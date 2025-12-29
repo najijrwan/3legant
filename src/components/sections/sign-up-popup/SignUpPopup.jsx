@@ -14,7 +14,6 @@ const SignUpPopup = ({ title }) => {
         <Container
             data-title={title}
             className="
-            w-full
             2xl:flex 2xl:gap-22"
         >
 
