@@ -68,6 +68,15 @@ const SignUpPopup = ({ formInputs }) => {
                 </p>
             </label>
 
+            <button
+                className="
+                    w-full h-12 
+                    bg-(--neutral-7-100) rounded-lg
+                    btn-s
+                    text-white"
+            >
+                Sign Up
+            </button>
         </form>
     );
 }
