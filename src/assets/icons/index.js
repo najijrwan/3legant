@@ -1,0 +1,1 @@
+export {ReactComponent as Eye} from './eye.svg';

@@ -60,6 +60,7 @@ body {
 
 @layer components {
 
+  /* Typography */
   .hero {
     @apply text-[96px] leading-[96px] -tracking-[0.02em] font-poppins font-medium;
   }

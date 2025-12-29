@@ -1,3 +1,4 @@
+import { Eye } from '@assets/icons/index.js';
 
 const formInputs = [
     { type: 'text', placeholder: 'Your Name' },
@@ -50,13 +51,16 @@ const SignUpPopup = ({ title }) => {
                     "
                 >
                     {formInputs.map((input, index) => (
-                        <div className="h-10 body-2 border-b border-(--neutral-3-100)">
+                        <div className="relative h-10 body-2 border-b border-(--neutral-3-100)">
                             <input
                                 key={index}
                                 type={input.type}
                                 placeholder={input.placeholder}
-                                className=""
+                                className="w-full outline-0"
                             />
+                            {input.type === 'password' && (
+                                <Eye className="absolute top-0 right-0 cursor-pointer" />
+                            )}
                         </div>
                     ))}
 
@@ -67,7 +71,10 @@ const SignUpPopup = ({ title }) => {
 
                 <button
                     className="
-                    "
+                    w-full h-12 
+                    bg-(--neutral-7-100) rounded-lg
+                    btn-s
+                    text-white"
                 >
                     Sign Up
                 </button>
