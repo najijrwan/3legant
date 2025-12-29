@@ -70,18 +70,18 @@ const SignUpPopup = ({ title }) => {
                     ))}
 
                     <div
-                        className='w-full flex items-center gap-3'>
+                        className='flex items-center gap-3'
+                    >
                         <button
                             className="
                             size-6 rounded-sm
                             flex items-center justify-center
                             border-[1.5px] border-(--neutral-4-100) box-border"
                         >
-                            <Check />
+
                         </button>
                         <p
-                            className='
-                            w-full 
+                            className=' 
                             flex items-center 
                             whitespace-break-spaces'
                         >
