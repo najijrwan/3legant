@@ -1,4 +1,11 @@
 
+const formInputs = [
+    { type: 'text', placeholder: 'Your Name' },
+    { type: 'text', placeholder: 'Username' },
+    { type: 'email', placeholder: 'Email Address' },
+    { type: 'password', placeholder: 'Password' },
+]
+
 const SignUpPopup = ({ title }) => {
     return (
         <section
@@ -16,24 +23,21 @@ const SignUpPopup = ({ title }) => {
 
             <div
                 className="
-                mx-auto py-10
+                w-[311px] mx-auto py-10
                 flex flex-col gap-8"
             >
                 <div
-                    className="
-                    flex flex-col gap-6"
+                    className="flex flex-col gap-6"
                 >
                     <header
-                        className="
-                        h4 text-black"
+                        className="h4"
                     >
                         {title}
                     </header>
                     <p
-                        className="
-                        body-2 text-[#6C7275]"
+                        className="body-2"
                     >
-                        Already have an account? 
+                        Already have an account?
                         <span className="body-2-semi text-[var(--green)]">Sign in</span>
                     </p>
                 </div>
@@ -41,12 +45,20 @@ const SignUpPopup = ({ title }) => {
                 <form
                     action=""
                     className="
+                    w-full
+                    flex flex-col gap-8
                     "
                 >
-                    <input type="text" />
-                    <input type="text" />
-                    <input type="email" />
-                    <input type="password" />
+                    {formInputs.map((input, index) => (
+                        <div className="h-10 body-2 border-b border-(--neutral-3-100)">
+                            <input
+                                key={index}
+                                type={input.type}
+                                placeholder={input.placeholder}
+                                className=""
+                            />
+                        </div>
+                    ))}
 
                     <div>
                         <p>I agree with Privacy Policy and Terms of Use</p>
