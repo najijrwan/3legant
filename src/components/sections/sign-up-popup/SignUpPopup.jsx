@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Eye, Check } from '@assets/icons/index.js';
 
 const formInputs = [
@@ -8,6 +9,10 @@ const formInputs = [
 ]
 
 const SignUpPopup = ({ title }) => {
+
+    const [agreed, setAgreed] = useState(false);
+
+
     return (
         <section
             data-title={title}
@@ -52,6 +57,7 @@ const SignUpPopup = ({ title }) => {
                 >
                     {formInputs.map((input, index) => (
                         <div
+                            key={index}
                             className="
                             relative 
                             h-10 
@@ -61,6 +67,7 @@ const SignUpPopup = ({ title }) => {
                                 key={index}
                                 type={input.type}
                                 placeholder={input.placeholder}
+                                autoComplete='on'
                                 className="w-full outline-0"
                             />
                             {input.type === 'password' && (
@@ -69,28 +76,40 @@ const SignUpPopup = ({ title }) => {
                         </div>
                     ))}
 
-                    <div
-                        className='flex items-center gap-3'
-                    >
-                        <button
-                            className="
+                    <label className="flex items-center gap-3 cursor-pointer select-none">
+                        {/* Real checkbox (accessible, functional) */}
+                        <input
+                            type="checkbox"
+                            checked={agreed}
+                            onChange={() => setAgreed(prev => !prev)}
+                            className="sr-only"
+                        />
+
+                        {/* Custom visual checkbox */}
+                        <span
+                            className={`
                             size-6 rounded-sm
                             flex items-center justify-center
-                            border-[1.5px] border-(--neutral-4-100) box-border"
+                            border-[1.5px]
+                            transition
+                            ${agreed
+                                    ? ''
+                                    : ''
+                                }
+    `}
                         >
+                            {agreed && <Check />}
+                        </span>
 
-                        </button>
-                        <p
-                            className=' 
-                            flex items-center 
-                            whitespace-break-spaces'
-                        >
-                            <span className='caption-2'>I agree with </span>
+                        {/* Text */}
+                        <p className="flex items-center flex-wrap gap-x-1">
+                            <span className="caption-2">I agree with</span>
                             <span className="caption-2-semi">Privacy Policy</span>
-                            <span className="caption-2"> and </span>
+                            <span className="caption-2">and</span>
                             <span className="caption-2-semi">Terms of Use</span>
                         </p>
-                    </div>
+                    </label>
+
                 </form>
 
                 <button
