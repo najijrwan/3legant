@@ -1,4 +1,4 @@
-import { Eye } from '@assets/icons/index.js';
+import { Eye, Check } from '@assets/icons/index.js';
 
 const formInputs = [
     { type: 'text', placeholder: 'Your Name' },
@@ -14,11 +14,11 @@ const SignUpPopup = ({ title }) => {
             className="w-full"
         >
 
-            <div>
+            <div className='w-full bg-[#F3F5F7]'>
                 <img
-                    src="src/assets/images/Paste image.png"
+                    src="src/assets/images/Earphones.png"
                     alt=""
-                    className="w-full"
+                    className=""
                 />
             </div>
 
@@ -51,7 +51,12 @@ const SignUpPopup = ({ title }) => {
                     "
                 >
                     {formInputs.map((input, index) => (
-                        <div className="relative h-10 body-2 border-b border-(--neutral-3-100)">
+                        <div
+                            className="
+                            relative 
+                            h-10 
+                            body-2 border-b border-(--neutral-3-100)"
+                        >
                             <input
                                 key={index}
                                 type={input.type}
@@ -64,8 +69,27 @@ const SignUpPopup = ({ title }) => {
                         </div>
                     ))}
 
-                    <div>
-                        <p>I agree with Privacy Policy and Terms of Use</p>
+                    <div
+                        className='w-full flex items-center gap-3'>
+                        <button
+                            className="
+                            size-6 rounded-sm
+                            flex items-center justify-center
+                            border-[1.5px] border-(--neutral-4-100) box-border"
+                        >
+                            <Check />
+                        </button>
+                        <p
+                            className='
+                            w-full 
+                            flex items-center 
+                            whitespace-break-spaces'
+                        >
+                            <span className='caption-2'>I agree with </span>
+                            <span className="caption-2-semi">Privacy Policy</span>
+                            <span className="caption-2"> and </span>
+                            <span className="caption-2-semi">Terms of Use</span>
+                        </p>
                     </div>
                 </form>
 

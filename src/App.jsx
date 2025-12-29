@@ -4,7 +4,7 @@ import SignUpPopup from '@sections/SignUpPopup';
 const App = () => {
   return (
     <>
-      <SignUpPopup title = "Sign Up" />
+      <SignUpPopup title = "Sign up" />
     </>
   );
 };

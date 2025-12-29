@@ -130,11 +130,11 @@ body {
   }
 
   .caption-2 {
-    @apply text-[12px] leading-[20px] -tracking-[0] font-inter font-normal;
+    @apply text-(--neutral-4-100) text-[12px] leading-[20px] -tracking-[0] font-inter font-normal;
   }
 
   .caption-2-semi {
-    @apply text-[12px] leading-[20px] -tracking-[0] font-inter font-semibold;
+    @apply text-(--neutral-7-100) text-[12px] leading-[20px] -tracking-[0] font-inter font-semibold;
   }
 
   .caption-2-bold {
