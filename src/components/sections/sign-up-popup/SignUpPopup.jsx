@@ -1,4 +1,5 @@
 import SignUpForm from './SingUpForm.jsx';
+import Container from '@layout/Container.jsx';
 
 const formInputs = [
     { type: 'text', placeholder: 'Your Name' },
@@ -10,10 +11,10 @@ const formInputs = [
 const SignUpPopup = ({ title }) => {
 
     return (
-        <section
+        <Container
             data-title={title}
             className="
-            w-full h-[100vh]
+            w-full
             2xl:flex 2xl:gap-22"
         >
 
@@ -39,7 +40,7 @@ const SignUpPopup = ({ title }) => {
 
             <div
                 className="
-                w-[311px] 2xl:w-[456px] mx-auto 2xl:mt-55 py-10 2xl:py-0
+                w-[311px] 2xl:w-[456px] mx-auto 2xl:mx-0 2xl:mt-55 py-10 2xl:py-0
                 flex flex-col gap-8"
             >
                 <div
@@ -61,7 +62,7 @@ const SignUpPopup = ({ title }) => {
                 <SignUpForm formInputs={formInputs} />
 
             </div>
-        </section>
+        </Container>
     );
 }
 

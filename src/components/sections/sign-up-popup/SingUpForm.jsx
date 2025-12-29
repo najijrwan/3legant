@@ -48,7 +48,7 @@ const SignUpPopup = ({ formInputs }) => {
                     className={`
                             size-6 rounded-sm
                             flex items-center justify-center
-                            border-[1.5px]
+                            border-[1.5px] border-(--neutral-4-100)
                             transition
                             ${agreed
                             ? ''
