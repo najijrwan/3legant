@@ -1,7 +1,6 @@
 import { useState } from 'react';
-import { Container } from '@layout';
-import { SignUpForm } from '@auth';
-import { SignInForm } from '@auth';
+import Container from '@layout/Container.jsx';
+import { SignUpForm, SignInForm } from '@auth';
 
 const AuthPopup = ({ title }) => {
 
