@@ -3,7 +3,7 @@ import { Eye, Check } from '@icons/index.js';
 import Button from './FormBtn.jsx';
 
 const fields = [
-    { name: 'email', type: 'email', placeholder: 'Email Address' },
+    { name: 'email', type: 'email', placeholder: 'Your username or email address' },
     { name: 'password', type: 'password', placeholder: 'Password' },
 ];
 
@@ -76,8 +76,8 @@ const SignInForm = ({ }) => {
             {/* Text */}
             <p
                 className="
-                width-full
-                flex items-center justify-between flex-wrap gap-x-1"
+                w-full
+                flex items-center justify-between flex-wrap"
             >
                 <span className="body-2">Remember me</span>
                 <span className="caption-2-semi">Forget Password?</span>
