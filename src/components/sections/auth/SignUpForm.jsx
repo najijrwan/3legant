@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Eye, Check } from '@icons/index.js';
+import { Eye, Check } from '@icons';
 import Button from './FormBtn.jsx';
 
 const fields = [
