@@ -121,7 +121,7 @@ body {
   }
 
   .caption-1-semi {
-    @apply text-[14px] leading-[22px] -tracking-[0] font-inter font-semibold;
+    @apply text-(--neutral-5-100) text-[14px] leading-[22px] -tracking-[0] font-inter font-semibold;
   }
 
   .caption-1-bold {
