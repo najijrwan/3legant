@@ -3,13 +3,6 @@ import Container from '@layout/Container.jsx';
 import SignUpForm from './SingUpForm.jsx';
 import SignInForm from './SignInForm.jsx';
 
-const formInputs = [
-    { type: 'text', placeholder: 'Your Name' },
-    { type: 'text', placeholder: 'Username' },
-    { type: 'email', placeholder: 'Email Address' },
-    { type: 'password', placeholder: 'Password' },
-]
-
 const AuthPopup = ({ title }) => {
 
     const [mode, setMode] = useState('signup');

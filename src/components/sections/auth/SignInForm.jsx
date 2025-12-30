@@ -1,13 +1,23 @@
+import { useState } from 'react';
+import { Eye, Check } from '@icons/index.js';
+import Button from './FormBtn.jsx';
 
+const fields = [
+    { name: 'email', type: 'email', placeholder: 'Email Address' },
+    { name: 'password', type: 'password', placeholder: 'Password' },
+];
 
-const SignInForm = ({ formInputs }) => {
+const SignInForm = ({ }) => {
+
+    const [agreed, setAgreed] = useState(false);
+
     return (<form
         action=""
         className="
         w-full
         flex flex-col gap-8"
     >
-        {formInputs.map((input, index) => (
+        {fields.map((input, index) => (
             <div
                 key={index}
                 className="
@@ -34,6 +44,7 @@ const SignInForm = ({ formInputs }) => {
 
         <label
             className="
+                w-full
                 flex items-center gap-3 
                 cursor-pointer 
                 select-none"
@@ -63,17 +74,21 @@ const SignInForm = ({ formInputs }) => {
             </span>
 
             {/* Text */}
-            <p className="flex items-center flex-wrap gap-x-1">
-                <span className="caption-2">I agree with</span>
-                <span className="caption-2-semi">Privacy Policy</span>
-                <span className="caption-2">and</span>
-                <span className="caption-2-semi">Terms of Use</span>
+            <p
+                className="
+                width-full
+                flex items-center justify-between flex-wrap gap-x-1"
+            >
+                <span className="body-2">Remember me</span>
+                <span className="caption-2-semi">Forget Password?</span>
             </p>
         </label>
 
         <Button>
-            Sign Up
+            Sign In
         </Button>
     </form>
     );
 }
+
+export default SignInForm;

@@ -2,7 +2,14 @@ import { useState } from 'react';
 import { Eye, Check } from '@icons/index.js';
 import Button from './FormBtn.jsx';
 
-const SignUpPopup = ({ formInputs }) => {
+const fields = [
+    { name: 'name', type: 'text', placeholder: 'Your Name' },
+    { name: 'username', type: 'text', placeholder: 'Username' },
+    { name: 'email', type: 'email', placeholder: 'Email Address' },
+    { name: 'password', type: 'password', placeholder: 'Password' },
+];
+
+const SignUpForm = ({ formInputs }) => {
 
     const [agreed, setAgreed] = useState(false);
 
@@ -13,7 +20,7 @@ const SignUpPopup = ({ formInputs }) => {
             w-full
             flex flex-col gap-8"
         >
-            {formInputs.map((input, index) => (
+            {fields.map((input, index) => (
                 <div
                     key={index}
                     className="
@@ -84,4 +91,4 @@ const SignUpPopup = ({ formInputs }) => {
     );
 }
 
-export default SignUpPopup;
+export default SignUpForm;
