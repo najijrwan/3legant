@@ -1,5 +1,5 @@
 import React from 'react';
-import AuthPopup from '@auth/AuthPopup.jsx';
+import { AuthPopup } from '@auth';
 
 const App = () => {
   return (
