@@ -1,12 +1,12 @@
-const FormBtn = ({ children }) => {
+const FormBtn = ({ variant,children }) => {
+    const variants = {
+        default: 'py-[10px] px-[40px] bg-(--neutral-7-100) rounded-lg btn-s text-white',
+        outline: ''
+    }
     return (
         <button
             type="submit"
-            className="
-            w-full h-12 
-            bg-(--neutral-7-100) rounded-lg
-            btn-s
-            text-white"
+            className={variants[variant]}
         >
             {children}
         </button>
