@@ -1,5 +1,7 @@
-import SignUpForm from './SingUpForm.jsx';
+import { useState } from 'react';
 import Container from '@layout/Container.jsx';
+import SignUpForm from './SingUpForm.jsx';
+import SignInForm from './SignInForm.jsx';
 
 const formInputs = [
     { type: 'text', placeholder: 'Your Name' },
@@ -8,7 +10,11 @@ const formInputs = [
     { type: 'password', placeholder: 'Password' },
 ]
 
-const SignUpPopup = ({ title }) => {
+const AuthPopup = ({ title }) => {
+
+    const [mode, setMode] = useState('signup');
+
+    const isSignup = mode === 'signup';
 
     return (
         <Container
@@ -37,32 +43,32 @@ const SignUpPopup = ({ title }) => {
                 />
             </div>
 
-            <div
-                className="
+            <div className="
                 w-[311px] 2xl:w-[456px] mx-auto 2xl:mx-0 2xl:mt-55 py-10 2xl:py-0
                 flex flex-col gap-8"
             >
-                <div
-                    className="flex flex-col gap-6"
-                >
-                    <header
-                        className="h4"
-                    >
-                        {title}
+                <div className="flex flex-col gap-6">
+                    <header className="h4">
+                        {isSignup ? 'Sign Up' : 'Sign In'}
                     </header>
-                    <p
-                        className="body-2"
-                    >
-                        Already have an account?
-                        <span className="body-2-semi text-[var(--green)]">Sign in</span>
+
+                    <p className="body-2">
+                        {isSignup ? 'Already have an account?' : "Don't have an account?"}
+                        <span
+                            onClick={() =>
+                                setMode(isSignup ? 'signin' : 'signup')
+                            }
+                            className="body-2-semi text-[var(--green)] cursor-pointer ml-1"
+                        >
+                            {isSignup ? 'Sign in' : 'Sign up'}
+                        </span>
                     </p>
                 </div>
 
-                <SignUpForm formInputs={formInputs} />
-
+                {isSignup ? <SignUpForm /> : <SignInForm />}
             </div>
         </Container>
     );
 }
 
-export default SignUpPopup;
+export default AuthPopup;

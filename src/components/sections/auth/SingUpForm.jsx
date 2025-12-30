@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Eye, Check } from '@assets/icons/index.js';
+import { Eye, Check } from '@icons/index.js';
+import Button from './FormBtn.jsx';
 
 const SignUpPopup = ({ formInputs }) => {
 
@@ -9,9 +10,8 @@ const SignUpPopup = ({ formInputs }) => {
         <form
             action=""
             className="
-                    w-full
-                    flex flex-col gap-8
-                    "
+            w-full
+            flex flex-col gap-8"
         >
             {formInputs.map((input, index) => (
                 <div
@@ -29,12 +29,21 @@ const SignUpPopup = ({ formInputs }) => {
                         className="w-full outline-0"
                     />
                     {input.type === 'password' && (
-                        <Eye className="absolute top-0 right-0 cursor-pointer" />
+                        <Eye
+                            className="
+                            absolute top-0 right-0 
+                            cursor-pointer"
+                        />
                     )}
                 </div>
             ))}
 
-            <label className="flex items-center gap-3 cursor-pointer select-none">
+            <label
+                className="
+                flex items-center gap-3 
+                cursor-pointer 
+                select-none"
+            >
                 {/* Real checkbox (accessible, functional) */}
                 <input
                     type="checkbox"
@@ -68,15 +77,9 @@ const SignUpPopup = ({ formInputs }) => {
                 </p>
             </label>
 
-            <button
-                className="
-                    w-full h-12 
-                    bg-(--neutral-7-100) rounded-lg
-                    btn-s
-                    text-white"
-            >
+            <Button>
                 Sign Up
-            </button>
+            </Button>
         </form>
     );
 }

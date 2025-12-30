@@ -1,10 +1,10 @@
 import React from 'react';
-import SignUpPopup from '@sections/sign-up-popup/SignUpPopup.jsx';
+import AuthPopup from '@auth/AuthPopup.jsx';
 
 const App = () => {
   return (
     <>
-      <SignUpPopup title = "Sign up" />
+      <AuthPopup title = "Sign Up" />
     </>
   );
 };
