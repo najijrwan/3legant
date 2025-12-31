@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -52,7 +52,7 @@ body {
   --font-inter: 'Inter', sans-serif;
 
   /* Color Styles */
-  
+
 
   --breakpoint-2xl: 1440px;
 }
@@ -89,63 +89,63 @@ body {
   }
 
   .h7 {
-    @apply text-[20px] leading-[28px] -tracking-[0] font-poppins font-medium;
+    @apply text-lg leading-[28px] -tracking-[0] font-poppins font-medium;
   }
 
   .body-1 {
-    @apply text-[20px] leading-[32px] -tracking-[0] font-inter font-normal;
+    @apply text-lg leading-[32px] -tracking-[0] font-inter font-normal;
   }
 
   .body-1-semi {
-    @apply text-[20px] leading-[32px] -tracking-[0] font-inter font-semibold;
+    @apply text-lg leading-[32px] -tracking-[0] font-inter font-semibold;
   }
 
   .body-1-bold {
-    @apply text-[20px] leading-[32px] -tracking-[0] font-inter font-bold;
+    @apply text-lg leading-[32px] -tracking-[0] font-inter font-bold;
   }
 
   .body-2 {
-    @apply text-(--neutral-4-100) text-[16px] leading-[26px] -tracking-[0] font-inter font-normal;
+    @apply text-(--neutral-4-100) text-base leading-[26px] -tracking-[0] font-inter font-normal;
   }
 
   .body-2-semi {
-    @apply text-[16px] leading-[26px] -tracking-[0] font-inter font-semibold;
+    @apply text-base leading-[26px] -tracking-[0] font-inter font-semibold;
   }
 
   .body-2-bold {
-    @apply text-[16px] leading-[26px] -tracking-[0] font-inter font-bold;
+    @apply text-base leading-[26px] -tracking-[0] font-inter font-bold;
   }
 
   .caption-1 {
-    @apply text-[14px] leading-[22px] -tracking-[0] font-inter font-normal;
+    @apply text-sm leading-[22px] -tracking-[0] font-inter font-normal;
   }
 
   .caption-1-semi {
-    @apply text-(--neutral-5-100) text-[14px] leading-[22px] -tracking-[0] font-inter font-semibold;
+    @apply text-(--neutral-5-100) text-sm leading-[22px] -tracking-[0] font-inter font-semibold;
   }
 
   .caption-1-bold {
-    @apply text-[14px] leading-[22px] -tracking-[0] font-inter font-bold;
+    @apply text-sm leading-[22px] -tracking-[0] font-inter font-bold;
   }
 
   .caption-2 {
-    @apply text-(--neutral-4-100) text-[12px] leading-[20px] -tracking-[0] font-inter font-normal;
+    @apply text-(--neutral-4-100) text-xs leading-[20px] -tracking-[0] font-inter font-normal;
   }
 
   .caption-2-semi {
-    @apply text-(--neutral-7-100) text-[12px] leading-[20px] -tracking-[0] font-inter font-semibold;
+    @apply text-(--neutral-7-100) text-xs leading-[20px] -tracking-[0] font-inter font-semibold;
   }
 
   .caption-2-bold {
-    @apply text-[12px] leading-[20px] -tracking-[0] font-inter font-bold;
+    @apply text-xs leading-[20px] -tracking-[0] font-inter font-bold;
   }
 
   .hairline-1 {
-    @apply text-[16px] leading-[16px] -tracking-[0] font-inter font-bold;
+    @apply text-base leading-[16px] -tracking-[0] font-inter font-bold;
   }
 
   .hairline-2 {
-    @apply text-[12px] leading-[12px] -tracking-[0] font-inter font-bold;
+    @apply text-xs leading-[12px] -tracking-[0] font-inter font-bold;
   }
 
   .btn-xl {
@@ -157,14 +157,14 @@ body {
   }
 
   .btn-m {
-    @apply text-[18px] leading-[32px] -tracking-[0] font-inter font-medium;
+    @apply text-lg leading-[32px] -tracking-[0] font-inter font-medium;
   }
 
   .btn-s {
-    @apply text-[16px] leading-[28px] -tracking-[0] font-inter font-medium;
+    @apply text-base leading-[28px] -tracking-[0] font-inter font-medium;
   }
 
   .btn-xs {
-    @apply text-[14px] leading-[24px] -tracking-[0] font-inter font-medium;
+    @apply text-sm leading-[24px] -tracking-[0] font-inter font-medium;
   }
 }

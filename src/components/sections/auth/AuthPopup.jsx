@@ -25,7 +25,7 @@ const AuthPopup = ({ title }) => {
                 <header
                     className='
                     absolute top-8 right-1/2 translate-x-1/2
-                    text-black text-6 leading-6 tracking-[0] font-poppins font-medium'>
+                    text-black text-2xl leading-6 tracking-[0] font-poppins font-medium'>
                     3legant<span className="text-(--neutral-4-100)">.</span>
                 </header>
                 <img

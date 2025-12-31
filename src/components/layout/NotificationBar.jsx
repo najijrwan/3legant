@@ -29,10 +29,10 @@ const NotificationBar = ({ }) => {
                 </div>
                 <button
                     className="
-                    flex gap-1
-                    btn-xs text-(--blue)"
+                    flex items-center gap-1
+                    btn-xs text-(--blue) border-b border-b-inherit"
                 >
-                    <span>Shop Now</span>
+                    <span className=''>Shop Now</span>
                     <ArrowRight />
                 </button>
             </div>
