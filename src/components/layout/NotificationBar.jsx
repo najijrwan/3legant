@@ -1,5 +1,4 @@
 import { Icon } from '@ui';
-import { TicketPercent, Close, ArrowRight } from '@icons';
 
 const NotificationBar = ({ }) => {
     return (
@@ -20,7 +19,7 @@ const NotificationBar = ({ }) => {
                     className="
                     flex items-center gap-2 2xl:gap-3"
                 >
-                    <Icon Component={TicketPercent} className="size-4 2xl:size-6" />
+                    <Icon name="TicketPercent" className="size-4 2xl:size-6" />
                     <p
                         className="
                         caption-2-semi 2xl:caption-1-semi text-(--neutral-5-100)"
@@ -40,6 +39,7 @@ const NotificationBar = ({ }) => {
             <button
                 className="
                 2xl:absolute top-2.5 right-4">
+                <Icon name="Close" className="size-4 2xl:size-6" />
             </button>
 
         </div>
