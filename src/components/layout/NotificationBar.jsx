@@ -7,7 +7,7 @@ const NotificationBar = ({ }) => {
             className="
             relative
             h-10
-            flex items-center justify-center
+            flex items-center justify-center gap-5.5
             bg-(--neutral-2-100)"
         >
 
@@ -17,12 +17,13 @@ const NotificationBar = ({ }) => {
             >
                 <div
                     className="
-                    flex gap-3"
+                    flex gap-2 2xl:gap-3"
                 >
                     <TicketPercent />
                     <p
                         className="
-                        caption-1-semi"
+                        caption-2-semi
+                        2xl:caption-1-semi"
                     >
                         30% off storewide — Limited time!
                     </p>
@@ -39,7 +40,7 @@ const NotificationBar = ({ }) => {
 
             <button
                 className="
-                absolute top-2.5 right-4">
+                2xl:absolute top-2.5 right-4">
                 <Close />
             </button>
 
