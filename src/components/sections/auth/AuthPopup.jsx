@@ -40,11 +40,11 @@ const AuthPopup = ({ title }) => {
                 flex flex-col gap-8"
             >
                 <div className="flex flex-col gap-6">
-                    <header className="h4">
+                    <header className="h4 text-(--neutral-7-100)">
                         {isSignup ? 'Sign Up' : 'Sign In'}
                     </header>
 
-                    <p className="body-2">
+                    <p className="body-2 text-(--neutral-4-100)">
                         {isSignup ? 'Already have an account?' : "Don't have an account?"}
                         <span
                             onClick={() =>

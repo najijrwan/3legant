@@ -22,8 +22,7 @@ const NotificationBar = ({ }) => {
                     <TicketPercent />
                     <p
                         className="
-                        caption-2-semi
-                        2xl:caption-1-semi"
+                        caption-2-semi text-(--neutral-7-100) 2xl:caption-1-semi text-(--neutral-5-100)"
                     >
                         30% off storewide — Limited time!
                     </p>
