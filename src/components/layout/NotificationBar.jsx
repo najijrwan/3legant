@@ -2,7 +2,7 @@ import { Icon } from '@ui';
 
 const NotificationBar = ({ }) => {
     return (
-        <div
+        <header
             data-title="notification-bar"
             className="
             relative
@@ -43,7 +43,7 @@ const NotificationBar = ({ }) => {
                 <Icon name="Close" className="size-4 2xl:size-5" />
             </button>
 
-        </div>
+        </header>
     );
 }
 

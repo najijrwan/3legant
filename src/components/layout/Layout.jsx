@@ -1,9 +1,10 @@
-import { Container, NotificationBar } from '@layout';
+import { Container, NotificationBar, NavBar } from '@layout';
 
 const Layout = ({ children }) => {
     return (
         <Container>
             <NotificationBar />
+            <NavBar />
             {children}
         </Container>
     );
