@@ -1,4 +1,4 @@
-import { Close, TicketPercent, ArrowRight } from '@icons';
+import { Icon } from '@ui';
 
 const NotificationBar = ({ }) => {
     return (
@@ -19,28 +19,28 @@ const NotificationBar = ({ }) => {
                     className="
                     flex items-center gap-2 2xl:gap-3"
                 >
-                    <TicketPercent />
+                    <Icon name="TicketPercent" size={24} color="#28303F" strokeWidth={1.5} fill="none" />
                     <p
                         className="
-                        2xl:caption-1-semi caption-2-semi text-(--neutral-5-100)"
+                        caption-2-semi 2xl:caption-1-semi text-(--neutral-5-100)"
                     >
                         30% off storewide — Limited time!
                     </p>
                 </div>
                 <button
                     className="
-                    flex items-center gap-1
+                    hidden 2xl:flex items-center gap-1
                     btn-xs text-(--blue) border-b border-b-inherit"
                 >
                     <span className=''>Shop Now</span>
-                    <ArrowRight />
+                    <Icon name="ArrowRight" size={16} />
                 </button>
             </div>
 
             <button
                 className="
                 2xl:absolute top-2.5 right-4">
-                <Close />
+                <Icon name="Close" size={16} />
             </button>
 
         </div>
