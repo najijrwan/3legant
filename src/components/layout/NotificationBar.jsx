@@ -17,12 +17,12 @@ const NotificationBar = ({ }) => {
             >
                 <div
                     className="
-                    flex gap-2 2xl:gap-3"
+                    flex items-center gap-2 2xl:gap-3"
                 >
                     <TicketPercent />
                     <p
                         className="
-                        caption-2-semi text-(--neutral-7-100) 2xl:caption-1-semi text-(--neutral-5-100)"
+                        2xl:caption-1-semi caption-2-semi text-(--neutral-5-100)"
                     >
                         30% off storewide — Limited time!
                     </p>
