@@ -7,7 +7,7 @@ const NotificationBar = ({ }) => {
             className="
             relative
             h-10
-            flex items-center justify-center gap-5.5
+            flex items-center justify-center gap-5.5 2xl:gap-127
             bg-(--neutral-2-100)"
         >
 
@@ -27,19 +27,21 @@ const NotificationBar = ({ }) => {
                         30% off storewide — Limited time!
                     </p>
                 </div>
+
                 <button
                     className="
                     hidden 2xl:flex items-center gap-1
                     btn-xs text-(--blue) border-b border-b-inherit"
                 >
                     <span className=''>Shop Now</span>
-                    <Icon name="ArrowRight"/>
+                    <Icon name="ArrowRight" />
                 </button>
             </div>
 
             <button
                 className="
-                2xl:absolute top-2.5 right-4">
+                2xl:translate-x-[254px]"
+            >
                 <Icon name="Close" className="size-4 2xl:size-5" />
             </button>
 

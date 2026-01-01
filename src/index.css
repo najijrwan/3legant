@@ -1,7 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
-:root {
+:root {}
+
+body {
+  background-color: white;
+}
+
+@theme {
+
+  /* Font Family */
+  --font-poppins: 'Poppins', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+  --font-space-grotesk: 'Space Grotesk', sans-serif;
+
+  /* Color Styles */
+  /* Primary */
+  --text-primary: var(--brand);
+  --color-primary: var(--brand);
+
+  /* Secondary */
   --blue: #377DFF;
   --green: #38CB89;
   --yellow: #FFAB00;
@@ -39,22 +57,7 @@
   --neutral-7-95: #1417185F;
   --neutral-7-50: #14171832;
 
-}
-
-body {
-  background-color: white;
-}
-
-@theme {
-
-  /* Text Styles */
-  --font-poppins: 'Poppins', sans-serif;
-  --font-inter: 'Inter', sans-serif;
-
-  /* Color Styles */
-  --text-primary: var(--brand);
-  --color-primary: var(--brand);
-
+  /* Breakpoints */
   --breakpoint-2xl: 1440px;
 }
 
