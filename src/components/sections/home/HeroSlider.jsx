@@ -10,6 +10,8 @@ const sliderButtons = [
 const images = [
     "/src/assets/images/hero image 1.png",
     "/src/assets/images/hero image 2.png",
+    "/src/assets/images/hero image 3.png",
+    "/src/assets/images/hero image 4.png",
 ];
 
 const HeroSlider = () => {
@@ -24,9 +26,21 @@ const HeroSlider = () => {
     };
 
     return (
-        <section className="pb-10 flex flex-col gap-8">
-            <div className="relative w-full h-[304px] 2xl:h-[536px] overflow-hidden">
-                <Carousel index={index} onChange={setIndex}>
+        <section
+            className="
+            pb-10 
+            flex flex-col gap-8"
+        >
+            <div
+                className="
+                relative
+                w-full h-[304px] 2xl:h-[536px] 
+                overflow-hidden"
+            >
+                <Carousel
+                    index={index}
+                    onChange={setIndex}
+                >
                     {images.map((src, i) => (
                         <img
                             key={i}
@@ -40,20 +54,37 @@ const HeroSlider = () => {
                     <button
                         key={i}
                         onClick={() => handleNav(button.side)}
-                        className={`hidden 2xl:block absolute top-[238px] ${button.side === "left" ? "left-6" : "right-6"
-                            } size-13 rounded-full flex items-center justify-center bg-white`}
+                        className={`
+                        absolute top-[238px] ${button.side}-6
+                        size-13 rounded-full
+                        hidden 2xl:flex items-center justify-center 
+                        bg-white
+                        cursor-pointer `}
                     >
-                        <Icon name={button.name} className="w-4.5 h-4" />
+                        <Icon
+                            name={button.name}
+                            className="w-4.5 h-4"
+                        />
                     </button>
                 ))}
 
-                <div className="absolute bottom-9.25 left-1/2 -translate-x-1/2 flex gap-4">
+                <div
+                    className="
+                    absolute bottom-9.25 left-1/2 -translate-x-1/2 
+                    flex gap-4"
+                >
                     {images.map((_, i) => (
                         <div
                             key={i}
-                            onClick={() => setIndex(i)} // dots are clickable
-                            className={`size-2 rounded-full cursor-pointer ${i === index ? "bg-black" : "bg-[var(--neutral-1-100)]"
-                                }`}
+                            onClick={() => setIndex(i)}
+                            className={`
+                            size-2 rounded-full
+                            bg-[var(--neutral-1-100)]
+                            transiton-all duration-500
+                            cursor-pointer
+                            ${i === index
+                                    ? "w-7.5"
+                                    : ""}`}
                         />
                     ))}
                 </div>

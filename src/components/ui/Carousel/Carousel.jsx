@@ -23,7 +23,6 @@ const Carousel = ({ children, index, onChange }) => {
         startX.current = null;
     };
 
-    // Predefined translate classes (extend if you expect more slides)
     const translateClasses = [
         "translate-x-0",
         "-translate-x-[100%]",
@@ -33,7 +32,10 @@ const Carousel = ({ children, index, onChange }) => {
 
     return (
         <div
-            className={`flex h-full transition-transform duration-500 ease-out ${translateClasses[index]}`}
+            className={`
+            h-full
+            flex 
+            transition-transform duration-500 ease-out ${translateClasses[index]}`}
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
         >
