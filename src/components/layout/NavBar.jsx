@@ -19,7 +19,7 @@ const navitems = [
     },
 ]
 
-const NavBar = ({ }) => {
+const NavBar = () => {
     return (
         <nav
             data-title="NavBar"
