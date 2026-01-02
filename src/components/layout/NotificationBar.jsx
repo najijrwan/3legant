@@ -34,7 +34,18 @@ const NotificationBar = ({ }) => {
                     btn-xs text-(--blue) border-b border-b-inherit"
                 >
                     <span className=''>Shop Now</span>
-                    <Icon name="ArrowRight" />
+                    <span
+                        className='
+                        size-4.5
+                        flex items-center justify-center'
+                    >
+                        <Icon
+                            name="ArrowRight"
+                            className="
+                            size-3
+                            text-(--blue)"
+                        />
+                    </span>
                 </button>
             </div>
 

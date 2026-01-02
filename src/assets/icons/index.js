@@ -3,6 +3,7 @@ export { ReactComponent as Check } from './check.svg';
 export { ReactComponent as Close } from './close.svg';
 export { ReactComponent as TicketPercent } from './ticket-percent.svg';
 export { ReactComponent as ArrowRight } from './arrow-right.svg';
+export { ReactComponent as ArrowLeft } from './arrow-left.svg';
 export { ReactComponent as Menu } from './menu.svg';
 export { ReactComponent as ShoppingBag } from './shopping-bag.svg';
 export { ReactComponent as UserCircle } from './user-circle.svg';
