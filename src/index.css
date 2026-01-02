@@ -61,122 +61,118 @@ body {
   --breakpoint-2xl: 1440px;
 }
 
-@layer components {
+/* Non-semantic heading */
+@utility h7 {
+  @apply text-lg leading-[28px] -tracking-[0] font-poppins font-medium;
+}
 
-  /* Typography */
-  .hero {
-    @apply text-[96px] leading-[96px] -tracking-[0.02em] font-poppins font-medium;
-  }
+/* Body text */
+@utility body-1 {
+  @apply text-lg leading-[32px] -tracking-[0] font-inter font-normal;
+}
 
-  .h1 {
-    @apply text-[80px] leading-[84px] -tracking-[3px] font-poppins font-medium;
-  }
+@utility body-1-semi {
+  @apply text-lg leading-[32px] -tracking-[0] font-inter font-semibold;
+}
 
-  .h2 {
-    @apply text-[72px] leading-[76px] -tracking-[2px] font-poppins font-medium;
-  }
+@utility body-1-bold {
+  @apply text-lg leading-[32px] -tracking-[0] font-inter font-bold;
+}
 
-  .h3 {
-    @apply text-[54px] leading-[58px] -tracking-[1px] font-poppins font-medium;
-  }
+@utility body-2 {
+  @apply text-base leading-[26px] -tracking-[0] font-inter font-normal;
+}
 
-  .h4 {
-    @apply text-[40px] leading-[44px] -tracking-[0.4px] font-poppins font-medium;
-  }
+@utility body-2-semi {
+  @apply text-base leading-[26px] -tracking-[0] font-inter font-semibold;
+}
 
-  .h5 {
-    @apply text-[34px] leading-[38px] -tracking-[0.6px] font-poppins font-medium;
-  }
+@utility body-2-bold {
+  @apply text-base leading-[26px] -tracking-[0] font-inter font-bold;
+}
 
-  .h6 {
-    @apply text-[28px] leading-[34px] -tracking-[0.6px] font-poppins font-medium;
-  }
-
-  .h7 {
-    @apply text-lg leading-[28px] -tracking-[0] font-poppins font-medium;
-  }
-
-  .body-1 {
-    @apply text-lg leading-[32px] -tracking-[0] font-inter font-normal;
-  }
-
-  .body-1-semi {
-    @apply text-lg leading-[32px] -tracking-[0] font-inter font-semibold;
-  }
-
-  .body-1-bold {
-    @apply text-lg leading-[32px] -tracking-[0] font-inter font-bold;
-  }
-
-  .body-2 {
-    @apply text-base leading-[26px] -tracking-[0] font-inter font-normal;
-  }
-
-  .body-2-semi {
-    @apply text-base leading-[26px] -tracking-[0] font-inter font-semibold;
-  }
-
-  .body-2-bold {
-    @apply text-base leading-[26px] -tracking-[0] font-inter font-bold;
-  }
-
-  .caption-1 {
-    @apply text-sm leading-[22px] -tracking-[0] font-inter font-normal;
-  }
-
-  .caption-1-semi {
-    @apply text-sm leading-[22px] -tracking-[0] font-inter font-semibold;
-  }
-
-  .caption-1-bold {
-    @apply text-sm leading-[22px] -tracking-[0] font-inter font-bold;
-  }
-
-  .caption-2 {
-    @apply text-xs leading-[20px] -tracking-[0] font-inter font-normal;
-  }
-
-  .caption-2-semi {
-    @apply text-xs leading-[20px] -tracking-[0] font-inter font-semibold;
-  }
-
-  .caption-2-bold {
-    @apply text-xs leading-[20px] -tracking-[0] font-inter font-bold;
-  }
-
-  .hairline-1 {
-    @apply text-base leading-[16px] -tracking-[0] font-inter font-bold;
-  }
-
-  .hairline-2 {
-    @apply text-xs leading-[12px] -tracking-[0] font-inter font-bold;
-  }
-
-  .btn-xl {
-    @apply text-[26px] leading-[38px] -tracking-[0] font-inter font-medium;
-  }
-
-  .btn-l {
-    @apply text-[22px] leading-[34px] -tracking-[0] font-inter font-medium;
-  }
-
-  .btn-m {
-    @apply text-lg leading-[32px] -tracking-[0] font-inter font-medium;
-  }
-
-  .btn-s {
-    @apply text-base leading-[28px] -tracking-[0] font-inter font-medium;
-  }
-
-  .btn-xs {
-    @apply text-sm leading-[24px] -tracking-[0] font-inter font-medium;
-  }
+/* Captions */
+@utility caption-1 {
+  @apply text-sm leading-[22px] -tracking-[0] font-inter font-normal;
 }
 
 @utility caption-1-semi {
   @apply text-sm leading-[22px] -tracking-[0] font-inter font-semibold;
 }
 
+@utility caption-1-bold {
+  @apply text-sm leading-[22px] -tracking-[0] font-inter font-bold;
+}
+
+@utility caption-2 {
+  @apply text-xs leading-[20px] -tracking-[0] font-inter font-normal;
+}
+
 @utility caption-2-semi {
   @apply text-xs leading-[20px] -tracking-[0] font-inter font-semibold;
+}
+
+@utility caption-2-bold {
+  @apply text-xs leading-[20px] -tracking-[0] font-inter font-bold;
+}
+
+/* Hairlines */
+@utility hairline-1 {
+  @apply text-base leading-[16px] -tracking-[0] font-inter font-bold;
+}
+
+@utility hairline-2 {
+  @apply text-xs leading-[12px] -tracking-[0] font-inter font-bold;
+}
+
+/* Buttons */
+@utility btn-xl {
+  @apply text-[26px] leading-[38px] -tracking-[0] font-inter font-medium;
+}
+
+@utility btn-l {
+  @apply text-[22px] leading-[34px] -tracking-[0] font-inter font-medium;
+}
+
+@utility btn-m {
+  @apply text-lg leading-[32px] -tracking-[0] font-inter font-medium;
+}
+
+@utility btn-s {
+  @apply text-base leading-[28px] -tracking-[0] font-inter font-medium;
+}
+
+@utility btn-xs {
+  @apply text-sm leading-[24px] -tracking-[0] font-inter font-medium;
+}
+
+/* Hero text (not a semantic tag, so stays in components) */
+@utility hero {
+  @apply text-[96px] leading-[96px] -tracking-[0.02em] font-poppins font-medium;
+}
+
+@layer base {
+  h1 {
+    @apply text-[80px] leading-[84px] -tracking-[3px] font-poppins font-medium;
+  }
+
+  h2 {
+    @apply text-[72px] leading-[76px] -tracking-[2px] font-poppins font-medium;
+  }
+
+  h3 {
+    @apply text-[54px] leading-[58px] -tracking-[1px] font-poppins font-medium;
+  }
+
+  h4 {
+    @apply text-[40px] leading-[44px] -tracking-[0.4px] font-poppins font-medium;
+  }
+
+  h5 {
+    @apply text-[34px] leading-[38px] -tracking-[0.6px] font-poppins font-medium;
+  }
+
+  h6 {
+    @apply text-[28px] leading-[34px] -tracking-[0.6px] font-poppins font-medium;
+  }
 }
