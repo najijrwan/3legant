@@ -2,12 +2,12 @@ import { useState } from "react";
 import { Icon } from "@ui";
 import { Carousel } from "@Carousel";
 
-const sliderButtons = [
+const SLIDER_BUTTONS = [
     { name: "ArrowLeft", side: "left" },
     { name: "ArrowRight", side: "right" },
 ];
 
-const images = [
+const IMAGES = [
     "/src/assets/images/hero image 1.png",
     "/src/assets/images/hero image 2.png",
     "/src/assets/images/hero image 3.png",
@@ -41,7 +41,7 @@ const HeroSlider = () => {
                     index={index}
                     onChange={setIndex}
                 >
-                    {images.map((src, i) => (
+                    {IMAGES.map((src, i) => (
                         <img
                             key={i}
                             src={src}
@@ -50,7 +50,7 @@ const HeroSlider = () => {
                     ))}
                 </Carousel>
 
-                {sliderButtons.map((button, i) => (
+                {SLIDER_BUTTONS.map((button, i) => (
                     <button
                         key={i}
                         onClick={() => handleNav(button.side)}
@@ -73,7 +73,7 @@ const HeroSlider = () => {
                     absolute bottom-9.25 left-1/2 -translate-x-1/2 
                     flex gap-4"
                 >
-                    {images.map((_, i) => (
+                    {IMAGES.map((_, i) => (
                         <div
                             key={i}
                             onClick={() => setIndex(i)}
