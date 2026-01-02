@@ -3,7 +3,7 @@ import { Icon } from '@ui';
 const NotificationBar = ({ }) => {
     return (
         <header
-            data-title="notification-bar"
+            data-title="Notification Bar"
             className="
             relative
             h-10

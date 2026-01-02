@@ -27,6 +27,7 @@ const HeroSlider = () => {
 
     return (
         <section
+            data-title= 'Hero Slider'
             className="
             pb-10 
             flex flex-col gap-8"

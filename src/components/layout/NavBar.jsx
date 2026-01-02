@@ -22,7 +22,7 @@ const navitems = [
 const NavBar = () => {
     return (
         <nav
-            data-title="NavBar"
+            data-title="Navigation Bar"
             className="
             w-full py-4 px-8 2xl:px-40
             flex justify-between"
@@ -85,7 +85,7 @@ const NavBar = () => {
                         className="hidden 2xl:block"
                     />
                 </button>
-                
+
                 <button
                     className="
                     size-6 flex items-center justify-center"
