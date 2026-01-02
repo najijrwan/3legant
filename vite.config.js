@@ -24,6 +24,7 @@ export default defineConfig({
           '@footer': path.resolve(__dirname, './src/components/layout/footer'),
         '@sections': path.resolve(__dirname, './src/components/sections'),
           '@auth': path.resolve(__dirname, './src/components/sections/auth'),
+          '@home': path.resolve(__dirname, './src/components/sections/home'),
         '@ui': path.resolve(__dirname, './src/components/ui'),
           '@cards': path.resolve(__dirname, './src/components/ui/cards'),
           '@product': path.resolve(__dirname, './src/components/ui/product'),

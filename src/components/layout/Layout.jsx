@@ -8,7 +8,9 @@ const Layout = ({ children }) => {
 
             <NavBar />
 
-            <main>
+            <main
+                className='
+                w-full px-8 2xl:px-40'>
                 {children}
             </main>
 
