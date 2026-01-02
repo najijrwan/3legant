@@ -27,6 +27,7 @@ export default defineConfig({
           '@home': path.resolve(__dirname, './src/components/sections/home'),
         '@ui': path.resolve(__dirname, './src/components/ui'),
           '@cards': path.resolve(__dirname, './src/components/ui/cards'),
+          '@Carousel': path.resolve(__dirname, './src/components/ui/Carousel'),
           '@product': path.resolve(__dirname, './src/components/ui/product'),
           '@blog': path.resolve(__dirname, './src/components/ui/blog'),
 
