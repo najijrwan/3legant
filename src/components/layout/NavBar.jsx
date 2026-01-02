@@ -51,13 +51,14 @@ const NavBar = ({ }) => {
 
             <ul
                 className="
-                    flex items-center gap-10
+                    w-fit h-fit
+                    hidden 2xl:flex items-center gap-10
                     text-(--neutral-4-100) btn-xs font-space-grotesk"
             >
                 {navitems.map((item, index) => (
                     <li
                         key={index}
-                        className=""
+                        className="w-fit h-fit"
                     >
                         <a
                             href={item.href}
