@@ -7,7 +7,7 @@ const NotificationBar = ({ }) => {
             className="
             relative
             h-10
-            flex items-center justify-center gap-5.5 2xl:gap-127
+            flex items-center justify-center gap-5.5 2xl:gap-127 2xl:justify-end 2xl:pr-4
             bg-(--neutral-2-100)"
         >
 
@@ -39,8 +39,7 @@ const NotificationBar = ({ }) => {
             </div>
 
             <button
-                className="
-                2xl:translate-x-[254px]"
+                className=""
             >
                 <Icon name="Close" className="size-4 2xl:size-5" />
             </button>

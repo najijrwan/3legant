@@ -71,27 +71,50 @@ const NavBar = ({ }) => {
 
             <div
                 className="
-                w-12.5 h-7
-                flex items-center justify-between"
+                flex flex-row-reverse items-center gap-4"
             >
+                <div
+                    className="
+                    w-12.5 h-7
+                    flex items-center gap-2.5"
+                >
+                    <button
+                        className="
+                    size-6 flex items-center justify-center"
+                    >
+                        <Icon
+                            name="ShoppingBag"
+                            className=""
+                        />
+                    </button>
+                    <span
+                        className="
+                    size-5 rounded-full
+                    flex items-center justify-center
+                    text-white text-xs leading-2.5 tracking-normal font-inter font-bold
+                    bg-(--neutral-7-100)"
+                    >
+                        2
+                    </span>
+                </div>
                 <button
                     className="
                     size-6 flex items-center justify-center"
                 >
                     <Icon
-                        name="ShoppingBag"
+                        name="UserCircle"
                         className=""
                     />
                 </button>
-                <span
+                <button
                     className="
-                    size-5 rounded-full
-                    flex items-center justify-center
-                    text-white text-xs leading-2.5 tracking-normal font-inter font-bold
-                    bg-(--neutral-7-100)"
+                    size-6 flex items-center justify-center"
                 >
-                    2
-                </span>
+                    <Icon
+                        name="Search"
+                        className=""
+                    />
+                </button>
             </div>
 
         </nav>
