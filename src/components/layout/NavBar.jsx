@@ -10,7 +10,7 @@ const navitems = [
         href: '#',
     },
     {
-        page: 'About',
+        page: 'Product',
         href: '#',
     },
     {
@@ -104,7 +104,7 @@ const NavBar = ({ }) => {
                 >
                     <Icon
                         name="UserCircle"
-                        className=""
+                        className="hidden 2xl:block"
                     />
                 </button>
                 <button
@@ -113,7 +113,7 @@ const NavBar = ({ }) => {
                 >
                     <Icon
                         name="Search"
-                        className=""
+                        className="hidden 2xl:block"
                     />
                 </button>
             </div>
