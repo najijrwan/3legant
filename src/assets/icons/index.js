@@ -13,3 +13,5 @@ export { ReactComponent as Heart } from './heart.svg';
 export { ReactComponent as Instagram } from './instagram.svg';
 export { ReactComponent as Facebook } from './facebook.svg';
 export { ReactComponent as YouTube } from './youtube.svg';
+export { ReactComponent as Minus } from './minus.svg';
+export { ReactComponent as Add } from './add.svg';

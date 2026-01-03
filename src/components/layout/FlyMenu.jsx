@@ -37,12 +37,13 @@ const FlyMenu = ({ onClose }) => {
                     flex justify-between">
                     <Brand />
                     <button
+                        onClick={onClose}
                         className=""
                     >
                         <Icon
-                            onClick={onClose}
                             name="Close"
-                            className="size-6 2xl:size-5" />
+                            className="size-6 2xl:size-5"
+                        />
                     </button>
                 </div>
 
