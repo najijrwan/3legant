@@ -63,6 +63,7 @@ const FlyMenu = ({ onClose }) => {
                 </form>
 
                 <NavLinks
+                    showChevron
                     ulClass='
                     w-full
                     flex flex-col gap-4
