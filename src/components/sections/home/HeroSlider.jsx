@@ -32,7 +32,9 @@ const HeroSlider = () => {
             pb-10 
             flex flex-col gap-8"
         >
+            {/* Images Slider */}
             <div
+                data-id="slider"
                 className="
                 relative
                 w-full h-[304px] 2xl:h-[536px] 
@@ -94,6 +96,7 @@ const HeroSlider = () => {
                 </div>
             </div>
 
+            {/* Slider Caption */}
             <div
                 className="
                 flex flex-col 2xl:flex-row 2xl:items-center gap-4 2xl:gap-6"
