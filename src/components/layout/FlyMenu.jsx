@@ -1,4 +1,4 @@
-import { Icon, Brand, CartButton } from '@ui';
+import { Icon, Brand, CartButton, SocialLinks } from '@ui';
 import { NavLinks } from '@navigation';
 
 const userSavedProducts = [
@@ -124,7 +124,9 @@ const FlyMenu = ({ onClose }) => {
                     <span className=''>Sign In</span>
                 </button>
 
-                
+                <div className="w-full">
+                    <SocialLinks color='--neutral-7-100' />
+                </div>
             </div>
         </aside>
     );

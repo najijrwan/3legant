@@ -10,3 +10,6 @@ export { ReactComponent as UserCircle } from './user-circle.svg';
 export { ReactComponent as Search } from './search-02.svg';
 export { ReactComponent as ChevronDown } from './chevron-down.svg';
 export { ReactComponent as Heart } from './heart.svg';
+export { ReactComponent as Instagram } from './instagram.svg';
+export { ReactComponent as Facebook } from './facebook.svg';
+export { ReactComponent as YouTube } from './youtube.svg';
