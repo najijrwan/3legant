@@ -1,6 +1,20 @@
 import { Icon } from '@ui';
 
-const CartButton = ({ count = 0 }) => {
+export const WishlistButton = ({ count = 0 }) => {
+    return (
+        <span
+            className="
+                size-5 rounded-full
+                flex items-center justify-center
+                text-white text-xs leading-2.5 tracking-normal font-inter font-bold
+                bg-(--neutral-7-100)"
+        >
+            {count}
+        </span>
+    );
+}
+
+const CartButton = ({ count }) => {
     return (
         <div
             className="
@@ -11,18 +25,9 @@ const CartButton = ({ count = 0 }) => {
                 className="
                 size-6 flex items-center justify-center"
             >
-                <Icon name="ShoppingBag"/>
+                <Icon name="ShoppingBag" />
             </button>
-
-            <span
-                className="
-                size-5 rounded-full
-                flex items-center justify-center
-                text-white text-xs leading-2.5 tracking-normal font-inter font-bold
-                bg-(--neutral-7-100)"
-            >
-                {count}
-            </span>
+            <WishlistButton count={count} />
         </div>
     );
 }

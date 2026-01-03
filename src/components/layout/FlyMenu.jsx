@@ -1,5 +1,11 @@
 import { Icon, Brand, CartButton } from '@ui';
-import {NavLinks} from '@navigation';
+import { NavLinks } from '@navigation';
+import { WishlistButton } from '@ui/CartButton.jsx';
+
+const cartAndWishlistClass = `
+    w-full h-8 pb-1.75
+    flex justify-between
+    border-b border-(--neutral-3-100) box-border`;
 
 const FlyMenu = ({ onClose }) => {
     return (
@@ -78,8 +84,30 @@ const FlyMenu = ({ onClose }) => {
             </div>
 
             {/* Bottom Container: Account Actions & Social Links */}
-            <div className="">
-
+            <div
+                className="
+                w-full"
+            >
+                <div
+                    className="
+                    w-full
+                    flex flex-col gap-2
+                    text-(--neutral-4-100)
+                    border-b border-(--neutral-4-100) box-border"
+                >
+                    <button
+                        className={cartAndWishlistClass}
+                    >
+                        <span>Cart</span>
+                        <CartButton />
+                    </button>
+                    <button
+                        className={cartAndWishlistClass}
+                    >
+                        <span>Cart</span>
+                        <WishlistButton count={2}/>
+                    </button>
+                </div>
             </div>
         </aside>
     );
