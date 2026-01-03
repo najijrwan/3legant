@@ -1,25 +1,6 @@
 import { Icon, Brand, CartButton } from '@ui';
 import {NavLinks} from '@navigation';
 
-const navitems = [
-    {
-        page: 'Home',
-        href: '#',
-    },
-    {
-        page: 'Shop',
-        href: '#',
-    },
-    {
-        page: 'Product',
-        href: '#',
-    },
-    {
-        page: 'Contact Us',
-        href: '#',
-    },
-]
-
 const NavBar = ({ onMenuOpen }) => {
     return (
         <nav
@@ -45,8 +26,10 @@ const NavBar = ({ onMenuOpen }) => {
             </div>
 
             <NavLinks
-                navitems={navitems}
-                ulClass="w-fit h-fit hidden 2xl:flex items-center gap-10 text-(--neutral-4-100) btn-xs font-space-grotesk"
+                ulClass="
+                w-fit h-fit 
+                hidden 2xl:flex items-center gap-10 
+                text-(--neutral-4-100) btn-xs font-space-grotesk"
                 liClass="w-fit h-fit"
                 aClass=""
             />

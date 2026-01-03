@@ -1,4 +1,5 @@
 import { Icon, Brand, CartButton } from '@ui';
+import {NavLinks} from '@navigation';
 
 const FlyMenu = ({ onClose }) => {
     return (
@@ -61,12 +62,18 @@ const FlyMenu = ({ onClose }) => {
                     </div>
                 </form>
 
-                <ul 
-                    className="
-                    flex flex-col gap-4"
-                >
-                    
-                </ul>
+                <NavLinks
+                    ulClass='
+                    w-full
+                    flex flex-col gap-4
+                    btn-xs text-(--neutral-7-100)'
+                    liClass='
+                    w-full pb-1.75
+                    border-b border-(--neutral-3-100) box-border'
+                    divClass='
+                    w-full h-8'
+                    aClass='w-full'
+                />
             </div>
 
             {/* Bottom Container: Account Actions & Social Links */}

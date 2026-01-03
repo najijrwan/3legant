@@ -59,7 +59,7 @@ const HeroSlider = () => {
                         key={i}
                         onClick={() => handleNav(button.side)}
                         className={`
-                        absolute top-[238px] ${button.side}-6
+                        absolute top-[238px] ${button.side === 'left' ? 'left-6' : 'right-6'}
                         size-13 rounded-full
                         hidden 2xl:flex items-center justify-center 
                         bg-white
