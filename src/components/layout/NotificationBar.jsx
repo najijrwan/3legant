@@ -1,20 +1,22 @@
 import { Icon } from '@ui';
 
-const NotificationBar = ({ }) => {
+const NotificationBar = () => {
     return (
         <header
-            data-title="Notification Bar"
+            data-id="notificationBar"
             className="
             relative
             h-10
             flex items-center justify-center gap-5.5 2xl:gap-[508px] 2xl:justify-end 2xl:pr-6
             bg-(--neutral-2-100)"
         >
-
+            {/* Notification Message & Shop Button */}
             <div
+                data-id='notificationMessege'
                 className="
                 flex items-center gap-3"
             >
+                {/* Message */}
                 <div
                     className="
                     flex items-center gap-2 2xl:gap-3"
@@ -28,6 +30,7 @@ const NotificationBar = ({ }) => {
                     </p>
                 </div>
 
+                {/* Shop */}
                 <button
                     className="
                     hidden 2xl:flex items-center gap-1
@@ -49,7 +52,9 @@ const NotificationBar = ({ }) => {
                 </button>
             </div>
 
+            {/* Close Notification Button */}
             <button
+                data-id='closeNotification'
                 className="
                 "
             >

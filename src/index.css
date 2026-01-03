@@ -175,4 +175,8 @@ body {
   h6 {
     @apply text-[28px] leading-[34px] -tracking-[0.6px] font-poppins font-medium;
   }
+
+  button {
+    @apply cursor-pointer
+  }
 }

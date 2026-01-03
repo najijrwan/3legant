@@ -18,18 +18,19 @@ const FlyMenu = ({ onClose }) => {
             data-title='Fly Menu'
             className='
             absolute top-0 left-0
-            w-[343px] h-screen p-6
+            w-[343px] h-full max-h-[812px] p-6
             flex flex-col justify-between
             bg-white
             z-20'
         >
-            {/* Top Container: Accessibility & Branding */}
+            {/* Top Container: Branding & Accessibility*/}
             <div
-                data-id='topContainer'
+                data-id='branding&accessibility'
                 className="
                 w-full
                 flex flex-col gap-4"
             >
+                {/* Brand & Close Menu Button */}
                 <div
                     className="
                     w-full
@@ -45,6 +46,7 @@ const FlyMenu = ({ onClose }) => {
                     </button>
                 </div>
 
+                {/* Search Product Input */}
                 <form
                     className="
                     w-full h-11.5 px-4 rounded-[6px]
@@ -73,6 +75,7 @@ const FlyMenu = ({ onClose }) => {
                     </div>
                 </form>
 
+                {/* Pages Navigation Links */}
                 <NavLinks
                     showChevron
                     ulClass='
@@ -94,6 +97,7 @@ const FlyMenu = ({ onClose }) => {
                 w-full h-52.5
                 flex flex-col justify-between"
             >
+                {/* Cart & wishlist */}
                 <div
                     className="
                     w-full
@@ -102,8 +106,9 @@ const FlyMenu = ({ onClose }) => {
                     border-b border-(--neutral-4-100) box-border"
                 >
 
-                    {userSavedProducts.map((item) => (
+                    {userSavedProducts.map((item, i) => (
                         <div
+                            key={i}
                             className="
                             w-full h-8 pb-1.75
                             flex justify-between
@@ -115,6 +120,7 @@ const FlyMenu = ({ onClose }) => {
                     ))}
                 </div>
 
+                {/* Sign In */}
                 <button className="
                     w-full py-2.5 px-6.5 rounded-md
                     flex items-center justify-center
@@ -124,6 +130,7 @@ const FlyMenu = ({ onClose }) => {
                     <span className=''>Sign In</span>
                 </button>
 
+                {/* Social Media Links */}
                 <div className="w-full">
                     <SocialLinks color='--neutral-7-100' />
                 </div>

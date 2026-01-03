@@ -4,13 +4,14 @@ import { NavLinks } from '@navigation';
 const NavBar = ({ onMenuOpen }) => {
     return (
         <nav
-            data-title="Navigation Bar"
+            data-id="NavigationBar"
             className="
             w-full py-4 px-8 2xl:px-40
             flex justify-between"
         >
-
+            {/* Brand & Menu */}
             <div
+                data-id='brand&menu'
                 className='
                 flex gap-1'
             >
@@ -25,7 +26,9 @@ const NavBar = ({ onMenuOpen }) => {
                 <Brand />
             </div>
 
+            {/* Pages Navigation Links */}
             <NavLinks
+                data-id='pages'
                 ulClass="
                 w-fit h-fit 
                 hidden 2xl:flex items-center gap-10 
@@ -34,7 +37,9 @@ const NavBar = ({ onMenuOpen }) => {
                 aClass=""
             />
 
+            {/* Action & Accessiblity Buttons */}
             <div
+                data-id='navButtons'
                 className="
                 flex flex-row-reverse items-center gap-4"
             >

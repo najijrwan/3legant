@@ -98,6 +98,7 @@ const HeroSlider = () => {
 
             {/* Slider Caption */}
             <div
+                data-id="sliderCaption"
                 className="
                 flex flex-col 2xl:flex-row 2xl:items-center gap-4 2xl:gap-6"
             >

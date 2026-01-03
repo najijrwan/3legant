@@ -26,6 +26,7 @@ const Layout = ({ children }) => {
             )}
 
             <main
+                data-id='main'
                 className='
                 w-full px-8 2xl:px-40'>
                 {children}

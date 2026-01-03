@@ -24,6 +24,7 @@ const SocialLinks = ({ color = '' }) => {
         >
             {SOCIAL_LINKS.map((social, i) => (
                 <a
+                    key={i}
                     href={social.link}
                     className="size-6 flex items-center justify-center"
                 >
