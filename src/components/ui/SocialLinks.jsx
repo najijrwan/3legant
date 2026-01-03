@@ -29,7 +29,7 @@ const SocialLinks = ({ color = '' }) => {
                 >
                     <Icon
                         name={social.iconName}
-                        className={`text-(${color})`}
+                        className={`size-5 text-(${color})`}
                     />
                 </a>
             ))}
