@@ -21,7 +21,7 @@ export default defineConfig({
       '@components': path.resolve(__dirname, './src/components'),
 
         '@layout': path.resolve(__dirname, './src/components/layout'),
-          '@footer': path.resolve(__dirname, './src/components/layout/footer'),
+        '@navigation': path.resolve(__dirname, './src/components/navigation'),
         '@sections': path.resolve(__dirname, './src/components/sections'),
           '@auth': path.resolve(__dirname, './src/components/sections/auth'),
           '@home': path.resolve(__dirname, './src/components/sections/home'),

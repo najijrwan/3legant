@@ -15,7 +15,8 @@ const FlyMenu = ({ onClose }) => {
             <div
                 data-id='topContainer'
                 className="
-                w-full "
+                w-full
+                flex flex-col gap-4"
             >
                 <div
                     className="
@@ -32,7 +33,40 @@ const FlyMenu = ({ onClose }) => {
                     </button>
                 </div>
 
-                
+                <form
+                    className="
+                    w-full h-11.5 px-4 rounded-[6px]
+                    border border-(--neutral-4-100)
+                    flex items-center"
+                >
+                    <div
+                        type="text"
+                        className="
+                        w-full
+                        flex gap-2"
+                    >
+                        <span className='size-6'>
+                            <Icon name="Search" />
+                        </span>
+                        <input
+                            type="text"
+                            id="searchPrduct"
+                            name="search"
+                            placeholder='Search'
+                            className='
+                            w-full
+                            text-(--neutral-4-100) caption-1
+                            outline-0'
+                        />
+                    </div>
+                </form>
+
+                <ul 
+                    className="
+                    flex flex-col gap-4"
+                >
+                    
+                </ul>
             </div>
 
             {/* Bottom Container: Account Actions & Social Links */}
