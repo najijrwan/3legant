@@ -11,6 +11,7 @@ const FlyMenu = ({ onClose }) => {
             bg-white
             z-20'
         >
+            {/* Top Container: Accessibility & Branding */}
             <div
                 data-id='topContainer'
                 className="
@@ -30,9 +31,14 @@ const FlyMenu = ({ onClose }) => {
                             className="size-6 2xl:size-5" />
                     </button>
                 </div>
+
+                
             </div>
 
-            <div className=""></div>
+            {/* Bottom Container: Account Actions & Social Links */}
+            <div className="">
+
+            </div>
         </aside>
     );
 }
