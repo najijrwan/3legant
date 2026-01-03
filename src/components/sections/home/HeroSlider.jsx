@@ -27,7 +27,7 @@ const HeroSlider = () => {
 
     return (
         <section
-            data-title= 'Hero Slider'
+            data-title='Hero Slider'
             className="
             pb-10 
             flex flex-col gap-8"
@@ -46,7 +46,10 @@ const HeroSlider = () => {
                         <img
                             key={i}
                             src={src}
-                            className="w-full h-full object-cover object-[55%_100%] 2xl:object-bottom-right flex-shrink-0"
+                            className="
+                            w-full h-full
+                            flex-shrink-0
+                            object-cover object-[55%_100%] 2xl:object-bottom-right"
                         />
                     ))}
                 </Carousel>
@@ -93,7 +96,7 @@ const HeroSlider = () => {
 
             <div
                 className="
-            flex flex-col 2xl:flex-row 2xl:items-center gap-4 2xl:gap-6"
+                flex flex-col 2xl:flex-row 2xl:items-center gap-4 2xl:gap-6"
             >
                 <h4 className="
                 2xl:w-[643px]

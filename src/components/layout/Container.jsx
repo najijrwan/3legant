@@ -1,8 +1,10 @@
 const Container = ({ children, className = '' }) => {
   return (
     <div
+      data-id="container"
       className={`
-      w-[375px] max-w-[1440px] mx-auto 
+        relative
+      w-[375px] 2xl:w-[1440px] mx-auto 
       ${className}`}
     >
       {children}

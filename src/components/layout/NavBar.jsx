@@ -1,4 +1,4 @@
-import { Icon, CartButton } from '@ui';
+import { Icon, Brand, CartButton } from '@ui';
 
 const navitems = [
     {
@@ -19,7 +19,7 @@ const navitems = [
     },
 ]
 
-const NavBar = () => {
+const NavBar = ({ onMenuOpen }) => {
     return (
         <nav
             data-title="Navigation Bar"
@@ -33,21 +33,14 @@ const NavBar = () => {
                 flex gap-1'
             >
                 <button
+                    onClick={onMenuOpen}
                     className="
                     size-6 flex 2xl:hidden items-center justify-center"
                 >
-                    <Icon
-                        name="Menu"
-                        className=""
-                    />
+                    <Icon name="Menu" />
                 </button>
-                <header
-                    className='
-                    text-(--primary) text-base 2xl:text-2xl leading-6 2xl:leading-6 tracking-[0] 
-                    font-poppins font-medium whitespace-break-spaces'
-                >
-                    3legant<span className="text-(--neutral-4-100)">. </span>
-                </header>
+
+                <Brand />
             </div>
 
             <ul
