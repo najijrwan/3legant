@@ -22,10 +22,10 @@ const FlyoutCart = ({ onClose }) => {
                     w-full
                     flex justify-between'
                 >
-                    <h6>Cart</h6>
+                    <h6 className='text-[#121212]'>Cart</h6>
                     <button
                         onClick={onClose}
-                        className="size-6"
+                        className="size-6 text-(--neutral-4-100)"
                     >
                         <Icon
                             name="Close"
@@ -45,5 +45,7 @@ const FlyoutCart = ({ onClose }) => {
 
             </div>
         </aside>
-    )
+    );
 }
+
+export default FlyoutCart;
