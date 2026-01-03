@@ -91,7 +91,8 @@ const FlyMenu = ({ onClose }) => {
             {/* Bottom Container: Account Actions & Social Links */}
             <div
                 className="
-                w-full"
+                w-full h-52.5
+                flex flex-col justify-between"
             >
                 <div
                     className="
@@ -113,6 +114,17 @@ const FlyMenu = ({ onClose }) => {
                         </div>
                     ))}
                 </div>
+
+                <button className="
+                    w-full py-2.5 px-6.5 rounded-md
+                    flex items-center justify-center
+                    bg-(--neutral-7-100)
+                    btn-m text-white"
+                >
+                    <span className=''>Sign In</span>
+                </button>
+
+                
             </div>
         </aside>
     );
