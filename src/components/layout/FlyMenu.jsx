@@ -1,10 +1,16 @@
 import { Icon, Brand, CartButton } from '@ui';
 import { NavLinks } from '@navigation';
 
-const cartAndWishlistClass = `
-    w-full h-8 pb-1.75
-    flex justify-between
-    border-b border-(--neutral-3-100) box-border`;
+const userSavedProducts = [
+    {
+        label: "Cart",
+        tool: <CartButton iconName="ShoppingBag" count={2} />,
+    },
+    {
+        label: "Wishlist",
+        tool: <CartButton iconName="Heart" count={2} />,
+    }
+]
 
 const FlyMenu = ({ onClose }) => {
     return (
@@ -94,18 +100,18 @@ const FlyMenu = ({ onClose }) => {
                     text-(--neutral-4-100)
                     border-b border-(--neutral-4-100) box-border"
                 >
-                    <div
-                        className={cartAndWishlistClass}
-                    >
-                        <span>Cart</span>
-                        <CartButton iconName="ShoppingBag" count={2} />
-                    </div>
-                    <div
-                        className={cartAndWishlistClass}
-                    >
-                        <span>Wishlist</span>
-                        <CartButton iconName="Heart" count={2}/>
-                    </div>
+
+                    {userSavedProducts.map((item) => (
+                        <div
+                            className="
+                            w-full h-8 pb-1.75
+                            flex justify-between
+                            border-b border-(--neutral-3-100) box-border"
+                        >
+                            <span>{item.label}</span>
+                            {item.tool}
+                        </div>
+                    ))}
                 </div>
             </div>
         </aside>
