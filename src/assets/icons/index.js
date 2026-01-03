@@ -9,3 +9,4 @@ export { ReactComponent as ShoppingBag } from './shopping-bag.svg';
 export { ReactComponent as UserCircle } from './user-circle.svg';
 export { ReactComponent as Search } from './search-02.svg';
 export { ReactComponent as ChevronDown } from './chevron-down.svg';
+export { ReactComponent as Heart } from './heart.svg';

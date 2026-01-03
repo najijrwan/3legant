@@ -1,6 +1,5 @@
 import { Icon, Brand, CartButton } from '@ui';
 import { NavLinks } from '@navigation';
-import { WishlistButton } from '@ui/CartButton.jsx';
 
 const cartAndWishlistClass = `
     w-full h-8 pb-1.75
@@ -95,18 +94,18 @@ const FlyMenu = ({ onClose }) => {
                     text-(--neutral-4-100)
                     border-b border-(--neutral-4-100) box-border"
                 >
-                    <button
+                    <div
                         className={cartAndWishlistClass}
                     >
                         <span>Cart</span>
-                        <CartButton />
-                    </button>
-                    <button
+                        <CartButton iconName="ShoppingBag" count={2} />
+                    </div>
+                    <div
                         className={cartAndWishlistClass}
                     >
-                        <span>Cart</span>
-                        <WishlistButton count={2}/>
-                    </button>
+                        <span>Wishlist</span>
+                        <CartButton iconName="Heart" count={2}/>
+                    </div>
                 </div>
             </div>
         </aside>
