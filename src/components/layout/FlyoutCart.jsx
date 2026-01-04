@@ -1,4 +1,5 @@
 import { Icon } from '@ui';
+import { formatPrice } from '@utils';
 
 const cartItems = [
     {
@@ -32,7 +33,7 @@ const FlyoutCart = ({ isOpen, onClose }) => {
             w-[343px] 2xl:w-[413px] h-full max-h-[812px] 2xl:max-h-[1024px] p-6 2xl:py-10
             flex 2xl:hidden flex-col justify-between
             bg-white
-            transition-transform duration-300 ease-out
+            transition-transform duration-100 ease-out
             z-30`}
         >
             {/* Top Container: Cart Produts & Products Actions */}
@@ -77,7 +78,7 @@ const FlyoutCart = ({ isOpen, onClose }) => {
                         >
                             <div className="
                                 w-full
-                                flex flex-col gap-4"
+                                flex gap-4"
                             >
                                 <div
                                     className='
@@ -90,7 +91,25 @@ const FlyoutCart = ({ isOpen, onClose }) => {
                                     />
                                 </div>
 
+                                <div
+                                    className="
+                                    w-full
+                                    flex flex-col gap-2"
+                                >
+                                    <p className="w-full
+                                    flex justify-between
+                                    text-(--neutral-7-100) caption-1-semi">
+                                        <span>{item.name}</span>
+                                        <span>{formatPrice(item.price)}</span>
+                                    </p>
 
+                                    <p className="w-full
+                                    flex justify-between
+                                    text-(--neutral-4-100) caption-2">
+                                        <span>Color: {item.color}</span>
+                                        <span><Icon name="Close" className='size-6' /></span>
+                                    </p>
+                                </div>
                             </div>
                         </li>
                     ))}

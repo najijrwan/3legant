@@ -21,7 +21,7 @@ const FlyMenu = ({ isOpen, onClose, onCartOpen }) => {
             w-[343px] h-full max-h-[812px] p-6
             flex 2xl:hidden flex-col justify-between
             bg-white
-            transform transition-transform duration-300 ease-out 
+            transform transition-transform duration-100 ease-out 
             z-20`}
         >
             {/* Top Container: Branding & Accessibility*/}
