@@ -30,7 +30,7 @@ const FlyoutCart = ({ isOpen, onClose }) => {
             className={`
             absolute top-0 right-0 transform ${isOpen ? 'translate-x-0' : 'translate-x-full'}
             w-[343px] 2xl:w-[413px] h-full max-h-[812px] 2xl:max-h-[1024px] p-6 2xl:py-10
-            flex flex-col justify-between
+            flex 2xl:hidden flex-col justify-between
             bg-white
             transition-transform duration-300 ease-out
             z-30`}
@@ -71,12 +71,27 @@ const FlyoutCart = ({ isOpen, onClose }) => {
                 >
                     {cartItems.map((item, i) => (
                         <li
+                            key={i}
                             className="
                             w-full py-6"
                         >
                             <div className="
                                 w-full
-                                flex flex-col gap-4"></div>
+                                flex flex-col gap-4"
+                            >
+                                <div
+                                    className='
+                                    w-20 h-24
+                                    bg-[#F3F5F7]'>
+                                    <img
+                                        src={item.image}
+                                        alt={`${item.name} image`}
+                                        className="size-full object-cover"
+                                    />
+                                </div>
+
+
+                            </div>
                         </li>
                     ))}
                 </ul>

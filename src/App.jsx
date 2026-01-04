@@ -2,7 +2,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import { AuthPopup } from '@auth';
-import HomePage from '@pages/index.jsx';
+import { HomePage } from '@pages';
 
 const AuthPage = () => {
   const navigate = useNavigate();

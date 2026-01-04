@@ -19,7 +19,7 @@ const FlyMenu = ({ isOpen, onClose, onCartOpen }) => {
             className={`
             absolute top-0 left-0 ${isOpen ? 'translate-x-0' : '-translate-x-full'}
             w-[343px] h-full max-h-[812px] p-6
-            flex flex-col justify-between
+            flex 2xl:hidden flex-col justify-between
             bg-white
             transform transition-transform duration-300 ease-out 
             z-20`}
