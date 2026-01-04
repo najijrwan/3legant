@@ -28,15 +28,16 @@ const cartItems = [
 const FlyoutCart = ({ isOpen, onClose }) => {
     return (
         <aside
+            data-id='Flyout Cart'
             className={`
-            absolute top-0 right-0 transform ${isOpen ? 'translate-x-0' : 'translate-x-full'}
+            fixed top-0 right-0 transform ${isOpen ? 'translate-x-0' : 'translate-x-full'}
             w-[343px] 2xl:w-[413px] h-full p-6 2xl:py-10
             flex flex-col justify-between
             bg-white
             transition-transform duration-100 ease-out
             z-30`}
         >
-            {/* Top Container: Cart Produts & Products Actions */}
+            {/* Top Container: Cart Products*/}
             <div
                 data-id='cartProducts'
                 className="
@@ -65,7 +66,7 @@ const FlyoutCart = ({ isOpen, onClose }) => {
                     </button>
                 </header>
 
-                {/* Cart Products Action */}
+                {/* Cart Products Summary */}
                 <ul className="
                     w-full
                     flex flex-col gap-4 2xl:gap-6"
@@ -116,9 +117,9 @@ const FlyoutCart = ({ isOpen, onClose }) => {
                 </ul>
             </div>
 
-            {/* Bottom Container: Cart Checkout & Actions */}
+            {/* Bottom Container: Cart Checkout */}
             <div
-                data-id='cartSummary'
+                data-id='cartCheckout'
                 className="
                 w-full
                 flex flex-col"

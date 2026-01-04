@@ -4,7 +4,7 @@ const Container = ({ children, className = '' }) => {
       data-id="container"
       className={`
       relative
-      w-[375px] 2xl:w-[1440px] mx-auto overflow-hidden
+      w-full 2xl:w-[1440px] min-h-[1024px] mx-auto
       ${className}`}
     >
       {children}
