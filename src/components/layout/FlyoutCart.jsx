@@ -30,8 +30,8 @@ const FlyoutCart = ({ isOpen, onClose }) => {
         <aside
             className={`
             absolute top-0 right-0 transform ${isOpen ? 'translate-x-0' : 'translate-x-full'}
-            w-[343px] 2xl:w-[413px] h-full max-h-[812px] 2xl:max-h-[1024px] p-6 2xl:py-10
-            flex 2xl:hidden flex-col justify-between
+            w-[343px] 2xl:w-[413px] h-full p-6 2xl:py-10
+            flex flex-col justify-between
             bg-white
             transition-transform duration-100 ease-out
             z-30`}
@@ -87,13 +87,13 @@ const FlyoutCart = ({ isOpen, onClose }) => {
                                     <img
                                         src={item.image}
                                         alt={`${item.name} image`}
-                                        className="size-full object-cover"
+                                        className="size-full object-cover object-center"
                                     />
                                 </div>
 
                                 <div
                                     className="
-                                    w-full
+                                    w-49.75 2xl:w-[267px]
                                     flex flex-col gap-2"
                                 >
                                     <p className="w-full
