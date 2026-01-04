@@ -1,7 +1,7 @@
 import { Icon, Brand, CartButton } from '@ui';
 import { NavLinks } from '@navigation';
 
-const NavBar = ({ onMenuOpen, onFlyoutCartOpen }) => {
+const NavBar = ({ onMenuOpen, onCartOpen }) => {
     return (
         <nav
             data-id="NavigationBar"
@@ -44,7 +44,7 @@ const NavBar = ({ onMenuOpen, onFlyoutCartOpen }) => {
                 flex flex-row-reverse items-center gap-4"
             >
                 <CartButton
-                    onClick={onFlyoutCartOpen}
+                    onClick={onCartOpen}
                     count={2}
                     iconName="ShoppingBag"
                 />

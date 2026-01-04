@@ -12,16 +12,17 @@ const userSavedProducts = [
     }
 ]
 
-const FlyMenu = ({ onClose }) => {
+const FlyMenu = ({ isOpen, onClose }) => {
     return (
         <aside
             data-title='Fly Menu'
-            className='
-            absolute top-0 left-0
+            className={`
+            absolute top-0 left-0 ${isOpen ? 'translate-x-0' : '-translate-x-full'}
             w-[343px] h-full max-h-[812px] p-6
             flex flex-col justify-between
             bg-white
-            z-20'
+            transform transition-transform duration-300 ease-out 
+            z-20`}
         >
             {/* Top Container: Branding & Accessibility*/}
             <div

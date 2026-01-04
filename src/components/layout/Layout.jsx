@@ -12,24 +12,25 @@ const Layout = ({ children }) => {
 
             <NavBar
                 onMenuOpen={() => setFlyMenuOpen(true)}
-                onFlyoutCartOpen={() => setFlyoutCartOpen(true)}
+                onCartOpen={() => setFlyoutCartOpen(true)}
             />
 
-            {isFlyMenuOpen || isFlyoutCartOpen && (
-                <>
-                    {/* Overlay */}
-                    <div
-                        data-id='overlay'
-                        className="fixed inset-0 bg-black/32 z-10"
-                        onClick={() => setFlyMenuOpen(false)}
-                    />
+            <FlyMenu
+                isOpen={isFlyMenuOpen}
+                onClose={() => setFlyMenuOpen(false)}
+            />
 
-                    {/* FlyMenu */}
-                    <FlyMenu onClose={() => setFlyMenuOpen(false)} />
+            <FlyoutCart
+                isOpen={isFlyoutCartOpen}
+                onClose={() => setFlyoutCartOpen(false)}
+            />
 
-                    {/* FlyoutCart */}
-                    <FlyoutCart onClose={() => setFlyoutCartOpen(false)} />
-                </>
+            {isFlyMenuOpen && (
+                <div
+                    data-id="overlay"
+                    className="fixed inset-0 bg-black/32 z-10"
+                    onClick={() => setFlyMenuOpen(false)}
+                />
             )}
 
             <main
