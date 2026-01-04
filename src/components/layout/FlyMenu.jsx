@@ -15,126 +15,130 @@ const FlyMenu = ({ isOpen, onClose, onCartOpen }) => {
 
     return (
         <aside
-            data-title='Fly Menu'
             className={`
-            absolute top-0 left-0 ${isOpen ? 'translate-x-0' : '-translate-x-full'}
-            w-[343px] h-screen min-h-[812px] max-h-[812px] p-6
-            flex 2xl:hidden flex-col justify-between
-            bg-white
-            transform transition-transform duration-100 ease-out 
-            z-20`}
+            fixed top-0 left-0 z-20 ${isOpen ? 'translate-x-0' : '-translate-x-full'}
+            w-[343px] h-screen p-6 overflow-y-auto 
+            transform transition-transform duration-100 ease-out
+            bg-white`}
         >
-            {/* Top Container: Branding & Accessibility*/}
             <div
-                data-id='branding&accessibility'
-                className="
+                data-title='Fly Menu'
+                className={`
+            h-screen pb-30
+            flex 2xl:hidden flex-col justify-between`}
+            >
+                {/* Top Container: Branding & Accessibility*/}
+                <div
+                    data-id='branding&accessibility'
+                    className="
                 w-full
                 flex flex-col gap-4"
-            >
-                {/* Brand & Close Menu Button */}
-                <div
-                    className="
+                >
+                    {/* Brand & Close Menu Button */}
+                    <div
+                        className="
                     w-full
                     flex justify-between">
-                    <Brand />
-                    <button
-                        onClick={onClose}
-                        className=""
-                    >
-                        <Icon
-                            name="Close"
-                            className="size-6 2xl:size-5"
-                        />
-                    </button>
-                </div>
+                        <Brand />
+                        <button
+                            onClick={onClose}
+                            className=""
+                        >
+                            <Icon
+                                name="Close"
+                                className="size-6 2xl:size-5"
+                            />
+                        </button>
+                    </div>
 
-                {/* Search Product Input */}
-                <form
-                    className="
+                    {/* Search Product Input */}
+                    <form
+                        className="
                     w-full h-11.5 px-4 rounded-[6px]
                     border border-(--neutral-4-100)
                     flex items-center"
-                >
-                    <div
-                        type="text"
-                        className="
+                    >
+                        <div
+                            type="text"
+                            className="
                         w-full
                         flex gap-2"
-                    >
-                        <span className='size-6'>
-                            <Icon name="Search" />
-                        </span>
-                        <input
-                            type="text"
-                            id="searchPrduct"
-                            name="search"
-                            placeholder='Search'
-                            className='
+                        >
+                            <span className='size-6'>
+                                <Icon name="Search" />
+                            </span>
+                            <input
+                                type="text"
+                                id="searchPrduct"
+                                name="search"
+                                placeholder='Search'
+                                className='
                             w-full
                             text-(--neutral-4-100) caption-1
                             outline-0'
-                        />
-                    </div>
-                </form>
+                            />
+                        </div>
+                    </form>
 
-                {/* Pages Navigation Links */}
-                <NavLinks
-                    showChevron
-                    ulClass='
+                    {/* Pages Navigation Links */}
+                    <NavLinks
+                        showChevron
+                        ulClass='
                     w-full
                     flex flex-col gap-4
                     btn-xs text-(--neutral-7-100)'
-                    liClass='
+                        liClass='
                     w-full pb-1.75
                     border-b border-(--neutral-3-100) box-border'
-                    divClass='
+                        divClass='
                     w-full h-8'
-                    aClass='w-full'
-                />
-            </div>
+                        aClass='w-full'
+                    />
+                </div>
 
-            {/* Bottom Container: Account Actions & Social Links */}
-            <div
-                className="
-                w-full h-52.5
-                flex flex-col justify-between"
-            >
-                {/* Cart & wishlist */}
+                {/* Bottom Container: Account Actions & Social Links */}
                 <div
                     className="
+                w-full h-52.5
+                flex flex-col justify-between"
+                >
+                    {/* Cart & wishlist */}
+                    <div
+                        className="
                     w-full
                     flex flex-col gap-2
                     text-(--neutral-4-100)
                     border-b border-(--neutral-4-100) box-border"
-                >
+                    >
 
-                    {userSavedProducts.map((item, i) => (
-                        <div
-                            key={i}
-                            className="
+                        {userSavedProducts.map((item, i) => (
+                            <div
+                                key={i}
+                                className="
                             w-full h-8 pb-1.75
                             flex justify-between
                             border-b border-(--neutral-3-100) box-border"
-                        >
-                            <span>{item.label}</span>
-                            {item.tool}
-                        </div>
-                    ))}
-                </div>
+                            >
+                                <span>{item.label}</span>
+                                {item.tool}
+                            </div>
+                        ))}
+                    </div>
 
-                {/* Sign In */}
-                <button className="
+                    {/* Sign In */}
+                    <button className="
                     w-full py-2.5 px-6.5 rounded-md
                     flex items-center justify-center
                     bg-(--neutral-7-100)
                     btn-m text-white"
-                >
-                    <span className=''>Sign In</span>
-                </button>
+                    >
+                        <span className=''>Sign In</span>
+                    </button>
 
-                {/* Social Media Links */}
-                <div className="w-full">
-                    <SocialLinks color='--neutral-7-100' />
+                    {/* Social Media Links */}
+                    <div className="w-full">
+                        <SocialLinks color='--neutral-7-100' />
+                    </div>
                 </div>
             </div>
         </aside>

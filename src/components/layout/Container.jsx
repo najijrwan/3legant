@@ -3,7 +3,6 @@ const Container = ({ children, className = '' }) => {
     <div
       data-id="container"
       className={`
-      relative
       w-full 2xl:w-[1440px] min-h-[1024px] mx-auto
       ${className}`}
     >
