@@ -1,4 +1,4 @@
-import { Icon, Brand, CartButton } from '@ui';
+import { Icon, Brand, CartWishlistButton } from '@ui';
 import { NavLinks } from '@navigation';
 
 const NavBar = ({ onMenuOpen, onCartOpen }) => {
@@ -43,7 +43,7 @@ const NavBar = ({ onMenuOpen, onCartOpen }) => {
                 className="
                 flex flex-row-reverse items-center gap-4"
             >
-                <CartButton
+                <CartWishlistButton
                     onClick={onCartOpen}
                     count={2}
                     iconName="ShoppingBag"

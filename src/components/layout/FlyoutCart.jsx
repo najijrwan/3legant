@@ -1,5 +1,29 @@
 import { Icon } from '@ui';
 
+const cartItems = [
+    {
+        image: 'src/assets/images/product image 1.png',
+        name: 'Tray Table',
+        color: 'black',
+        quantity: 2,
+        price: 19.19,
+    },
+    {
+        image: 'src/assets/images/product image 2.png',
+        name: 'Tray Table',
+        color: 'red',
+        quantity: 2,
+        price: 19.19,
+    },
+    {
+        image: 'src/assets/images/product image 3.png',
+        name: 'Table Lamp',
+        color: 'Gold',
+        quantity: 2,
+        price: 39,
+    },
+]
+
 const FlyoutCart = ({ isOpen, onClose }) => {
     return (
         <aside
@@ -18,22 +42,35 @@ const FlyoutCart = ({ isOpen, onClose }) => {
                 w-full
                 flex flex-col"
             >
+                {/* Brand & Close Menu Button */}
                 <header
                     className='
                     w-full
-                    flex justify-between'
+                    flex justify-between items-center gap-4'
                 >
-                    <h6 className='text-[#121212]'>Cart</h6>
+                    <h6
+                        className='
+                        w-full
+                        text-[#121212]'>Cart</h6>
                     <button
                         onClick={onClose}
-                        className="size-6 text-(--neutral-4-100)"
+                        className="
+                        2xl:hidden"
                     >
                         <Icon
                             name="Close"
-                            className="size-3.5 2xl:size-5"
+                            className="size-6 text-(--neutral-4-100)"
                         />
                     </button>
                 </header>
+
+                {/* Cart Products Action */}
+                <div className="
+                    w-full
+                    flex flex-col gap-4"
+                >
+
+                </div>
             </div>
 
             {/* Bottom Container: Cart Checkout & Actions */}

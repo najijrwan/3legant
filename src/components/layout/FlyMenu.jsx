@@ -1,15 +1,15 @@
-import { Icon, Brand, CartButton, SocialLinks } from '@ui';
+import { Icon, Brand, CartWishlistButton, SocialLinks } from '@ui';
 import { NavLinks } from '@navigation';
 
 const FlyMenu = ({ isOpen, onClose, onCartOpen }) => {
     const userSavedProducts = [
         {
             label: "Cart",
-            tool: <CartButton onClick={onCartOpen} count={2} iconName="ShoppingBag" />,
+            tool: <CartWishlistButton onClick={onCartOpen} count={2} iconName="ShoppingBag" />,
         },
         {
             label: "Wishlist",
-            tool: <CartButton count={2} iconName="Heart" />,
+            tool: <CartWishlistButton count={2} iconName="Heart" />,
         }
     ]
 
