@@ -65,12 +65,21 @@ const FlyoutCart = ({ isOpen, onClose }) => {
                 </header>
 
                 {/* Cart Products Action */}
-                <div className="
+                <ul className="
                     w-full
-                    flex flex-col gap-4"
+                    flex flex-col gap-4 2xl:gap-6"
                 >
-
-                </div>
+                    {cartItems.map((item, i) => (
+                        <li
+                            className="
+                            w-full py-6"
+                        >
+                            <div className="
+                                w-full
+                                flex flex-col gap-4"></div>
+                        </li>
+                    ))}
+                </ul>
             </div>
 
             {/* Bottom Container: Cart Checkout & Actions */}
