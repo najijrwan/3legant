@@ -1,18 +1,18 @@
 import { Icon, Brand, CartButton, SocialLinks } from '@ui';
 import { NavLinks } from '@navigation';
 
-const userSavedProducts = [
-    {
-        label: "Cart",
-        tool: <CartButton iconName="ShoppingBag" count={2} />,
-    },
-    {
-        label: "Wishlist",
-        tool: <CartButton iconName="Heart" count={2} />,
-    }
-]
+const FlyMenu = ({ isOpen, onClose, onCartOpen }) => {
+    const userSavedProducts = [
+        {
+            label: "Cart",
+            tool: <CartButton onClick={onCartOpen} count={2} iconName="ShoppingBag" />,
+        },
+        {
+            label: "Wishlist",
+            tool: <CartButton count={2} iconName="Heart" />,
+        }
+    ]
 
-const FlyMenu = ({ isOpen, onClose }) => {
     return (
         <aside
             data-title='Fly Menu'

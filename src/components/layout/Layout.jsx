@@ -4,6 +4,7 @@ import { Container, NotificationBar, NavBar, FlyMenu, FlyoutCart } from '@layout
 const Layout = ({ children }) => {
     const [isFlyMenuOpen, setFlyMenuOpen] = useState(false);
     const [isFlyoutCartOpen, setFlyoutCartOpen] = useState(false);
+    const isAnyPanelOpen = isFlyMenuOpen || isFlyoutCartOpen;
 
     return (
         <Container>
@@ -17,6 +18,7 @@ const Layout = ({ children }) => {
 
             <FlyMenu
                 isOpen={isFlyMenuOpen}
+                onCartOpen={() => setFlyoutCartOpen(true)}
                 onClose={() => setFlyMenuOpen(false)}
             />
 
@@ -25,11 +27,13 @@ const Layout = ({ children }) => {
                 onClose={() => setFlyoutCartOpen(false)}
             />
 
-            {isFlyMenuOpen && (
+            {isAnyPanelOpen && (
                 <div
-                    data-id="overlay"
                     className="fixed inset-0 bg-black/32 z-10"
-                    onClick={() => setFlyMenuOpen(false)}
+                    onClick={() => {
+                        setFlyMenuOpen(false);
+                        setFlyoutCartOpen(false);
+                    }}
                 />
             )}
 

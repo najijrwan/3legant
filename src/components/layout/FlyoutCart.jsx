@@ -4,11 +4,12 @@ const FlyoutCart = ({ isOpen, onClose }) => {
     return (
         <aside
             className={`
-            absolute top-0 right-0 ${isOpen ? 'translate-x-0' : 'translate-x-full'}
+            absolute top-0 right-0 transform ${isOpen ? 'translate-x-0' : 'translate-x-full'}
             w-[343px] 2xl:w-[413px] h-full max-h-[812px] 2xl:max-h-[1024px] p-6 2xl:py-10
             flex flex-col justify-between
             bg-white
-            z-20`}
+            transition-transform duration-300 ease-out
+            z-30`}
         >
             {/* Top Container: Cart Produts & Products Actions */}
             <div

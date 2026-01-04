@@ -1,6 +1,6 @@
 import { Icon } from '@ui';
 
-const CartButton = ({ iconName = '', count = 0 }) => {
+const CartButton = ({ onClick, iconName = '', count = 0 }) => {
     return (
         <div
             className="
@@ -8,6 +8,7 @@ const CartButton = ({ iconName = '', count = 0 }) => {
             flex items-center gap-2.5"
         >
             <button
+                onClick={onClick}
                 className="
                 size-6 flex items-center justify-center"
             >
