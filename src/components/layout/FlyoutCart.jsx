@@ -1,3 +1,4 @@
+import { asideClass } from '@layout/FlyMenu.jsx';
 import { Icon } from '@ui';
 import { formatPrice } from '@utils';
 
@@ -30,13 +31,17 @@ const FlyoutCart = ({ isOpen, onClose }) => {
         <aside
             data-id='Flyout Cart'
             className={`
-            fixed top-0 right-0 transform ${isOpen ? 'translate-x-0' : 'translate-x-full'}
-            w-[343px] 2xl:w-[413px] h-full p-6 2xl:py-10
-            flex flex-col justify-between
-            bg-white
-            transition-transform duration-100 ease-out
-            z-30`}
+            ${asideClass}
+            right-0 ${isOpen ? 'translate-x-0' : 'translate-x-full'} z-30
+            2xl:w-[413px] 2xl:py-10`}
         >
+            <div
+                className={`
+                    h-screen pb-30
+                    flex flex-col justify-between`}
+            >
+
+            </div>
             {/* Top Container: Cart Products*/}
             <div
                 data-id='cartProducts'
