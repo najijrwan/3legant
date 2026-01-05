@@ -123,20 +123,21 @@ const FlyoutCart = ({ isOpen, onClose }) => {
                 {/* Bottom Container: Cart Checkout */}
                 <div
                     data-id='cartCheckout'
-                    className="w-full flex flex-col justify-between text-n7100"
+                    className="w-full flex flex-col gap-4 justify-between text-n7100"
                 >
                     <div className="">
                         <p className="flex justify-between py-3.25">
                             <span className='body-2'>Subtotal</span>
                             <span className='body-2-semi'>$99.00</span>
                         </p>
+                        <div className="h-px bg-n3100"></div>
                         <p className="flex justify-between py-3.25 h7">
                             <span>Total</span>
                             <span>$234.00</span>
                         </p>
                     </div>
 
-                    <button className="">
+                    <button className="px-6.5 py-2.5 bg-n7100 ">
 
                     </button>
 

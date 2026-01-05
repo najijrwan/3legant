@@ -55,6 +55,7 @@ body {
   --font-space-grotesk: 'Space Grotesk', sans-serif;
 
   /* Color */
+  --color-n3100: var(--neutral-3-100);
   --color-n7100: var(--neutral-7-100);
 
   /* Breakpoints */
