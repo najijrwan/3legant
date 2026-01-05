@@ -16,7 +16,9 @@ body {
 
   /* Color Styles */
   /* Primary */
+  --brand: #000000;
   --text-primary: var(--brand);
+  --color-n7100: var(--neutral-7-100);
   --color-primary: var(--brand);
 
   /* Secondary */
@@ -24,7 +26,6 @@ body {
   --green: #38CB89;
   --yellow: #FFAB00;
   --red: #FF5630;
-  --brand: #000000;
 
   /* Neutral */
   --neutral-1-100: #FEFEFE;
