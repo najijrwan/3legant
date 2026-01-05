@@ -125,17 +125,21 @@ const FlyoutCart = ({ isOpen, onClose }) => {
                     data-id='cartCheckout'
                     className="w-full flex flex-col justify-between text-n7100"
                 >
-                    <div className="w-full py-3.25">
-                        <p className="flex justify-between">
+                    <div className="">
+                        <p className="flex justify-between py-3.25">
                             <span className='body-2'>Subtotal</span>
                             <span className='body-2-semi'>$99.00</span>
+                        </p>
+                        <p className="flex justify-between py-3.25 h7">
+                            <span>Total</span>
+                            <span>$234.00</span>
                         </p>
                     </div>
 
                     <button className="">
 
                     </button>
-                    
+
                     <button className="">
 
                     </button>
