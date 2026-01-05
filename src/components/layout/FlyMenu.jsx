@@ -28,8 +28,8 @@ const FlyMenu = ({ isOpen, onClose, onCartOpen }) => {
         >
             <div
                 className={`
-                h-screen pb-30
-                flex 2xl:hidden flex-col justify-between`}
+                pb-30
+                flex 2xl:hidden flex-col justify-between gap-61`}
             >
                 {/* Top Container: Branding & Accessibility*/}
                 <div
