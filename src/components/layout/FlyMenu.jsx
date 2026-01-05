@@ -1,6 +1,13 @@
 import { Icon, Brand, CartWishlistButton, SocialLinks } from '@ui';
 import { NavLinks } from '@navigation';
 
+export const asideClass =`
+    fixed top-0
+    w-[343px] h-screen overflow-y-auto
+    transform transition-transform duration-100 ease-out
+    bg-white
+    z-20`;
+
 const FlyMenu = ({ isOpen, onClose, onCartOpen }) => {
     const userSavedProducts = [
         {
@@ -16,15 +23,12 @@ const FlyMenu = ({ isOpen, onClose, onCartOpen }) => {
     return (
         <aside
             className={`
-            fixed top-0 left-0 z-20 ${isOpen ? 'translate-x-0' : '-translate-x-full'}
-            w-[343px] h-screen p-6 overflow-y-auto 
-            transform transition-transform duration-100 ease-out
-            bg-white`}
+            left-0 ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}
         >
             <div
                 data-title='Fly Menu'
                 className={`
-            h-screen pb-30
+            h-screen pb-30 p-6
             flex 2xl:hidden flex-col justify-between`}
             >
                 {/* Top Container: Branding & Accessibility*/}
