@@ -125,6 +125,7 @@ const FlyoutCart = ({ isOpen, onClose }) => {
                     data-id='cartCheckout'
                     className="w-full flex flex-col gap-4 justify-between text-n7100"
                 >
+                    {/* Cart Sumamry */}
                     <div className="">
                         <p className="flex justify-between items-center py-3.25">
                             <span className='body-2'>Subtotal</span>
@@ -137,6 +138,7 @@ const FlyoutCart = ({ isOpen, onClose }) => {
                         </p>
                     </div>
 
+                    {/* Cart Actions */}
                     <button className="px-6.5 py-2.5 bg-n7100 rounded-md text-white btn-m">
                         Checkout
                     </button>

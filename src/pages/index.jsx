@@ -1,10 +1,11 @@
 import { Layout } from '@layout';
-import { HeroSlider } from '@home';
+import { HeroSlider, BannerGrid } from '@home';
 
 const HomePage = () => {
     return (
         <Layout>
             <HeroSlider />
+            <BannerGrid />
         </Layout>
     );
 };

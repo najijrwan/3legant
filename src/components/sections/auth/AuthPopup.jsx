@@ -22,7 +22,7 @@ const AuthPopup = ({ title }) => {
                 relative 
                 w-full 2xl:w-[50%]
                 flex items-center justify-center
-                bg-[#F3F5F7]'
+                bg-n2100'
             >
                 <header
                     className='

@@ -55,8 +55,51 @@ body {
   --font-space-grotesk: 'Space Grotesk', sans-serif;
 
   /* Color */
+  /* Primary */
+  --color-brand: var(--brand);
+
+  /* Secondary */
+  --color-blue: var(--blue);
+  --color-green: var(--green);
+  --color-yellow: var(--yellow);
+  --color-red: var(--red);
+
+  /* Neutral 1 */
+  --color-n1100: var(--neutral-1-100);
+  --color-n195: var(--netural-1-95);
+  --color-n120: var(--netural-1-20);
+  --color-n110: var(--netural-1-10);
+
+  /* Neutral 2 */
+  --color-n2100: var(--neutral-2-100);
+  --color-n250: var(--neutral-2-50);
+
+  /* Neutral 3 */
   --color-n3100: var(--neutral-3-100);
+  --color-n375: var(--neutral-3-75);
+  --color-n350: var(--neutral-3-50);
+
+  /* Neutral 4 */
+  --color-n4100: var(--neutral-4-100);
+  --color-n475: var(--neutral-4-75);
+  --color-n450: var(--neutral-4-50);
+  --color-n425: var(--neutral-4-25);
+  --color-n415: var(--neutral-4-15);
+
+  /* Neutral 5 */
+  --color-n5100: var(--neutral-5-100);
+  --color-n550: var(--neutral-5-50);
+
+  /* Neutral 6 */
+  --color-n6100: var(--neutral-6-100);
+  --color-n695: var(--neutral-6-95);
+  --color-n690: var(--neutral-6-90);
+  --color-n650: var(--neutral-6-50);
+
+  /* Neutral 7 */
   --color-n7100: var(--neutral-7-100);
+  --color-n795: var(--neutral-7-95);
+  --color-n750: var(--neutral-7-50);
 
   /* Breakpoints */
   --breakpoint-2xl: 1440px;

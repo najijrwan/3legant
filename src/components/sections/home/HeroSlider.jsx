@@ -29,7 +29,7 @@ const HeroSlider = () => {
         <section
             data-title='Hero Slider'
             className="
-            pb-10 
+            px-8 2xl:px-40 pb-10
             flex flex-col gap-8"
         >
             {/* Images Slider */}
