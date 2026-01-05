@@ -33,12 +33,12 @@ const FlyoutCart = ({ isOpen, onClose }) => {
             className={`
             ${asideClass}
             right-0 ${isOpen ? 'translate-x-0' : 'translate-x-full'} z-30
-            2xl:w-[413px] 2xl:py-10`}
+            2xl:w-[413px] 2xl:py-10 2xl:h-screen`}
         >
             <div
                 className={`
-                    pb-30
-                    flex flex-col gap-14`}
+                    2xl:h-full pb-30 2xl:pb-0
+                    flex flex-col 2xl:justify-between gap-14`}
             >
                 {/* Top Container: Cart Products*/}
                 <div
