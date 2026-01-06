@@ -107,6 +107,9 @@ body {
 
   /* Breakpoints */
   --breakpoint-2xl: 1440px;
+
+  /* Shadows */
+  --shadow-1: inset 0 -1px 0 var(--neutral-7-100);
 }
 
 /* Non-semantic heading */
@@ -207,11 +210,11 @@ body {
 }
 
 @utility btn-m {
-  @apply text-lg leading-[32px] -tracking-[0] font-inter font-medium;
+  @apply text-lg leading-[32px] -tracking-[0.4px] font-inter font-medium;
 }
 
 @utility btn-s {
-  @apply text-base leading-[28px] -tracking-[0] font-inter font-medium;
+  @apply text-base leading-[28px] -tracking-[0.4px] font-inter font-medium;
 }
 
 @utility btn-xs {

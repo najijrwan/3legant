@@ -2,18 +2,19 @@ import { Icon } from '@ui';
 
 const ShopMoreBtn = ({
     label = '',
-    btnClassName = '',
     labelClassName = '',
     spanClassName = '',
+    btnClassName = '',
 }) => {
     return (
         <button
             className={`
+            ${btnClassName}
             w-fit
             flex items-center gap-1
             btn-xs 2xl:btn-s
-            border-b border-b-inherit box-border
-            ${btnClassName}`}
+            shadow-1
+            `}
         >
             <span className={`${labelClassName}`}>{label}</span>
             <Icon
