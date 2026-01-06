@@ -5,19 +5,22 @@ const bannerItems = [
         image: 'src/assets/images/product image 4.png',
         category: 'Living Room',
         containerHeight: 'h-[377px] 2xl:h-[664px]',
-        imageHeight: '',
+        imageHeight: 'size-full',
+        imagePosition: 'static',
     },
     {
         image: 'src/assets/images/product image 5.png',
         category: 'Bedroom',
         containerHeight: 'h-[180px] 2xl:h-[320px]',
-        imageHeight: 'h-[160px] 2xl:h-[360px] ',
+        imageHeight: 'h-[160px] 2xl:h-[360px]',
+        imagePosition: 'absolute right-0 -top-[30px]',
     },
     {
         image: 'src/assets/images/product image 6.png',
         category: 'kitchen',
         containerHeight: 'h-[180px] 2xl:h-[320px]',
-        imageHeight: 'h-[100px] 2xl:h-[320px]',
+        imageHeight: 'h-[100px] 2xl:h-[240px]',
+        imagePosition: 'absolute right-[50px] top-1/2 -translate-y-1/2',
     },
 ]
 
@@ -42,7 +45,7 @@ const BannerGrid = () => {
                         src={item.image}
                         alt={`${item.category} image`}
                         className={`
-                        absolute right-0 -top-[30px]
+                        ${item.imagePosition}
                         ${item.imageHeight} object-contain object-bottom`}
                     />
                 </div>
