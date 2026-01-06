@@ -1,6 +1,6 @@
 import * as Icons from '@icons';
 
-const Icon = ({ name, className = '', ...props }) => {
+const Icon = ({ name, size = 'inherit', className = '', ...props }) => {
   const Component = Icons[name]; // Dynamically pick the icon
 
   if (!Component) {
@@ -8,7 +8,15 @@ const Icon = ({ name, className = '', ...props }) => {
     return null;
   }
 
-  return <Component className={className} {...props} />;
+  return (
+    <span 
+    className={`
+      size-[${size}]
+      flex items-center justify-center`}
+      >
+      <Component className={className} {...props} />
+    </span>
+  );
 };
 
 export default Icon;

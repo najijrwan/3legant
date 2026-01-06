@@ -5,22 +5,22 @@ const bannerItems = [
         image: 'src/assets/images/product image 4.png',
         category: 'Living Room',
         containerHeight: 'h-[377px] 2xl:h-[664px]',
-        imageHeight: 'size-full',
         imagePosition: 'static',
+        imageHeight: 'size-full',
     },
     {
         image: 'src/assets/images/product image 5.png',
         category: 'Bedroom',
         containerHeight: 'h-[180px] 2xl:h-[320px]',
-        imageHeight: 'h-[160px] 2xl:h-[360px]',
-        imagePosition: 'absolute right-0 -top-[30px]',
+        imagePosition: 'absolute -right-[20px] 2xl:-right-[30px] 2xl:-top-[30px]',
+        imageHeight: 'h-[180px] 2xl:h-[360px]',
     },
     {
         image: 'src/assets/images/product image 6.png',
         category: 'kitchen',
         containerHeight: 'h-[180px] 2xl:h-[320px]',
-        imageHeight: 'h-[100px] 2xl:h-[240px]',
-        imagePosition: 'absolute right-[50px] top-1/2 -translate-y-1/2',
+        imagePosition: 'absolute right-[10px] 2xl:right-[30px] top-[40px] 2xl:top-[60px]',
+        imageHeight: 'h-[120px] 2xl:h-[220px]',
     },
 ]
 
@@ -48,6 +48,22 @@ const BannerGrid = () => {
                         ${item.imagePosition}
                         ${item.imageHeight} object-contain object-bottom`}
                     />
+                    <div
+                        className="
+                        absolute left-8 bottom-8 2xl:bottom-10
+                        flex flex-col gap-2
+                        text-n7100"
+                    >
+                        <h6 className='2xl:h5'>{item.category}</h6>
+                        <button
+                            className="
+                            flex items-center gap-1
+                            btn-xs 2xl:btns"
+                        >
+                            <span>Shop Now</span>
+                            <Icon name="ArrowRight" size='16px' className='w-2.5 h-2'/>
+                        </button>
+                    </div>
                 </div>
             ))}
         </section>

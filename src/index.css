@@ -47,6 +47,10 @@ body {
   background-color: white;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 @theme {
 
   /* Font Family */
@@ -106,6 +110,30 @@ body {
 }
 
 /* Non-semantic heading */
+@utility h1 {
+  @apply text-[80px] leading-[84px] -tracking-[3px] font-poppins font-medium;
+}
+
+@utility h2 {
+  @apply text-[72px] leading-[76px] -tracking-[2px] font-poppins font-medium;
+}
+
+@utility h3 {
+  @apply text-[54px] leading-[58px] -tracking-[1px] font-poppins font-medium;
+}
+
+@utility h4 {
+  @apply text-[40px] leading-[44px] -tracking-[0.4px] font-poppins font-medium;
+}
+
+@utility h5 {
+  @apply text-[34px] leading-[38px] -tracking-[0.6px] font-poppins font-medium;
+}
+
+@utility h6 {
+  @apply text-[28px] leading-[34px] -tracking-[0.6px] font-poppins font-medium;
+}
+
 @utility h7 {
   @apply text-lg leading-[28px] -tracking-[0] font-poppins font-medium;
 }
