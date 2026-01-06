@@ -1,6 +1,6 @@
 import { ShopMoreBtn } from '@ui';
 
-const bannerItems = [
+const BANNER_ITEMS = [
     {
         image: 'src/assets/images/product image 4.png',
         category: 'Living Room',
@@ -48,7 +48,7 @@ const BannerGrid = () => {
             grid-rows-4 2xl:grid-rows-2
             gap-4 2xl:gap-6"
         >
-            {bannerItems.map((item, i) => {
+            {BANNER_ITEMS.map((item, i) => {
                 const v = variants[item.variant];
 
                 return (
