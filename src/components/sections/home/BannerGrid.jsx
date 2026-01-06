@@ -49,10 +49,11 @@ const BannerGrid = () => {
                         ${item.imageHeight} object-contain object-bottom`}
                     />
                     <div
-                        className="
+                        className={`
+                        ${item.category === 'Living Room' ? '2xl:left-12 top-8 2xl:top-12' : ''}
                         absolute left-8 bottom-8 2xl:bottom-10
                         flex flex-col gap-2
-                        text-n7100"
+                        text-n7100`}
                     >
                         <h6 className='2xl:h5'>{item.category}</h6>
                         <button
