@@ -15,3 +15,4 @@ export { ReactComponent as Facebook } from './facebook.svg';
 export { ReactComponent as YouTube } from './youtube.svg';
 export { ReactComponent as Minus } from './minus.svg';
 export { ReactComponent as Add } from './add.svg';
+export { ReactComponent as StarFill } from './star-fill.svg';

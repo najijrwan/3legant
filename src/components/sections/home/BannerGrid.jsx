@@ -1,74 +1,86 @@
-import { Icon } from '@ui';
+import { ShopMoreBtn } from '@ui';
 
 const bannerItems = [
     {
         image: 'src/assets/images/product image 4.png',
         category: 'Living Room',
-        containerHeight: 'h-[377px] 2xl:h-[664px]',
-        imagePosition: 'static',
-        imageHeight: 'size-full',
+        variant: 'tall',
     },
     {
         image: 'src/assets/images/product image 5.png',
         category: 'Bedroom',
-        containerHeight: 'h-[180px] 2xl:h-[320px]',
-        imagePosition: 'absolute -right-[20px] 2xl:-right-[30px] 2xl:-top-[30px]',
-        imageHeight: 'h-[180px] 2xl:h-[360px]',
+        variant: 'rightFloat',
     },
     {
         image: 'src/assets/images/product image 6.png',
-        category: 'kitchen',
-        containerHeight: 'h-[180px] 2xl:h-[320px]',
-        imagePosition: 'absolute right-[10px] 2xl:right-[30px] top-[40px] 2xl:top-[60px]',
-        imageHeight: 'h-[120px] 2xl:h-[220px]',
+        category: 'Kitchen',
+        variant: 'leftFloat',
     },
-]
+];
+
+const variants = {
+    tall: {
+        container: 'h-[377px] 2xl:h-[664px] row-span-2',
+        image: 'static size-full',
+        label: 'left-8 top-8 2xl:left-12 2xl:top-12',
+    },
+    rightFloat: {
+        container: 'h-[180px] 2xl:h-[320px]',
+        image:'absolute h-[180px] 2xl:h-[360px] -right-[20px] 2xl:-right-[30px] 2xl:-top-[30px]',
+        label: 'left-8 bottom-8 2xl:bottom-10',
+    },
+    leftFloat: {
+        container: 'h-[180px] 2xl:h-[320px]',
+        image:'absolute h-[120px] 2xl:h-[220px] right-[10px] 2xl:right-[30px] top-[40px] 2xl:top-[60px]',
+        label: 'left-8 bottom-8 2xl:bottom-10',
+    },
+};
 
 const BannerGrid = () => {
     return (
         <section
+            data-title='Banner Grid'
             className="
             w-full
             px-8 2xl:px-40
-            grid grid-cols-1 2xl:grid-cols-2 grid-rows-4 2xl:grid-rows-2 gap-4 2xl:gap-6"
+            grid grid-cols-1
+            2xl:grid-cols-2
+            grid-rows-4 2xl:grid-rows-2
+            gap-4 2xl:gap-6"
         >
-            {bannerItems.map((item, i) => (
-                <div
-                    key={i}
-                    className={`
-                    relative
-                    ${item.containerHeight}
-                    ${item.category === 'Living Room' ? 'row-span-2' : ''}
-                    bg-n2100`}
-                >
-                    <img
-                        src={item.image}
-                        alt={`${item.category} image`}
-                        className={`
-                        ${item.imagePosition}
-                        ${item.imageHeight} object-contain object-bottom`}
-                    />
+            {bannerItems.map((item, i) => {
+                const v = variants[item.variant];
+
+                return (
                     <div
+                        key={i}
                         className={`
-                        ${item.category === 'Living Room' ? '2xl:left-12 top-8 2xl:top-12' : ''}
-                        absolute left-8 bottom-8 2xl:bottom-10
-                        flex flex-col gap-2
-                        text-n7100`}
+                        relative ${v.container} bg-n2100`}
                     >
-                        <h6 className='2xl:h5'>{item.category}</h6>
-                        <button
-                            className="
-                            flex items-center gap-1
-                            btn-xs 2xl:btns"
+                        {/* Product Category Image */}
+                        <img
+                            src={item.image}
+                            alt={`${item.category} image`}
+                            className={`
+                            ${v.image} object-contain object-bottom`}
+                        />
+                        {/* Category & Shop*/}
+                        <div
+                            className={`
+                            absolute
+                            ${v.label}
+                            flex flex-col gap-2
+                            text-n7100`}
                         >
-                            <span>Shop Now</span>
-                            <Icon name="ArrowRight" size='16px' className='w-2.5 h-2'/>
-                        </button>
+                            <h6 className="2xl:h5">{item.category}</h6>
+
+                            <ShopMoreBtn label='Shop Now' variant={sm} />
+                        </div>
                     </div>
-                </div>
-            ))}
+                );
+            })}
         </section>
     );
-}
+};
 
 export default BannerGrid;
