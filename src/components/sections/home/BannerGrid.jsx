@@ -74,7 +74,7 @@ const BannerGrid = () => {
                         >
                             <h6 className="2xl:h5">{item.category}</h6>
 
-                            <ShopMoreBtn label='Shop Now' variant={sm} />
+                            <ShopMoreBtn label='Shop Now' variant='sm' className='text-n7100'/>
                         </div>
                     </div>
                 );
