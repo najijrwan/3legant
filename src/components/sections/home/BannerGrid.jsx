@@ -74,7 +74,12 @@ const BannerGrid = () => {
                         >
                             <h6 className="2xl:h5">{item.category}</h6>
 
-                            <ShopMoreBtn label='Shop Now' variant='sm' className='text-n7100'/>
+                            <ShopMoreBtn 
+                                label='Shop Now' 
+                                btnClassName='text-n7100'
+                                spanClassName='size-4 2xl:size-5'
+                                iconClassName='w-'
+                            />
                         </div>
                     </div>
                 );
