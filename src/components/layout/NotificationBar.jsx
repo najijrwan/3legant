@@ -34,7 +34,8 @@ const NotificationBar = () => {
                 <button
                     className="
                     hidden 2xl:flex items-center gap-1
-                    btn-xs text-(--blue) border-b border-b-inherit"
+                    btn-xs text-(--blue)
+                    border-b border-b-inherit box-border"
                 >
                     <span className=''>Shop Now</span>
                     <span

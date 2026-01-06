@@ -5,7 +5,6 @@ const ShopMoreBtn = ({
     btnClassName = '',
     labelClassName = '',
     spanClassName = '',
-    iconClassName = '',
 }) => {
     return (
         <button
@@ -13,13 +12,14 @@ const ShopMoreBtn = ({
             w-fit
             flex items-center gap-1
             btn-xs 2xl:btn-s
+            border-b border-b-inherit box-border
             ${btnClassName}`}
         >
             <span className={`${labelClassName}`}>{label}</span>
             <Icon
                 name="ArrowRight"
                 spanClassName={`${spanClassName}`}
-                iconClassName={`${iconClassName}`}
+                iconClassName='w-3 h-2.5'
             />
         </button>
     );

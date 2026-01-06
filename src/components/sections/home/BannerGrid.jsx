@@ -78,7 +78,6 @@ const BannerGrid = () => {
                                 label='Shop Now' 
                                 btnClassName='text-n7100'
                                 spanClassName='size-4 2xl:size-5'
-                                iconClassName='w-'
                             />
                         </div>
                     </div>
