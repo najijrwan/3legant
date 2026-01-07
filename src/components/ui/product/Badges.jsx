@@ -34,7 +34,7 @@ const Badges = ({ variant = 'medium', discountPercentage = 0 }) => {
                         : ''} 
                         rounded-sm text-n1100 bg-green`}
             >
-                {discountPercentage}
+                -{discountPercentage}%
             </div>
         </div>
     );

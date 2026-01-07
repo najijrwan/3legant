@@ -21,7 +21,7 @@ const HeroSlider = () => {
         setIndex((prev) =>
             side === "left"
                 ? Math.max(prev - 1, 0)
-                : Math.min(prev + 1, images.length - 1)
+                : Math.min(prev + 1, IMAGES.length - 1)
         );
     };
 

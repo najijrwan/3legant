@@ -5,13 +5,13 @@ const ProductCard = ({ product, variant }) => {
     return (
         <li
             className="
-            h-[392px]
+            h-full
             flex flex-col gap-3"
         >
             <div
                 className="
                     relative
-                    w-[231px] h-[308px] 2xl:[349px]
+                    w-[231px] 2xl:w-[262px] h-[306px] 2xl:h-[349px]
                     bg-n2100"
             >
                 <img
