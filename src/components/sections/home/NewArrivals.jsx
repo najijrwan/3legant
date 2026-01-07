@@ -1,5 +1,5 @@
 import { ShopMoreBtn } from '@ui';
-import { ProductCard } from '@product';
+import { ProductCard, ProductCarousel } from '@product';
 import { NEW_ARRIVALS_ITEMS } from '@products';
 
 
@@ -28,19 +28,11 @@ const NewArrivals = ({ title }) => {
                 />
             </header>
 
-            <ul
-                className="
-                h-[392px] 2xl:h-[433px] overflow-x-auto
-                flex gap-4 2xl:gap-6"
-            >
-                {NEW_ARRIVALS_ITEMS.map((product, index) => (
-                    <ProductCard
-                        key={index}
-                        product={product}
-                        variant='medium'
-                    />
-                ))}
-            </ul>
+            <ProductCarousel
+                items={NEW_ARRIVALS_ITEMS}
+                cardVariant="medium"
+            />
+
         </section>
     );
 }
