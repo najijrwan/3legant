@@ -1,6 +1,7 @@
 import { Icon } from '@ui';
+import { Badges } from '@product';
 
-const ProductCard = ({ image, rating, label, discountPercentage, price }) => {
+const ProductCard = ({ product, variant }) => {
     return (
         <li
             className="
@@ -16,11 +17,15 @@ const ProductCard = ({ image, rating, label, discountPercentage, price }) => {
                     w-[231px] h-[308px] 2xl:[349px]"
                 >
                     <img
-                        src={image}
-                        alt={`${image} image`}
+                        src={product.image}
+                        alt={`${product.image} image`}
                         className="size-full object-contain"
                     />
                 </div>
+
+                <Badges 
+                    variant={variant}
+                    discountPercentage={product.discountPercentage} />
             </div>
 
             <div

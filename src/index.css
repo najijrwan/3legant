@@ -229,7 +229,7 @@ body {
 
 /* Badges */
 @utility badges {
-  @apply text-[18px] leading-[18px] tracking-[0] font-inter font-bold;
+  @apply text-[18px] leading-[18px] tracking-[0] font-inter font-bold
 }
 
 @layer base {
