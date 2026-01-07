@@ -1,4 +1,4 @@
-const Badges = ({ variant, discountPercentage = 0 }) => {
+const Badges = ({ variant = 'medium', discountPercentage = 0 }) => {
     const VARIANTS = {
         medium: {
             container: 'left-4 top-4',

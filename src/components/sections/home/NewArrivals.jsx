@@ -1,43 +1,7 @@
 import { ShopMoreBtn } from '@ui';
 import { ProductCard } from '@product';
+import { NEW_ARRIVALS_ITEMS } from '@products';
 
-const NEW_ARRIVALS_ITEMS = [
-    {
-        image: 'src/assets/images/product image 7.png',
-        rating: 5,
-        label: 'Loveseat Sofa',
-        discountPercentage: 50,
-        price: 400,
-    },
-    {
-        image: 'src/assets/images/product image 3.png',
-        rating: 5,
-        label: 'Table Lamp',
-        discountPercentage: 35,
-        price: 75,
-    },
-    {
-        image: 'src/assets/images/product image 8.png',
-        rating: 5,
-        label: 'Beige Table Lamp',
-        discountPercentage: 35,
-        price: 75,
-    },
-    {
-        image: 'src/assets/images/product image 9.png',
-        rating: 5,
-        label: 'Bamboo Basket',
-        discountPercentage: 35,
-        price: 75,
-    },
-    {
-        image: 'src/assets/images/product image 6.png',
-        rating: 5,
-        label: 'Toasted',
-        discountPercentage: 50,
-        price: 449,
-    },
-]
 
 const NewArrivals = ({ title }) => {
     return (

@@ -1,0 +1,1 @@
+export { NEW_ARRIVALS_ITEMS } from './newArrivals.js';

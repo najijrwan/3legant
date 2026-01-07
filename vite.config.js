@@ -32,6 +32,7 @@ export default defineConfig({
           '@blog': path.resolve(__dirname, './src/components/ui/blog'),
 
       '@data': path.resolve(__dirname, './src/data'),
+        '@products': path.resolve(__dirname, './src/data/products'),
       '@pages': path.resolve(__dirname, './src/pages'),
       '@utils': path.resolve(__dirname, './src/utils'),
     },
