@@ -10,20 +10,17 @@ const ProductCard = ({ product, variant }) => {
         >
             <div
                 className="
-                relative"
+                    relative
+                    w-[231px] h-[308px] 2xl:[349px]
+                    bg-n2100"
             >
-                <div
-                    className="
-                    w-[231px] h-[308px] 2xl:[349px]"
-                >
-                    <img
-                        src={product.image}
-                        alt={`${product.image} image`}
-                        className="size-full object-contain"
-                    />
-                </div>
+                <img
+                    src={product.image}
+                    alt={`${product.image} image`}
+                    className="size-full object-contain"
+                />
 
-                <Badges 
+                <Badges
                     variant={variant}
                     discountPercentage={product.discountPercentage} />
             </div>

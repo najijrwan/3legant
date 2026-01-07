@@ -2,21 +2,20 @@
 @import "tailwindcss";
 
 :root {
-  /* Colors */
-  /* Primary */
+  /*------------COLORS------------*/
+  /*-Primary-*/
   --brand: #000000;
-  /* Secondary */
+  /*--Secondary--*/
   --blue: #377DFF;
   --green: #38CB89;
   --yellow: #FFAB00;
   --red: #FF5630;
-  --black-900: #121212
-
-  /* Neutral */
+  --black-900: #121212;
+  /*---Neutral---*/
   --neutral-1-100: #FEFEFE;
-  --netural-1-95: #FEFEFE5F;
-  --netural-1-20: #FEFEFE14;
-  --netural-1-10: #FEFEFE0A;
+  --neutral-1-95: #FEFEFE5F;
+  --neutral-1-20: #FEFEFE14;
+  --neutral-1-10: #FEFEFE0A;
 
   --neutral-2-100: #F3F5F7;
   --neutral-2-50: #F3F5F732;
@@ -54,66 +53,65 @@ body {
 
 @theme {
 
-  /* Font Family */
+  /* ------------FONT FAMILY------------*/
   --font-poppins: 'Poppins', sans-serif;
   --font-inter: 'Inter', sans-serif;
   --font-space-grotesk: 'Space Grotesk', sans-serif;
 
-  /* Color */
-  /* Primary */
+  /*------------COLORS------------*/
+  /*-Primary-*/
   --color-brand: var(--brand);
 
-  /* Secondary */
+  /*--Secondary--*/
   --color-blue: var(--blue);
   --color-green: var(--green);
   --color-yellow: var(--yellow);
   --color-red: var(--red);
 
-  /* Neutral 1 */
+  /*---Neutral---*/
   --color-n1100: var(--neutral-1-100);
-  --color-n195: var(--netural-1-95);
-  --color-n120: var(--netural-1-20);
-  --color-n110: var(--netural-1-10);
+  --color-n195: var(--neutral-1-95);
+  --color-n120: var(--neutral-1-20);
+  --color-n110: var(--neutral-1-10);
 
-  /* Neutral 2 */
   --color-n2100: var(--neutral-2-100);
   --color-n250: var(--neutral-2-50);
 
-  /* Neutral 3 */
   --color-n3100: var(--neutral-3-100);
   --color-n375: var(--neutral-3-75);
   --color-n350: var(--neutral-3-50);
 
-  /* Neutral 4 */
   --color-n4100: var(--neutral-4-100);
   --color-n475: var(--neutral-4-75);
   --color-n450: var(--neutral-4-50);
   --color-n425: var(--neutral-4-25);
   --color-n415: var(--neutral-4-15);
 
-  /* Neutral 5 */
   --color-n5100: var(--neutral-5-100);
   --color-n550: var(--neutral-5-50);
 
-  /* Neutral 6 */
   --color-n6100: var(--neutral-6-100);
   --color-n695: var(--neutral-6-95);
   --color-n690: var(--neutral-6-90);
   --color-n650: var(--neutral-6-50);
 
-  /* Neutral 7 */
   --color-n7100: var(--neutral-7-100);
   --color-n795: var(--neutral-7-95);
   --color-n750: var(--neutral-7-50);
 
-  /* Breakpoints */
+  /*------------BREAKPOINTS------------*/
   --breakpoint-2xl: 1440px;
 
-  /* Shadows */
+  /*------------Shadows------------*/
   --shadow-1: inset 0 -1px 0 var(--color-n7100);
 }
 
-/* Non-semantic heading */
+/*------------HERO------------*/
+@utility hero {
+  @apply text-[96px] leading-[96px] -tracking-[0.02em] font-poppins font-medium;
+}
+
+/*------------HEADINGS------------*/
 @utility h1 {
   @apply text-[80px] leading-[84px] -tracking-[3px] font-poppins font-medium;
 }
@@ -142,7 +140,12 @@ body {
   @apply text-lg leading-[28px] -tracking-[0] font-poppins font-medium;
 }
 
-/* Body text */
+/*------------BADGES------------*/
+@utility badges {
+  @apply text-[18px] leading-[18px] tracking-[0] font-inter font-bold
+}
+
+/*------------BODY------------*/
 @utility body-1 {
   @apply text-lg leading-[32px] -tracking-[0] font-inter font-normal;
 }
@@ -167,7 +170,7 @@ body {
   @apply text-base leading-[26px] -tracking-[0] font-inter font-bold;
 }
 
-/* Captions */
+/*------------CAPTION------------*/
 @utility caption-1 {
   @apply text-sm leading-[22px] -tracking-[0] font-inter font-normal;
 }
@@ -192,7 +195,7 @@ body {
   @apply text-xs leading-[20px] -tracking-[0] font-inter font-bold;
 }
 
-/* Hairlines */
+/*------------HAIRLINES------------*/
 @utility hairline-1 {
   @apply text-base leading-[16px] -tracking-[0] font-inter font-bold;
 }
@@ -201,7 +204,7 @@ body {
   @apply text-xs leading-[12px] -tracking-[0] font-inter font-bold;
 }
 
-/* Buttons */
+/*------------BUTTON------------*/
 @utility btn-xl {
   @apply text-[26px] leading-[38px] -tracking-[0] font-inter font-medium;
 }
@@ -220,16 +223,6 @@ body {
 
 @utility btn-xs {
   @apply text-sm leading-[24px] -tracking-[0] font-inter font-medium;
-}
-
-/* Hero text (not a semantic tag, so stays in components) */
-@utility hero {
-  @apply text-[96px] leading-[96px] -tracking-[0.02em] font-poppins font-medium;
-}
-
-/* Badges */
-@utility badges {
-  @apply text-[18px] leading-[18px] tracking-[0] font-inter font-bold
 }
 
 @layer base {
