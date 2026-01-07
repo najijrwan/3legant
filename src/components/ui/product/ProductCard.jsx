@@ -13,12 +13,12 @@ const ProductCard = ({ image, rating, label, discountPercentage, price }) => {
             >
                 <div
                     className="
-                    w-[231px] h-[308px]"
+                    w-[231px] h-[308px] 2xl:[349px]"
                 >
                     <img
                         src={image}
                         alt={`${image} image`}
-                        className=""
+                        className="size-full object-contain"
                     />
                 </div>
             </div>

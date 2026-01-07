@@ -10,6 +10,7 @@
   --green: #38CB89;
   --yellow: #FFAB00;
   --red: #FF5630;
+  --black-900: #121212
 
   /* Neutral */
   --neutral-1-100: #FEFEFE;
@@ -224,6 +225,11 @@ body {
 /* Hero text (not a semantic tag, so stays in components) */
 @utility hero {
   @apply text-[96px] leading-[96px] -tracking-[0.02em] font-poppins font-medium;
+}
+
+/* Badges */
+@utility badges {
+  @apply text-[18px] leading-[18px] tracking-[0] font-inter font-bold;
 }
 
 @layer base {
