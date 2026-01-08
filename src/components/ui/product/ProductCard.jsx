@@ -5,13 +5,14 @@ import { formatPrice, finalPrice } from '@utils';
 const ProductCard = ({ product, variant }) => {
     const { rating } = product;
     const discountPrice = product.price * (product.discountPercentage / 100);
+    const newPrice = formatPrice(finalPrice(product.price, product.discountPercentage));
 
     return (
         <li
             className="
             h-full
             flex flex-col gap-3
-            group"
+            group cursor-pointer"
         >
             <div
                 className="
@@ -55,7 +56,7 @@ const ProductCard = ({ product, variant }) => {
                     className='w-fit flex items-center gap-3'
                 >
                     <span className='text-n7100 caption-1-semi'>
-                        {formatPrice(finalPrice(discountPrice))}
+                        {newPrice}
                     </span>
 
                     <span className='hidden text-n4100 caption-1 line-through group-hover:block'>
