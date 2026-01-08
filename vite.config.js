@@ -29,6 +29,7 @@ export default defineConfig({
           '@cards': path.resolve(__dirname, './src/components/ui/cards'),
           '@Carousel': path.resolve(__dirname, './src/components/ui/Carousel'),
           '@product': path.resolve(__dirname, './src/components/ui/product'),
+          '@ProductCarousel': path.resolve(__dirname, './src/components/ui/ProductCarousel'),
           '@blog': path.resolve(__dirname, './src/components/ui/blog'),
 
       '@data': path.resolve(__dirname, './src/data'),

@@ -48,7 +48,7 @@ const ProductCard = ({ product, variant }) => {
                 <AddToCartBtn
                     className='
                     absolute right-1/2 translate-x-1/2 bottom-3.5 2xl:bottom-4 translate-y-1/2
-                    w-fit 2xl:w-[230px] px-6 py-2
+                    w-[203px] 2xl:w-[230px] px-6 py-2
                     text-n1100 btn-s
                     opacity-0
                     group-hover:opacity-100 group-hover:translate-y-0

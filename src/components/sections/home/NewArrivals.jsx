@@ -1,5 +1,5 @@
 import { ShopMoreBtn } from '@ui';
-import { ProductCarousel } from '@product';
+import { ProductCarousel } from '@ProductCarousel';
 import { NEW_ARRIVALS_ITEMS } from '@products';
 
 
