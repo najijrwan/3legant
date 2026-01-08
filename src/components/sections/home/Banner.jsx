@@ -15,7 +15,10 @@ const Banner = () => {
                 <img
                     src="src/assets/images/banner image.png"
                     alt="banner image"
-                    className='object-fill absolute -bottom-[26px] w-full h-[469px]'
+                    className='
+                    absolute -bottom-[26px] 2xl:-bottom-[40px]
+                    w-full h-[469px] 2xl:h-auto
+                    object-fill 2xl:object-fill'
                 />
             </div>
 
