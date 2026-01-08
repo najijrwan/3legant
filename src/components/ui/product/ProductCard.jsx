@@ -1,5 +1,6 @@
 import { Icon } from '@ui';
 import { Badges } from '@product';
+import { formatPrice } from '@utils';
 
 const ProductCard = ({ product, variant }) => {
     const { rating } = product;
@@ -28,7 +29,7 @@ const ProductCard = ({ product, variant }) => {
             </div>
 
             <div
-                className='w-full flex gap-0.5'
+                className='w-full flex flex-col gap-1'
             >
                 <div className="flex gap-0.5">
                     {Array.from({ length: rating }).map((_, index) => (
@@ -40,7 +41,25 @@ const ProductCard = ({ product, variant }) => {
                     ))}
                 </div>
 
-                
+                <p
+                    className='
+                    w-full
+                    text-n7100 body-2-semi'
+                >
+                    {product.label}
+                </p>
+
+                <p
+                    className='flex gap-3'
+                >
+                    <span className='text-n7100 caption-1-semi'>
+                        {formatPrice(product.price * (product.discountPercentage / 100))}
+                    </span>
+
+                    <span className='text-n4100 caption-1 line-through'>
+                        {formatPrice(product.price)}
+                    </span>
+                </p>
             </div>
         </li>
     );
