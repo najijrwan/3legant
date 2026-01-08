@@ -24,9 +24,9 @@ const Banner = () => {
 
             <div
                 className='
-                '
+                w-full 2xl:w-1/2 h-1/2 2xl:h-full
+                flex flex-col items-start justify-center gap-6'
             >
-
             </div>
         </section>
     );

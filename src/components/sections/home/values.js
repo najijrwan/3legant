@@ -2,7 +2,7 @@ export const VALUES = [
     {
         iconName: 'FastDelivery',
         title:'Free Shipping',
-        text: 'Order above $200',
+        text: 'Order \n Above $200',
     },
     {
         iconName: 'Money',
@@ -12,11 +12,11 @@ export const VALUES = [
     {
         iconName: 'Lock01',
         title: 'Secure Payments',
-        text: 'Secured by Stripe',
+        text: 'Secured \n by Stripe',
     },
     {
         iconName: 'Call',
         title: '24/7 Support',
-        text: 'Phone and Email support',
+        text: 'Phone and \n Email support',
     }
 ]

@@ -27,7 +27,7 @@ const Values = () => {
                                 {value.title}
                             </header>
                             
-                            <p className='text-n4100 caption-1 2xl:caption'>
+                            <p className='text-n4100 caption-1 2xl:caption whitespace-pre-line'>
                                 {value.text}
                             </p>
                     </div>
