@@ -30,6 +30,19 @@ const ProductCard = ({ product, variant }) => {
                     discountPercentage={product.discountPercentage}
                 />
 
+                <button
+                    className={`
+                    absolute top-4 ${variant === 'medium' ? 'right-4' : 'right-3 2xl:right-4' }
+                    size-8 rounded-full
+                    flex items-center justify-center
+                    bg-white`}
+                >
+                    <Icon 
+                        name='Heart' 
+                        spanClassName='size-5' 
+                        iconClassName='w-[19px] h-[15px] text-n4100' />
+                </button>
+
                 <AddToCartBtn
                     className='
                     absolute right-1/2 translate-x-1/2 bottom-3.5 2xl:bottom-4 translate-y-1/2
