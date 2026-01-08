@@ -5,7 +5,7 @@ const Banner = () => {
         <section
             className='
             w-full h-[734px] 2xl:h-[532px]
-            flex flex-col
+            flex flex-col 2xl:flex-row
             '
         >
             <div
@@ -24,9 +24,33 @@ const Banner = () => {
 
             <div
                 className='
-                w-full 2xl:w-1/2 h-1/2 2xl:h-full
+                w-full 2xl:w-1/2 h-1/2 2xl:h-full px-8 2xl:pl-18 2xl:pr-40
                 flex flex-col items-start justify-center gap-6'
             >
+                <div
+                    className=' h-fit
+                    flex flex-col gap-4'
+                >
+                    <p className='text-blue hairline-1'>
+                        SALE UP TO 35% OFF
+                    </p>
+
+                    <h5
+                        className='text-n7100 2xl:h4'>
+                        HUNDREDS of <br />
+                        New lower prices!
+                    </h5>
+
+                    <p className='max-w-[452px] text-n7100 body-2 2xl:body-1'>
+                        It’s more affordable than ever to give every room in your home a stylish makeover
+                    </p>
+                </div>
+
+                <ShopMoreBtn
+                    label='Shop Now'
+                    btnClassName='text-n7100 btn-xs'
+                    spanClassName='size-4'
+                />
             </div>
         </section>
     );

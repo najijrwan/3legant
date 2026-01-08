@@ -148,15 +148,15 @@ body {
 
 /*------------BODY------------*/
 @utility body-1 {
-  @apply text-lg leading-[32px] -tracking-[0] font-inter font-normal;
+  @apply text-xl leading-[32px] -tracking-[0] font-inter font-normal;
 }
 
 @utility body-1-semi {
-  @apply text-lg leading-[32px] -tracking-[0] font-inter font-semibold;
+  @apply text-xl leading-[32px] -tracking-[0] font-inter font-semibold;
 }
 
 @utility body-1-bold {
-  @apply text-lg leading-[32px] -tracking-[0] font-inter font-bold;
+  @apply text-xl leading-[32px] -tracking-[0] font-inter font-bold;
 }
 
 @utility body-2 {
