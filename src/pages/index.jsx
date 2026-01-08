@@ -1,5 +1,5 @@
 import { Layout } from '@layout';
-import { HeroSlider, BannerGrid, NewArrivals } from '@home';
+import { HeroSlider, BannerGrid, NewArrivals, Values } from '@home';
 
 const HomePage = () => {
     return (
@@ -7,6 +7,7 @@ const HomePage = () => {
             <HeroSlider />
             <BannerGrid />
             <NewArrivals title="New Arrivals" />
+            <Values />
         </Layout>
     );
 };
