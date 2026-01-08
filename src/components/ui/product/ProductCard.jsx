@@ -2,6 +2,8 @@ import { Icon } from '@ui';
 import { Badges } from '@product';
 
 const ProductCard = ({ product, variant }) => {
+    const { rating } = product;
+
     return (
         <li
             className="
@@ -26,10 +28,19 @@ const ProductCard = ({ product, variant }) => {
             </div>
 
             <div
-                className="
-                "
+                className='w-full flex gap-0.5'
             >
+                <div className="flex gap-0.5">
+                    {Array.from({ length: rating }).map((_, index) => (
+                        <Icon
+                            key={index}
+                            name="StarFill"
+                            spanClassName="size-4"
+                        />
+                    ))}
+                </div>
 
+                
             </div>
         </li>
     );

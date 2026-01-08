@@ -8,14 +8,14 @@ export const NEW_ARRIVALS_ITEMS = [
     },
     {
         image: 'src/assets/images/product image 3.png',
-        rating: 5,
+        rating: 4,
         label: 'Table Lamp',
         discountPercentage: 35,
         price: 75,
     },
     {
         image: 'src/assets/images/product image 8.png',
-        rating: 5,
+        rating: 3,
         label: 'Beige Table Lamp',
         discountPercentage: 35,
         price: 75,
@@ -29,7 +29,7 @@ export const NEW_ARRIVALS_ITEMS = [
     },
     {
         image: 'src/assets/images/product image 6.png',
-        rating: 5,
+        rating: 1,
         label: 'Toasted',
         discountPercentage: 50,
         price: 449,
