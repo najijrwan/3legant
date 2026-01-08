@@ -4,8 +4,7 @@ import { formatPrice, finalPrice } from '@utils';
 
 const ProductCard = ({ product, variant }) => {
     const { rating } = product;
-    const discountPrice = product.price * (product.discountPercentage / 100);
-    const newPrice = formatPrice(finalPrice(product.price, product.discountPercentage));
+    const price = formatPrice(finalPrice(product.price, product.discountPercentage));
 
     return (
         <li
@@ -56,10 +55,16 @@ const ProductCard = ({ product, variant }) => {
                     className='w-fit flex items-center gap-3'
                 >
                     <span className='text-n7100 caption-1-semi'>
-                        {newPrice}
+                        {price}
                     </span>
 
-                    <span className='hidden text-n4100 caption-1 line-through group-hover:block'>
+                    <span
+                        className=' 
+                        text-n4100 caption-1 line-through
+                        opacity-0
+                        group-hover:block group-hover:opacity-100
+                        transition-opacity duration-300 ease-out'
+                    >
                         {formatPrice(product.price)}
                     </span>
                 </p>
