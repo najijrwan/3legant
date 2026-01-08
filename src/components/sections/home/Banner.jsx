@@ -10,11 +10,12 @@ const Banner = () => {
         >
             <div
                 className='
-                w-full 2xl:w-1/2 h-1/2 2xl:h-full'>
+                relative
+                w-full 2xl:w-1/2 h-1/2 2xl:h-full overflow-hidden'>
                 <img
-                    src=""
-                    alt=""
-                    className='w-full object-contain object-[20%_100%]'
+                    src="src/assets/images/banner image.png"
+                    alt="banner image"
+                    className='object-fill absolute -bottom-[26px] w-full h-[469px]'
                 />
             </div>
 
