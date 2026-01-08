@@ -103,7 +103,8 @@ body {
   --breakpoint-2xl: 1440px;
 
   /*------------Shadows------------*/
-  --shadow-1: inset 0 -1px 0 var(--color-n7100);
+  --shadow-line: inset 0 -1px 0 var(--color-n7100);
+  --shadow-2-: 
 }
 
 /*------------HERO------------*/

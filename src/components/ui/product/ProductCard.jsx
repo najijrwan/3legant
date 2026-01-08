@@ -1,5 +1,5 @@
 import { Icon } from '@ui';
-import { Badges } from '@product';
+import { Badges, AddToCartBtn } from '@product';
 import { formatPrice, finalPrice } from '@utils';
 
 const ProductCard = ({ product, variant }) => {
@@ -27,7 +27,18 @@ const ProductCard = ({ product, variant }) => {
 
                 <Badges
                     variant={variant}
-                    discountPercentage={product.discountPercentage} />
+                    discountPercentage={product.discountPercentage}
+                />
+
+                <AddToCartBtn
+                    className='
+                    absolute right-1/2 translate-x-1/2 bottom-3.5 2xl:bottom-4 translate-y-1/2
+                    w-fit 2xl:w-[230px] px-6 py-2
+                    text-n1100 btn-s
+                    opacity-0
+                    group-hover:opacity-100 group-hover:translate-y-0 cursor-pointer
+                    transition-all duration-400 east-out'
+                />
             </div>
 
             <div
@@ -62,7 +73,7 @@ const ProductCard = ({ product, variant }) => {
                         className=' 
                         text-n4100 caption-1 line-through
                         opacity-0
-                        group-hover:block group-hover:opacity-100
+                        group-hover:opacity-100
                         transition-opacity duration-300 ease-out'
                     >
                         {formatPrice(product.price)}
