@@ -114,7 +114,7 @@ const ProductCarousel = ({ items, cardVariant }) => {
                 />
             </div>
 
-            <div></div>
+            <div className='2xl:hidden'></div>
         </>
     );
 };

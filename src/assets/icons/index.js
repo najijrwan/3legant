@@ -16,3 +16,7 @@ export { ReactComponent as YouTube } from './youtube.svg';
 export { ReactComponent as Minus } from './minus.svg';
 export { ReactComponent as Add } from './add.svg';
 export { ReactComponent as StarFill } from './star-fill.svg';
+export { ReactComponent as FastDelivery } from './fast-delivery.svg';
+export { ReactComponent as Money } from './money.svg';
+export { ReactComponent as Lock01 } from './lock-01.svg';
+export { ReactComponent as Call } from './call.svg';

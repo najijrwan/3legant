@@ -172,6 +172,9 @@ body {
 }
 
 /*------------CAPTION------------*/
+@utility caption {
+  @apply text-sm leading-[24px] tracking-[0] font-poppins font-normal
+}
 @utility caption-1 {
   @apply text-sm leading-[22px] -tracking-[0] font-inter font-normal;
 }

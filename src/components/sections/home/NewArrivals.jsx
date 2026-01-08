@@ -9,7 +9,7 @@ const NewArrivals = ({ title }) => {
             data-title={title}
             className="
             relative
-            w-full p-8 pr-0 2xl:pl-40 2xl:pt-12
+            w-full p-8 pr-0 2xl:pl-40 2xl:pt-12 2xl:pb-0
             flex flex-col gap-10 2xl:gap-12"
         >
             <header
