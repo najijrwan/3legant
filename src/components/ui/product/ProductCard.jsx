@@ -9,7 +9,8 @@ const ProductCard = ({ product, variant }) => {
         <li
             className="
             h-full
-            flex flex-col gap-3"
+            flex flex-col gap-3
+            group"
         >
             <div
                 className="
@@ -50,13 +51,13 @@ const ProductCard = ({ product, variant }) => {
                 </p>
 
                 <p
-                    className='flex gap-3'
+                    className='w-fit flex items-center gap-3'
                 >
                     <span className='text-n7100 caption-1-semi'>
-                        {formatPrice(product.price * (product.discountPercentage / 100))}
+                        {formatPrice(product.price * (product.discountPercentage / 100) % 10 === 0 ? -1 : -0.01)}
                     </span>
 
-                    <span className='text-n4100 caption-1 line-through'>
+                    <span className='hidden text-n4100 caption-1 line-through group-hover:block'>
                         {formatPrice(product.price)}
                     </span>
                 </p>
