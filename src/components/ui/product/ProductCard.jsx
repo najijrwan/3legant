@@ -1,9 +1,10 @@
 import { Icon } from '@ui';
 import { Badges } from '@product';
-import { formatPrice } from '@utils';
+import { formatPrice, finalPrice } from '@utils';
 
 const ProductCard = ({ product, variant }) => {
     const { rating } = product;
+    const discountPrice = product.price * (product.discountPercentage / 100);
 
     return (
         <li
@@ -54,7 +55,7 @@ const ProductCard = ({ product, variant }) => {
                     className='w-fit flex items-center gap-3'
                 >
                     <span className='text-n7100 caption-1-semi'>
-                        {formatPrice(product.price * (product.discountPercentage / 100) % 10 === 0 ? -1 : -0.01)}
+                        {formatPrice(finalPrice(discountPrice))}
                     </span>
 
                     <span className='hidden text-n4100 caption-1 line-through group-hover:block'>

@@ -10,8 +10,8 @@ export const NEW_ARRIVALS_ITEMS = [
         image: 'src/assets/images/product image 3.png',
         rating: 4,
         label: 'Table Lamp',
-        discountPercentage: 35,
-        price: 75,
+        discountPercentage: 50,
+        price: 50,
     },
     {
         image: 'src/assets/images/product image 8.png',
@@ -32,6 +32,6 @@ export const NEW_ARRIVALS_ITEMS = [
         rating: 1,
         label: 'Toasted',
         discountPercentage: 50,
-        price: 449,
+        price: 450,
     },
 ]
