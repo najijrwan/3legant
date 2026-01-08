@@ -13,7 +13,7 @@ const ShopMoreBtn = ({
             w-fit
             flex items-center gap-1
             btn-xs 2xl:btn-s
-            shadow-1
+            shadow-line
             `}
         >
             <span className={`${labelClassName}`}>{label}</span>
