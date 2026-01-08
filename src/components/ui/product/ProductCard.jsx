@@ -32,10 +32,12 @@ const ProductCard = ({ product, variant }) => {
 
                 <button
                     className={`
-                    absolute top-4 ${variant === 'medium' ? 'right-4' : 'right-3 2xl:right-4' }
+                    absolute top-4 ${variant === 'medium' ? 'right-4' : 'right-3 2xl:right-4' } -translate-y-1/2
                     size-8 rounded-full
                     flex items-center justify-center
-                    bg-white`}
+                    bg-white opacity-0
+                    group-hover:opacity-100 group-hover:translate-y-0
+                    transition-all duration-300 ease-out`}
                 >
                     <Icon 
                         name='Heart' 
@@ -49,7 +51,7 @@ const ProductCard = ({ product, variant }) => {
                     w-fit 2xl:w-[230px] px-6 py-2
                     text-n1100 btn-s
                     opacity-0
-                    group-hover:opacity-100 group-hover:translate-y-0 cursor-pointer
+                    group-hover:opacity-100 group-hover:translate-y-0
                     transition-all duration-400 east-out'
                 />
             </div>
