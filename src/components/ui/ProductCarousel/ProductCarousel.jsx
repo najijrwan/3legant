@@ -4,90 +4,82 @@ import { ProductCard } from '@product';
 const ProductCarousel = ({ items, cardVariant }) => {
     const trackRef = useRef(null);
     const barRef = useRef(null);
-    const isDraggingRef = useRef(false);
+    const draggingRef = useRef(false);
 
     const [progress, setProgress] = useState(0);
-    const [thumbWidth, setThumbWidth] = useState(1);
-
+    const [thumbRatio, setThumbRatio] = useState(1);
     const [barWidth, setBarWidth] = useState(0);
 
-    const maxThumbX = barWidth * (1 - thumbWidth);
-    const thumbX = maxThumbX * progress;
-
-    useEffect(() => {
-        if (!barRef.current) return;
-        setBarWidth(barRef.current.clientWidth);
-    }, []);
-
-
     /* ================================
-       Sync scroll -> progress
+       Measure bar + thumb
     ================================= */
     useEffect(() => {
-        const el = trackRef.current;
-        if (!el) return;
+        if (!barRef.current || !trackRef.current) return;
 
-        const onScroll = () => {
-            const maxScroll = el.scrollWidth - el.clientWidth;
-            const value = maxScroll === 0 ? 0 : el.scrollLeft / maxScroll;
-            setProgress(value);
-        };
+        const track = trackRef.current;
+        const ratio = track.clientWidth / track.scrollWidth;
 
-        el.addEventListener('scroll', onScroll);
-        return () => el.removeEventListener('scroll', onScroll);
-    }, []);
+        setThumbRatio(Math.min(ratio, 1));
+        setBarWidth(barRef.current.clientWidth);
+    }, [items]);
 
     /* ================================
-       Calculate thumb width
+       Scroll -> progress
     ================================= */
     useEffect(() => {
         const track = trackRef.current;
         if (!track) return;
 
-        const ratio = track.clientWidth / track.scrollWidth;
-        setThumbWidth(Math.min(ratio, 1));
-    }, [items]);
+        const onScroll = () => {
+            const max = track.scrollWidth - track.clientWidth;
+            setProgress(max === 0 ? 0 : track.scrollLeft / max);
+        };
+
+        track.addEventListener('scroll', onScroll);
+        return () => track.removeEventListener('scroll', onScroll);
+    }, []);
 
     /* ================================
-       Drag logic
+       Drag thumb -> scroll
     ================================= */
     useEffect(() => {
         const onMouseMove = (e) => {
-            if (!isDraggingRef.current) return;
+            if (!draggingRef.current) return;
 
             const track = trackRef.current;
             const bar = barRef.current;
             if (!track || !bar) return;
 
             const rect = bar.getBoundingClientRect();
-            const thumbPx = thumbWidth * rect.width;
+            const thumbPx = thumbRatio * rect.width;
 
             const x = e.clientX - rect.left - thumbPx / 2;
             const maxX = rect.width - thumbPx;
-
             const ratio = Math.min(Math.max(x / maxX, 0), 1);
-            const maxScroll = track.scrollWidth - track.clientWidth;
 
-            track.scrollLeft = ratio * maxScroll;
+            track.scrollLeft = ratio * (track.scrollWidth - track.clientWidth);
         };
 
-        const onMouseUp = () => {
-            isDraggingRef.current = false;
-        };
+        const stopDrag = () => (draggingRef.current = false);
 
         window.addEventListener('mousemove', onMouseMove);
-        window.addEventListener('mouseup', onMouseUp);
+        window.addEventListener('mouseup', stopDrag);
 
         return () => {
             window.removeEventListener('mousemove', onMouseMove);
-            window.removeEventListener('mouseup', onMouseUp);
+            window.removeEventListener('mouseup', stopDrag);
         };
-    }, [thumbWidth]);
+    }, [thumbRatio]);
 
-    const onMouseDown = (e) => {
-        isDraggingRef.current = true;
+    const startDrag = (e) => {
+        draggingRef.current = true;
         e.preventDefault();
     };
+
+    /* ================================
+       Derived thumb position
+    ================================= */
+    const thumbX = progress * barWidth * (1 - thumbRatio);
 
     return (
         <>
@@ -95,7 +87,7 @@ const ProductCarousel = ({ items, cardVariant }) => {
                 ref={trackRef}
                 className="
                     h-[392px] 2xl:h-[433px]
-                    overflow-x-auto
+                    overflow-x-auto scroll-
                     flex gap-4 2xl:gap-6
                 "
             >
@@ -108,25 +100,21 @@ const ProductCarousel = ({ items, cardVariant }) => {
                 ))}
             </ul>
 
-            {/* Custom scrollbar */}
             <div
                 ref={barRef}
-                className="relative w-[1120px] h-2 bg-black rounded mt-4"
+                className="relative w-[311px] 2xl:w-[1120px] h-1 bg-n3100 rounded-[80px]"
             >
                 <div
-                    onMouseDown={onMouseDown}
-                    className="absolute top-0 h-full bg-green rounded cursor-pointer"
+                    onMouseDown={startDrag}
+                    className="absolute top-0 h-full bg-n5100 rounded cursor-pointer"
                     style={{
-                        width: `${thumbWidth * 100}%`,
+                        width: `${thumbRatio * 100}%`,
                         transform: `translateX(${thumbX}px)`,
                     }}
                 />
             </div>
 
-            {/* Debug (remove later) */}
-            <div className="text-xs opacity-50">
-                progress: {progress.toFixed(2)}
-            </div>
+            <div></div>
         </>
     );
 };

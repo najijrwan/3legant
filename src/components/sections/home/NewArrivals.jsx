@@ -23,7 +23,7 @@ const NewArrivals = ({ title }) => {
                     label='More Products'
                     spanClassName='size-4 2xl:size-5'
                     btnClassName='
-                    absolute 2xl:static left-8 bottom-0
+                    absolute 2xl:static left-8 bottom-8
                     text-n7100'
                 />
             </header>
