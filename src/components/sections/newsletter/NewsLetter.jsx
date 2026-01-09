@@ -4,32 +4,51 @@ const NewsLetter = () => {
     return (
         <section
             className='
-            w-full px-8 py-[95px] 2xl:p-0
+            relative
+            w-full 2xl:h-[360px] px-8 py-[95px] 2xl:p-0
             flex flex-col gap-8
             text-center
             bg-[#F2F4F6]'
         >
-            <header className='flex flex-col gap-2 text-n7100'>
-                <h6>Join Our Newsletter</h6>
-                <p className='caption-1'>Sign up for deals, new products and promotions</p>
-            </header>
-
-            <form
-                action=""
+            <img
+                src="src/assets/images/product image 5.png"
+                alt=""
                 className='
-                    w-full max-w-[488px] h-13
+                absolute -left-[294px]
+                hidden 2xl:block
+                object-cover'
+            />
+
+            <div className='2xl:absolute left-1/2 2xl:-translate-x-1/2 top-[101px]'>
+                <header className='flex flex-col gap-2 text-n7100'>
+                    <h6 className='2xl:h4'>Join Our Newsletter</h6>
+                    <p
+                        className='
+                        caption-1 2xl:text-lg 2xl:leading-[30px] font-inter font-normal'
+                    >
+                        Sign up for deals, new products and promotions
+                    </p>
+                </header>
+
+                <form
+                    action=""
+                    className='
+                    w-full 2xl:w-[488px] h-13
                     flex items-center justify-between
                     border-b border-b-n450'
-            >
-                <Icon name='Email' spanClassName='size-6 text-n7100' />
+                >
+                    <div className='flex items-center gap-2'>
+                        <Icon name='Email' spanClassName='size-6 text-n7100' />
 
-                <input 
-                    type="email"
-                    placeholder='Email address'
-                    className='h-full text-n4100 btn-s outline-none'/>
+                        <input
+                            type="email"
+                            placeholder='Email address'
+                            className='h-full text-n4100 btn-s outline-none' />
+                    </div>
 
-                <button className='text-n4100 btn-s'>Signup</button>
-            </form>
+                    <button className='text-n4100 btn-s'>Signup</button>
+                </form>
+            </div>
         </section>
     );
 }
