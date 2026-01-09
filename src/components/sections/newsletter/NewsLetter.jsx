@@ -19,6 +19,15 @@ const NewsLetter = () => {
                 size-[640px]'
             />
 
+            <img
+                src="src/assets/images/product image 4.png"
+                alt=""
+                className='
+                absolute -right-[230px] -bottom-[160px]
+                hidden 2xl:block
+                size-[640px]'
+            />
+
             <div className='2xl:absolute left-1/2 2xl:-translate-x-1/2 top-[101px]'>
                 <header className='flex flex-col gap-2 text-n7100'>
                     <h6 className='2xl:h4'>Join Our Newsletter</h6>
