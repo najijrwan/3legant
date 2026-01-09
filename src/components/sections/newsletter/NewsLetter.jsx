@@ -5,7 +5,7 @@ const NewsLetter = () => {
         <section
             className='
             relative
-            w-full 2xl:h-[360px] px-8 py-[95px] 2xl:p-0
+            w-full 2xl:h-[360px] px-8 py-[95px] 2xl:p-0 overflow-hidden
             flex flex-col gap-8
             text-center
             bg-[#F2F4F6]'
@@ -14,9 +14,9 @@ const NewsLetter = () => {
                 src="src/assets/images/product image 5.png"
                 alt=""
                 className='
-                absolute -left-[294px]
+                absolute -left-[230px] -bottom-[160px]
                 hidden 2xl:block
-                object-cover'
+                size-[640px]'
             />
 
             <div className='2xl:absolute left-1/2 2xl:-translate-x-1/2 top-[101px]'>
