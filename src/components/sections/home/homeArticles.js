@@ -8,7 +8,7 @@ export const HOME_ARTICLES = [
         title: 'Kitchen organization',
     },
     {
-        image: 'src/assets/images/article image 2.png',
+        image: 'src/assets/images/article image 3.png',
         title: 'Decor your bedroom',
     },
 ]

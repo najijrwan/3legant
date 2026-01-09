@@ -49,7 +49,7 @@ const Banner = () => {
 
                 <ShopMoreBtn
                     label='Shop Now'
-                    btnClassName='btn-xs 2xl:btn-s'
+                    btnClassName='text-n7100'
                     spanClassName='size-4'
                 />
             </div>

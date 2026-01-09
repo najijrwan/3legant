@@ -2,9 +2,9 @@ import { Icon } from '@ui';
 
 const ShopMoreBtn = ({
     label = '',
+    btnClassName = '',
     labelClassName = '',
     spanClassName = '',
-    btnClassName = '',
 }) => {
     return (
         <button
