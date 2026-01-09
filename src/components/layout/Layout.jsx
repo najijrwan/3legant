@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Container, NotificationBar, NavBar, FlyMenu, FlyoutCart } from '@layout';
+import { Container, NotificationBar, NavBar, FlyMenu, FlyoutCart, NewsLetter } from '@layout';
 
 const Layout = ({ children }) => {
     const [isFlyMenuOpen, setFlyMenuOpen] = useState(false);
@@ -43,6 +43,8 @@ const Layout = ({ children }) => {
                 w-full'>
                 {children}
             </main>
+
+            <NewsLetter />
 
         </Container>
     );
