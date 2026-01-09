@@ -13,12 +13,12 @@ const FooterMain = () => {
             <div
                 className="
                 w-full
-                flex flex-col items-center 2xl:flex-col 2xl:justify-between gap-10"
+                flex flex-col items-center 2xl:flex-row 2xl:justify-between gap-10"
             >
                 <div
                     className="
                     w-full 2xl:w-[544px]
-                    flex flex-col gap-4 2xl:gap-8"
+                    flex flex-col 2xl:flex-row gap-4 2xl:gap-8"
                 >
                     <header
                         className="
@@ -36,6 +36,7 @@ const FooterMain = () => {
                 </div>
 
                 <NavLinks
+                    showBlog = {true}
                     ulClass='
                     flex flex-col justify-center 2xl:flex-row gap-8 2xl:gap-10
                     text-n1100 caption-1'

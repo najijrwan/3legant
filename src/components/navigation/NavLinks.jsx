@@ -14,16 +14,27 @@ const navitems = [
     href: '#',
   },
   {
+    page: 'Blog',
+    href: '#',
+  },
+  {
     page: 'Contact Us',
     href: '#',
   },
 ]
 
-const NavLinks = ({ showChevron, ulClass = "", liClass = "", divClass = "", aClass = "", }) => {
+const NavLinks = ({
+  showChevron,
+  showBlog = false,
+  ulClass = "",
+  liClass = "",
+  divClass = "",
+  aClass = "",
+}) => {
   return (
     <ul className={ulClass}>
       {navitems.map((item, index) => (
-        <li key={index} className={liClass}>
+        <li key={index} className={`${liClass} ${showBlog ? 'block' : 'hidden'}`}>
           <div className={`flex justify-between ${divClass}`}>
             <a href={item.href} className={aClass}>
               {item.page}
