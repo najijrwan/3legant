@@ -20,12 +20,12 @@ const NewsLetter = () => {
             />
 
             <img
-                src="src/assets/images/product image 4.png"
+                src="src/assets/images/image.png"
                 alt=""
                 className='
-                absolute -right-[230px] -bottom-[160px]
+                absolute -right-[260px] -bottom-[210px]
                 hidden 2xl:block
-                size-[640px]'
+                size-[680px]'
             />
 
             <div className='2xl:absolute left-1/2 2xl:-translate-x-1/2 top-[101px]'>
