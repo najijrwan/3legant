@@ -5,3 +5,4 @@ export { default as Values } from './Values.jsx';
 export { VALUES } from './values.js';
 export { default as Banner } from './Banner.jsx';
 export { default as Blog } from './Blog.jsx';
+export { HOME_ARTICLES } from './homeArticles.js';

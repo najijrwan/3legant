@@ -9,11 +9,11 @@ const ShopMoreBtn = ({
     return (
         <button
             className={`
-            ${btnClassName}
             w-fit
             flex items-center gap-1
             btn-xs 2xl:btn-s
             shadow-line
+            ${btnClassName}
             `}
         >
             <span className={`${labelClassName}`}>{label}</span>

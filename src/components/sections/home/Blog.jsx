@@ -1,4 +1,5 @@
 import { ShopMoreBtn } from '@ui';
+import { HOME_ARTICLES } from '@home';
 
 const Blog = ({ title }) => {
     return (
@@ -20,7 +21,28 @@ const Blog = ({ title }) => {
                 />
             </header>
 
-            
+            <div
+                className='
+                flex flex-col gap-6 2xl:gap-6.25'
+            >
+                {HOME_ARTICLES.map((article, index) => (
+                    <div
+                        key={index}
+                        className='
+                        flex flex-col gap-4 2xl:gap-6'
+                    >
+                        <img
+                            src={article.image}
+                            alt=""
+                            className="w-[311px] h-[283px] 2xl:w-[357px] 2xl:h-[325px]"
+                        />
+
+                        <div
+                            className='
+                            '></div>
+                    </div>
+                ))}
+            </div>
         </section>
     );
 }
