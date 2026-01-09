@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Container, NotificationBar, NavBar, FlyMenu, FlyoutCart, NewsLetter } from '@layout';
+import { Container, NotificationBar, NavBar, FlyMenu, FlyoutCart } from '@layout';
+import { Footer } from '@footer';
 
 const Layout = ({ children }) => {
     const [isFlyMenuOpen, setFlyMenuOpen] = useState(false);
@@ -44,8 +45,7 @@ const Layout = ({ children }) => {
                 {children}
             </main>
 
-            <NewsLetter />
-
+            <Footer />
         </Container>
     );
 };

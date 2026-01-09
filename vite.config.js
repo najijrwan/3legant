@@ -20,11 +20,13 @@ export default defineConfig({
 
       '@components': path.resolve(__dirname, './src/components'),
 
+        '@footer': path.resolve(__dirname, './src/components/footer'),
         '@layout': path.resolve(__dirname, './src/components/layout'),
         '@navigation': path.resolve(__dirname, './src/components/navigation'),
         '@sections': path.resolve(__dirname, './src/components/sections'),
           '@auth': path.resolve(__dirname, './src/components/sections/auth'),
           '@home': path.resolve(__dirname, './src/components/sections/home'),
+          '@newsletter': path.resolve(__dirname, './src/components/sections/newsletter'),
         '@ui': path.resolve(__dirname, './src/components/ui'),
           '@cards': path.resolve(__dirname, './src/components/ui/cards'),
           '@Carousel': path.resolve(__dirname, './src/components/ui/Carousel'),
