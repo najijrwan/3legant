@@ -29,26 +29,27 @@ const Banner = () => {
             >
                 <div
                     className=' h-fit
-                    flex flex-col gap-4'
+                    flex flex-col gap-4
+                    text-n7100'
                 >
                     <p className='text-blue hairline-1'>
                         SALE UP TO 35% OFF
                     </p>
 
                     <h5
-                        className='text-n7100 2xl:h4'>
+                        className='2xl:h4'>
                         HUNDREDS of <br />
                         New lower prices!
                     </h5>
 
-                    <p className='max-w-[452px] text-n7100 body-2 2xl:body-1'>
+                    <p className='max-w-[452px]  body-2 2xl:body-1'>
                         It’s more affordable than ever to give every room in your home a stylish makeover
                     </p>
                 </div>
 
                 <ShopMoreBtn
                     label='Shop Now'
-                    btnClassName='text-n7100 btn-xs'
+                    btnClassName='btn-xs 2xl:btn-s'
                     spanClassName='size-4'
                 />
             </div>
