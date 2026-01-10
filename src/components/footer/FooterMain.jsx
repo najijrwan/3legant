@@ -1,5 +1,5 @@
 import { NavLinks } from '@navigation';
-
+import { Brand } from '@ui';
 
 const FooterMain = () => {
     return (
@@ -20,12 +20,7 @@ const FooterMain = () => {
                     w-full 2xl:w-[544px]
                     flex flex-col 2xl:flex-row gap-4 2xl:gap-8"
                 >
-                    <header
-                        className="
-                        text-white text-2xl leading-[24px] tracking-[0] font-poppins font-medium"
-                    >
-                        3legant
-                    </header>
+                    <Brand className='text-white text-2xl' />
 
                     <p
                         className="
@@ -36,7 +31,7 @@ const FooterMain = () => {
                 </div>
 
                 <NavLinks
-                    showBlog = {true}
+                    showBlog={true}
                     ulClass='
                     flex flex-col justify-center 2xl:flex-row gap-8 2xl:gap-10
                     text-n1100 caption-1'
