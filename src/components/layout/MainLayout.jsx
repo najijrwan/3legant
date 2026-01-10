@@ -1,4 +1,4 @@
-import { NavBar, NotificationBar } from '@layout';
+import { NotificationBar, NavBar } from '@navigation';
 import { Newsletter } from '@newsletter';
 import { Footer } from '@footer';
 

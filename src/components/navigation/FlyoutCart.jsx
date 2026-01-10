@@ -1,4 +1,4 @@
-import { asideClass } from '@layout/FlyMenu.jsx';
+import { asideClass } from '@navigation/FlyMenu.jsx';
 import { Icon } from '@ui';
 import { formatPrice } from '@utils';
 

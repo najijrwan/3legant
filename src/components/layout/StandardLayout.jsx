@@ -1,4 +1,4 @@
-import { NavBar } from '@layout';
+import { NavBar } from '@navigation';
 import { Newsletter } from '@newsletter';
 import { Footer } from '@footer';
 
