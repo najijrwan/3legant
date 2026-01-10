@@ -1,8 +1,8 @@
 // App.jsx
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
 import { AuthPopup } from '@auth';
-import { MainLayout } from '@layout';
+import { MainLayout, GlobalLayout } from '@layout';
 import { HomePage } from '@pages';
 
 const AuthPage = () => {
@@ -19,13 +19,15 @@ const AuthPage = () => {
 
 const App = () => {
   return (
-    <Router>
+    <BrowserRouter>
       <Routes>
-        <Route element={<MainLayout />}>
+
+        <Route element={<GlobalLayout Shell={MainLayout} />}>
           <Route path="/" element={<HomePage />} />
         </Route>
+
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 };
 

@@ -4,5 +4,6 @@ export { default as Layout } from './Layout.jsx';
 export { default as MainLayout } from './MainLayout.jsx';
 export { default as MinimalLayout } from './MinimalLayout.jsx';
 export { default as NavBar } from './NavBar.jsx';
+export { default as GlobalLayout } from './GlobalLayout.jsx';
 export { default as FlyMenu } from './FlyMenu.jsx';
 export { default as FlyoutCart } from './FlyoutCart.jsx';

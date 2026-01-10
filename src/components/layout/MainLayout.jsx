@@ -8,9 +8,10 @@ const MainLayout = () => {
   return (
     <>
       <NotificationBar />
-      <NavBar />
-
-      <main>
+      
+      <main
+        data-id='main'
+      >
         <Outlet />
       </main>
 
