@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
-import { FlyMenu, FlyoutCart } from '@layout';
+import { FlyMenu, FlyoutCart } from '@navigation';
 
 const GlobalLayout = ({ Shell }) => {
     const [isFlyMenuOpen, setFlyMenuOpen] = useState(false);
