@@ -33,9 +33,14 @@ const ProductLoop = () => {
                 className='
                 relative
                 w-full h-[414px]
+                flex items-center
                 bg-n2100'
             >
-                <img src="" alt="" className='size-full object-contain' />
+                <img
+                    src="src/assets/images/product image 1.png"
+                    alt=""
+                    className='size-[350px] object-cover object-bottom'
+                />
 
                 <Badges variant='large' />
             </div>
