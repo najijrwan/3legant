@@ -18,12 +18,9 @@ const AuthPage = () => {
 
 const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/auth" element={<AuthPage />} />
-      </Routes>
-    </Router>
+    <Route element={<MainLayout />}>
+      <Route path="/" element={<HomePage />} />
+    </Route>
   );
 };
 

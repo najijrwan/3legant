@@ -1,1 +1,1 @@
-export { default as NewsLetter } from './NewsLetter.jsx';
+export { default as Newsletter } from './Newsletter.jsx';

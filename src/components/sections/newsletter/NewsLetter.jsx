@@ -1,6 +1,6 @@
 import { Icon } from '@ui';
 
-const NewsLetter = () => {
+const Newsletter = () => {
     return (
         <section
             className='
@@ -62,4 +62,4 @@ const NewsLetter = () => {
     );
 }
 
-export default NewsLetter;
+export default Newsletter;
