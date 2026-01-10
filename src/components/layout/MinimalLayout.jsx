@@ -1,16 +1,19 @@
 // layout/MinimalLayout.jsx
-import { Outlet } from 'react-router-dom';
 import { NavBar, NotificationBar } from '@layout';
 import { Footer } from '@footer';
 
-const MinimalLayout = () => {
+const MinimalLayout = ({ children, onMenuOpen, onCartOpen }) => {
   return (
     <>
-      <NotificationBar mobileOnly />
-      <NavBar />
+      <NotificationBar className='2xl:hidden' />
+
+      <NavBar
+        onMenuOpen={onMenuOpen}
+        onCartOpen={onCartOpen}
+      />
 
       <main>
-        <Outlet />
+        {children}
       </main>
 
       <Footer />

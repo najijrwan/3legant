@@ -1,18 +1,19 @@
-// layout/MainLayout.jsx
-import { Outlet } from 'react-router-dom';
 import { NavBar, NotificationBar } from '@layout';
 import { Newsletter } from '@newsletter';
 import { Footer } from '@footer';
 
-const MainLayout = () => {
+const MainLayout = ({ children, onMenuOpen, onCartOpen }) => {
   return (
     <>
       <NotificationBar />
-      
-      <main
-        data-id='main'
-      >
-        <Outlet />
+
+      <NavBar
+        onMenuOpen={onMenuOpen}
+        onCartOpen={onCartOpen}
+      />
+
+      <main>
+        {children}
       </main>
 
       <Newsletter />
@@ -20,5 +21,6 @@ const MainLayout = () => {
     </>
   );
 };
+
 
 export default MainLayout;

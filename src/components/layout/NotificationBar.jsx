@@ -1,14 +1,15 @@
 import { Icon } from '@ui';
 
-const NotificationBar = () => {
+const NotificationBar = ({ className = '' }) => {
     return (
         <header
             data-id="notificationBar"
-            className="
+            className={`
             relative
             h-10
             flex items-center justify-center gap-5.5 2xl:gap-[508px] 2xl:justify-end 2xl:pr-6
-            bg-(--neutral-2-100)"
+            bg-(--neutral-2-100)
+            ${className}`}
         >
             {/* Notification Message & Shop Button */}
             <div
