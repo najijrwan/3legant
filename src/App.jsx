@@ -2,7 +2,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
 import { AuthPopup } from '@auth';
-import { GlobalLayout, MainLayout, MinimalLayout} from '@layout';
+import { GlobalLayout, MainLayout, MinimalLayout, StandardLayout} from '@layout';
 import { HomePage } from '@pages';
 
 const AuthPage = () => {
@@ -22,7 +22,7 @@ const App = () => {
     <BrowserRouter>
       <Routes>
 
-        <Route element={<GlobalLayout Shell={MinimalLayout} />}>
+        <Route element={<GlobalLayout Shell={MainLayout} />}>
           <Route path="/" element={<HomePage />} />
         </Route>
 
