@@ -33,23 +33,22 @@ const NavLinks = ({
 }) => {
   return (
     <ul className={ulClass}>
-      {navitems.map((item, index) => (
-        <li key={index} className={`${liClass} ${showBlog ? 'block' : 'hidden'}`}>
-          <div className={`flex justify-between ${divClass}`}>
-            <a href={item.href} className={aClass}>
-              {item.page}
-            </a>
-            {
-              showChevron &&
-              <span className='size-6 flex items-center justify-center'>
-                <Icon
-                  name="ChevronDown"
-                  className='w-3 h-1.5' />
-              </span>
-            }
-          </div>
-        </li>
-      ))}
+      {navitems
+        .filter(item => showBlog || item.page !== 'Blog')
+        .map((item, index) => (
+          <li key={index} className={liClass}>
+            <div className={`flex justify-between ${divClass}`}>
+              <a href={item.href} className={aClass}>
+                {item.page}
+              </a>
+              {showChevron && (
+                <span className="size-6 flex items-center justify-center">
+                  <Icon name="ChevronDown" className="w-3 h-1.5" />
+                </span>
+              )}
+            </div>
+          </li>
+        ))}
     </ul>
   );
 };
