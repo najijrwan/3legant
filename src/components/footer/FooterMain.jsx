@@ -1,5 +1,5 @@
 import { NavLinks } from '@navigation';
-import { Brand } from '@ui';
+import { Brand, SocialLinks } from '@ui';
 
 const FooterMain = () => {
     return (
@@ -38,6 +38,29 @@ const FooterMain = () => {
                     liClass=''
                     divClass='justify-center'
                 />
+            </div>
+
+            <div
+                className='
+                w-full py-6
+                flex flex-col items-center gap-8'
+            >
+                <SocialLinks color='n1100' />
+
+                <div
+                    className='
+                    w-full
+                    flex flex-col items-center gap-6.5'
+                >
+                    <div
+                        className='flex gap-6.5 text-n1100 caption-2-bold'
+                    >
+                        <p>Privacy Policy</p>
+                        <p>Terms of Use</p>
+                    </div>
+
+                    <p className='text-n3100 caption-2'>Copyright © 2023 3legant. All rights reserved</p>
+                </div>
             </div>
         </footer>
     );
