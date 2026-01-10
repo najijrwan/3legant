@@ -1,4 +1,5 @@
 import { Icon } from '@ui';
+import { Badges } from '@product';
 
 const ProductLoop = () => {
     return (
@@ -28,7 +29,16 @@ const ProductLoop = () => {
                 <li className='text-black900'>Product</li>
             </ul>
 
+            <div
+                className='
+                relative
+                w-full h-[414px]
+                bg-n2100'
+            >
+                <img src="" alt="" className='size-full object-contain' />
 
+                <Badges variant='large' />
+            </div>
         </section>
     );
 }

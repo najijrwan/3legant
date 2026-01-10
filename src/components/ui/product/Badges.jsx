@@ -6,9 +6,9 @@ const Badges = ({ variant = 'medium', discountPercentage = 0 }) => {
             textColor: 'text-n7100',
         },
         large: {
-            container: 'left-6 top-6 2xl:left-8 top-8',
+            container: 'left-6 2xl:left-8 top-6 2xl:top-8',
             badge: 'px-4.5 py-2',
-            textStyle: { new: 'text-black-900 body-semi-2 2xl:badges', percent: 'badges' },
+            textStyle: { new: 'text-black-900 body-2-semi 2xl:badges', percent: 'badges' },
         },
     }
     return (
