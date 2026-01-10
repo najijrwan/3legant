@@ -9,9 +9,9 @@ const ProductLoop = () => {
         >
             <ul
                 className="
-                2xl:pl-40
+                w-fit 2xl:pl-40
                 flex gap-2 2xl:gap-4
-                text-black600 caption-1 font-medium"
+                text-black600 caption-1 font-medium 2xl:btn-xs"
             >
                 <li className='flex items-center gap-1'>
                     <span>Home</span>
@@ -27,6 +27,8 @@ const ProductLoop = () => {
                 </li>
                 <li className='text-black900'>Product</li>
             </ul>
+
+
         </section>
     );
 }
