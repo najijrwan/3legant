@@ -29,6 +29,7 @@ export default defineConfig({
           '@auth': path.resolve(__dirname, './src/components/sections/auth'),
           '@home': path.resolve(__dirname, './src/components/sections/home'),
           '@newsletter': path.resolve(__dirname, './src/components/sections/newsletter'),
+          '@productPage': path.resolve(__dirname, './src/components/sections/product'),
         '@ui': path.resolve(__dirname, './src/components/ui'),
           '@cards': path.resolve(__dirname, './src/components/ui/cards'),
           '@Carousel': path.resolve(__dirname, './src/components/ui/Carousel'),

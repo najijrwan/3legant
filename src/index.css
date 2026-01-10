@@ -11,6 +11,7 @@
   --yellow: #FFAB00;
   --red: #FF5630;
   --black-900: #121212;
+  --black-600: #605F5F;
   /*---Neutral---*/
   --neutral-1-100: #FEFEFE;
   --neutral-1-95: #FEFEFE5F;
@@ -99,8 +100,10 @@ body {
   --color-n795: var(--neutral-7-95);
   --color-n750: var(--neutral-7-50);
 
-  
+  --color-black900: var(--black-900);
+  --color-black600: var(--black-600);
 
+  
   /*------------BREAKPOINTS------------*/
   --breakpoint-2xl: 1440px;
 
