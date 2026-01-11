@@ -36,6 +36,7 @@ const NotificationBar = ({ className = '' }) => {
                     label='Shop Now'
                     buttonClass='hidden 2xl:block shadow-blue'
                     labelClass='btn-sx text-blue'
+                    iconSpanClass='size-[18px]'
                     iconClass='w-[10.5px] h-[9px]'
                 />
             </div>

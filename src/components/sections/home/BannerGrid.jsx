@@ -26,12 +26,12 @@ const variants = {
     },
     rightFloat: {
         container: 'h-[180px] 2xl:h-[320px]',
-        image:'absolute h-[180px] 2xl:h-[360px] -right-[20px] 2xl:-right-[30px] 2xl:-top-[30px]',
+        image: 'absolute h-[180px] 2xl:h-[360px] -right-[20px] 2xl:-right-[30px] 2xl:-top-[30px]',
         label: 'left-8 bottom-8 2xl:bottom-10',
     },
     leftFloat: {
         container: 'h-[180px] 2xl:h-[320px]',
-        image:'absolute h-[120px] 2xl:h-[220px] right-[10px] 2xl:right-[30px] top-[40px] 2xl:top-[60px]',
+        image: 'absolute h-[120px] 2xl:h-[220px] right-[10px] 2xl:right-[30px] top-[40px] 2xl:top-[60px]',
         label: 'left-8 bottom-8 2xl:bottom-10',
     },
 };
@@ -74,11 +74,7 @@ const BannerGrid = () => {
                         >
                             <h6 className="2xl:h5">{item.category}</h6>
 
-                            <MoreActionBtn 
-                                label='Shop Now' 
-                                btnClassName='text-n7100'
-                                spanClassName='size-4 2xl:size-5'
-                            />
+                            <MoreActionBtn label='Shop Now' />
                         </div>
                     </div>
                 );

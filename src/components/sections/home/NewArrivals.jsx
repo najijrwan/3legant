@@ -18,13 +18,7 @@ const NewArrivals = ({ title }) => {
                 flex justify-between items-end"
             >
                 <h5 className="w-[125px] text-brand 2xl:h4">{title}</h5>
-                <MoreActionBtn
-                    label='More Products'
-                    spanClassName='size-4 2xl:size-5'
-                    btnClassName='
-                    absolute 2xl:static left-8 bottom-8
-                    text-n7100'
-                />
+                <MoreActionBtn label='More Products' />
             </header>
 
             <ProductCarousel

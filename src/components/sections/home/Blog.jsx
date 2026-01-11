@@ -15,11 +15,7 @@ const Blog = ({ title }) => {
             >
                 <h5 className='text-brand 2xl:h4'>{title}</h5>
 
-                <MoreActionBtn
-                    label='More Articles'
-                    btnClassName='text-n7100'
-                    spanClassName='size-4 2xl:size-5'
-                />
+                <MoreActionBtn label='More Articles' />
             </header>
 
             <div
@@ -46,8 +42,7 @@ const Blog = ({ title }) => {
 
                             <MoreActionBtn
                                 label='Read More'
-                                btnClassName='text-n7100'
-                                spanClassName='size-4 2xl:size-5 text-n4100'
+                                iconClass='2xl:text-[#6C7275]'
                             />
                         </div>
                     </div>

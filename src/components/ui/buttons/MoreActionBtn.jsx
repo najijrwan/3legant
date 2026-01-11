@@ -2,10 +2,10 @@ import { Icon } from '@ui';
 
 const MoreActionBtn = ({
     label,
-    buttonClass = '',
-    labelClass = '',
-    iconSpanClass = '',
-    iconClass = '',
+    buttonClass = 'shadow-n7100',
+    labelClass = 'btn-xs 2xl:btn-s text-n7100',
+    iconSpanClass = 'size-4 2xl:size-5',
+    iconClass = 'w-[9.33px] h-[8px] 2xl:w-[11.67px] h-[10px]',
 }) => {
     return (
         <button

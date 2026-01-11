@@ -47,11 +47,7 @@ const Banner = () => {
                     </p>
                 </div>
 
-                <MoreActionBtn
-                    label='Shop Now'
-                    btnClassName='text-n7100'
-                    spanClassName='size-4'
-                />
+                <MoreActionBtn label='Shop Now' />
             </div>
         </section>
     );
