@@ -1,6 +1,6 @@
 export { default as AddToCartBtn } from './buttons/AddToCartBtn';
 export { default as CartWishlistButton } from './buttons/CartWishlistButton';
-export { default as ShopMoreBtn } from './buttons/ShopMoreBtn';
+export { default as MoreActionBtn } from './buttons/MoreActionBtn';
 
 export { default as HeroCarousel } from './carousel/HeroCarousel';
 export { default as ProductCarousel } from './carousel/ProductCarousel';
