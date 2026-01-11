@@ -1,5 +1,5 @@
 import { ShopMoreBtn } from '@ui';
-import { HOME_ARTICLES } from '@home';
+import { HOME_ARTICLES } from '@data/home/homeArticles';
 
 const Blog = ({ title }) => {
     return (

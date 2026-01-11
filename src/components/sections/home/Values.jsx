@@ -1,5 +1,5 @@
 import { Icon } from '@ui';
-import { VALUES } from '@home';
+import { VALUES } from '@data/home/values';
 
 const Values = () => {
     return (
