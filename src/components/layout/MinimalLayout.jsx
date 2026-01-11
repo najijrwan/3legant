@@ -1,6 +1,6 @@
 // layout/MinimalLayout.jsx
 import { NavBar, NotificationBar } from '@navigation';
-import { Footer } from '@footer';
+import Footer from '@footer/Footer';
 
 const MinimalLayout = ({ children, onMenuOpen, onCartOpen }) => {
   return (

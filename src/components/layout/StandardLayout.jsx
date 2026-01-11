@@ -1,6 +1,6 @@
 import { NavBar } from '@navigation';
-import { Newsletter } from '@newsletter';
-import { Footer } from '@footer';
+import Newsletter from '@newsletter/Newsletter';
+import Footer from '@footer/Footer';
 
 const StandardLayout = ({ children, onMenuOpen, onCartOpen }) => {
     return (

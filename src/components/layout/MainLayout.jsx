@@ -1,6 +1,6 @@
 import { NotificationBar, NavBar } from '@navigation';
-import { Newsletter } from '@newsletter/Newsletter';
-import { Footer } from '@footer/Footer';
+import Newsletter from '@newsletter/Newsletter';
+import Footer from '@footer/Footer';
 
 const MainLayout = ({ children, onMenuOpen, onCartOpen }) => {
   return (
@@ -17,7 +17,7 @@ const MainLayout = ({ children, onMenuOpen, onCartOpen }) => {
       </main>
 
       <Newsletter />
-      
+
       <Footer />
     </>
   );
