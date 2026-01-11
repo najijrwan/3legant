@@ -4,6 +4,7 @@ const MoreActionBtn = ({
     label,
     buttonClass = '',
     labelClass = '',
+    iconSpanClass = '',
     iconClass = '',
 }) => {
     return (
@@ -18,7 +19,7 @@ const MoreActionBtn = ({
 
             <Icon
                 name="ArrowRight"
-                iconClassName={iconClass}
+                spanClassName={iconSpanClass} iconClassName={iconClass}
             />
         </button>
     );

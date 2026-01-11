@@ -1,4 +1,4 @@
-import { ShopMoreBtn } from '@ui';
+import { MoreActionBtn } from '@ui';
 
 const BANNER_ITEMS = [
     {
@@ -74,7 +74,7 @@ const BannerGrid = () => {
                         >
                             <h6 className="2xl:h5">{item.category}</h6>
 
-                            <ShopMoreBtn 
+                            <MoreActionBtn 
                                 label='Shop Now' 
                                 btnClassName='text-n7100'
                                 spanClassName='size-4 2xl:size-5'

@@ -1,4 +1,4 @@
-import { ShopMoreBtn } from '@ui';
+import { MoreActionBtn } from '@ui';
 
 const Banner = () => {
     return (
@@ -47,7 +47,7 @@ const Banner = () => {
                     </p>
                 </div>
 
-                <ShopMoreBtn
+                <MoreActionBtn
                     label='Shop Now'
                     btnClassName='text-n7100'
                     spanClassName='size-4'

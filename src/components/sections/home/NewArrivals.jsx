@@ -1,4 +1,4 @@
-import { ShopMoreBtn, ProductCarousel } from '@ui';
+import { MoreActionBtn, ProductCarousel } from '@ui';
 import { NEW_ARRIVALS_ITEMS } from '@data';
 
 
@@ -18,7 +18,7 @@ const NewArrivals = ({ title }) => {
                 flex justify-between items-end"
             >
                 <h5 className="w-[125px] text-brand 2xl:h4">{title}</h5>
-                <ShopMoreBtn
+                <MoreActionBtn
                     label='More Products'
                     spanClassName='size-4 2xl:size-5'
                     btnClassName='

@@ -1,4 +1,4 @@
-import { ShopMoreBtn } from '@ui';
+import { MoreActionBtn } from '@ui';
 import { HOME_ARTICLES } from '@data';
 
 const Blog = ({ title }) => {
@@ -15,7 +15,7 @@ const Blog = ({ title }) => {
             >
                 <h5 className='text-brand 2xl:h4'>{title}</h5>
 
-                <ShopMoreBtn
+                <MoreActionBtn
                     label='More Articles'
                     btnClassName='text-n7100'
                     spanClassName='size-4 2xl:size-5'
@@ -44,7 +44,7 @@ const Blog = ({ title }) => {
                         >
                             <p className='text-[#23262F] body-2-semi 2xl:h7'>{article.title}</p>
 
-                            <ShopMoreBtn
+                            <MoreActionBtn
                                 label='Read More'
                                 btnClassName='text-n7100'
                                 spanClassName='size-4 2xl:size-5 text-n4100'

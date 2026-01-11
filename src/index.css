@@ -109,7 +109,7 @@ body {
 
   /*------------Shadows------------*/
   --shadow-line: inset 0 -1px 0 var(--color-n7100);
-  --shadow-1: 0 8px 16px 0 rgba(0, 0, 0, 0.0364);
+  --shadow-1: 0 8px 16px 0;
 }
 
 /*------------HERO------------*/

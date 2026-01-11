@@ -1,4 +1,4 @@
-import { Icon } from '@ui';
+import { Iconm, MoreActionBtn } from '@ui';
 
 const NotificationBar = ({ className = '' }) => {
     return (
@@ -32,26 +32,12 @@ const NotificationBar = ({ className = '' }) => {
                 </div>
 
                 {/* Shop */}
-                <button
-                    className="
-                    hidden 2xl:flex items-center gap-1
-                    btn-xs text-(--blue)
-                    border-b border-b-inherit box-border"
-                >
-                    <span className=''>Shop Now</span>
-                    <span
-                        className='
-                        size-4.5
-                        flex items-center justify-center'
-                    >
-                        <Icon
-                            name="ArrowRight"
-                            className="
-                            size-3
-                            text-(--blue)"
-                        />
-                    </span>
-                </button>
+                <MoreActionBtn
+                    label='Shop Now'
+                    buttonClass='hidden 2xl:block shadow-blue'
+                    labelClass='btn-sx text-blue'
+                    iconClass='w-[10.5px] h-[9px]'
+                />
             </div>
 
             {/* Close Notification Button */}
