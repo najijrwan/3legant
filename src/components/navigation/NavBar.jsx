@@ -28,13 +28,15 @@ const NavBar = ({ onMenuOpen, onCartOpen }) => {
 
             {/* Pages Navigation Links */}
             <NavLinks
-                data-id='pages'
-                ulClass="
-                w-fit h-fit 
-                hidden 2xl:flex items-center gap-10 
-                text-(--neutral-4-100) btn-xs font-space-grotesk"
-                liClass="w-fit h-fit"
-                aClass=""
+                excluse={['Blog']}
+                classNames={{
+                    ul: `
+                    w-fit h-fit
+                    hidden 2xl:flex items-center gap-10
+                    text-(--neutral-4-100) btn-xs font-space-grotesk`,
+                    li: `
+                    w-fit h-fit`,
+                }}
             />
 
             {/* Action & Accessiblity Buttons */}

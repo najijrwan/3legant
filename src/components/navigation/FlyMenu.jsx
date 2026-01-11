@@ -87,16 +87,18 @@ const FlyMenu = ({ isOpen, onClose, onCartOpen }) => {
                     {/* Pages Navigation Links */}
                     <NavLinks
                         showChevron
-                        ulClass='
-                    w-full
-                    flex flex-col gap-4
-                    btn-xs text-(--neutral-7-100)'
-                        liClass='
-                    w-full pb-1.75
-                    border-b border-(--neutral-3-100) box-border'
-                        divClass='
-                    w-full h-8'
-                        aClass='w-full'
+                        exclude={['Blog']}
+                        classNames={{
+                            ul: `
+                             w-full
+                            flex flex-col gap-4
+                            btn-xs text-(--neutral-7-100)`,
+                            li: `
+                            w-full pb-1.75
+                            border-b border-(--neutral-3-100) box-border`,
+                            row: `w-full h-8`,
+                            link: `w-full`,
+                        }}
                     />
                 </div>
 

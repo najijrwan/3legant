@@ -1,46 +1,30 @@
 import { Icon } from '@ui';
-
-const navitems = [
-  {
-    page: 'Home',
-    href: '#',
-  },
-  {
-    page: 'Shop',
-    href: '#',
-  },
-  {
-    page: 'Product',
-    href: '#',
-  },
-  {
-    page: 'Blog',
-    href: '#',
-  },
-  {
-    page: 'Contact Us',
-    href: '#',
-  },
-]
+import { NAV_ITEMS } from '@data';
 
 const NavLinks = ({
-  showChevron,
-  showBlog = false,
-  ulClass = "",
-  liClass = "",
-  divClass = "",
-  aClass = "",
+  items = NAV_ITEMS,
+  showChevron = false,
+  exclude = [],
+  classNames = {},
 }) => {
+  const {
+    ul = '',
+    li = '',
+    row = '',
+    link = '',
+  } = classNames;
+
   return (
-    <ul className={ulClass}>
-      {navitems
-        .filter(item => showBlog || item.page !== 'Blog')
-        .map((item, index) => (
-          <li key={index} className={liClass}>
-            <div className={`flex justify-between ${divClass}`}>
-              <a href={item.href} className={aClass}>
-                {item.page}
+    <ul className={ul}>
+      {items
+        .filter(item => !exclude.includes(item.label))
+        .map(item => (
+          <li key={item.label} className={li}>
+            <div className={`flex justify-between ${row}`}>
+              <a href={item.href} className={link}>
+                {item.label}
               </a>
+
               {showChevron && (
                 <span className="size-6 flex items-center justify-center">
                   <Icon name="ChevronDown" className="w-3 h-1.5" />
