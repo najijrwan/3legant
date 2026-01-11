@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-const Carousel = ({ children, index, onChange }) => {
+const HeroCarousel = ({ children, index, onChange }) => {
     const startX = useRef(null);
 
     const handleTouchStart = (e) => {
@@ -44,4 +44,4 @@ const Carousel = ({ children, index, onChange }) => {
     );
 };
 
-export default Carousel;
+export default HeroCarousel;

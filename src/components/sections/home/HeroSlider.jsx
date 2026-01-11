@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { Icon } from "@ui";
-import { Carousel } from "@Carousel";
+import { Icon, HeroCarousel } from "@ui";
 
 const SLIDER_BUTTONS = [
     { name: "ArrowLeft", side: "left" },
@@ -40,7 +39,7 @@ const HeroSlider = () => {
                 w-full h-[304px] 2xl:h-[536px] 
                 overflow-hidden"
             >
-                <Carousel
+                <HeroCarousel
                     index={index}
                     onChange={setIndex}
                 >
@@ -54,7 +53,7 @@ const HeroSlider = () => {
                             object-cover object-[55%_100%] 2xl:object-bottom-right"
                         />
                     ))}
-                </Carousel>
+                </HeroCarousel>
 
                 {SLIDER_BUTTONS.map((button, i) => (
                     <button
