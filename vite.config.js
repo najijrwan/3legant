@@ -21,7 +21,6 @@ export default defineConfig({
         '@images': path.resolve(__dirname, './src/assets/images/'),
 
       '@components': path.resolve(__dirname, './src/components'),
-
         '@footer': path.resolve(__dirname, './src/components/footer'),
         '@layout': path.resolve(__dirname, './src/components/layout'),
         '@navigation': path.resolve(__dirname, './src/components/navigation'),
@@ -29,17 +28,13 @@ export default defineConfig({
           '@auth': path.resolve(__dirname, './src/components/sections/auth'),
           '@home': path.resolve(__dirname, './src/components/sections/home'),
           '@newsletter': path.resolve(__dirname, './src/components/sections/newsletter'),
-          '@productPage': path.resolve(__dirname, './src/components/sections/product'),
+          '@product': path.resolve(__dirname, './src/components/sections/product'),
         '@ui': path.resolve(__dirname, './src/components/ui'),
-          '@buttons': path.resolve(__dirname, './src/components/ui/buttons'),
-          '@carousel': path.resolve(__dirname, './src/components/ui/carousel'),
-          '@primitives': path.resolve(__dirname, './src/components/ui/primitives'),
-          '@product': path.resolve(__dirname, './src/components/ui/product'),
-          '@ProductCarousel': path.resolve(__dirname, './src/components/ui/ProductCarousel'),
 
       '@data': path.resolve(__dirname, './src/data'),
-        '@products': path.resolve(__dirname, './src/data/products'),
+
       '@pages': path.resolve(__dirname, './src/pages'),
+      
       '@utils': path.resolve(__dirname, './src/utils'),
     },
   },

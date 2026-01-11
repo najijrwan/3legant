@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from 'react';
-import { ProductCard } from '@product';
+import { ProductCard } from '@ui';
 
 const ProductCarousel = ({ items, cardVariant }) => {
     const trackRef = useRef(null);

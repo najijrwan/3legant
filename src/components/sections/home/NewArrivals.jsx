@@ -1,6 +1,5 @@
-import { ShopMoreBtn } from '@ui';
-import { ProductCarousel } from '@ProductCarousel';
-import { NEW_ARRIVALS_ITEMS } from '@products';
+import { ShopMoreBtn, ProductCarousel } from '@ui';
+import { NEW_ARRIVALS_ITEMS } from '@data';
 
 
 const NewArrivals = ({ title }) => {

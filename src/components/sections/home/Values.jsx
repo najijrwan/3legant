@@ -1,7 +1,8 @@
 import { Icon } from '@ui';
-import { VALUES } from '@data/home/values';
+import { VALUES } from '@data';
 
 const Values = () => {
+    console.log(VALUES);
     return (
         <section
             className='
@@ -23,13 +24,13 @@ const Values = () => {
                     <div
                         className='
                         flex flex-col gap-1 2xl:gap-2'>
-                            <header className='text-n7100 caption-1-semi 2xl:h7'>
-                                {value.title}
-                            </header>
-                            
-                            <p className='text-n4100 caption-1 2xl:caption whitespace-pre-line'>
-                                {value.text}
-                            </p>
+                        <header className='text-n7100 caption-1-semi 2xl:h7'>
+                            {value.title}
+                        </header>
+
+                        <p className='text-n4100 caption-1 2xl:caption whitespace-pre-line'>
+                            {value.text}
+                        </p>
                     </div>
                 </div>
             ))}

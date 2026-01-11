@@ -1,4 +1,4 @@
-import { ProductLoop } from '@productPage';
+import { ProductLoop } from '@product';
 
 const ProductPage = () => {
     return (

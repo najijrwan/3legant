@@ -1,5 +1,4 @@
-import { Icon } from '@ui';
-import { Badges, AddToCartBtn } from '@product';
+import { Icon, Badges, AddToCartBtn } from '@ui';
 import { formatPrice, finalPrice } from '@utils';
 
 const ProductCard = ({ product, variant }) => {
@@ -32,16 +31,16 @@ const ProductCard = ({ product, variant }) => {
 
                 <button
                     className={`
-                    absolute top-4 ${variant === 'medium' ? 'right-4' : 'right-3 2xl:right-4' } -translate-y-1/2
+                    absolute top-4 ${variant === 'medium' ? 'right-4' : 'right-3 2xl:right-4'} -translate-y-1/2
                     size-8 rounded-full
                     flex items-center justify-center
                     bg-white opacity-0
                     group-hover:opacity-100 group-hover:translate-y-0
                     transition-all duration-300 ease-out`}
                 >
-                    <Icon 
-                        name='Heart' 
-                        spanClassName='size-5' 
+                    <Icon
+                        name='Heart'
+                        spanClassName='size-5'
                         iconClassName='w-[19px] h-[15px] text-n4100' />
                 </button>
 

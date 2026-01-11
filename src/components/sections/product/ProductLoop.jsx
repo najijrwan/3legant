@@ -1,5 +1,4 @@
-import { Icon } from '@ui';
-import { Badges } from '@product';
+import { Icon, Badges } from '@ui';
 
 const ProductLoop = () => {
     return (
