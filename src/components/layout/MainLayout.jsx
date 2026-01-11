@@ -17,6 +17,7 @@ const MainLayout = ({ children, onMenuOpen, onCartOpen }) => {
       </main>
 
       <Newsletter />
+      
       <Footer />
     </>
   );
