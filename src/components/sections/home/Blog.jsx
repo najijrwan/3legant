@@ -42,7 +42,7 @@ const Blog = ({ title }) => {
 
                             <MoreActionBtn
                                 label='Read More'
-                                iconClass='2xl:text-[#6C7275]'
+                                iconClass='2xl:text-n4100'
                             />
                         </div>
                     </div>
