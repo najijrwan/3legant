@@ -4,4 +4,4 @@ export { HOME_VALUES } from './home/homeValues';
 
 export { NAV_ITEMS } from './navigation/navItems';
 
-export { NEW_ARRIVALS_ITEMS } from './products/newArrivals';
+export { NEW_ARRIVALS_PRODUCTS } from './products/newArrivalsProducts';

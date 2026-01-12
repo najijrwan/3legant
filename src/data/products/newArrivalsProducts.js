@@ -1,4 +1,4 @@
-export const NEW_ARRIVALS_ITEMS = [
+export const NEW_ARRIVALS_PRODUCTS = [
     {
         image: 'src/assets/images/product image 7.png',
         rating: 5,
