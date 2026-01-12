@@ -47,7 +47,7 @@ const Footer = () => {
                 w-full py-6 2xl:py-4
                 flex flex-col 2xl:flex-row-reverse items-center gap-8'
             >
-                <SocialLinks color='n1100' />
+                <SocialLinks iconClassName="text-n1100" />
 
                 <div
                     className='

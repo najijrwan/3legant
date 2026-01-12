@@ -143,7 +143,7 @@ const FlyMenu = ({ isOpen, onClose, onCartOpen }) => {
 
                     {/* Social Media Links */}
                     <div className="w-full">
-                        <SocialLinks color='n1100' />
+                        <SocialLinks iconClassName="text-n7100" />
                     </div>
                 </div>
             </div>
