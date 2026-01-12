@@ -15,12 +15,15 @@ const SOCIAL_LINKS = [
     },
 ]
 
-const SocialLinks = ({ iconClassName = '' }) => {
+const SocialLinks = ({ color = '' }) => {
+    const COLOR_MAP = {
+        light: 'text-n1100',
+        dark: 'text-n7100',
+    };
     return (
         <div
             className='
-            w-30
-            flex justify-between'
+            flex gap-6'
         >
             {SOCIAL_LINKS.map((social, i) => (
                 <a
@@ -30,7 +33,7 @@ const SocialLinks = ({ iconClassName = '' }) => {
                 >
                     <Icon
                         name={social.iconName}
-                        className={`size-5 ${iconClassName}`}
+                        className={`size-5 ${COLOR_MAP[color] ?? ''}`}
                     />
                 </a>
             ))}
