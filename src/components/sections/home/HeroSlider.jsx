@@ -10,11 +10,15 @@ const SLIDER_BUTTONS = [
 const HeroSlider = () => {
     const [index, setIndex] = useState(0);
 
+    const isPrevDisabled = index === 0;
+    const isNextDisabled = index === HERO_IMAGES.length - 1;
+
     const goNext = () =>
         setIndex((i) => Math.min(i + 1, HERO_IMAGES.length - 1));
 
     const goPrev = () =>
         setIndex((i) => Math.max(i - 1, 0));
+
 
     return (
         <section
@@ -48,20 +52,32 @@ const HeroSlider = () => {
                     ))}
                 </HeroCarousel>
 
-                {SLIDER_BUTTONS.map((btn, i) => (
-                    <button
-                        key={i}
-                        onClick={btn.action === 'next' ? goNext : goPrev}
-                        className={`
-                        absolute top-[238px]
-                        ${btn.action === 'prev' ? 'left-6' : 'right-6'}
-                        size-13 rounded-full
-                        hidden 2xl:flex items-center justify-center
-                        bg-white`}
-                    >
-                        <Icon name={btn.name} spanClassName='size-8' iconClassName="w-[18.67px] h-[16px]" />
-                    </button>
-                ))}
+                {SLIDER_BUTTONS.map((btn, i) => {
+                    const isDisabled =
+                        (btn.action === 'prev' && isPrevDisabled) ||
+                        (btn.action === 'next' && isNextDisabled);
+
+                    return (
+                        <button
+                            key={i}
+                            onClick={btn.action === 'next' ? goNext : goPrev}
+                            className={`
+                            absolute top-[238px] ${btn.action === 'prev' ? 'left-6' : 'right-6'}
+                            size-13 rounded-full
+                            hidden 2xl:flex items-center justify-center
+                            bg-white
+                            ${isDisabled ? 'pointer-events-none' : ''}`}
+                        >
+                            <Icon
+                                name={btn.name}
+                                spanClassName='size-8'
+                                iconClassName={`
+                            w-[18.67px] h-[16px] 
+                            ${isDisabled ? 'text-n4100' : 'text-n7100'}`}
+                            />
+                        </button>
+                    );
+                })}
 
                 <div
                     className="
