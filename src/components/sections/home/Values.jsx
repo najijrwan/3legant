@@ -1,15 +1,15 @@
 import { Icon } from '@ui';
-import { VALUES } from '@data';
+import { HOME_VALUES } from '@data';
 
 const Values = () => {
-    console.log(VALUES);
+    console.log(HOME_VALUES);
     return (
         <section
             className='
             p-8 2xl:px-40 2xl:py-12
             grid grid-cols-2 2xl:grid-cols-4 gap-x-2 2xl:gap-x-6 gap-y-6'
         >
-            {VALUES.map((value, index) => (
+            {HOME_VALUES.map((value, index) => (
                 <div
                     key={index}
                     className='

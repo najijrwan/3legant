@@ -1,4 +1,4 @@
-export const VALUES = [
+export const HOME_VALUES = [
     {
         iconName: 'FastDelivery',
         title:'Free Shipping',
