@@ -59,7 +59,7 @@ const HeroSlider = () => {
                         hidden 2xl:flex items-center justify-center
                         bg-white`}
                     >
-                        <Icon name={btn.name} className="w-4.5 h-4" />
+                        <Icon name={btn.name} spanClassName='size-8' iconClassName="w-[18.67px] h-[16px]" />
                     </button>
                 ))}
 
