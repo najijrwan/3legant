@@ -1,43 +1,19 @@
-import { useRef } from "react";
+import useSwipe from '@/hooks/useSwipe';
 
-const HeroCarousel = ({ children, index, onChange }) => {
-    const startX = useRef(null);
-
-    const handleTouchStart = (e) => {
-        startX.current = e.touches[0].clientX;
-    };
-
-    const handleTouchEnd = (e) => {
-        if (startX.current === null) return;
-        const endX = e.changedTouches[0].clientX;
-        const diff = startX.current - endX;
-
-        if (diff > 50) {
-            // swipe left → next slide
-            onChange?.(Math.min(index + 1, children.length - 1));
-        } else if (diff < -50) {
-            // swipe right → previous slide
-            onChange?.(Math.max(index - 1, 0));
-        }
-
-        startX.current = null;
-    };
-
-    const translateClasses = [
-        "translate-x-0",
-        "-translate-x-[100%]",
-        "-translate-x-[200%]",
-        "-translate-x-[300%]",
-    ];
+const HeroCarousel = ({ children, index, onNext, onPrev }) => {
+    const swipeHandlers = useSwipe({
+        onSwipeLeft: onNext,
+        onSwipeRight: onPrev,
+    });
 
     return (
         <div
-            className={`
+            className="
             h-full
-            flex 
-            transition-transform duration-500 ease-out ${translateClasses[index]}`}
-            onTouchStart={handleTouchStart}
-            onTouchEnd={handleTouchEnd}
+            flex
+            transition-transform duration-500 ease-out"
+            style={{ transform: `translateX(-${index * 100}%)` }}
+            {...swipeHandlers}
         >
             {children}
         </div>

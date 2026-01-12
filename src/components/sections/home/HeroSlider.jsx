@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Icon, HeroCarousel } from "@ui";
 
 const SLIDER_BUTTONS = [
-    { name: "ArrowLeft", side: "left" },
-    { name: "ArrowRight", side: "right" },
+    { name: 'ArrowLeft', action: 'prev' },
+    { name: 'ArrowRight', action: 'next' },
 ];
 
 const IMAGES = [
@@ -16,13 +16,11 @@ const IMAGES = [
 const HeroSlider = () => {
     const [index, setIndex] = useState(0);
 
-    const handleNav = (side) => {
-        setIndex((prev) =>
-            side === "left"
-                ? Math.max(prev - 1, 0)
-                : Math.min(prev + 1, IMAGES.length - 1)
-        );
-    };
+    const goNext = () =>
+        setIndex((i) => Math.min(i + 1, IMAGES.length - 1));
+
+    const goPrev = () =>
+        setIndex((i) => Math.max(i - 1, 0));
 
     return (
         <section
@@ -41,7 +39,8 @@ const HeroSlider = () => {
             >
                 <HeroCarousel
                     index={index}
-                    onChange={setIndex}
+                    onNext={goNext}
+                    onPrev={goPrev}
                 >
                     {IMAGES.map((src, i) => (
                         <img
@@ -49,27 +48,24 @@ const HeroSlider = () => {
                             src={src}
                             className="
                             w-full h-full
-                            flex-shrink-0
+                            shrink-0
                             object-cover object-[55%_100%] 2xl:object-bottom-right"
                         />
                     ))}
                 </HeroCarousel>
 
-                {SLIDER_BUTTONS.map((button, i) => (
+                {SLIDER_BUTTONS.map((btn, i) => (
                     <button
                         key={i}
-                        onClick={() => handleNav(button.side)}
+                        onClick={btn.action === 'next' ? goNext : goPrev}
                         className={`
-                        absolute top-[238px] ${button.side === 'left' ? 'left-6' : 'right-6'}
+                        absolute top-[238px]
+                        ${btn.action === 'prev' ? 'left-6' : 'right-6'}
                         size-13 rounded-full
-                        hidden 2xl:flex items-center justify-center 
-                        bg-white
-                        cursor-pointer `}
+                        hidden 2xl:flex items-center justify-center
+                        bg-white`}
                     >
-                        <Icon
-                            name={button.name}
-                            className="w-4.5 h-4"
-                        />
+                        <Icon name={btn.name} className="w-4.5 h-4" />
                     </button>
                 ))}
 
