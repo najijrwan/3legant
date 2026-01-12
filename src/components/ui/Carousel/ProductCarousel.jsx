@@ -50,8 +50,7 @@ const ProductCarousel = ({ items, cardVariant }) => {
                     w-[311px] 2xl:w-[1120px]
                     h-1
                     bg-n3100
-                    rounded-[80px]
-                "
+                    rounded-[80px]"
             >
                 <div
                     onMouseDown={startDrag}
@@ -59,8 +58,7 @@ const ProductCarousel = ({ items, cardVariant }) => {
                         absolute top-0 h-full
                         bg-n5100
                         rounded
-                        cursor-pointer
-                    "
+                        cursor-pointer"
                     style={{
                         width: `${thumbRatio * 100}%`,
                         transform: `translateX(${thumbX}px)`,
