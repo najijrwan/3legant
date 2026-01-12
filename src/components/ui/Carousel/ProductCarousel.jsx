@@ -1,18 +1,15 @@
 import { useRef, useState, useEffect } from 'react';
 import { ProductCard } from '@ui';
+import { useScrollbarDrag } from '@hooks';
 
 const ProductCarousel = ({ items, cardVariant }) => {
     const trackRef = useRef(null);
     const barRef = useRef(null);
-    const draggingRef = useRef(false);
 
     const [progress, setProgress] = useState(0);
     const [thumbRatio, setThumbRatio] = useState(1);
-    const [barWidth, setBarWidth] = useState(0);
 
-    /* ================================
-       Measure bar + thumb
-    ================================= */
+    /* Measure bar + thumb */
     useEffect(() => {
         if (!barRef.current || !trackRef.current) return;
 
@@ -20,12 +17,9 @@ const ProductCarousel = ({ items, cardVariant }) => {
         const ratio = track.clientWidth / track.scrollWidth;
 
         setThumbRatio(Math.min(ratio, 1));
-        setBarWidth(barRef.current.clientWidth);
-    }, [items]);
+    }, [items.length]);
 
-    /* ================================
-       Scroll -> progress
-    ================================= */
+    /* Scroll -> progress */
     useEffect(() => {
         const track = trackRef.current;
         if (!track) return;
@@ -39,57 +33,24 @@ const ProductCarousel = ({ items, cardVariant }) => {
         return () => track.removeEventListener('scroll', onScroll);
     }, []);
 
-    /* ================================
-       Drag thumb -> scroll
-    ================================= */
-    useEffect(() => {
-        const onMouseMove = (e) => {
-            if (!draggingRef.current) return;
+    const { startDrag } = useScrollbarDrag({
+        trackRef,
+        barRef,
+        thumbRatio,
+    });
 
-            const track = trackRef.current;
-            const bar = barRef.current;
-            if (!track || !bar) return;
+    const barWidth = barRef.current?.clientWidth ?? 0;
+    const thumbX = progress * (barWidth * (1 - thumbRatio));
 
-            const rect = bar.getBoundingClientRect();
-            const thumbPx = thumbRatio * rect.width;
-
-            const x = e.clientX - rect.left - thumbPx / 2;
-            const maxX = rect.width - thumbPx;
-            const ratio = Math.min(Math.max(x / maxX, 0), 1);
-
-            track.scrollLeft = ratio * (track.scrollWidth - track.clientWidth);
-        };
-
-        const stopDrag = () => (draggingRef.current = false);
-
-        window.addEventListener('mousemove', onMouseMove);
-        window.addEventListener('mouseup', stopDrag);
-
-        return () => {
-            window.removeEventListener('mousemove', onMouseMove);
-            window.removeEventListener('mouseup', stopDrag);
-        };
-    }, [thumbRatio]);
-
-    const startDrag = (e) => {
-        draggingRef.current = true;
-        e.preventDefault();
-    };
-
-    /* ================================
-       Derived thumb position
-    ================================= */
-    const thumbX = progress * barWidth * (1 - thumbRatio);
 
     return (
         <>
             <ul
                 ref={trackRef}
                 className="
-                    h-[392px] 2xl:h-[433px]
-                    overflow-x-auto scroll-
-                    flex gap-4 2xl:gap-6
-                "
+                h-[392px] 2xl:h-[433px]
+                overflow-x-auto
+                flex gap-4 2xl:gap-6"
             >
                 {items.map((product, index) => (
                     <ProductCard
@@ -114,7 +75,7 @@ const ProductCarousel = ({ items, cardVariant }) => {
                 />
             </div>
 
-            <div className='2xl:hidden'></div>
+            <div className="2xl:hidden" />
         </>
     );
 };
