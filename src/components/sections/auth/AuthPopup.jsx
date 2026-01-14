@@ -22,7 +22,7 @@ const AuthPopup = ({ title }) => {
                 className='
                 relative 
                 w-full 2xl:w-[50%] h-[430px] 2xl:h-screen
-                flex items-center justify-center
+                flex items-start justify-center
                 bg-n2100'
             >
                 <Brand className='absolute left-1/2 -translate-x-1/2 top-8'/>
@@ -30,7 +30,7 @@ const AuthPopup = ({ title }) => {
                 <img
                     src="src/assets/images/image.png"
                     alt=""
-                    className='size-full 2xl:h-auto object-contain'
+                    className='size-full 2xl:h-auto max-h-[1080px] object-contain'
                 />
             </div>
 

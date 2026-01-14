@@ -85,7 +85,7 @@ const SignInForm = ({ }) => {
                 </p>
             </label>
 
-            <Button>
+            <Button variant='default'>
                 Sign In
             </Button>
         </form>
