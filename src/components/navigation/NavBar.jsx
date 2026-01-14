@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { Icon, Brand, CartWishlistButton } from '@ui';
 import { NavLinks } from '@navigation';
 
@@ -26,7 +26,9 @@ const NavBar = ({ onMenuOpen, onCartOpen }) => {
                     <Icon name="Menu" />
                 </button>
 
-                <Brand />
+                <Link to='/'>
+                    <Brand className='text-base 2xl:text-2xl'/>
+                </Link>
             </div>
 
             {/* Pages Navigation Links */}

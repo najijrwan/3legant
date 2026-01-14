@@ -27,9 +27,9 @@ const AuthPopup = ({ title, onButtonClick }) => {
                 bg-n2100'
             >
                 <Link to='/'>
-                    <Brand className='text-2xl' />
+                    <Brand />
                 </Link>
-                
+
                 <img
                     src="src/assets/images/Paste image.png"
                     alt=""

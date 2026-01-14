@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { Icon, Brand, CartWishlistButton, SocialLinks } from '@ui';
 import { NavLinks } from '@navigation';
 
@@ -46,7 +46,9 @@ const FlyMenu = ({ isOpen, onClose, onCartOpen }) => {
                         className="
                     w-full
                     flex justify-between">
-                        <Brand />
+                        <Link to='/'>
+                            <Brand className='text-base 2xl:text-2xl'/>
+                        </Link>
                         <button
                             onClick={onClose}
                             className=""
