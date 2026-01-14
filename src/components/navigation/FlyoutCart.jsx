@@ -64,7 +64,7 @@ const FlyoutCart = ({ isOpen, onClose }) => {
                         >
                             <Icon
                                 name="Close"
-                                className="size-6 text-(--neutral-4-100)"
+                                className="size-6 text-n4100"
                             />
                         </button>
                     </header>
@@ -102,14 +102,14 @@ const FlyoutCart = ({ isOpen, onClose }) => {
                                     >
                                         <p className="w-full
                                     flex justify-between items-center
-                                    text-(--neutral-7-100) caption-1-semi">
+                                    text-n7100 caption-1-semi">
                                             <span>{item.name}</span>
                                             <span>{formatPrice(item.price)}</span>
                                         </p>
 
                                         <p className="w-full
                                     flex justify-between items-center
-                                    text-(--neutral-4-100) caption-2">
+                                    text-n4100 caption-2">
                                             <span className=''>Color: {item.color}</span>
                                             <span><Icon name="Close" className='size-6' /></span>
                                         </p>

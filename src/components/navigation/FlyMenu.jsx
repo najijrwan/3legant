@@ -64,7 +64,7 @@ const FlyMenu = ({ isOpen, onClose, onCartOpen }) => {
                     <form
                         className="
                         w-full h-11.5 px-4 rounded-[6px]
-                        border border-(--neutral-4-100)
+                        border border-n4100
                         flex items-center"
                     >
                         <div
@@ -83,7 +83,7 @@ const FlyMenu = ({ isOpen, onClose, onCartOpen }) => {
                                 placeholder='Search'
                                 className='
                                 w-full
-                                text-(--neutral-4-100) caption-1
+                                text-n4100 caption-1
                                 outline-0'
                             />
                         </div>
@@ -97,10 +97,10 @@ const FlyMenu = ({ isOpen, onClose, onCartOpen }) => {
                             ul: `
                             w-full
                             flex flex-col gap-4
-                            btn-xs text-(--neutral-7-100)`,
+                            btn-xs text-n7100`,
                             li: `
                             w-full pb-1.75
-                            border-b border-(--neutral-3-100) box-border`,
+                            border-b border-n3100 box-border`,
                             row: `w-full h-8`,
                             link: `w-full`,
                         }}
@@ -118,8 +118,8 @@ const FlyMenu = ({ isOpen, onClose, onCartOpen }) => {
                         className="
                         w-full
                         flex flex-col gap-2
-                        text-(--neutral-4-100)
-                        border-b border-(--neutral-4-100) box-border"
+                        text-n4100
+                        border-b border-n4100 box-border"
                     >
 
                         {userSavedProducts.map((item, i) => (
@@ -128,7 +128,7 @@ const FlyMenu = ({ isOpen, onClose, onCartOpen }) => {
                                 className="
                                 w-full h-8 pb-1.75
                                 flex justify-between
-                                border-b border-(--neutral-3-100) box-border"
+                                border-b border-n3100 box-border"
                             >
                                 <span>{item.label}</span>
                                 {item.tool}
@@ -142,7 +142,7 @@ const FlyMenu = ({ isOpen, onClose, onCartOpen }) => {
                         className="
                         w-full py-2.5 px-6.5 rounded-md
                         flex items-center justify-center
-                        bg-(--neutral-7-100)
+                        bg-n7100
                         btn-m text-white"
                     >
                         <span className=''>Sign In</span>

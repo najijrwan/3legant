@@ -19,7 +19,7 @@ const CartWishlistButton = ({ onClick, iconName = '', count = 0 }) => {
                 size-5 rounded-full
                 flex items-center justify-center
                 text-white text-xs leading-2.5 tracking-normal font-inter font-bold
-                bg-(--neutral-7-100)"
+                bg-n7100"
             >
                 {count}
             </span>

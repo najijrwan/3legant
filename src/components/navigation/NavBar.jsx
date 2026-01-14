@@ -36,7 +36,7 @@ const NavBar = ({ onMenuOpen, onCartOpen }) => {
                     ul: `
                     w-fit h-fit
                     hidden 2xl:flex items-center gap-10
-                    text-(--neutral-4-100) btn-xs font-space-grotesk`,
+                    text-n4100 btn-xs font-space-grotesk`,
                     li: `
                     w-fit h-fit`,
                 }}

@@ -26,7 +26,7 @@ const SignUpForm = ({ formInputs }) => {
                     className="
                             relative 
                             h-10 
-                            body-2 text-(--neutral-4-100) border-b border-(--neutral-3-100)"
+                            body-2 text-n4100 border-b border-n3100"
                 >
                     <input
                         key={index}
@@ -64,7 +64,7 @@ const SignUpForm = ({ formInputs }) => {
                     className={`
                             size-6 rounded-sm
                             flex items-center justify-center
-                            border-[1.5px] border-(--neutral-4-100)
+                            border-[1.5px] border-n4100
                             transition
                             ${agreed
                             ? ''
@@ -77,10 +77,10 @@ const SignUpForm = ({ formInputs }) => {
 
                 {/* Text */}
                 <p className="flex items-center flex-wrap gap-x-1">
-                    <span className="caption-2 text-(--neutral-4-100)">I agree with</span>
-                    <span className="caption-2-semi text-(--neutral-7-100)">Privacy Policy</span>
-                    <span className="caption-2 text-(--neutral-4-100)">and</span>
-                    <span className="caption-2-semi text-(--neutral-7-100)">Terms of Use</span>
+                    <span className="caption-2 text-n4100">I agree with</span>
+                    <span className="caption-2-semi text-n7100">Privacy Policy</span>
+                    <span className="caption-2 text-n4100">and</span>
+                    <span className="caption-2-semi text-n7100">Terms of Use</span>
                 </p>
             </label>
 

@@ -24,7 +24,7 @@ const SignInForm = ({ }) => {
                     className="
                             relative 
                             h-10 
-                            body-2 text-(--neutral-4-100) border-b border-(--neutral-3-100)"
+                            body-2 text-n4100 border-b border-n3100"
                 >
                     <input
                         key={index}
@@ -63,7 +63,7 @@ const SignInForm = ({ }) => {
                     className={`
                             size-6 rounded-sm
                             flex items-center justify-center
-                            border-[1.5px] border-(--neutral-4-100)
+                            border-[1.5px] border-n4100
                             transition
                             ${agreed
                             ? ''
@@ -80,8 +80,8 @@ const SignInForm = ({ }) => {
                 w-full
                 flex items-center justify-between flex-wrap"
                 >
-                    <span className="body-2 text-(--neutral-4-100)">Remember me</span>
-                    <span className="caption-2-semi text-(--neutral-7-100)">Forget Password?</span>
+                    <span className="body-2 text-n4100">Remember me</span>
+                    <span className="caption-2-semi text-n7100">Forget Password?</span>
                 </p>
             </label>
 

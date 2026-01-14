@@ -25,7 +25,7 @@ const AuthPopup = ({ title }) => {
                 flex items-start justify-center
                 bg-n2100'
             >
-                <Brand className='absolute left-1/2 -translate-x-1/2 top-8'/>
+                <Brand className='absolute left-1/2 -translate-x-1/2 top-8' />
 
                 <img
                     src="src/assets/images/image.png"
@@ -48,20 +48,21 @@ const AuthPopup = ({ title }) => {
                 >
                     <header
                         className="
-                        h4 text-(--neutral-7-100)">
+                        h4 text-n7100"
+                    >
                         {isSignup ? 'Sign Up' : 'Sign In'}
                     </header>
 
                     <p
                         className="
-                        body-2 text-(--neutral-4-100)"
+                        body-2 text-n7100"
                     >
                         {isSignup ? 'Already have an account?' : "Don't have an account?"}
                         <span
                             onClick={() =>
                                 setMode(isSignup ? 'signin' : 'signup')
                             }
-                            className="body-2-semi text-[var(--green)] cursor-pointer ml-1"
+                            className="body-2-semi text-green cursor-pointer ml-1"
                         >
                             {isSignup ? 'Sign in' : 'Sign up'}
                         </span>

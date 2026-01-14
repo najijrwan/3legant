@@ -90,7 +90,7 @@ const HeroSlider = () => {
                             onClick={() => setIndex(i)}
                             className={`
                             size-2 rounded-full
-                            bg-[var(--neutral-1-100)]
+                            bg-[varn1100]
                             transiton-all duration-500
                             cursor-pointer
                             ${i === index
@@ -109,14 +109,14 @@ const HeroSlider = () => {
             >
                 <h4 className="
                 2xl:w-[643px]
-                text-(--neutral-7-100) 2xl:text-[72px] 2xl:leading-[76px] 2xl:tracking-[2px]"
+                text-n7100 2xl:text-[72px] 2xl:leading-[76px] 2xl:tracking-[2px]"
                 >
-                    Simply Unique<span className="text-(--neutral-4-100)">/</span><br />
-                    Simply Better<span className="text-(--neutral-4-100)">.</span>
+                    Simply Unique<span className="text-n4100">/</span><br />
+                    Simply Better<span className="text-n4100">.</span>
                 </h4>
                 <p className="
                 2xl:w-[424px]
-                caption-1 2xl:body-2 text-(--neutral-4-100)"
+                caption-1 2xl:body-2 text-n4100"
                 >
                     <span className="caption-1-semi neutral-5-100">3legant </span>
                     is a gift & decorations store based in HCMC, Vietnam. Est since 2019.

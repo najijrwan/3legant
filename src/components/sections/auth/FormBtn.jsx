@@ -1,7 +1,7 @@
 const FormBtn = ({ variant, children }) => {
     const variants = {
-        default: 'bg-(--neutral-7-100) text-white',
-        outline: 'border border-(--neutral-7-100) text-(--neutral-7-100) bg-transparent',
+        default: 'bg-n7100 text-white',
+        outline: 'border border-n7100 text-n7100 bg-transparent',
     }
     return (
         <button

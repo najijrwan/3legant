@@ -8,7 +8,7 @@ const NotificationBar = ({ className = '' }) => {
             relative
             h-10
             flex items-center justify-center gap-5.5 2xl:gap-[508px] 2xl:justify-end 2xl:pr-6
-            bg-(--neutral-2-100)
+            bg-n2100
             ${className}`}
         >
             {/* Notification Message & Shop Button */}
@@ -25,7 +25,7 @@ const NotificationBar = ({ className = '' }) => {
                     <Icon name="TicketPercent" className="size-4 2xl:size-6" />
                     <p
                         className="
-                        caption-2-semi 2xl:caption-1-semi text-(--neutral-5-100)"
+                        caption-2-semi 2xl:caption-1-semi text-n5100"
                     >
                         30% off storewide — Limited time!
                     </p>
