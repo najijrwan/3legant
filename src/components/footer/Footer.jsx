@@ -20,7 +20,7 @@ const Footer = () => {
                     w-full 2xl:w-[544px]
                     flex flex-col items-center 2xl:flex-row gap-4 2xl:gap-8"
                 >
-                    <Brand className='text-white text-2xl' />
+                    <Brand className='text-white' />
 
                     <div className='w-6 h-px 2xl:h-6 2xl:w-px bg-n4100'></div>
 

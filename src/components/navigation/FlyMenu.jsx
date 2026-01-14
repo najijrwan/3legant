@@ -1,4 +1,4 @@
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Icon, Brand, CartWishlistButton, SocialLinks } from '@ui';
 import { NavLinks } from '@navigation';
 
@@ -38,17 +38,17 @@ const FlyMenu = ({ isOpen, onClose, onCartOpen }) => {
                 <div
                     data-id='branding&accessibility'
                     className="
-                w-full
-                flex flex-col gap-4"
+                    w-full
+                    flex flex-col gap-4"
                 >
                     {/* Brand & Close Menu Button */}
                     <div
                         className="
-                    w-full
-                    flex justify-between">
-                        <Link to='/'>
-                            <Brand className='text-base 2xl:text-2xl'/>
-                        </Link>
+                        w-full
+                        flex justify-between"
+                    >
+                        <Brand className='text-base 2xl:text-2xl' />
+
                         <button
                             onClick={onClose}
                             className=""
@@ -63,15 +63,15 @@ const FlyMenu = ({ isOpen, onClose, onCartOpen }) => {
                     {/* Search Product Input */}
                     <form
                         className="
-                    w-full h-11.5 px-4 rounded-[6px]
-                    border border-(--neutral-4-100)
-                    flex items-center"
+                        w-full h-11.5 px-4 rounded-[6px]
+                        border border-(--neutral-4-100)
+                        flex items-center"
                     >
                         <div
                             type="text"
                             className="
-                        w-full
-                        flex gap-2"
+                            w-full
+                            flex gap-2"
                         >
                             <span className='size-6'>
                                 <Icon name="Search" />
@@ -82,9 +82,9 @@ const FlyMenu = ({ isOpen, onClose, onCartOpen }) => {
                                 name="search"
                                 placeholder='Search'
                                 className='
-                            w-full
-                            text-(--neutral-4-100) caption-1
-                            outline-0'
+                                w-full
+                                text-(--neutral-4-100) caption-1
+                                outline-0'
                             />
                         </div>
                     </form>
@@ -95,7 +95,7 @@ const FlyMenu = ({ isOpen, onClose, onCartOpen }) => {
                         exclude={['Blog']}
                         classNames={{
                             ul: `
-                             w-full
+                            w-full
                             flex flex-col gap-4
                             btn-xs text-(--neutral-7-100)`,
                             li: `
@@ -110,25 +110,25 @@ const FlyMenu = ({ isOpen, onClose, onCartOpen }) => {
                 {/* Bottom Container: Account Actions & Social Links */}
                 <div
                     className="
-                w-full h-52.5
-                flex flex-col justify-between"
+                    w-full h-52.5
+                    flex flex-col justify-between"
                 >
                     {/* Cart & wishlist */}
                     <div
                         className="
-                    w-full
-                    flex flex-col gap-2
-                    text-(--neutral-4-100)
-                    border-b border-(--neutral-4-100) box-border"
+                        w-full
+                        flex flex-col gap-2
+                        text-(--neutral-4-100)
+                        border-b border-(--neutral-4-100) box-border"
                     >
 
                         {userSavedProducts.map((item, i) => (
                             <div
                                 key={i}
                                 className="
-                            w-full h-8 pb-1.75
-                            flex justify-between
-                            border-b border-(--neutral-3-100) box-border"
+                                w-full h-8 pb-1.75
+                                flex justify-between
+                                border-b border-(--neutral-3-100) box-border"
                             >
                                 <span>{item.label}</span>
                                 {item.tool}

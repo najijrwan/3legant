@@ -26,9 +26,7 @@ const AuthPopup = ({ title, onButtonClick }) => {
                 flex items-center justify-center
                 bg-n2100'
             >
-                <Link to='/'>
-                    <Brand />
-                </Link>
+                <Brand />
 
                 <img
                     src="src/assets/images/Paste image.png"
