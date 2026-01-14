@@ -1,5 +1,7 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Container from '@layout/Container.jsx';
+import { Brand } from '@ui';
 import { SignUpForm, SignInForm } from '@auth';
 
 const AuthPopup = ({ title, onButtonClick }) => {
@@ -24,13 +26,10 @@ const AuthPopup = ({ title, onButtonClick }) => {
                 flex items-center justify-center
                 bg-n2100'
             >
-                <header
-                    onClick={onButtonClick}
-                    className='
-                    absolute top-8 right-1/2 translate-x-1/2
-                    text-(--primary) text-2xl leading-6 tracking-[0] font-poppins font-medium'>
-                    3legant<span className="text-(--neutral-4-100)">.</span>
-                </header>
+                <Link to='/'>
+                    <Brand className='text-2xl' />
+                </Link>
+                
                 <img
                     src="src/assets/images/Paste image.png"
                     alt=""
