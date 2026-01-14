@@ -16,10 +16,11 @@ const SOCIAL_LINKS = [
 ]
 
 const SocialLinks = ({ color = '' }) => {
-    const COLOR_MAP = {
+    const ICON_COLOR_MAP = {
         light: 'text-n1100',
         dark: 'text-n7100',
     };
+    
     return (
         <div
             className='
@@ -33,7 +34,7 @@ const SocialLinks = ({ color = '' }) => {
                 >
                     <Icon
                         name={social.iconName}
-                        className={`size-5 ${COLOR_MAP[color] ?? ''}`}
+                        className={`size-5 ${ICON_COLOR_MAP[color] ?? ''}`}
                     />
                 </a>
             ))}

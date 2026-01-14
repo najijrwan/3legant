@@ -1,7 +1,10 @@
+import { useNavigate } from 'react-router-dom';
 import { Icon, Brand, CartWishlistButton } from '@ui';
 import { NavLinks } from '@navigation';
 
 const NavBar = ({ onMenuOpen, onCartOpen }) => {
+    const navigate = useNavigate();
+
     return (
         <nav
             data-id="NavigationBar"
@@ -52,6 +55,7 @@ const NavBar = ({ onMenuOpen, onCartOpen }) => {
                 />
 
                 <button
+                    onClick={() => navigate('/auth')}
                     className="
                     size-6 flex items-center justify-center"
                 >

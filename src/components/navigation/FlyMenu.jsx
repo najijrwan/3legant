@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { Icon, Brand, CartWishlistButton, SocialLinks } from '@ui';
 import { NavLinks } from '@navigation';
 
@@ -8,6 +9,8 @@ export const asideClass = `
     bg-white`;
 
 const FlyMenu = ({ isOpen, onClose, onCartOpen }) => {
+    const navigate = useNavigate();
+
     const userSavedProducts = [
         {
             label: "Cart",
@@ -132,11 +135,13 @@ const FlyMenu = ({ isOpen, onClose, onCartOpen }) => {
                     </div>
 
                     {/* Sign In */}
-                    <button className="
-                    w-full py-2.5 px-6.5 rounded-md
-                    flex items-center justify-center
-                    bg-(--neutral-7-100)
-                    btn-m text-white"
+                    <button
+                        onClick={() => navigate('/auth')}
+                        className="
+                        w-full py-2.5 px-6.5 rounded-md
+                        flex items-center justify-center
+                        bg-(--neutral-7-100)
+                        btn-m text-white"
                     >
                         <span className=''>Sign In</span>
                     </button>
