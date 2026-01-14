@@ -1,10 +1,9 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import Container from '@layout/Container.jsx';
+import { Container } from '@layout';
 import { Brand } from '@ui';
 import { SignUpForm, SignInForm } from '@auth';
 
-const AuthPopup = ({ title, onButtonClick }) => {
+const AuthPopup = ({ title }) => {
 
     const [mode, setMode] = useState('signup');
 
@@ -22,16 +21,16 @@ const AuthPopup = ({ title, onButtonClick }) => {
                 data-id='image&brand'
                 className='
                 relative 
-                w-full 2xl:w-[50%]
+                w-full 2xl:w-[50%] h-[430px] 2xl:h-screen
                 flex items-center justify-center
                 bg-n2100'
             >
-                <Brand />
+                <Brand className='absolute left-1/2 -translate-x-1/2 top-8'/>
 
                 <img
-                    src="src/assets/images/Paste image.png"
+                    src="src/assets/images/image.png"
                     alt=""
-                    className='h-[430px] 2xl:h-auto'
+                    className='size-full 2xl:h-auto object-contain'
                 />
             </div>
 
