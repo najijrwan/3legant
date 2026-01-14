@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Container from '@layout/Container.jsx';
 import { SignUpForm, SignInForm } from '@auth';
 
-const AuthPopup = ({ title }) => {
+const AuthPopup = ({ title, onButtonClick }) => {
 
     const [mode, setMode] = useState('signup');
 
@@ -25,6 +25,7 @@ const AuthPopup = ({ title }) => {
                 bg-n2100'
             >
                 <header
+                    onClick={onButtonClick}
                     className='
                     absolute top-8 right-1/2 translate-x-1/2
                     text-(--primary) text-2xl leading-6 tracking-[0] font-poppins font-medium'>
