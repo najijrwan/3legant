@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import { FlyMenu, FlyoutCart } from '@navigation';
+import { Container } from '@layout';
 
 const GlobalLayout = ({ Shell }) => {
     const [isFlyMenuOpen, setFlyMenuOpen] = useState(false);
@@ -8,7 +9,7 @@ const GlobalLayout = ({ Shell }) => {
     const isAnyPanelOpen = isFlyMenuOpen || isFlyoutCartOpen;
 
     return (
-        <>
+        <Container>
             <Shell
                 onMenuOpen={() => setFlyMenuOpen(true)}
                 onCartOpen={() => setFlyoutCartOpen(true)}
@@ -36,7 +37,7 @@ const GlobalLayout = ({ Shell }) => {
                     }}
                 />
             )}
-        </>
+        </Container>
     );
 };
 

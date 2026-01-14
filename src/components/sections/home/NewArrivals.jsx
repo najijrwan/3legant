@@ -20,7 +20,7 @@ const NewArrivals = ({ title }) => {
                 <h5 className="w-[125px] text-brand 2xl:h4">{title}</h5>
                 <MoreActionBtn
                     label='More Products'
-                    buttonClass='absolute bottom-0 left-8'
+                    buttonClass='absolute bottom-0 left-8 2xl:static'
                 />
             </header>
 

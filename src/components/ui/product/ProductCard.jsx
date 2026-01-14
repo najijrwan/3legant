@@ -36,12 +36,15 @@ const ProductCard = ({ product, variant }) => {
                     flex items-center justify-center
                     bg-white opacity-0
                     group-hover:opacity-100 group-hover:translate-y-0
+                    group-focus:opacity-100 group-focus:translate-y-0
+                    group-active:opacity-100 group-active:translate-y-0
                     transition-all duration-300 ease-out`}
                 >
                     <Icon
                         name='Heart'
                         spanClassName='size-5'
-                        iconClassName='w-[19px] h-[15px] text-n4100' />
+                        iconClassName='w-[19px] h-[15px] text-n4100'
+                    />
                 </button>
 
                 <AddToCartBtn
@@ -51,6 +54,8 @@ const ProductCard = ({ product, variant }) => {
                     text-n1100 btn-s
                     opacity-0
                     group-hover:opacity-100 group-hover:translate-y-0
+                    group-focus:opacity-100 group-focus:translate-y-0
+                    group-active:opacity-100 group-focus:translate-y-0
                     transition-all duration-400 east-out'
                 />
             </div>
