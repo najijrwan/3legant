@@ -74,7 +74,7 @@ const BannerGrid = () => {
                         >
                             <h6 className="2xl:h5">{item.category}</h6>
 
-                            <MoreActionBtn label='Shop Now' />
+                            <MoreActionBtn label='Shop Now' labelClass='btn-xs 2xl:btn-s text-n7100'/>
                         </div>
                     </div>
                 );

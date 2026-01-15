@@ -35,7 +35,7 @@ const NotificationBar = ({ className = '' }) => {
                 <MoreActionBtn
                     label='Shop Now'
                     buttonClass='hidden 2xl:flex shadow-blue!'
-                    labelClass='btn-xs text-blue!'
+                    labelClass='btn-xs text-blue'
                     iconSpanClass='size-[18px]'
                     iconClass='w-[10.5px] h-[9px] text-blue'
                 />

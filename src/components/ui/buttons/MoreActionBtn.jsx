@@ -15,7 +15,7 @@ const MoreActionBtn = ({
             shadow-line shadow-n7100
             ${buttonClass}`}
         >
-            <span className={`btn-xs 2xl:btn-s text-n7100 ${labelClass}`}>
+            <span className={labelClass}>
                 {label}
             </span>
 
