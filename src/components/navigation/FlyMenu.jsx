@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import { Icon, Brand, CartWishlistButton, SocialLinks } from '@ui';
 import { NavLinks } from '@navigation';
 
@@ -9,7 +9,6 @@ export const asideClass = `
     bg-white`;
 
 const FlyMenu = ({ isOpen, onClose, onCartOpen }) => {
-    const navigate = useNavigate();
 
     const userSavedProducts = [
         {
@@ -137,16 +136,16 @@ const FlyMenu = ({ isOpen, onClose, onCartOpen }) => {
                     </div>
 
                     {/* Sign In */}
-                    <button
-                        onClick={() => navigate('/auth')}
+                    <Link
+                        to="/auth"
                         className="
                         w-full py-2.5 px-6.5 rounded-md
                         flex items-center justify-center
                         bg-n7100
                         btn-m text-white"
                     >
-                        <span className=''>Sign In</span>
-                    </button>
+                        Sign In
+                    </Link>
 
                     {/* Social Media Links */}
                     <div className="w-full">
