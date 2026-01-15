@@ -28,7 +28,11 @@ const Newsletter = () => {
                 size-[680px]'
             />
 
-            <div className='2xl:absolute left-1/2 2xl:-translate-x-1/2 top-[101px]'>
+            <div 
+                className='
+                2xl:absolute left-1/2 2xl:-translate-x-1/2 top-[101px]
+                flex flex-col gap-8'
+            >
                 <header className='flex flex-col gap-2 text-n7100'>
                     <h6 className='2xl:h4'>Join Our Newsletter</h6>
                     <p

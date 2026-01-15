@@ -37,7 +37,7 @@ const GlobalLayout = ({ Shell }) => {
 
             {isAnyPanelOpen && (
                 <div
-                    className='fixed inset-0 bg-n4100 z-10'
+                    className='fixed inset-0 bg-black/32 z-10'
                     onClick={() => {
                         setFlyMenuOpen(false);
                         setFlyoutCartOpen(false);
