@@ -1,9 +1,8 @@
-import { useNavigate } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import { Icon, Brand, CartWishlistButton } from '@ui';
 import { NavLinks } from '@navigation';
 
 const NavBar = ({ onMenuOpen, onCartOpen }) => {
-    const navigate = useNavigate();
 
     return (
         <nav
@@ -54,16 +53,19 @@ const NavBar = ({ onMenuOpen, onCartOpen }) => {
                     iconName="ShoppingBag"
                 />
 
-                <button
-                    onClick={() => navigate('/auth')}
+                <Link
+                    to="/auth"
                     className="
-                    size-6 flex items-center justify-center"
+                    size-6
+                    flex items-center justify-center"
+                    aria-label="Sign up"
                 >
                     <Icon
                         name="UserCircle"
                         className="hidden 2xl:block"
                     />
-                </button>
+                </Link>
+
 
                 <button
                     className="

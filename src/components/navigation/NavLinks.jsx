@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Icon } from '@ui';
 import { NAV_ITEMS } from '@data';
 
@@ -6,7 +7,9 @@ const NavLinks = ({
   showChevron = false,
   exclude = [],
   classNames = {},
+
 }) => {
+
   const {
     ul = '',
     li = '',
@@ -21,9 +24,9 @@ const NavLinks = ({
         .map(item => (
           <li key={item.label} className={li}>
             <div className={`flex justify-between ${row}`}>
-              <a href={item.href} className={link}>
+              <Link to={item.link} className={link}>
                 {item.label}
-              </a>
+              </Link>
 
               {showChevron && (
                 <span className="size-6 flex items-center justify-center">

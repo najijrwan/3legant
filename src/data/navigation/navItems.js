@@ -1,7 +1,7 @@
 export const NAV_ITEMS = [
-    { label: 'Home', href: '#' },
-    { label: 'Shop', href: '#' },
-    { label: 'Product', href: '#' },
-    { label: 'Blog', href: '#' },
-    { label: 'Contact Us', href: '#' },
+    { label: 'Home', link: '#' },
+    { label: 'Shop', link: '#' },
+    { label: 'Product', link: '/product' },
+    { label: 'Blog', link: '#' },
+    { label: 'Contact Us', link: '#' },
 ];
