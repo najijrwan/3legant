@@ -32,7 +32,7 @@ const FlyoutCart = ({ isOpen, onClose }) => {
             data-id='Flyout Cart'
             className={`
             ${asideClass}
-            right-0 ${isOpen ? 'translate-x-0' : 'translate-x-full'} z-30
+            right-0 ${isOpen ? 'translate-x-0' : 'translate-x-full'} z-20
             2xl:w-[413px] 2xl:py-10 2xl:h-screen`}
         >
             <div

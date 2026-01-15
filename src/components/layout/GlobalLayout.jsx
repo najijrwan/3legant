@@ -7,12 +7,16 @@ const GlobalLayout = ({ Shell }) => {
     const [isFlyMenuOpen, setFlyMenuOpen] = useState(false);
     const [isFlyoutCartOpen, setFlyoutCartOpen] = useState(false);
     const isAnyPanelOpen = isFlyMenuOpen || isFlyoutCartOpen;
-
     return (
         <Container>
             <Shell
-                onMenuOpen={() => setFlyMenuOpen(true)}
-                onCartOpen={() => setFlyoutCartOpen(true)}
+                onMenuOpen={() => {
+                    setFlyMenuOpen(true);
+                }}
+                onCartOpen={() => {
+                    setFlyMenuOpen(false);
+                    setFlyoutCartOpen(true);
+                }}
             >
                 <Outlet />
             </Shell>
@@ -20,7 +24,10 @@ const GlobalLayout = ({ Shell }) => {
             <FlyMenu
                 isOpen={isFlyMenuOpen}
                 onClose={() => setFlyMenuOpen(false)}
-                onCartOpen={() => setFlyoutCartOpen(true)}
+                onCartOpen={() => {
+                    setFlyMenuOpen(false);
+                    setFlyoutCartOpen(true);
+                }}
             />
 
             <FlyoutCart
@@ -30,7 +37,7 @@ const GlobalLayout = ({ Shell }) => {
 
             {isAnyPanelOpen && (
                 <div
-                    className="fixed inset-0 bg-black/32 z-10"
+                    className='fixed inset-0 bg-n4100 z-10'
                     onClick={() => {
                         setFlyMenuOpen(false);
                         setFlyoutCartOpen(false);
