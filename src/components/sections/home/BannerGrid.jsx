@@ -39,7 +39,7 @@ const variants = {
 const BannerGrid = () => {
     return (
         <section
-            data-title='Banner Grid'
+            data-title='Categories Banner'
             className="
             w-full
             px-8 2xl:px-40
@@ -54,6 +54,7 @@ const BannerGrid = () => {
                 return (
                     <div
                         key={i}
+                        data-id={item.category}
                         className={`
                         relative ${v.container} bg-n2100`}
                     >
@@ -64,6 +65,7 @@ const BannerGrid = () => {
                             className={`
                             ${v.image} object-contain object-bottom`}
                         />
+                        
                         {/* Category & Shop*/}
                         <div
                             className={`

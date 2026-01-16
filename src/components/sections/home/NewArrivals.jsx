@@ -12,12 +12,14 @@ const NewArrivals = ({ title }) => {
             flex flex-col gap-10 2xl:gap-12"
         >
             <header
-                data-id='title&action'
+                data-id='title-action'
                 className="
                 2xl:w-[1120px]
                 flex justify-between items-end"
             >
-                <h5 className="w-[125px] text-brand 2xl:h4">{title}</h5>
+                <h5 className="text-brand 2xl:h4">
+                    {title.split(" ")[0]} <br /> {title.split(" ").slice(1).join(" ")}
+                </h5>
                 <MoreActionBtn
                     label='More Products'
                     labelClass='btn-xs 2xl:btn-s text-n7100'
@@ -26,6 +28,7 @@ const NewArrivals = ({ title }) => {
             </header>
 
             <ProductCarousel
+                data-id='products'
                 items={NEW_ARRIVALS_PRODUCTS}
                 cardVariant="medium"
             />
