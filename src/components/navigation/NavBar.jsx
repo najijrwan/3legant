@@ -54,7 +54,7 @@ const NavBar = ({ onMenuOpen, onCartOpen }) => {
                 />
 
                 <Link
-                    to="/auth"
+                    to="/auth?mode=signin"
                     className="
                     size-6
                     flex items-center justify-center"

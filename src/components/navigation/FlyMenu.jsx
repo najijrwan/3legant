@@ -137,7 +137,7 @@ const FlyMenu = ({ isOpen, onClose, onCartOpen }) => {
 
                     {/* Sign In */}
                     <Link
-                        to="/auth"
+                        to='/auth?mode=signin'
                         className="
                         w-full py-2.5 px-6.5 rounded-md
                         flex items-center justify-center

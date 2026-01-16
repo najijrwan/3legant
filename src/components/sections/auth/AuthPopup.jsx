@@ -1,13 +1,14 @@
-import { useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { Container } from '@layout';
 import { Brand } from '@ui';
 import { SignUpForm, SignInForm } from '@auth';
 
 const AuthPopup = ({ title }) => {
 
-    const [mode, setMode] = useState('signup');
+    const [searchParams, setSearchParams] = useSearchParams();
 
-    const isSignup = mode === 'signup';
+    const modeParam = searchParams.get('mode');
+    const isSignup = modeParam !== 'signin';
 
     return (
         <Container
@@ -60,7 +61,7 @@ const AuthPopup = ({ title }) => {
                         {isSignup ? 'Already have an account?' : "Don't have an account?"}
                         <span
                             onClick={() =>
-                                setMode(isSignup ? 'signin' : 'signup')
+                                setSearchParams({ mode: isSignup ? 'signin' : 'signup' })
                             }
                             className="body-2-semi text-green cursor-pointer ml-1"
                         >
