@@ -45,8 +45,12 @@ const ProductLoop = () => {
             </div>
 
             <div className='px-8 py-4'>
-                <div className='pb-6 flex flex-col gap-4'>
+                <div className='pb-6 flex flex-col'>
+                    <div></div>
 
+                    <div></div>
+
+                    <div></div>
                 </div>
 
                 <div></div>

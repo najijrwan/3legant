@@ -1,7 +1,6 @@
 // App.jsx
 import React from 'react';
-import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
-import { AuthPopup } from '@auth';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { GlobalLayout, MainLayout, MinimalLayout, StandardLayout } from '@layout';
 import { HomePage, AuthPage, ProductPage } from '@pages';
 
