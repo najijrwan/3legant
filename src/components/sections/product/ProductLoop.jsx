@@ -43,6 +43,10 @@ const ProductLoop = () => {
 
                 <Badges variant='large' />
             </div>
+
+            <div
+                className='
+                px-8 py-4'></div>
         </section>
     );
 }

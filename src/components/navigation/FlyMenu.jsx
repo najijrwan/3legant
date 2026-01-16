@@ -23,7 +23,7 @@ const FlyMenu = ({ isOpen, onClose, onCartOpen }) => {
 
     return (
         <aside
-            data-title='Fly Menu'
+            data-id='Fly Menu'
             className={`
             ${asideClass}
             left-0 ${isOpen ? 'translate-x-0' : '-translate-x-full'} z-20`}

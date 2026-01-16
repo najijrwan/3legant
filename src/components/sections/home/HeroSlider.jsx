@@ -90,7 +90,7 @@ const HeroSlider = () => {
                             onClick={() => setIndex(i)}
                             className={`
                             size-2 rounded-full
-                            bg-[varn1100]
+                            bg-n1100
                             transiton-all duration-500
                             cursor-pointer
                             ${i === index

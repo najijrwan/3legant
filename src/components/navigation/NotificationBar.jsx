@@ -3,7 +3,6 @@ import { Icon, MoreActionBtn } from '@ui';
 const NotificationBar = ({ className = '' }) => {
     return (
         <header
-            data-id="notificationBar"
             className={`
             relative
             h-10

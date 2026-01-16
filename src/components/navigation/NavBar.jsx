@@ -6,7 +6,6 @@ const NavBar = ({ onMenuOpen, onCartOpen }) => {
 
     return (
         <nav
-            data-id="NavigationBar"
             className="
             w-full py-4 px-8 2xl:px-40
             flex justify-between"

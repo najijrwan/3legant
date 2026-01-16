@@ -10,7 +10,7 @@ const StandardLayout = ({ children, onMenuOpen, onCartOpen }) => {
                 onCartOpen={onCartOpen}
             />
 
-            <main className="w-full">
+            <main>
                 {children}
             </main>
 
