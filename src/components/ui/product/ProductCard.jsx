@@ -59,7 +59,7 @@ const ProductCard = ({ product, variant }) => {
             <div
                 className='w-full flex flex-col gap-1'
             >
-                <ProductRating rating={product.rating} />
+                <ProductRating rating={rating} />
 
                 <p
                     className='

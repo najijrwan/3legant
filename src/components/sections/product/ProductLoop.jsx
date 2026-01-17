@@ -1,4 +1,4 @@
-import { Icon, Badges } from '@ui';
+import { Icon, Badges, ProductRating } from '@ui';
 
 const ProductLoop = () => {
     return (
@@ -44,9 +44,21 @@ const ProductLoop = () => {
                 <Badges variant='large' />
             </div>
 
-            <div className='px-8 py-4'>
-                <div className='pb-6 flex flex-col'>
-                    <div></div>
+            <div className='px-8 pt-4'>
+                <div className='flex flex-col'>
+                    <div className='pb-6 flex flex-col gap-4'>
+                        <div className='flex gap-2.5'>
+                            <ProductRating rating={5} />
+                            <span className='text-n7100 caption-2'>11 Reviews</span>
+                        </div>
+
+                        <h4>Tray Table</h4>
+
+                        <p className='w-[311px] text-n4100 body-2'>
+                            Buy one or buy a few and make every space where you sit more convenient. 
+                            Light and easy to move around with removable tray top, handy for serving snacks.
+                        </p>
+                    </div>
 
                     <div></div>
 
