@@ -119,7 +119,19 @@ const ProductLoop = () => {
                     <p className='text-black body-1'>17 1/2x20 5/8 "</p>
                 </div>
 
-                
+                <div className='flex flex-col gap-4'>
+                    <div className='flex flex-col gap-2'>
+                        <div className='flex items-center gap-1 text-n4100'>
+                            <p className='body-2-semi'>Choose Color</p>
+                            <Icon
+                                name="ChevronRight"
+                                spanClassName='size-6'
+                                iconClassName='w-[6px] h-[15px]'
+                            />
+                        </div>
+                        <p className='text-black body-1'>Black</p>
+                    </div>
+                </div>
             </div>
         </section>
     );
