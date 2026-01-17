@@ -5,6 +5,7 @@
   /*------------COLORS------------*/
   /*-Primary-*/
   --brand: #000000;
+
   /*--Secondary--*/
   --blue: #377DFF;
   --green: #38CB89;
@@ -12,6 +13,8 @@
   --red: #FF5630;
   --black-900: #121212;
   --black-600: #605F5F;
+  --black-100: #F5F5F5;
+
   /*---Neutral---*/
   --neutral-1-100: #FEFEFE;
   --neutral-1-95: #FEFEFE5F;
@@ -70,6 +73,7 @@ body {
   --color-red: var(--red);
   --color-black900: var(--black-900);
   --color-black600: var(--black-600);
+  --color-black100: var(--black-100);
 
   /*---Neutral---*/
   --color-n1100: var(--neutral-1-100);

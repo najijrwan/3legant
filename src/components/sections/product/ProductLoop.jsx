@@ -20,6 +20,13 @@ const timerBlocks = [
     },
 ]
 
+const productColors = [
+    "src/assets/images/product image 1 black.png",
+    "src/assets/images/product image 1 brown.png",
+    "src/assets/images/product image 1 red.png",
+    "src/assets/images/product image 1 white.png",
+]
+
 const ProductLoop = () => {
     const price = formatPrice(finalPrice(400, 50));
     return (
@@ -133,22 +140,52 @@ const ProductLoop = () => {
                         <p className='text-black body-1'>Black</p>
 
                         <div className='w-[311px] flex justify-between'>
-                            <div className='h-[72px]'>
+                            {productColors.map((colors, i) => (
                                 <img
-                                    src="src/assets/images/product image 1.png"
+                                    key={i}
+                                    src={colors}
                                     alt=""
-                                    className="h-full object-contain"
+                                    className="h-[72px]"
                                 />
-                            </div>
-                            <div className='h-[72px]'>
-                                <img
-                                    src="src/assets/images/product image 2.png"
-                                    alt=""
-                                    className="h-full object-contain"
+                            ))}
+                        </div>
+                    </div>
+                </div>
+
+                <div className='py-6 flex gap-2'>
+                    <div className='flex gap-2'>
+                        <div className='px-2 py-3 bg-black100'>
+                            <div className='flex items-center gap-[13px]'>
+                                <Icon
+                                    name="Minus"
+                                    spanClassName='size-4'
+                                    iconClassName='w-[9.33px] text-black900'
+                                />
+                                <span className='text-black900 text-[12px] leading-5 font-inter font-semibold'>
+                                    1
+                                </span>
+                                <Icon
+                                    name="Add"
+                                    spanClassName='size-4'
+                                    iconClassName='w-[9.33px] text-black900'
                                 />
                             </div>
                         </div>
                     </div>
+
+                    <button 
+                        className='
+                        w-full px-10 py-1
+                        flex items-center justify-center gap-2
+                        rounded-sm border border-n7100'
+                        >
+                        <Icon
+                            name='Heart'
+                            spanClassName='size-4'
+                            iconClassName='w-[14.67px] h-[11.68] text-n7100'
+                        />
+                        <span className='text-n7100 btn-xs'>Wishlist</span>
+                    </button>
                 </div>
             </div>
         </section>
