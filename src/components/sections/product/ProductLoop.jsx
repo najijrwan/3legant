@@ -69,50 +69,57 @@ const ProductLoop = () => {
                 </div>
             </div>
 
-            <div className='px-8 pt-4'>
-                <div className='flex flex-col'>
-                    <div className='pb-6 flex flex-col gap-4'>
-                        <div className='flex gap-2.5'>
-                            <ProductRating rating={5} />
-                            <span className='text-n7100 caption-2'>11 Reviews</span>
-                        </div>
-
-                        <h4>Tray Table</h4>
-
-                        <p className='w-[311px] text-n4100 body-2'>
-                            Buy one or buy a few and make every space where you sit more convenient.
-                            Light and easy to move around with removable tray top, handy for serving snacks.
-                        </p>
-
-                        <div className='flex items-center gap-3'>
-                            <h6 className='text-black900'>{price}</h6>
-                            <p className='h7 text-n4100 line-through'>{formatPrice(400)}</p>
-                        </div>
+            <div
+                className='
+                px-8 pt-4
+                flex flex-col gap-6'
+            >
+                <div className='flex flex-col gap-4'>
+                    <div className='flex gap-2.5'>
+                        <ProductRating rating={5} />
+                        <span className='text-n7100 caption-2'>11 Reviews</span>
                     </div>
 
-                    <div className='py-6 flex flex-col gap-3'>
-                        <p className='text-n5100 body-2'>Offer expires in:</p>
+                    <h4>Tray Table</h4>
 
-                        <div className='flex gap-4'>
-                            {timerBlocks.map((block, i) => (
-                                <div className='flex flex-col items-center'>
-                                    <h5 className='size-15 flex items-center justify-center bg-n2100'>
-                                        {block.number}
-                                    </h5>
-                                    <p className='text-n4100 caption-2'>
-                                        {block.in}
-                                    </p>
-                                </div>
-                            ))}
-                        </div>
+                    <p className='w-[311px] text-n4100 body-2'>
+                        Buy one or buy a few and make every space where you sit more convenient.
+                        Light and easy to move around with removable tray top, handy for serving snacks.
+                    </p>
+
+                    <div className='flex items-center gap-3'>
+                        <h6 className='text-black900'>{price}</h6>
+                        <p className='h7 text-n4100 line-through'>{formatPrice(400)}</p>
                     </div>
-
-                    <div></div>
                 </div>
 
-                <div></div>
+                <div className='w-full h-px bg-n3100'></div>
 
-                <div></div>
+                <div className='flex flex-col gap-3'>
+                    <p className='text-n5100 body-2'>Offer expires in:</p>
+
+                    <div className='flex gap-4'>
+                        {timerBlocks.map((block, i) => (
+                            <div className='flex flex-col items-center'>
+                                <h5 className='size-15 flex items-center justify-center bg-n2100'>
+                                    {block.number}
+                                </h5>
+                                <p className='text-n4100 caption-2'>
+                                    {block.in}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                <div className='w-full h-px bg-n3100'></div>
+
+                <div className='flex flex-col gap-2'>
+                    <p className='text-n4100 body-2-semi'>Measurements</p>
+                    <p className='text-black body-1'>17 1/2x20 5/8 "</p>
+                </div>
+
+                
             </div>
         </section>
     );
