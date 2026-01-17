@@ -1,4 +1,4 @@
-import { Icon, Badges, ProductRating } from '@ui';
+import { Icon, Badges, ProductRating, AddToCartBtn } from '@ui';
 import { formatPrice, finalPrice } from '@utils';
 
 const timerBlocks = [
@@ -152,7 +152,7 @@ const ProductLoop = () => {
                     </div>
                 </div>
 
-                <div className='py-6 flex gap-2'>
+                <div className='pt-6 flex gap-2'>
                     <div className='flex gap-2'>
                         <div className='px-2 py-3 bg-black100'>
                             <div className='flex items-center gap-[13px]'>
@@ -187,6 +187,12 @@ const ProductLoop = () => {
                         <span className='text-n7100 btn-xs'>Wishlist</span>
                     </button>
                 </div>
+
+                <AddToCartBtn
+                    className='
+                    px-10 py-1
+                    text-white btn-xs'
+                />
             </div>
         </section>
     );
