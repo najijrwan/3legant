@@ -10,5 +10,6 @@ export { default as Icon } from './primitives/Icon';
 
 export { default as Badges } from './product/Badges';
 export { default as ProductCard } from './product/ProductCard';
+export { default as ProductRating } from './product/ProductRating';
 
 export { default as SocialLinks } from './SocialLinks.jsx';

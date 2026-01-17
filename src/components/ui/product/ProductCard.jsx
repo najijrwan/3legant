@@ -1,4 +1,4 @@
-import { Icon, Badges, AddToCartBtn } from '@ui';
+import { Icon, Badges, AddToCartBtn, ProductRating } from '@ui';
 import { formatPrice, finalPrice } from '@utils';
 
 const ProductCard = ({ product, variant }) => {
@@ -59,15 +59,7 @@ const ProductCard = ({ product, variant }) => {
             <div
                 className='w-full flex flex-col gap-1'
             >
-                <div className="flex gap-0.5">
-                    {Array.from({ length: rating }).map((_, index) => (
-                        <Icon
-                            key={index}
-                            name="StarFill"
-                            spanClassName="size-4"
-                        />
-                    ))}
-                </div>
+                <ProductRating rating={product.rating} />
 
                 <p
                     className='
