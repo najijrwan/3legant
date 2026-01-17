@@ -173,12 +173,12 @@ const ProductLoop = () => {
                         </div>
                     </div>
 
-                    <button 
+                    <button
                         className='
                         w-full px-10 py-1
                         flex items-center justify-center gap-2
                         rounded-sm border border-n7100'
-                        >
+                    >
                         <Icon
                             name='Heart'
                             spanClassName='size-4'
