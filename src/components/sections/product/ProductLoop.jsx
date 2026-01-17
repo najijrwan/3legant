@@ -39,15 +39,15 @@ const ProductLoop = () => {
                 >
                     <li className='flex items-center gap-1'>
                         <span>Home</span>
-                        <Icon name='ChevronRight' spanClassName='size-3' />
+                        <Icon name='ChevronRight' spanClassName='size-3' iconClassName='w-[8px] h-[9px]' />
                     </li>
                     <li className='flex items-center gap-1'>
                         <span>Shop</span>
-                        <Icon name='ChevronRight' spanClassName='size-3' />
+                        <Icon name='ChevronRight' spanClassName='size-3' iconClassName='w-[8px] h-[9px]' />
                     </li>
                     <li className='flex items-center gap-1'>
                         <span>Living Room</span>
-                        <Icon name='ChevronRight' spanClassName='size-3' />
+                        <Icon name='ChevronRight' spanClassName='size-3' iconClassName='w-[8px] h-[9px]' />
                     </li>
                     <li className='text-black900'>Product</li>
                 </ul>
@@ -126,10 +126,28 @@ const ProductLoop = () => {
                             <Icon
                                 name="ChevronRight"
                                 spanClassName='size-6'
-                                iconClassName='w-[6px] h-[15px]'
+                                iconClassName='w-[7px] h-[15px]'
                             />
                         </div>
+
                         <p className='text-black body-1'>Black</p>
+
+                        <div className='w-[311px] flex justify-between'>
+                            <div className='h-[72px]'>
+                                <img
+                                    src="src/assets/images/product image 1.png"
+                                    alt=""
+                                    className="h-full object-contain"
+                                />
+                            </div>
+                            <div className='h-[72px]'>
+                                <img
+                                    src="src/assets/images/product image 2.png"
+                                    alt=""
+                                    className="h-full object-contain"
+                                />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
