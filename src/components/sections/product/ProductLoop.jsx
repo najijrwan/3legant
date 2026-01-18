@@ -20,11 +20,17 @@ const timerBlocks = [
     },
 ]
 
-const productColors = [
+const PRODUCT_COLORS = [
     "src/assets/images/product image 1 black.png",
     "src/assets/images/product image 1 brown.png",
     "src/assets/images/product image 1 red.png",
     "src/assets/images/product image 1 white.png",
+]
+
+const productOtherImages = [
+    "src/assets/images/product image 1.1.png",
+    "src/assets/images/product image 1.2.png",
+    "src/assets/images/product image 1.3.png",
 ]
 
 const ProductLoop = () => {
@@ -54,7 +60,7 @@ const ProductLoop = () => {
 
             <div
                 className='
-                px-8 2xl:px-0 2xl:pl-40
+                px-8 2xl:pl-40
                 flex flex-col 2xl:flex-row gap-4 2xl:gap-[63px]'
             >
                 <div
@@ -73,7 +79,11 @@ const ProductLoop = () => {
                     <Badges variant='large' />
                 </div>
 
-                <div className='flex flex-col gap-6'>
+                <div
+                    className='
+                    w-full max-w-[508px]
+                    flex flex-col gap-6'
+                >
                     <div className='flex flex-col gap-4'>
                         <div className='flex gap-2.5'>
                             <ProductRating rating={5} />
@@ -82,7 +92,7 @@ const ProductLoop = () => {
 
                         <h4>Tray Table</h4>
 
-                        <p className='w-[311px] text-n4100 body-2'>
+                        <p className='text-n4100 body-2'>
                             Buy one or buy a few and make every space where you sit more convenient.
                             Light and easy to move around with removable tray top, handy for serving snacks.
                         </p>
@@ -135,7 +145,7 @@ const ProductLoop = () => {
                             <p className='text-black body-1'>Black</p>
 
                             <div className='w-[311px] flex justify-between'>
-                                {productColors.map((colors, i) => (
+                                {PRODUCT_COLORS.map((colors, i) => (
                                     <img
                                         key={i}
                                         src={colors}
