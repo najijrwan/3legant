@@ -193,6 +193,21 @@ const ProductLoop = () => {
                     px-10 py-1
                     text-white btn-xs'
                 />
+
+                <div className='w-full h-px bg-n3100'></div>
+
+                <div
+                    className='
+                    w-full pb-6
+                    flex flex-col justify-center gap-2'
+                >
+                    <p className='flex gap-[98px]'>
+                        <span className='text-n4100 caption-2'>SKU</span>
+                        <span className='text-n7100 caption-2'>1117</span>
+                    </p>
+
+                    <p>Category</p>
+                </div>
             </div>
         </section>
     );
