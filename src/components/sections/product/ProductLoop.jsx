@@ -82,7 +82,7 @@ const ProductLoop = () => {
 
                     <div
 
-                        className='flex gap-6'
+                        className='hidden 2xl:flex gap-6'
                     >
                         {PRODUCT_OTHER_IMAGES.map((images, i) => (
 
@@ -165,7 +165,7 @@ const ProductLoop = () => {
 
                             <p className='text-black body-1'>Black</p>
 
-                            <div className='w-[311px] flex justify-between'>
+                            <div className='w-full max-w-[334px] flex justify-between'>
                                 {PRODUCT_COLORS.map((colors, i) => (
                                     <img
                                         key={i}
