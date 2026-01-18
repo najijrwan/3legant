@@ -60,14 +60,14 @@ const ProductLoop = () => {
                 <div
                     className='
                     relative
-                    max-w-[547px] max-h-[728px] mb-4 2lx:mb-[67px]
+                    max-w-[547px] h-[414px] 2xl:h-[728px] mb-4 2lx:mb-[67px]
                     flex items-center
                     bg-n2100'
                 >
                     <img
                         src="src/assets/images/product image 1 black.png"
                         alt=""
-                        className='size-full object-cover object-bottom'
+                        className='size-[350px] 2xl:size-[650px] object-cover object-bottom'
                     />
 
                     <Badges variant='large' />
