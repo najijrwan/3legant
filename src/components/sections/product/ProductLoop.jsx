@@ -27,7 +27,7 @@ const PRODUCT_COLORS = [
     "src/assets/images/product image 1 white.png",
 ]
 
-const productOtherImages = [
+const PRODUCT_OTHER_IMAGES = [
     "src/assets/images/product image 1.1.png",
     "src/assets/images/product image 1.2.png",
     "src/assets/images/product image 1.3.png",
@@ -63,20 +63,41 @@ const ProductLoop = () => {
                 px-8 2xl:pl-40
                 flex flex-col 2xl:flex-row gap-4 2xl:gap-[63px]'
             >
-                <div
-                    className='
+                <div>
+                    <div
+                        className='
                     relative
                     max-w-[547px] h-[414px] 2xl:h-[728px] mb-4 2lx:mb-[67px]
                     flex items-center
                     bg-n2100'
-                >
-                    <img
-                        src="src/assets/images/product image 1 black.png"
-                        alt=""
-                        className='size-[350px] 2xl:size-[650px] object-cover object-bottom'
-                    />
+                    >
+                        <img
+                            src="src/assets/images/product image 1 black.png"
+                            alt=""
+                            className='size-[350px] 2xl:size-[650px] object-cover object-bottom'
+                        />
 
-                    <Badges variant='large' />
+                        <Badges variant='large' />
+                    </div>
+
+                    <div
+
+                        className='flex gap-6'
+                    >
+                        {PRODUCT_OTHER_IMAGES.map((images, i) => (
+
+                            <div
+                                key={i}
+                                className='size-[167px]'
+                            >
+                                <img
+                                    src={images}
+                                    alt=""
+                                    className="size-full" />
+                            </div>
+                        ))}
+                    </div>
+
                 </div>
 
                 <div
