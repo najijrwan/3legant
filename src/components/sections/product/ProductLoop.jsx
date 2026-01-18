@@ -61,15 +61,15 @@ const ProductLoop = () => {
             <div
                 className='
                 px-8 2xl:pl-40
-                flex flex-col 2xl:flex-row gap-4 2xl:gap-[63px]'
+                flex flex-col 2xl:flex-row 2xl:gap-[63px]'
             >
-                <div>
+                <div className=''>
                     <div
                         className='
-                    relative
-                    max-w-[547px] h-[414px] 2xl:h-[728px] mb-4 2lx:mb-[67px]
-                    flex items-center
-                    bg-n2100'
+                        relative
+                        max-w-[547px] h-[414px] 2xl:h-[728px] mb-4 2lx:mb-[67px]
+                        flex items-center
+                        bg-n2100'
                     >
                         <img
                             src="src/assets/images/product image 1 black.png"
@@ -103,9 +103,13 @@ const ProductLoop = () => {
                 <div
                     className='
                     w-full max-w-[508px]
-                    flex flex-col gap-6'
+                    flex flex-col'
                 >
-                    <div className='flex flex-col gap-4'>
+                    <div
+                        className='
+                        py-4 2xl:py-0 2xl:pb-6
+                        flex flex-col gap-4 
+                        border-b border-b-n3100'>
                         <div className='flex gap-2.5'>
                             <ProductRating rating={5} />
                             <span className='text-n7100 caption-2'>11 Reviews</span>
@@ -124,9 +128,7 @@ const ProductLoop = () => {
                         </div>
                     </div>
 
-                    <div className='w-full h-px bg-n3100'></div>
-
-                    <div className='flex flex-col gap-3'>
+                    <div className='py-6 flex flex-col gap-3 border-b border-b-n3100'>
                         <p className='text-n5100 body-2'>Offer expires in:</p>
 
                         <div className='flex gap-4'>
@@ -145,40 +147,40 @@ const ProductLoop = () => {
                         </div>
                     </div>
 
-                    <div className='w-full h-px bg-n3100'></div>
-
-                    <div className='flex flex-col gap-2'>
-                        <p className='text-n4100 body-2-semi'>Measurements</p>
-                        <p className='text-black body-1'>17 1/2x20 5/8 "</p>
-                    </div>
-
-                    <div className='flex flex-col gap-4'>
+                    <div className='py-6 flex flex-col gap-6'>
                         <div className='flex flex-col gap-2'>
-                            <div className='flex items-center gap-1 text-n4100'>
-                                <p className='body-2-semi'>Choose Color</p>
-                                <Icon
-                                    name="ChevronRight"
-                                    spanClassName='size-6'
-                                    iconClassName='w-[7px] h-[15px]'
-                                />
+                            <p className='text-n4100 body-2-semi'>Measurements</p>
+                            <p className='text-black body-1'>17 1/2x20 5/8 "</p>
+                        </div>
+
+                        <div className='flex flex-col gap-4'>
+                            <div className='flex flex-col gap-2'>
+                                <div className='flex items-center gap-1 text-n4100'>
+                                    <p className='body-2-semi'>Choose Color</p>
+                                    <Icon
+                                        name="ChevronRight"
+                                        spanClassName='size-6'
+                                        iconClassName='w-[7px] h-[15px]'
+                                    />
+                                </div>
+
+                                <p className='text-black body-1'>Black</p>
                             </div>
 
-                            <p className='text-black body-1'>Black</p>
-                        </div>
-
-                        <div className='w-full max-w-[334px] flex justify-between'>
-                            {PRODUCT_COLORS.map((colors, i) => (
-                                <img
-                                    key={i}
-                                    src={colors}
-                                    alt=""
-                                    className="h-[72px]"
-                                />
-                            ))}
+                            <div className='w-full max-w-[334px] flex justify-between'>
+                                {PRODUCT_COLORS.map((colors, i) => (
+                                    <img
+                                        key={i}
+                                        src={colors}
+                                        alt=""
+                                        className="h-[72px]"
+                                    />
+                                ))}
+                            </div>
                         </div>
                     </div>
 
-                    <div className='pt-6 flex flex-col gap-4'>
+                    <div className='py-8 flex flex-col gap-4 border-b border-b-n3100'>
 
                         <div className='flex items-center gap-2 2xl:gap-6'>
                             <div className='px-2 2xl:px-4 py-3 2xl:py-3 bg-black100'>
@@ -188,7 +190,7 @@ const ProductLoop = () => {
                                         spanClassName='size-4 2xl:size-5'
                                         iconClassName='w-[10px] 2xl:w-[12px] text-black900'
                                     />
-                                    <span 
+                                    <span
                                         className='
                                         text-black900 text-[12px] 2xl:text-[16px] leading-5 leading-6.5 font-inter font-semibold'>
                                         1
@@ -223,11 +225,9 @@ const ProductLoop = () => {
                         />
                     </div>
 
-                    <div className='w-full h-px bg-n3100'></div>
-
                     <div
                         className='
-                        w-full pb-6
+                        py-6
                         flex flex-col gap-2'
                     >
                         <p className='flex gap-[98px]'>
