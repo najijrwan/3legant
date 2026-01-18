@@ -164,21 +164,22 @@ const ProductLoop = () => {
                             </div>
 
                             <p className='text-black body-1'>Black</p>
+                        </div>
 
-                            <div className='w-full max-w-[334px] flex justify-between'>
-                                {PRODUCT_COLORS.map((colors, i) => (
-                                    <img
-                                        key={i}
-                                        src={colors}
-                                        alt=""
-                                        className="h-[72px]"
-                                    />
-                                ))}
-                            </div>
+                        <div className='w-full max-w-[334px] flex justify-between'>
+                            {PRODUCT_COLORS.map((colors, i) => (
+                                <img
+                                    key={i}
+                                    src={colors}
+                                    alt=""
+                                    className="h-[72px]"
+                                />
+                            ))}
                         </div>
                     </div>
 
-                    <div className='pt-6 flex gap-2'>
+                    <div className='pt-6 flex flex-col gap-4'>
+
                         <div className='flex gap-2'>
                             <div className='px-2 py-3 bg-black100'>
                                 <div className='flex items-center gap-[13px]'>
@@ -197,35 +198,35 @@ const ProductLoop = () => {
                                     />
                                 </div>
                             </div>
+
+                            <button
+                                className='
+                            w-full px-10 py-1 2xl:py-2.5
+                            flex items-center justify-center gap-2
+                            rounded-sm 2xl:rounded-lg border border-n7100'
+                            >
+                                <Icon
+                                    name='Heart'
+                                    spanClassName='size-4 2xl:size-6'
+                                    iconClassName='w-[14.67px] h-[11.68] 2xl:size-full text-n7100'
+                                />
+                                <span className='text-n7100 btn-xs 2xl:btn-m'>Wishlist</span>
+                            </button>
                         </div>
 
-                        <button
+                        <AddToCartBtn
                             className='
-                        w-full px-10 py-1
-                        flex items-center justify-center gap-2
-                        rounded-sm border border-n7100'
-                        >
-                            <Icon
-                                name='Heart'
-                                spanClassName='size-4'
-                                iconClassName='w-[14.67px] h-[11.68] text-n7100'
-                            />
-                            <span className='text-n7100 btn-xs'>Wishlist</span>
-                        </button>
+                            px-10 py-1 2xl:py-2.5
+                            text-white btn-xs 2xl:btn-m rounded-sm 2xl:rounded-lg'
+                        />
                     </div>
-
-                    <AddToCartBtn
-                        className='
-                    px-10 py-1
-                    text-white btn-xs'
-                    />
 
                     <div className='w-full h-px bg-n3100'></div>
 
                     <div
                         className='
-                    w-full pb-6
-                    flex flex-col gap-2'
+                        w-full pb-6
+                        flex flex-col gap-2'
                     >
                         <p className='flex gap-[98px]'>
                             <span className='text-n4100 caption-2'>SKU</span>
