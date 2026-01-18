@@ -60,7 +60,7 @@ const ProductLoop = () => {
 
             <div
                 className='
-                px-8 2xl:pl-40
+                px-8 2xl:px-40
                 flex flex-col 2xl:flex-row 2xl:gap-[63px]'
             >
                 <div className=''>
