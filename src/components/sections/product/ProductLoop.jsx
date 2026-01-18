@@ -180,35 +180,37 @@ const ProductLoop = () => {
 
                     <div className='pt-6 flex flex-col gap-4'>
 
-                        <div className='flex gap-2'>
-                            <div className='px-2 py-3 bg-black100'>
-                                <div className='flex items-center gap-[13px]'>
+                        <div className='flex items-center gap-2 2xl:gap-6'>
+                            <div className='px-2 2xl:px-4 py-3 2xl:py-3 bg-black100'>
+                                <div className='h-7 flex items-center gap-6 box-content'>
                                     <Icon
                                         name="Minus"
-                                        spanClassName='size-4'
-                                        iconClassName='w-[9.33px] text-black900'
+                                        spanClassName='size-4 2xl:size-5'
+                                        iconClassName='w-[10px] 2xl:w-[12px] text-black900'
                                     />
-                                    <span className='text-black900 text-[12px] leading-5 font-inter font-semibold'>
+                                    <span 
+                                        className='
+                                        text-black900 text-[12px] 2xl:text-[16px] leading-5 leading-6.5 font-inter font-semibold'>
                                         1
                                     </span>
                                     <Icon
                                         name="Add"
-                                        spanClassName='size-4'
-                                        iconClassName='w-[9.33px] text-black900'
+                                        spanClassName='size-4 2xl:size-5'
+                                        iconClassName='w-[10px] 2xl:w-[13px] 2xl:h-[13px] text-black900'
                                     />
                                 </div>
                             </div>
 
                             <button
                                 className='
-                            w-full px-10 py-1 2xl:py-2.5
-                            flex items-center justify-center gap-2
-                            rounded-sm 2xl:rounded-lg border border-n7100'
+                                2xl:w-[357px] px-10 py-1 2xl:py-2.5
+                                flex items-center justify-center gap-2
+                                rounded-sm 2xl:rounded-lg border border-n7100 box-border'
                             >
                                 <Icon
                                     name='Heart'
                                     spanClassName='size-4 2xl:size-6'
-                                    iconClassName='w-[14.67px] h-[11.68] 2xl:size-full text-n7100'
+                                    iconClassName='w-[15px] h-[12px] 2xl:w-[24px] 2xl:h-[18px] text-n7100'
                                 />
                                 <span className='text-n7100 btn-xs 2xl:btn-m'>Wishlist</span>
                             </button>
