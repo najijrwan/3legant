@@ -102,12 +102,13 @@ const ProductLoop = () => {
 
                 <div
                     className='
+                    pt-4 2xl:pt-0
                     w-full max-w-[508px]
                     flex flex-col'
                 >
                     <div
                         className='
-                        py-4 2xl:py-0 2xl:pb-6
+                        pb-6
                         flex flex-col gap-4 
                         border-b border-b-n3100'>
                         <div className='flex gap-2.5'>
@@ -180,11 +181,10 @@ const ProductLoop = () => {
                         </div>
                     </div>
 
-                    <div className='py-8 flex flex-col gap-4 border-b border-b-n3100'>
-
+                    <div className='py-6 2xl:py-8 flex flex-col gap-4 border-b border-b-n3100'>
                         <div className='flex items-center gap-2 2xl:gap-6'>
-                            <div className='px-2 2xl:px-4 py-3 2xl:py-3 bg-black100'>
-                                <div className='h-7 flex items-center gap-6 box-content'>
+                            <div className='h-8 2xl:h-auto px-2 2xl:px-4 2xl:py-3 flex items-center bg-black100'>
+                                <div className='2xl:h-7 flex items-center gap-[13px] 2xl:gap-6'>
                                     <Icon
                                         name="Minus"
                                         spanClassName='size-4 2xl:size-5'
@@ -192,7 +192,7 @@ const ProductLoop = () => {
                                     />
                                     <span
                                         className='
-                                        text-black900 text-[12px] 2xl:text-[16px] leading-5 leading-6.5 font-inter font-semibold'>
+                                        text-black900 text-[12px] 2xl:text-[16px] leading-5 2xl:leading-6.5 font-inter font-semibold'>
                                         1
                                     </span>
                                     <Icon
