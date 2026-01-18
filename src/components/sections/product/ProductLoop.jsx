@@ -203,9 +203,9 @@ const ProductLoop = () => {
 
                             <button
                                 className='
-                                2xl:w-[357px] px-10 py-1 2xl:py-2.5
+                                w-full px-10 py-1 2xl:py-2.5
                                 flex items-center justify-center gap-2
-                                rounded-sm 2xl:rounded-lg border border-n7100 box-border'
+                                rounded-sm 2xl:rounded-lg border border-n7100'
                             >
                                 <Icon
                                     name='Heart'
