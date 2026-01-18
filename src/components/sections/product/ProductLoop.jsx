@@ -30,10 +30,10 @@ const productColors = [
 const ProductLoop = () => {
     const price = formatPrice(finalPrice(400, 50));
     return (
-        <section className="flex flex-col gap-4">
+        <section className="">
             <ul
                 className="
-                w-fit mt-4 ml-8 2xl:ml-40
+                w-fit my-4 ml-8 2xl:ml-40
                 flex gap-2 2xl:gap-4
                 text-black600 caption-1 font-medium 2xl:btn-xs"
             >
@@ -55,19 +55,19 @@ const ProductLoop = () => {
             <div
                 className='
                 px-8 2xl:px-0 2xl:pl-40
-                flex flex-col 2xl:flex-row 2xl:gap-[63px]'
+                flex flex-col 2xl:flex-row gap-4 2xl:gap-[63px]'
             >
                 <div
                     className='
                     relative
-                    w-full h-[414px] mb-8 2lx:mb-[67px]
+                    max-w-[547px] max-h-[728px] mb-4 2lx:mb-[67px]
                     flex items-center
                     bg-n2100'
                 >
                     <img
                         src="src/assets/images/product image 1 black.png"
                         alt=""
-                        className='size-[350px] object-cover object-bottom'
+                        className='size-full object-cover object-bottom'
                     />
 
                     <Badges variant='large' />
