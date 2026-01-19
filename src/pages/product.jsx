@@ -1,8 +1,11 @@
-import { ProductLoop } from '@product';
+import { ProductLoop, ProductTabs } from '@product';
 
 const ProductPage = () => {
     return (
-        <ProductLoop />
+        <>
+            <ProductLoop />
+            <ProductTabs />
+        </>
     );
 }
 

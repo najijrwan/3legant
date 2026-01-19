@@ -33,6 +33,8 @@ const PRODUCT_OTHER_IMAGES = [
     "src/assets/images/product image 1.3.png",
 ]
 
+
+
 const ProductLoop = () => {
     const price = formatPrice(finalPrice(400, 50));
     return (
