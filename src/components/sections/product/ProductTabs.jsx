@@ -53,30 +53,32 @@ const ProductTabs = () => {
                     const isOpen = activeTab === tab.id;
 
                     return (
-                        <div
-                            key={tab.id}
-                            className="pb-2 flex flex-col gap-2.5 border-b border-b-n4100"
-                        >
-                            <button
-                                onClick={() =>
-                                    setActiveTab(isOpen ? null : tab.id)
-                                }
-                                className="w-full flex items-center justify-between"
+                        <>
+                            <div
+                                key={tab.id}
+                                className="pb-2 flex flex-col gap-2.5 border-b border-b-n4100"
                             >
-                                <span className="text-n4100 btn-m">{tab.label}</span>
+                                <button
+                                    onClick={() =>
+                                        setActiveTab(isOpen ? null : tab.id)
+                                    }
+                                    className="w-full flex items-center justify-between"
+                                >
+                                    <span className="text-n4100 btn-m">{tab.label}</span>
 
-                                <Icon
-                                    name="ChevronDown"
-                                    spanClassName="size-6"
-                                    iconClassName={`
-                                    w-[12px] h-[6px]
-                                    ${isOpen ? 'rotate-180' : 'rotate-0'}
-                                    transition-all duration-150`}
-                                />
-                            </button>
+                                    <Icon
+                                        name="ChevronDown"
+                                        spanClassName="size-6"
+                                        iconClassName={`
+                                        w-[12px] h-[6px]
+                                        ${isOpen ? 'rotate-180' : 'rotate-0'}
+                                        transition-all duration-150`}
+                                    />
+                                </button>
+                            </div>
 
                             {isOpen && tab.content}
-                        </div>
+                        </>
                     );
                 })}
 
