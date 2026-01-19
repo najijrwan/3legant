@@ -20,31 +20,26 @@ const ADDITONAL_INFO = [
         `
     },
 ]
-const productTabs = {
-    additionalInfo: {
-        label: 'Additonal Info',
-        elements:
-            <div
-                className='
-                    pt-2
-                    flex flex-col gap-4'
-            >
+
+const productTabs = [
+    {
+        id: 'additionalInfo',
+        label: 'Additional Info',
+        content: (
+            <div className="pt-2 flex flex-col gap-4">
                 {ADDITONAL_INFO.map((ele, i) => (
-                    <div
-                        key={i}
-                        className='
-                        flex flex-col gap-2'
-                    >
-                        <p className='text-n4100 caption-1-semi'>{ele.infoTitle}</p>
-                        <p className='text-n7100 caption-2'>{ele.infoText}</p>
+                    <div key={i} className="flex flex-col gap-2">
+                        <p className="text-n4100 caption-1-semi">{ele.infoTitle}</p>
+                        <p className="text-n7100 caption-2">{ele.infoText}</p>
                     </div>
                 ))}
             </div>
-    }
-}
+        ),
+    },
+];
 
 const ProductTabs = () => {
-    const [expanded, setExpanded] = useState(false);
+    const [activeTab, setActiveTab] = useState(null);
     return (
         <section
             className="
@@ -54,30 +49,37 @@ const ProductTabs = () => {
             <div
                 className="w-full flex flex-col 2xl:flex-row 2xl:gap-20"
             >
-                {productTabs.map((tabs, i) => (
-                    <div
-                        key={i}
-                        className='
-                        pb-2
-                        flex flex-col gap-2.5
-                        border-b border-b-n4100'
-                    >
-                        <button
-                            onClick={() => setExpanded(true)}
-                            className="w-full flex items-center justify-between"
+                {productTabs.map((tab) => {
+                    const isOpen = activeTab === tab.id;
+
+                    return (
+                        <div
+                            key={tab.id}
+                            className="pb-2 flex flex-col gap-2.5 border-b border-b-n4100"
                         >
-                            <span className="text-n4100 btn-m">{tabs.label}</span>
-                            <Icon
-                                name="ChevronDown"
-                                spanClassName='size-6'
-                                iconClassName={`
-                                w-[12px] h-[6px] 
-                                ${expanded ? 'rotate-180' : 'rotate-0'}
-                                transition-all duration-150`}
-                            />
-                        </button>
-                    </div>
-                ))}
+                            <button
+                                onClick={() =>
+                                    setActiveTab(isOpen ? null : tab.id)
+                                }
+                                className="w-full flex items-center justify-between"
+                            >
+                                <span className="text-n4100 btn-m">{tab.label}</span>
+
+                                <Icon
+                                    name="ChevronDown"
+                                    spanClassName="size-6"
+                                    iconClassName={`
+                                    w-[12px] h-[6px]
+                                    ${isOpen ? 'rotate-180' : 'rotate-0'}
+                                    transition-all duration-150`}
+                                />
+                            </button>
+
+                            {isOpen && tab.content}
+                        </div>
+                    );
+                })}
+
             </div>
         </section>
     );
