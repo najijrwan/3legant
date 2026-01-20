@@ -1,5 +1,5 @@
 import { MoreActionBtn, ProductCarousel } from '@ui';
-import { NEW_ARRIVALS_PRODUCTS } from '@data';
+import { HOME_NEW_ARRIVALS } from '@data';
 
 
 const NewArrivals = ({ title }) => {
@@ -29,7 +29,7 @@ const NewArrivals = ({ title }) => {
 
             <ProductCarousel
                 data-id='products'
-                items={NEW_ARRIVALS_PRODUCTS}
+                items={HOME_NEW_ARRIVALS}
                 cardVariant="medium"
             />
 

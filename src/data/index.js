@@ -7,4 +7,4 @@ export { NAV_ITEMS } from './navigation/navItems';
 export { PRODUCT_ADDITONAL_INFO } from './product/productAddtionalInfo';
 export { PRODUCT_REVIEWS } from './product/productReviews';
 
-export { NEW_ARRIVALS_PRODUCTS } from './products/newArrivalsProducts';
+export { HOME_NEW_ARRIVALS } from './home/homeNewArrivals';
