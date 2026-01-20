@@ -90,7 +90,7 @@ const productTabs = [
                             <input 
                                 type="text"
                                 placeholder='Share your thoughts'
-                                className='text-n4100 caption-1'
+                                className='text-n4100 caption-1 2xl:placeholder:none'
                                 />
                         </form>
 
@@ -108,6 +108,10 @@ const productTabs = [
                         </button>
                     </div>
                 </div>
+
+                <div
+                    className='
+                    '></div>
             </>
         ),
     }
