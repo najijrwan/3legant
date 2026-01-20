@@ -84,7 +84,7 @@ const productTabs = [
                         className='
                         w-full pl-6 pr-4 py-4
                         flex justify-between
-                        rounded-2xl border border-n3100'
+                        rounded-2xl border-2 border-n3100'
                     >
                         <form className=''>
                             <input 
