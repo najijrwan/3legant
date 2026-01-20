@@ -63,7 +63,7 @@ const productTabs = [
         label: 'Reviews',
         content: (
             <>
-                <div className='flex flex-col gap-8'>
+                <div className='mt-10 flex flex-col gap-8'>
                     <div className='flex flex-col gap-6'>
                         <p className='text-[#23262F] h7'>Customer Reviews</p>
 
@@ -80,8 +80,32 @@ const productTabs = [
                         </div>
                     </div>
 
-                    <div>
+                    <div
+                        className='
+                        w-full pl-6 pr-4 py-4
+                        flex justify-between
+                        rounded-2xl border border-n3100'
+                    >
+                        <form className=''>
+                            <input 
+                                type="text"
+                                placeholder='Share your thoughts'
+                                className='text-n4100 caption-1'
+                                />
+                        </form>
 
+                        <button
+                            className='
+                            size-8 
+                            flex items-center justify-center
+                            bg-n7100 rounded-full'
+                        >
+                            <Icon
+                                name='ArrowRightLong'
+                                spanClassName='size-6'
+                                iconClassName='w-[14px] h-[9px]'
+                            />
+                        </button>
                     </div>
                 </div>
             </>

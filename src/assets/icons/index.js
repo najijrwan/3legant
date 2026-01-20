@@ -22,3 +22,4 @@ export { ReactComponent as Money } from './money.svg';
 export { ReactComponent as Lock01 } from './lock-01.svg';
 export { ReactComponent as Call } from './call.svg';
 export { ReactComponent as Email } from './email.svg';
+export { ReactComponent as ArrowRightLong } from './arrow-right-long.svg';
