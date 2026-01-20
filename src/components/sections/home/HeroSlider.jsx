@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Icon, HeroCarousel } from "@ui";
-import { HERO_IMAGES } from '@data';
+import { HOME_HERO_IMAGES } from '@data';
 
 const SLIDER_BUTTONS = [
     { name: 'ArrowLeft', action: 'prev' },
@@ -11,10 +11,10 @@ const HeroSlider = () => {
     const [index, setIndex] = useState(0);
 
     const isPrevDisabled = index === 0;
-    const isNextDisabled = index === HERO_IMAGES.length - 1;
+    const isNextDisabled = index === HOME_HERO_IMAGES.length - 1;
 
     const goNext = () =>
-        setIndex((i) => Math.min(i + 1, HERO_IMAGES.length - 1));
+        setIndex((i) => Math.min(i + 1, HOME_HERO_IMAGES.length - 1));
 
     const goPrev = () =>
         setIndex((i) => Math.max(i - 1, 0));
@@ -27,7 +27,7 @@ const HeroSlider = () => {
             px-8 2xl:px-40 pb-10
             flex flex-col gap-8"
         >
-            {/* HERO_IMAGES Slider */}
+            {/* HOME_HERO_IMAGES Slider */}
             <div
                 data-id="slider"
                 className="
@@ -40,7 +40,7 @@ const HeroSlider = () => {
                     onNext={goNext}
                     onPrev={goPrev}
                 >
-                    {HERO_IMAGES.map((src, i) => (
+                    {HOME_HERO_IMAGES.map((src, i) => (
                         <img
                             key={i}
                             src={src}
@@ -84,7 +84,7 @@ const HeroSlider = () => {
                     absolute bottom-7.25 2xl:bottom-9.25 left-1/2 -translate-x-1/2 
                     flex gap-4"
                 >
-                    {HERO_IMAGES.map((_, i) => (
+                    {HOME_HERO_IMAGES.map((_, i) => (
                         <div
                             key={i}
                             onClick={() => setIndex(i)}

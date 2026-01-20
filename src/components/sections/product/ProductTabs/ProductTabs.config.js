@@ -1,5 +1,5 @@
-import ProductAdditionalInfo from './renders/ProductAdditionalInfo';
-import ProductReviews from './renders/ProductReviews';
+import ProductAdditionalInfo from './ProductAdditionalInfo';
+import ProductReviews from './ProductReviews';
 
 export const PRODUCT_TABS = [
     {

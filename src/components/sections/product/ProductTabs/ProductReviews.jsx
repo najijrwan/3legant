@@ -75,9 +75,9 @@ const ProductReviews = () => (
             </div>
 
             <div className='w-full flex flex-col gap-6'>
-                {PRODUCT_REVIEWS.map((review, i) => (
+                {PRODUCT_REVIEWS.map((review) => (
                     <div
-                        key={i}
+                        key={review.name}
                         className='pb-4 2xl:pb-6 border-b border-b-n3100'
                     >
                         <div className='flex flex-col gap-4'>

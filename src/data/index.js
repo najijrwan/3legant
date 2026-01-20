@@ -1,4 +1,4 @@
-export { HERO_IMAGES } from './home/heroImages';
+export { HOME_HERO_IMAGES } from './home/homeHeroImages';
 export { HOME_ARTICLES } from './home/homeArticles';
 export { HOME_VALUES } from './home/homeValues';
 
