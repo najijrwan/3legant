@@ -68,7 +68,7 @@ const productTabs = [
             <>
                 <div className='mt-10 flex flex-col gap-8'>
                     <div className='flex flex-col gap-6'>
-                        <p className='text-[#23262F] h7'>Customer Reviews</p>
+                        <p className='text-n2 h7'>Customer Reviews</p>
 
                         <div className='flex flex-col gap-2'>
                             <div className='flex gap-2'>
@@ -78,7 +78,7 @@ const productTabs = [
 
                             <div className='flex gap-2'>
                                 <p className='text-n7100 caption-1'>Be the first to review</p>
-                                <p className='text-[#23262F] caption-1-semi'>Tray Table</p>
+                                <p className='text-n2 caption-1-semi'>Tray Table</p>
                             </div>
                         </div>
                     </div>
@@ -93,7 +93,7 @@ const productTabs = [
                             <input
                                 type="text"
                                 placeholder='Share your thoughts'
-                                className='text-n4100 caption-1 2xl:placeholder:none'
+                                className='text-n4100 caption-1 2xl:placeholder:none outline-none'
                             />
                         </form>
 
@@ -158,12 +158,16 @@ const productTabs = [
                                         </div>
                                     </div>
 
-                                    <p className='text-[#353945] body-2'>
+                                    <p className='text-n3 body-2'>
                                         {review.comment}
                                     </p>
 
                                     <div className='flex gap-4'>
-                                        <p className=''></p>
+                                        <p className='text-n2 caption-2'>about 1 hours ago</p>
+
+                                        <button className='text-n2 caption-2-semi'>Like</button>
+
+                                        <button className='text-n2 caption-2-semi'>Reply</button>
                                     </div>
                                 </div>
                             </div>

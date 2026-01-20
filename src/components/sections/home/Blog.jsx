@@ -38,7 +38,7 @@ const Blog = ({ title }) => {
                             className='
                             flex flex-col gap-2'
                         >
-                            <p className='text-[#23262F] body-2-semi 2xl:h7'>{article.title}</p>
+                            <p className='text-n2 body-2-semi 2xl:h7'>{article.title}</p>
 
                             <MoreActionBtn
                                 label='Read More'

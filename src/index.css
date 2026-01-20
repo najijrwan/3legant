@@ -16,6 +16,9 @@
   --black-100: #F5F5F5;
 
   /*---Neutral---*/
+  --neutrals-2: #23262F;
+  --neutrals-3: #353945;
+
   --neutral-1-100: #FEFEFE;
   --neutral-1-95: #FEFEFE5F;
   --neutral-1-20: #FEFEFE14;
@@ -76,6 +79,9 @@ body {
   --color-black100: var(--black-100);
 
   /*---Neutral---*/
+  --color-n2: var(--neutrals-2);
+  --color-n3: var(--neutrals-3);
+
   --color-n1100: var(--neutral-1-100);
   --color-n195: var(--neutral-1-95);
   --color-n120: var(--neutral-1-20);
