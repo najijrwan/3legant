@@ -206,9 +206,8 @@ const ProductTabs = () => {
                             <div
                                 key={tab.id}
                                 className={`
-                                pb-2
-                                flex flex-col gap-2.5 
-                                border-b border-b-n4100 ${isOpen ? 'border-b-n7100' : ''}`}
+                                pb-2 2xl:pb-0
+                                ${isOpen ? 'border-b border-b-n7100' : 'border-b border-b-n4100 2xl:border-0'}`}
                             >
                                 <button
                                     onClick={() =>
@@ -220,7 +219,7 @@ const ProductTabs = () => {
 
                                     <Icon
                                         name="ChevronDown"
-                                        spanClassName="size-6"
+                                        spanClassName="size-6 2xl:hidden"
                                         iconClassName={`
                                         w-[12px] h-[6px]
                                         ${isOpen ? 'rotate-180' : 'rotate-0'}
