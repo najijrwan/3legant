@@ -141,10 +141,10 @@ const productTabs = [
                         {REVIEWS.map((review, i) => (
                             <div
                                 key={i}
-                                className='pb-4 border-b border-b-n3100'
+                                className='pb-4 2xl:pb-6 border-b border-b-n3100'
                             >
                                 <div className='flex flex-col gap-4'>
-                                    <div className='flex gap-4'>
+                                    <div className='flex gap-4 2xl:gap-10'>
                                         <img
                                             src={review.avatar}
                                             alt=""
@@ -160,11 +160,11 @@ const productTabs = [
                                         </div>
                                     </div>
 
-                                    <p className='text-n3 body-2'>
+                                    <p className='2xl:ml-[112px] text-n3 body-2'>
                                         {review.comment}
                                     </p>
 
-                                    <div className='flex gap-4'>
+                                    <div className='2xl:ml-[112px] flex gap-4'>
                                         <p className='text-n2 caption-2'>about 1 hours ago</p>
 
                                         <button className='text-n2 caption-2-semi'>Like</button>
