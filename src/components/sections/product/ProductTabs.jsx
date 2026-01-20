@@ -87,11 +87,11 @@ const productTabs = [
                         rounded-2xl border-2 border-n3100'
                     >
                         <form className=''>
-                            <input 
+                            <input
                                 type="text"
                                 placeholder='Share your thoughts'
                                 className='text-n4100 caption-1 2xl:placeholder:none'
-                                />
+                            />
                         </form>
 
                         <button
@@ -100,18 +100,38 @@ const productTabs = [
                             flex items-center justify-center
                             bg-n7100 rounded-full'
                         >
+                            <span className='hidden 2xl:block text-white btn-s'>Write Review</span>
                             <Icon
                                 name='ArrowRightLong'
-                                spanClassName='size-6'
+                                spanClassName='2xl:hidden size-6'
                                 iconClassName='w-[14px] h-[9px]'
                             />
                         </button>
                     </div>
                 </div>
 
-                <div
-                    className='
-                    '></div>
+                <div className='w-full mt-10 flex flex-col gap-10'>
+                    <div className='flex flex-col gap-6'>
+                        <h6 className='text-black'>11 Reviews</h6>
+
+                        <div
+                            className='
+                            pl-4 py-2 pr-2
+                            flex items-center justify-between
+                            border-2 border-n3100 rounded-lg'
+                        >
+                            <p className='text-n7100 body-2-semi'>Newest</p>
+
+                            <span className='size-8 flex items-center justify-center'>
+                                <Icon
+                                    name='ChevronDown'
+                                    spanClassName='size-6'
+                                    iconClassName='size-3 text-n4100'
+                                />
+                            </span>
+                        </div>
+                    </div>
+                </div>
             </>
         ),
     }
