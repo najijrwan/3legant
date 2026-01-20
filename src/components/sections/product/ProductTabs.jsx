@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Icon } from '@ui';
+import { Icon, ProductRating } from '@ui';
 
 const ADDITONAL_INFO = [
     {
@@ -64,10 +64,24 @@ const productTabs = [
         content: (
             <>
                 <div className='flex flex-col gap-8'>
-                    <div className='flex flec-col gap-6'>
+                    <div className='flex flex-col gap-6'>
                         <p className='text-[#23262F] h7'>Customer Reviews</p>
 
-                        <div className='flex flex-col gap-2'></div>
+                        <div className='flex flex-col gap-2'>
+                            <div className='flex gap-2'>
+                                <ProductRating rating={4} />
+                                <span className='text-n7100 caption-2'>11 Reviews</span>
+                            </div>
+
+                            <div className='flex gap-2'>
+                                <p className='text-n7100 caption-1'>Be the first to review</p>
+                                <p className='text-[#23262F] caption-1-semi'>Tray Table</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+
                     </div>
                 </div>
             </>
