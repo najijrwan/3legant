@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Icon, ProductRating } from '@ui';
+import { REVIEWS } from '@data';
 
 const ADDITONAL_INFO = [
     {
@@ -18,6 +19,8 @@ const ADDITONAL_INFO = [
         `
     },
 ]
+
+
 
 const productTabs = [
     {
@@ -126,10 +129,45 @@ const productTabs = [
                                 <Icon
                                     name='ChevronDown'
                                     spanClassName='size-6'
-                                    iconClassName='size-3 text-n4100'
+                                    iconClassName='w-[9px] h-[5.5px] text-n4100'
                                 />
                             </span>
                         </div>
+                    </div>
+
+                    <div className='w-full flex flex-col gap-6'>
+                        {REVIEWS.map((review, i) => (
+                            <div
+                                key={i}
+                                className='pb-4 border-b border-b-n3100'
+                            >
+                                <div className='flex flex-col gap-4'>
+                                    <div className='flex gap-4'>
+                                        <img
+                                            src={review.avatar}
+                                            alt=""
+                                            className="size-[72px]"
+                                        />
+
+                                        <div className='flex flex-col gap-4'>
+                                            <header className='text-n7100 body-1-semi [word-spacing:4px]'>
+                                                {review.name}
+                                            </header>
+
+                                            <ProductRating rating={review.rating} />
+                                        </div>
+                                    </div>
+
+                                    <p className='text-[#353945] body-2'>
+                                        {review.comment}
+                                    </p>
+
+                                    <div className='flex gap-4'>
+                                        <p className=''></p>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </>
