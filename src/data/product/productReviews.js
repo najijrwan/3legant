@@ -1,4 +1,4 @@
-export const REVIEWS = [
+export const PRODUCT_REVIEWS = [
     {
         name: 'Sofia Havertz',
         avatar: 'src/assets/images/avatar sofia havertz.png',

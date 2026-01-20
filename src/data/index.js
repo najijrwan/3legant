@@ -4,6 +4,7 @@ export { HOME_VALUES } from './home/homeValues';
 
 export { NAV_ITEMS } from './navigation/navItems';
 
-export { REVIEWS } from './product/reviews';
+export { PRODUCT_ADDITONAL_INFO } from './product/productAddtionalInfo';
+export { PRODUCT_REVIEWS } from './product/productReviews';
 
 export { NEW_ARRIVALS_PRODUCTS } from './products/newArrivalsProducts';

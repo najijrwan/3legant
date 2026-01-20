@@ -1,7 +1,7 @@
 import * as Icons from '@icons';
 
 const Icon = ({ name, spanClassName = '', iconClassName = '', ...props }) => {
-  const Component = Icons[name]; // Dynamically pick the icon
+  const Component = Icons[name];
 
   if (!Component) {
     console.warn(`⚠️ Icon "${name}" does not exist in @icons`);
