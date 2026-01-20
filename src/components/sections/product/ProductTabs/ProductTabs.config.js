@@ -1,5 +1,5 @@
 import ProductAdditionalInfo from './ProductAdditionalInfo';
-import ProductReviews from './ProductReviews';
+import ProductReviews from './ProductReviews/ProductReviews';
 
 export const PRODUCT_TABS = [
     {
