@@ -14,8 +14,16 @@ const ADDITONAL_INFO = [
     {
         infoTitle: 'Packaging',
         infoText: `
-        Width: 20 " Height: 1 ½ " Length: 21 ½ "
-        Weight: 7 lb 8 oz
+        Width: 20 " Height: 1 ½ " Length: 21 ½ "\n
+        Weight: 7 lb 8 oz\n
+        Package(s): 1
+        `
+    },
+    {
+        infoTitle: 'Packaging',
+        infoText: `
+        Width: 20 " Height: 1 ½ " Length: 21 ½ "\n
+        Weight: 7 lb 8 oz\n
         Package(s): 1
         `
     },
@@ -30,7 +38,7 @@ const productTabs = [
                 {ADDITONAL_INFO.map((ele, i) => (
                     <div key={i} className="flex flex-col gap-2">
                         <p className="text-n4100 caption-1-semi">{ele.infoTitle}</p>
-                        <p className="text-n7100 caption-2">{ele.infoText}</p>
+                        <p className="text-n7100 caption-2 whitespace-pre-line">{ele.infoText}</p>
                     </div>
                 ))}
             </div>
@@ -56,7 +64,10 @@ const ProductTabs = () => {
                         <>
                             <div
                                 key={tab.id}
-                                className="pb-2 flex flex-col gap-2.5 border-b border-b-n4100"
+                                className={`
+                                pb-2
+                                flex flex-col gap-2.5 
+                                border-b border-b-n4100 ${isOpen ? 'border-b-n7100' : ''}`}
                             >
                                 <button
                                     onClick={() =>
@@ -64,7 +75,7 @@ const ProductTabs = () => {
                                     }
                                     className="w-full flex items-center justify-between"
                                 >
-                                    <span className="text-n4100 btn-m">{tab.label}</span>
+                                    <span className={`text-n4100 ${isOpen ? 'text-n7100' : ''} btn-m`}>{tab.label}</span>
 
                                     <Icon
                                         name="ChevronDown"
