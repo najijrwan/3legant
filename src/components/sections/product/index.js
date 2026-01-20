@@ -1,2 +1,2 @@
 export { default as ProductLoop } from './ProductLoop';
-export { default as ProductTabs } from './ProductTabs';
+export { default as ProductTabs } from './ProductTabs/ProductTabs';
