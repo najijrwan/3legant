@@ -4,26 +4,16 @@ import { Icon } from '@ui';
 const ADDITONAL_INFO = [
     {
         infoTitle: 'Details',
-        infoText: `
-        You can use the removable tray for serving. 
-        The design makes it easy to put the tray back 
-        after use since you place it directly on the 
-        table frame without having to fit it into any holes.
+        infoText: `You can use the removable tray for serving. The
+        design makes it easy to put the tray back after use
+        since you place it directly on the table frame without 
+        having to fit it into any holes.
         `
     },
     {
         infoTitle: 'Packaging',
-        infoText: `
-        Width: 20 " Height: 1 ½ " Length: 21 ½ "\n
-        Weight: 7 lb 8 oz\n
-        Package(s): 1
-        `
-    },
-    {
-        infoTitle: 'Packaging',
-        infoText: `
-        Width: 20 " Height: 1 ½ " Length: 21 ½ "\n
-        Weight: 7 lb 8 oz\n
+        infoText: `Width: 20 " Height: 1 ½ " Length: 21 ½ "
+        Weight: 7 lb 8 oz
         Package(s): 1
         `
     },
@@ -34,11 +24,16 @@ const productTabs = [
         id: 'additionalInfo',
         label: 'Additional Info',
         content: (
-            <div className="pt-2 flex flex-col gap-4">
+            <div className="py-2 flex flex-col gap-4">
                 {ADDITONAL_INFO.map((ele, i) => (
                     <div key={i} className="flex flex-col gap-2">
-                        <p className="text-n4100 caption-1-semi">{ele.infoTitle}</p>
-                        <p className="text-n7100 caption-2 whitespace-pre-line">{ele.infoText}</p>
+                        <p className="text-n4100 caption-1-semi">
+                            {ele.infoTitle}
+                        </p>
+
+                        <p className="text-n7100 caption-2 whitespace-pre-line">
+                            {ele.infoText}
+                        </p>
                     </div>
                 ))}
             </div>
