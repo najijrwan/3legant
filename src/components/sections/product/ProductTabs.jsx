@@ -172,6 +172,14 @@ const productTabs = [
                                 </div>
                             </div>
                         ))}
+
+                        <button
+                            className='
+                            w-fit mx-auto px-10 py-1.5 
+                            rounded-[80px] border border-b7100 btn-s'
+                        >
+                            Load More
+                        </button>
                     </div>
                 </div>
             </>
