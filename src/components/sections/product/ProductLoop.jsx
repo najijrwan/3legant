@@ -33,8 +33,6 @@ const PRODUCT_OTHER_IMAGES = [
     "src/assets/images/product image 1.3.png",
 ]
 
-
-
 const ProductLoop = () => {
     const price = formatPrice(finalPrice(400, 50));
     return (
@@ -63,31 +61,27 @@ const ProductLoop = () => {
             <div
                 className='
                 px-8 2xl:px-40
-                flex flex-col 2xl:flex-row 2xl:gap-[63px]'
+                flex flex-col 2xl:flex-row 2xl:justify-between'
             >
                 <div className=''>
-                    <div
-                        className='
-                        relative
-                        max-w-[547px] h-[414px] 2xl:h-[728px] mb-4 2lx:mb-[67px]
-                        flex items-center
-                        bg-n2100'
-                    >
-                        <img
-                            src="src/assets/images/product image 1 black.png"
-                            alt=""
-                            className='size-[350px] 2xl:size-[650px] object-cover object-bottom'
-                        />
+                    <div className='grid grid-cols-3 grid-rows-3'>
+                        <div
+                            className='
+                            relative row-span-2 col-span-3
+                            max-w-[547px] h-[414px] 2xl:h-[728px] mb-4 2lx:mb-[67px]
+                            flex items-center
+                            bg-n2100'
+                        >
+                            <img
+                                src="src/assets/images/product image 1 black.png"
+                                alt=""
+                                className='size-[350px] 2xl:size-[650px] object-cover object-bottom'
+                            />
 
-                        <Badges variant='large' />
-                    </div>
+                            <Badges variant='large' />
+                        </div>
 
-                    <div
-
-                        className='hidden 2xl:flex gap-6'
-                    >
                         {PRODUCT_OTHER_IMAGES.map((images, i) => (
-
                             <div
                                 key={i}
                                 className='size-[167px]'
@@ -99,7 +93,6 @@ const ProductLoop = () => {
                             </div>
                         ))}
                     </div>
-
                 </div>
 
                 <div
