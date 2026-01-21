@@ -30,7 +30,7 @@ const ProductLoop = () => {
             >
                 <ProductMedia
                     images={PRODUCT_IMAGES}
-                    hasRecommendations={true}
+                    hasRecommendations={false}
                 />
 
                 <div

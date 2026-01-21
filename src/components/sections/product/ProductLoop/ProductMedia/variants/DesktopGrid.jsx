@@ -11,7 +11,7 @@ const DesktopGrid = ({ images }) => {
                     <img
                         src={image}
                         alt=""
-                        className="size-full object-cover"
+                        className={`size-full ${i === 0 ? 'h-85' : ''} object-cover`}
                     />
 
                     {i === 0 ? <Badges variant='large' /> : ''}
