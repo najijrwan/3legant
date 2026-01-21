@@ -14,6 +14,8 @@ const PRODUCT_IMAGES = [
     "src/assets/images/product image 1.1.png",
     "src/assets/images/product image 1.2.png",
     "src/assets/images/product image 1.3.png",
+    "src/assets/images/product image 1.4.png",
+    "src/assets/images/product image 1.5.png",
 ]
 
 const ProductLoop = () => {
@@ -28,7 +30,7 @@ const ProductLoop = () => {
             >
                 <ProductMedia
                     images={PRODUCT_IMAGES}
-                    hasRecommendations={false}
+                    hasRecommendations={true}
                 />
 
                 <div
