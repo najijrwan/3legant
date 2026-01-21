@@ -1,3 +1,5 @@
+import { Icon, AddToCartBtn } from '@ui';
+
 const ProductActions = () => {
     return (
         <div className='py-6 2xl:py-8 flex flex-col gap-4 border-b border-b-n3100'>
