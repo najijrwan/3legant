@@ -17,3 +17,27 @@ const timerBlocks = [
     },
 ]
 
+const OfferCountdown = () => {
+    return (
+        <div className='py-6 flex flex-col gap-3 border-b border-b-n3100'>
+            <p className='text-n5100 body-2'>Offer expires in:</p>
+
+            <div className='flex gap-4'>
+                {timerBlocks.map((block, i) => (
+                    <div
+                        key={i}
+                        className='flex flex-col items-center'>
+                        <h5 className='size-15 flex items-center justify-center bg-n2100'>
+                            {block.number}
+                        </h5>
+                        <p className='text-n4100 caption-2'>
+                            {block.in}
+                        </p>
+                    </div>
+                ))}
+            </div>
+        </div>
+    )
+}
+
+export default OfferCountdown;
