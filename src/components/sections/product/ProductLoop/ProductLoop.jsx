@@ -1,24 +1,5 @@
-import { Icon, Badges, ProductRating, AddToCartBtn } from '@ui';
-import { formatPrice, finalPrice } from '@utils';
-
-const timerBlocks = [
-    {
-        number: '02',
-        in: 'Days',
-    },
-    {
-        number: '12',
-        in: 'Hours',
-    },
-    {
-        number: '45',
-        in: 'Minutes',
-    },
-    {
-        number: '05',
-        in: 'Seconds',
-    },
-]
+import { Icon, Badges, AddToCartBtn } from '@ui';
+import { ProductBreadcrumbs, ProductSummary } from '@product';
 
 const PRODUCT_COLORS = [
     "src/assets/images/product image 1 black.png",
@@ -34,29 +15,9 @@ const PRODUCT_OTHER_IMAGES = [
 ]
 
 const ProductLoop = () => {
-    const price = formatPrice(finalPrice(400, 50));
     return (
         <section className="">
-            <ul
-                className="
-                w-fit my-4 ml-8 2xl:ml-40
-                flex gap-2 2xl:gap-4
-                text-black600 caption-1 font-medium 2xl:btn-xs"
-            >
-                <li className='flex items-center gap-1'>
-                    <span>Home</span>
-                    <Icon name='ChevronRight' spanClassName='size-3' iconClassName='w-[8px] h-[9px]' />
-                </li>
-                <li className='flex items-center gap-1'>
-                    <span>Shop</span>
-                    <Icon name='ChevronRight' spanClassName='size-3' iconClassName='w-[8px] h-[9px]' />
-                </li>
-                <li className='flex items-center gap-1'>
-                    <span>Living Room</span>
-                    <Icon name='ChevronRight' spanClassName='size-3' iconClassName='w-[8px] h-[9px]' />
-                </li>
-                <li className='text-black900'>Product</li>
-            </ul>
+            <ProductBreadcrumbs />
 
             <div
                 className='
@@ -101,28 +62,7 @@ const ProductLoop = () => {
                     w-full max-w-[508px]
                     flex flex-col'
                 >
-                    <div
-                        className='
-                        pb-6
-                        flex flex-col gap-4 
-                        border-b border-b-n3100'>
-                        <div className='flex gap-2.5'>
-                            <ProductRating rating={5} />
-                            <span className='text-n7100 caption-2'>11 Reviews</span>
-                        </div>
-
-                        <h4>Tray Table</h4>
-
-                        <p className='text-n4100 body-2'>
-                            Buy one or buy a few and make every space where you sit more convenient.
-                            Light and easy to move around with removable tray top, handy for serving snacks.
-                        </p>
-
-                        <div className='flex items-center gap-3'>
-                            <h6 className='text-black900'>{price}</h6>
-                            <p className='h7 text-n4100 line-through'>{formatPrice(400)}</p>
-                        </div>
-                    </div>
+                    <ProductSummary />
 
                     <div className='py-6 flex flex-col gap-3 border-b border-b-n3100'>
                         <p className='text-n5100 body-2'>Offer expires in:</p>
