@@ -1,11 +1,11 @@
-import { Icon, Badges, AddToCartBtn } from '@ui';
+import { Badges } from '@ui';
 import {
-ProductBreadcrumbs, 
-ProductSummary, 
-OfferCountdown,
-ProductOptions,
-ProductActions,
-ProductMeta,
+    ProductBreadcrumbs,
+    ProductSummary,
+    OfferCountdown,
+    ProductOptions,
+    ProductActions,
+    ProductMeta,
 } from '@product';
 
 const PRODUCT_OTHER_IMAGES = [
@@ -69,7 +69,7 @@ const ProductLoop = () => {
                     <ProductOptions />
 
                     <ProductActions />
-                    
+
                     <ProductMeta />
                 </div>
             </div>
