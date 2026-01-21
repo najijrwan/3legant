@@ -1,11 +1,9 @@
 import DesktopCarousel from './variants/DesktopCarousel';
 
-const ProductMedia = ({ images, hasRecommendations }) => {
-    return (
-        <div className='grid grid-cols-3 grid-rows-3'>
-            <DesktopCarousel images={images}/>
-        </div>
-    )
+const ProductMedia = ({ images, isMobile, hasRecommendations }) => {
+    if (isMobile) return <MobileCarousel />
+    if (hasRecommendations) return <DesktopGrid />
+    return <DesktopCarousel images={images}/>
 }
 
 export default ProductMedia;

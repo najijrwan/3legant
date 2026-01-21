@@ -1,8 +1,8 @@
 import { Badges } from '@ui';
 
-const DesktopCarousel = ({images}) => {
+const DesktopCarousel = ({ images }) => {
     return (
-        <>
+        <div className='grid grid-cols-3 grid-rows-3'>
             <div
                 className='
                 relative row-span-2 col-span-3
@@ -11,7 +11,7 @@ const DesktopCarousel = ({images}) => {
                 bg-n2100'
             >
                 <img
-                    src="src/assets/images/product image 1 black.png"
+                    src={images[0]}
                     alt=""
                     className='size-[350px] 2xl:size-[650px] object-cover object-bottom'
                 />
@@ -19,18 +19,18 @@ const DesktopCarousel = ({images}) => {
                 <Badges variant='large' />
             </div>
 
-            {images.map((images, i) => (
+            {images.map((image, i) => (
                 <div
                     key={i}
                     className='size-[167px]'
                 >
                     <img
-                        src={images}
+                        src={image}
                         alt=""
                         className="size-full" />
                 </div>
             ))}
-        </>
+        </div>
     )
 }
 

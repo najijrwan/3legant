@@ -10,6 +10,7 @@ import {
 } from '@product';
 
 const PRODUCT_IMAGES = [
+    "src/assets/images/product image 1 black.png",
     "src/assets/images/product image 1.1.png",
     "src/assets/images/product image 1.2.png",
     "src/assets/images/product image 1.3.png",
