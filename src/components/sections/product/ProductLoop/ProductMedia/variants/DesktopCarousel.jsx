@@ -55,13 +55,13 @@ const DesktopCarousel = ({ images = [] }) => {
             <div
                 className="
                 relative row-span-2 col-span-3
-                max-w-[547px] h-[414px] 2xl:h-[728px] mb-4
+                max-w-[549px] h-[414px] 2xl:h-[728px] mb-4
                 flex items-center justify-center"
             >
                 <img
                     src={images[activeIndex]}
                     alt={`Product image ${activeIndex + 1}`}
-                    className="size-full object-cover"
+                    className="w-full h-full object-cover"
                 />
 
                 <Badges variant="large" />
