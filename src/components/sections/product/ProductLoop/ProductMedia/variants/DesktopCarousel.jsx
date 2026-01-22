@@ -1,85 +1,111 @@
 import { useState } from 'react';
 import { Badges } from '@ui';
 
-const DesktopCarousel = ({ images }) => {
+const THUMB_COUNT = 3;
+
+const DesktopCarousel = ({ images = [] }) => {
     const [activeIndex, setActiveIndex] = useState(0);
-    const [thumbStart, setThumbStart] = useState(0); // first visible thumbnail
-    const THUMB_COUNT = 3; // how many thumbnails are visible at once
+    const [thumbStart, setThumbStart] = useState(0);
 
-    const handlePrev = () => {
-        if (activeIndex === 0) return; // disabled
-        const newIndex = activeIndex - 1;
-        setActiveIndex(newIndex);
+    const maxThumbStart = Math.max(
+        0,
+        images.length - (THUMB_COUNT + 1)
+    );
 
-        // shift thumbnail window if needed
-        if (newIndex < thumbStart) {
-            setThumbStart(newIndex);
-        }
-    };
+    const hasPrev = activeIndex > 0;
+    const hasNext = activeIndex < images.length - 1;
 
     const handleNext = () => {
-        if (activeIndex === images.length - 1) return; // disabled
-        const newIndex = activeIndex + 1;
-        setActiveIndex(newIndex);
+        if (!hasNext) return;
 
-        // shift thumbnail window if needed
-        if (newIndex >= thumbStart + THUMB_COUNT) {
-            setThumbStart(newIndex - THUMB_COUNT + 1);
+        const nextIndex = activeIndex + 1;
+        setActiveIndex(nextIndex);
+
+        // move thumbnails only if not frozen
+        if (
+            nextIndex > thumbStart &&
+            thumbStart < maxThumbStart
+        ) {
+            setThumbStart(prev =>
+                Math.min(prev + 1, maxThumbStart)
+            );
         }
     };
 
+    const handlePrev = () => {
+        if (!hasPrev) return;
+
+        const prevIndex = activeIndex - 1;
+        setActiveIndex(prevIndex);
+
+        // move thumbnails back only if needed
+        if (prevIndex < thumbStart) {
+            setThumbStart(prevIndex);
+        }
+    };
+
+    const visibleThumbnails = images.slice(
+        thumbStart + 1,
+        thumbStart + 1 + THUMB_COUNT
+    );
+
     return (
-        <div className='flex flex-col'>
-            {/* Main Image */}
+        <div className="flex flex-col gap-6">
+            {/* Main image */}
             <div
-                className='
+                className="
                 relative row-span-2 col-span-3
-                max-w-[549px] h-[414px] 2xl:h-[728px] mb-4 2lx:mb-[67px]
-                flex items-center'
+                max-w-[547px] h-[414px] 2xl:h-[728px] mb-4
+                flex items-center justify-center"
             >
                 <img
                     src={images[activeIndex]}
                     alt={`Product image ${activeIndex + 1}`}
-                    className='size-full object-cover object-bottom'
+                    className="size-full object-cover"
                 />
 
-                <Badges variant='large' />
+                <Badges variant="large" />
 
-                {/* Left button */}
                 <button
+                    disabled={!hasPrev}
                     onClick={handlePrev}
-                    disabled={activeIndex === 0}
-                    className={`absolute left-2 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-md z-10
-                        ${activeIndex === 0 ? 'opacity-40 cursor-not-allowed' : ''}
+                    className={`
+                        absolute left-2 top-1/2 -translate-y-1/2
+                        ${!hasPrev ? 'opacity-40 cursor-not-allowed' : ''}
                     `}
                 >
-                    &#8592;
+                    ←
                 </button>
 
-                {/* Right button */}
                 <button
+                    disabled={!hasNext}
                     onClick={handleNext}
-                    disabled={activeIndex === images.length - 1}
-                    className={`absolute right-2 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-md z-10
-                        ${activeIndex === images.length - 1 ? 'opacity-40 cursor-not-allowed' : ''}
+                    className={`
+                        absolute right-2 top-1/2 -translate-y-1/2
+                        ${!hasNext ? 'opacity-40 cursor-not-allowed' : ''}
                     `}
                 >
-                    &#8594;
+                    →
                 </button>
             </div>
 
             {/* Thumbnails */}
-            <div className="flex gap-2 mt-4">
-                {images.slice(thumbStart, thumbStart + THUMB_COUNT).map((img, i) => {
-                    const imgIndex = thumbStart + i; // actual index in images
+            <div className="hidden 2xl:flex gap-6">
+                {visibleThumbnails.map((img, i) => {
+                    const realIndex = thumbStart + i + 1;
+
                     return (
-                        <div
-                            key={imgIndex}
-                            className={`size-[167px] cursor-pointer border-2 ${activeIndex === imgIndex ? 'border-n7100' : 'border-transparent'}`}
-                            onClick={() => setActiveIndex(imgIndex)}
+                        <button
+                            key={img}
+                            onClick={() => setActiveIndex(realIndex)}
+                            className="w-[167px]"
                         >
-                            <img src={img} alt={`Thumbnail ${imgIndex + 1}`} className="w-full h-full" />
-                        </div>
+                            <img
+                                src={img}
+                                alt={`Thumbnail ${realIndex + 1}`}
+                                className="size-[167px] object-cover object-bottom"
+                            />
+                        </button>
                     );
                 })}
             </div>
