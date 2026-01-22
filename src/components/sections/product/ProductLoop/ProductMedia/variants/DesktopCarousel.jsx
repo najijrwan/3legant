@@ -74,13 +74,15 @@ const DesktopCarousel = ({ images = [] }) => {
                         size-10
                         flex items-center justify-center
                         bg-white rounded-full
-                        ${!hasPrev ? 'opacity-40 cursor-not-allowed' : ''}
+                        ${!hasPrev ? 'cursor-not-allowed' : ''}
                     `}
                 >
                     <Icon
                         name='ArrowLeft'
                         spanClassName='size-6'
-                        iconClassName='w-[14px] h-[9px] text-n7100 shadow-1'
+                        iconClassName={`
+                        w-[14px] h-[12px] shadow-1
+                        ${!hasPrev ? 'text-n4100' : 'text-7100'}`}
                     />
                 </button>
 
@@ -92,16 +94,15 @@ const DesktopCarousel = ({ images = [] }) => {
                         size-10
                         flex items-center justify-center
                         bg-white rounded-full
-                        ${!hasNext ? 'opacity-40 cursor-not-allowed' : ''}
+                        ${!hasNext ? 'cursor-not-allowed' : ''}
                     `}
                 >
                     <Icon
                         name='ArrowRight'
                         spanClassName='size-6'
                         iconClassName={`
-                        w-[14px] h-[9px] text-n7100 shadow-1
-                        ${!hasNext ? 'text-n3100' : 'n7100'}
-                    `}
+                        w-[14px] h-[12px] shadow-1
+                        ${!hasNext ? 'text-n4100' : 'text-n7100'}`}
                     />
                 </button>
             </div>
