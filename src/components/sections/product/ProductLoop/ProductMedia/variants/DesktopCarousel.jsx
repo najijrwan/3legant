@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Badges } from '@ui';
+import { Icon, Badges } from '@ui';
 
 const THUMB_COUNT = 3;
 
@@ -55,7 +55,7 @@ const DesktopCarousel = ({ images = [] }) => {
             <div
                 className="
                 relative row-span-2 col-span-3
-                max-w-[549px] h-[414px] 2xl:h-[728px] mb-4
+                w-[549px] h-[728px]
                 flex items-center justify-center"
             >
                 <img
@@ -70,22 +70,39 @@ const DesktopCarousel = ({ images = [] }) => {
                     disabled={!hasPrev}
                     onClick={handlePrev}
                     className={`
-                        absolute left-2 top-1/2 -translate-y-1/2
+                        absolute left-[33px] top-1/2 -translate-y-1/2
+                        size-10
+                        flex items-center justify-center
+                        bg-white rounded-full
                         ${!hasPrev ? 'opacity-40 cursor-not-allowed' : ''}
                     `}
                 >
-                    ←
+                    <Icon
+                        name='ArrowLeft'
+                        spanClassName='size-6'
+                        iconClassName='w-[14px] h-[9px] text-n7100 shadow-1'
+                    />
                 </button>
 
                 <button
                     disabled={!hasNext}
                     onClick={handleNext}
                     className={`
-                        absolute right-2 top-1/2 -translate-y-1/2
+                        absolute right-[33px] top-1/2 -translate-y-1/2
+                        size-10
+                        flex items-center justify-center
+                        bg-white rounded-full
                         ${!hasNext ? 'opacity-40 cursor-not-allowed' : ''}
                     `}
                 >
-                    →
+                    <Icon
+                        name='ArrowRight'
+                        spanClassName='size-6'
+                        iconClassName={`
+                        w-[14px] h-[9px] text-n7100 shadow-1
+                        ${!hasNext ? 'text-n3100' : 'n7100'}
+                    `}
+                    />
                 </button>
             </div>
 
