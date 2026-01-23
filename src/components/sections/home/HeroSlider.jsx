@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Icon, HeroCarousel } from "@ui";
+import { Icon, SwipeCarousel } from "@ui";
 import { HOME_HERO_IMAGES } from '@data';
 
 const SLIDER_BUTTONS = [
@@ -35,7 +35,7 @@ const HeroSlider = () => {
                 w-full h-[304px] 2xl:h-[536px] 
                 overflow-hidden"
             >
-                <HeroCarousel
+                <SwipeCarousel
                     index={index}
                     onNext={goNext}
                     onPrev={goPrev}
@@ -50,7 +50,7 @@ const HeroSlider = () => {
                             object-cover object-[55%_100%] 2xl:object-bottom-right"
                         />
                     ))}
-                </HeroCarousel>
+                </SwipeCarousel>
 
                 {SLIDER_BUTTONS.map((btn, i) => {
                     const isDisabled =

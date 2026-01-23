@@ -1,6 +1,6 @@
 import useSwipe from '@/hooks/useSwipe';
 
-const HeroCarousel = ({ children, index, onNext, onPrev }) => {
+const SwipeCarousel = ({ children, index, onNext, onPrev }) => {
     const swipeHandlers = useSwipe({
         onSwipeLeft: onNext,
         onSwipeRight: onPrev,
@@ -20,4 +20,4 @@ const HeroCarousel = ({ children, index, onNext, onPrev }) => {
     );
 };
 
-export default HeroCarousel;
+export default SwipeCarousel;

@@ -64,7 +64,10 @@ const DesktopCarousel = ({ images = [] }) => {
                     className="w-full h-full object-cover"
                 />
 
-                <Badges variant="large" />
+                <Badges
+                    variant="large"
+                    containerClass='left-8 top-8'
+                />
 
                 <button
                     disabled={!hasPrev}
