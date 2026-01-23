@@ -3,10 +3,6 @@ import { Icon, Badges } from '@ui';
 
 const ProductCarouselBase = ({
     images = [],
-    badgesPosition,
-    containerClass,
-    imageClass,
-    enableSwipe,
 }) => {
     const { activeIndex, hasPrev, hasNext, handleNext, handlePrev } = useCarousel(images, 0);
 
@@ -30,18 +26,18 @@ const ProductCarouselBase = ({
                         key={i}
                         src={img}
                         alt={`Product image ${i + 1}`}
-                        className={`w-full ${i === 0 ? 'h-[360px]' : 'h-full'} object-cover flex-shrink-0`}
+                        className={`w-full ${i === 0 ? 'h-[360px] 2xl:h-[660px]' : 'h-full'} object-cover flex-shrink-0`}
                     />
                 ))}
             </div>
 
-            <Badges variant='large' containerClass='left-6 top-6' />
+            <Badges variant='large' containerClass='left-6 top-6 2xl:left-8 2xl:top-8' />
 
             <button
                 disabled={!hasPrev}
                 onClick={handlePrev}
                 className={`
-                        absolute left-6 top-1/2 -translate-y-1/2
+                        absolute left-6 2xl:left-8 top-1/2 -translate-y-1/2
                         size-10
                         flex items-center justify-center
                         bg-white rounded-full
@@ -61,7 +57,7 @@ const ProductCarouselBase = ({
                 disabled={!hasNext}
                 onClick={handleNext}
                 className={`
-                        absolute right-6 top-1/2 -translate-y-1/2
+                        absolute right-6 2xl:right-8 top-1/2 -translate-y-1/2
                         size-10
                         flex items-center justify-center
                         bg-white rounded-full
