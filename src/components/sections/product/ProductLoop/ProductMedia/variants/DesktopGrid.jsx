@@ -11,10 +11,14 @@ const DesktopGrid = ({ images }) => {
                     <img
                         src={image}
                         alt=""
-                        className={`size-full ${i === 0 ? 'h-85' : ''} object-cover`}
+                        className={`size-full  object-cover`}
                     />
 
-                    {i === 0 ? <Badges variant='large' /> : ''}
+                    {i === 0
+                        ?   <Badges
+                                variant='large' 
+                                containerClass='left-4 top-4'/>
+                        : ''}
                 </div>
             ))}
         </div>

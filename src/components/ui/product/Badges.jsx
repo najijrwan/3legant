@@ -1,19 +1,19 @@
-const Badges = ({ variant = 'medium', discountPercentage = 0 }) => {
+const Badges = ({ variant = 'medium', discountPercentage = 0, containerClass = '' }) => {
     const VARIANTS = {
         medium: {
-            container: 'left-4 top-4',
             badge: 'px-3.5 py-1 hairline-1',
             textColor: 'text-n7100',
         },
         large: {
-            container: 'left-6 2xl:left-8 top-6 2xl:top-8',
             badge: 'px-4.5 py-2',
             textStyle: { new: 'text-black-900 body-2-semi 2xl:badges', percent: 'badges' },
         },
     }
     return (
         <div
-            className={`${VARIANTS[variant].container} absolute flex flex-col gap-2 2xl:gap-2.25`}
+            className={`
+            absolute flex flex-col gap-2 2xl:gap-2.25
+            ${containerClass}`}
         >
             <div
                 className={`
