@@ -26,9 +26,9 @@ const ProductLoop = () => {
                 flex flex-col 2xl:flex-row 2xl:justify-between'
             >
                 <ProductMedia
-                    images={PRODUCT_IMAGES}             // array of image URLs
-                    isMobile={true}       // boolean: mobile view
-                    hasRecommendations={false}  // boolean: desktop grid layout
+                    images={PRODUCT_IMAGES}
+                    isMobile={false}
+                    hasRecommendations={false}
                 />
 
                 <div
