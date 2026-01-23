@@ -1,4 +1,3 @@
-import { Badges } from '@ui';
 import {
     ProductMedia,
     ProductBreadcrumbs,
@@ -30,8 +29,8 @@ const ProductLoop = () => {
             >
                 <ProductMedia
                     images={PRODUCT_IMAGES}             // array of image URLs
-                    isMobile={isMobile}            // boolean: mobile view
-                    hasRecommendations={hasRecommendations}  // boolean: desktop grid layout
+                    isMobile={false}          // boolean: mobile view
+                    hasRecommendations={false}  // boolean: desktop grid layout
                 />
 
                 <div
