@@ -29,7 +29,7 @@ const ProductLoop = () => {
             >
                 <ProductMedia
                     images={PRODUCT_IMAGES}             // array of image URLs
-                    isMobile={false}          // boolean: mobile view
+                    isMobile={true}          // boolean: mobile view
                     hasRecommendations={false}  // boolean: desktop grid layout
                 />
 

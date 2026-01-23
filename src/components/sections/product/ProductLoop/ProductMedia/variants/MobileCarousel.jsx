@@ -10,9 +10,9 @@ const MobileCarousel = ({ images = [] }) => {
     });
 
     return (
-        <div className="relative w-full h-[400px] sm:h-[500px]" {...swipeHandlers}>
+        <div className="relative overflow-clip" {...swipeHandlers}>
             <div
-                className="h-full flex transition-transform duration-500 ease-out"
+                className="h-full w-full flex transition-transform duration-500 ease-out"
                 style={{ transform: `translateX(-${activeIndex * 100}%)` }}
             >
                 {images.map((img, i) => (
