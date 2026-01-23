@@ -1,5 +1,5 @@
 import { useSwipe, useCarousel } from '@/hooks';
-import { Icon } from '@ui';
+import { Icon, Badges } from '@ui';
 
 const MobileCarousel = ({ images = [] }) => {
     const { activeIndex, hasPrev, hasNext, handleNext, handlePrev } = useCarousel(images, 0);
@@ -12,7 +12,11 @@ const MobileCarousel = ({ images = [] }) => {
     return (
         <div className="relative overflow-clip" {...swipeHandlers}>
             <div
-                className="h-full w-full flex transition-transform duration-500 ease-out"
+                className="
+                w-full h-[414px] 
+                flex
+                bg-n2100
+                transition-transform duration-500 ease-out"
                 style={{ transform: `translateX(-${activeIndex * 100}%)` }}
             >
                 {images.map((img, i) => (
@@ -24,6 +28,8 @@ const MobileCarousel = ({ images = [] }) => {
                     />
                 ))}
             </div>
+
+            <Badges variant='large' containerClass='left-6 top-6' />
 
             {/* Optional buttons */}
             <button

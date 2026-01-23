@@ -1,6 +1,5 @@
 import {
     ProductMedia,
-    ProductBreadcrumbs,
     ProductSummary,
     OfferCountdown,
     ProductOptions,
@@ -20,7 +19,6 @@ const PRODUCT_IMAGES = [
 const ProductLoop = () => {
     return (
         <section className="">
-            <ProductBreadcrumbs />
 
             <div
                 className='
@@ -29,7 +27,7 @@ const ProductLoop = () => {
             >
                 <ProductMedia
                     images={PRODUCT_IMAGES}             // array of image URLs
-                    isMobile={true}          // boolean: mobile view
+                    isMobile={true}       // boolean: mobile view
                     hasRecommendations={false}  // boolean: desktop grid layout
                 />
 
