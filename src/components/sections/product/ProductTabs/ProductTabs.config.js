@@ -1,4 +1,4 @@
-import ProductAdditionalInfo from './ProductAdditionalInfo';
+import ProductAdditionalInfo from './ProductAdditionalInfo/ProductAdditionalInfo';
 import ProductReviews from './ProductReviews/ProductReviews';
 
 export const PRODUCT_TABS = [
