@@ -1,12 +1,8 @@
 import { useSwipe, useCarousel } from '@/hooks';
 import { Icon, Badges } from '@ui';
 
-const ProductCarouselBase = ({
-    images = [],
-}) => {
+const ProductCarouselBase = ({ images = [] }) => {
     const { activeIndex, hasPrev, hasNext, handleNext, handlePrev } = useCarousel(images, 0);
-
-
 
     return (
         <div className="relative overflow-hidden" >
