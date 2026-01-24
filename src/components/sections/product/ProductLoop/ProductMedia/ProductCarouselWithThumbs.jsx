@@ -1,5 +1,4 @@
 import { useCarousel } from '@/hooks';
-import { Icon, Badges } from '@ui';
 import ProductCarouselBase from './ProductCarouselBase';
 
 const THUMB_COUNT = 3;

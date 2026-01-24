@@ -1,6 +1,6 @@
-import ProductCarouselBase from './variants/ProductCarouselBase';
-import DesktopGrid from './variants/DesktopGrid';
-import ProductCarouselWithThumbs from './variants/ProductCarouselWithThumbs';
+import ProductCarouselBase from './ProductCarouselBase';
+import DesktopGrid from './DesktopGrid';
+import ProductCarouselWithThumbs from './ProductCarouselWithThumbs';
 
 const ProductMedia = ({ images, isMobile, hasRecommendations }) => {
     if (isMobile) return <ProductCarouselBase images={images} />;
