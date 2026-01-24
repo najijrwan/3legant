@@ -1,6 +1,6 @@
 import { Badges } from '@ui';
 
-const DesktopGrid = ({ images }) => {
+const ProductDesktopGrid = ({ images }) => {
     return (
         <div className="grid grid-cols-2 grid-row-3 gap-6">
             {images.map((image, i) => (
@@ -25,4 +25,4 @@ const DesktopGrid = ({ images }) => {
     )
 }
 
-export default DesktopGrid;
+export default ProductDesktopGrid;

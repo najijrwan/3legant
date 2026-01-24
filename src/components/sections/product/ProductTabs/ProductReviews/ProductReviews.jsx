@@ -1,10 +1,10 @@
-import ReviewsSummary from './ReviewsSummary';
-import ReviewList from './ReviewsList';
+import ProductReviewsSummary from './ProductReviewsSummary';
+import ProductReviewList from './ProductReviewsList';
 
 const ProductReviews = () => (
     <div className='flex flex-col gap-10'>
-        <ReviewsSummary />
-        <ReviewList />
+        <ProductReviewsSummary />
+        <ProductReviewList />
     </div>
 )
 

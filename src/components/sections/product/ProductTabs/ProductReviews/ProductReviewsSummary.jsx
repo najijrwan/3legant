@@ -1,6 +1,6 @@
 import { Icon, ProductRating } from '@ui';
 
-const ReviewsSummary = () => (
+const ProductReviewsSummary = () => (
     <div className='flex flex-col gap-8 2xl:gap-7.5'>
         <div className='flex flex-col gap-6'>
             <p className='text-n2 h7 2xl:h6'>Customer Reviews</p>
@@ -51,4 +51,4 @@ const ReviewsSummary = () => (
     </div>
 )
 
-export default ReviewsSummary;
+export default ProductReviewsSummary;

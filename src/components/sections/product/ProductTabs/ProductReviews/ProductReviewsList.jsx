@@ -1,7 +1,7 @@
 import { Icon, ProductRating } from '@ui';
 import { PRODUCT_REVIEWS } from "@data";
 
-const ReviewList = () => (
+const ProductReviewList = () => (
     <div className='w-full flex flex-col gap-10'>
         <div className='flex flex-col 2xl:flex-row 2xl:justify-between gap-6'>
             <h6 className='text-black'>11 Reviews</h6>
@@ -73,4 +73,4 @@ const ReviewList = () => (
     </div>
 )
 
-export default ReviewList;
+export default ProductReviewList;
