@@ -20,8 +20,8 @@ const ProductLoop = () => {
             >
                 <ProductMedia
                     images={PRODUCT_IMAGES}
-                    isMobile={true}
-                    hasRecommendations={true}
+                    isMobile={false}
+                    hasRecommendations={false}
                 />
 
                 <ProductInfo />

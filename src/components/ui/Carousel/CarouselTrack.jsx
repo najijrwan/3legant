@@ -1,5 +1,3 @@
-import { Badges } from '@ui';
-
 const CarouselTrack = ({ images, activeIndex, className = '' }) => {
     return (
         <div
@@ -18,11 +16,6 @@ const CarouselTrack = ({ images, activeIndex, className = '' }) => {
                     className="w-full h-full object-cover flex-shrink-0"
                 />
             ))}
-
-            <Badges
-                variant='large'
-                containerClass='left-6 top-6 2xl:left-8 2xl:top-8'
-            />
         </div>
     );
 };

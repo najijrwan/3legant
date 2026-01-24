@@ -39,21 +39,21 @@ const HeroSlider = () => {
                     ))}
                 </div>
 
-                {/* Badges */}
-                <Badges variant="large" containerClass="left-6 top-6 2xl:left-8 2xl:top-8" />
-
                 {/* Left & Right buttons */}
                 <CarouselNavButton
-                    onClick={handlePrev}
+                    direction="left"
+                    variant='lg'
                     disabled={!hasPrev}
-                    position="left"
-                    size="2xl:size-13"
+                    onClick={handlePrev}
+                    className="hidden 2xl:flex left-10.25"
                 />
+
                 <CarouselNavButton
-                    onClick={handleNext}
+                    direction="right"
+                    variant='lg'
                     disabled={!hasNext}
-                    position="right"
-                    size="2xl:size-13"
+                    onClick={handleNext}
+                    className="hidden 2xl:flex right-10.25"
                 />
 
                 {/* Pagination dots */}

@@ -1,7 +1,7 @@
 import { useSwipe, useCarousel } from '@/hooks';
-import { CarouselTrack, CarouselNavButton, CarouselThumbs } from '@ui';
+import { Badges, CarouselTrack, CarouselNavButton, CarouselThumbs } from '@ui';
 
-const MediaCarousel = ({ images, showThumbs }) => {
+const MediaCarousel = ({ images, showBadges, showThumbs }) => {
     const {
         activeIndex,
         hasPrev,
@@ -20,6 +20,13 @@ const MediaCarousel = ({ images, showThumbs }) => {
                 images={images}
                 activeIndex={activeIndex}
             />
+
+            {showBadges && (
+                <Badges
+                    variant='large'
+                    containerClass='left-6 top-6 2xl:left-8 2xl:top-8'
+                />
+            )}
 
             <CarouselNavButton
                 direction="left"
