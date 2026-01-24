@@ -2,9 +2,8 @@ const CarouselTrack = ({ images, activeIndex, className = '' }) => {
     return (
         <div
             className={`
-                relative
                 flex items-center
-                bg-n2100
+                bg-n2100 2xl:bg-white
                 transition-transform duration-500 ease-out ${className}`}
             style={{ transform: `translateX(-${activeIndex * 100}%)` }}
         >
