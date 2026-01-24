@@ -1,7 +1,10 @@
-const CarouselTrack = ({ images, activeIndex, children, className = '' }) => {
+import { Badges } from '@ui';
+
+const CarouselTrack = ({ images, activeIndex, className = '' }) => {
     return (
         <div
             className={`
+                relative
                 flex items-center
                 bg-n2100
                 transition-transform duration-500 ease-out ${className}`}
@@ -15,7 +18,11 @@ const CarouselTrack = ({ images, activeIndex, children, className = '' }) => {
                     className="w-full h-full object-cover flex-shrink-0"
                 />
             ))}
-            {children}
+
+            <Badges
+                variant='large'
+                containerClass='left-6 top-6 2xl:left-8 2xl:top-8'
+            />
         </div>
     );
 };

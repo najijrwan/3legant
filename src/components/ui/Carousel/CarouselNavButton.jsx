@@ -25,7 +25,8 @@ const CarouselNavButton = ({ direction, variant = 'md', disabled, onClick, class
                 bg-white rounded-full
                 ${className}
                 ${btnSize}
-                ${disabled ? 'cursor-not-allowed' : ''}`}>
+                ${disabled ? 'cursor-not-allowed' : ''}`}
+        >
             <Icon
                 name={direction === 'left' ? 'ArrowLeft' : 'ArrowRight'}
                 spanClassName={iconSpanSize}
