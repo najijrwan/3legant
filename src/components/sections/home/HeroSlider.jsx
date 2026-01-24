@@ -1,5 +1,5 @@
 import { useCarousel, useSwipe } from '@/hooks';
-import { Icon, Badges, CarouselNavButton } from '@ui';
+import { CarouselTrack, CarouselNavButton } from '@ui';
 import { HOME_HERO_IMAGES } from '@data';
 
 const HeroSlider = () => {
@@ -20,24 +20,14 @@ const HeroSlider = () => {
         >
             {/* Slider container */}
             <div
-                data-id="slider"
-                className="relative w-full h-[304px] 2xl:h-[536px] overflow-hidden"
                 {...swipeHandlers}
+                className='relative overflow-hidden'
             >
-                {/* Image track */}
-                <div
-                    className="flex transition-transform duration-500 ease-out h-full"
-                    style={{ transform: `translateX(-${activeIndex * 100}%)` }}
-                >
-                    {HOME_HERO_IMAGES.map((src, i) => (
-                        <img
-                            key={i}
-                            src={src}
-                            className="w-full shrink-0 h-full 2xl:h-full object-cover object-[55%_100%] 2xl:object-bottom-right"
-                            alt={`Hero image ${i + 1}`}
-                        />
-                    ))}
-                </div>
+                <CarouselTrack
+                    images={HOME_HERO_IMAGES}
+                    activeIndex={activeIndex}
+                    className='w-full h-[304px] 2xl:h-[536px]'
+                />
 
                 {/* Left & Right buttons */}
                 <CarouselNavButton

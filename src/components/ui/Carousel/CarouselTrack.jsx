@@ -12,7 +12,7 @@ const CarouselTrack = ({ images, activeIndex, className = '' }) => {
                     key={i}
                     src={img}
                     alt={`Slide ${i + 1}`}
-                    className="w-full h-full object-cover flex-shrink-0"
+                    className="w-full h-full object-cover object-bottom shrink-0"
                 />
             ))}
         </div>
