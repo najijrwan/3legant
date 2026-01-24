@@ -6,13 +6,10 @@ const ProductCarouselBase = ({
 }) => {
     const { activeIndex, hasPrev, hasNext, handleNext, handlePrev } = useCarousel(images, 0);
 
-    const swipeHandlers = useSwipe({
-        onSwipeLeft: handleNext,
-        onSwipeRight: handlePrev,
-    });
+
 
     return (
-        <div className="relative overflow-hidden" {...swipeHandlers}>
+        <div className="relative overflow-hidden" >
             <div
                 className="
                 w-[311px] 2xl:w-[549px] h-[414px] 2xl:h-[728px]

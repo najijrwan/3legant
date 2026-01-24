@@ -17,7 +17,7 @@ const timerBlocks = [
     },
 ]
 
-const OfferCountdown = () => {
+const ProductOfferCountdown = () => {
     return (
         <div className='py-6 flex flex-col gap-3 border-b border-b-n3100'>
             <p className='text-n5100 body-2'>Offer expires in:</p>
@@ -40,4 +40,4 @@ const OfferCountdown = () => {
     )
 }
 
-export default OfferCountdown;
+export default ProductOfferCountdown;

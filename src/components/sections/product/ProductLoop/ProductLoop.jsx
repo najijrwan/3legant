@@ -1,11 +1,4 @@
-import {
-    ProductMedia,
-    ProductSummary,
-    OfferCountdown,
-    ProductOptions,
-    ProductActions,
-    ProductMeta,
-} from '@product';
+import { ProductMedia, ProductInfo, } from '@product';
 
 const PRODUCT_IMAGES = [
     "src/assets/images/product image 1 black.png",
@@ -31,22 +24,7 @@ const ProductLoop = () => {
                     hasRecommendations={true}
                 />
 
-                <div
-                    className='
-                    pt-4 2xl:pt-0
-                    w-full max-w-[508px]
-                    flex flex-col'
-                >
-                    <ProductSummary />
-
-                    <OfferCountdown />
-
-                    <ProductOptions />
-
-                    <ProductActions />
-
-                    <ProductMeta />
-                </div>
+                <ProductInfo />
             </div>
         </section>
     );
