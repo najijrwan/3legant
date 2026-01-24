@@ -1,11 +1,17 @@
-import ProductCarouselBase from './ProductCarouselBase';
 import ProductDesktopGrid from './ProductDesktopGrid';
-import ProductCarouselWithThumbs from './ProductCarouselWithThumbs';
+import { MediaCarousel } from '@ui';
 
 const ProductMedia = ({ images, isMobile, hasRecommendations }) => {
-    if (isMobile) return <ProductCarouselBase images={images} />;
-    if (hasRecommendations) return <ProductDesktopGrid images={images} />;
-    return <ProductCarouselWithThumbs images={images} />;
+    if (hasRecommendations && !isMobile) return <ProductDesktopGrid images={images} />;
+
+    return (
+        <MediaCarousel
+            images={images}
+            showThumbs={!isMobile}
+            isMobile={isMobile}
+        />
+    );
 };
 
 export default ProductMedia;
+

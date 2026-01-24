@@ -2,8 +2,11 @@ export { default as AddToCartBtn } from './buttons/AddToCartBtn';
 export { default as CartWishlistButton } from './buttons/CartWishlistButton';
 export { default as MoreActionBtn } from './buttons/MoreActionBtn';
 
-export { default as SwipeCarousel } from './carousel/SwipeCarousel';
 export { default as ProductCarousel } from './carousel/ProductCarousel';
+export { default as MediaCarousel } from './carousel/MediaCarousel';
+export { default as CarouselTrack } from './carousel/CarouselTrack';
+export { default as CarouselNavButton } from './carousel/CarouselNavButton';
+export { default as CarouselThumbs } from './carousel/CarouselThumbs';
 
 export { default as Brand } from './primitives/Brand';
 export { default as Icon } from './primitives/Icon';

@@ -87,7 +87,7 @@ const FlyoutCart = ({ isOpen, onClose }) => {
                                     <div
                                         className='
                                     w-20 h-24
-                                    bg-[#F3F5F7]'>
+                                    bg-n2100'>
                                         <img
                                             src={item.image}
                                             alt={`${item.name} image`}
