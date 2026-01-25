@@ -19,7 +19,7 @@ const ProductLoop = () => {
 
             <ProductMedia
                 images={PRODUCT_IMAGES}
-                isMobile={true}
+                isMobile={false}
                 hasRecommendations={false}
             />
 
