@@ -27,6 +27,7 @@ const ProductCard = ({ product, variant }) => {
                 <Badges
                     variant={variant}
                     discountPercentage={product.discountPercentage}
+                    containerClass='left-6 top-6'
                 />
 
                 <button
