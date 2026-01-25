@@ -16,10 +16,20 @@ const MediaCarousel = ({ images, showBadges, showThumbs }) => {
 
     return (
         <div className="relative overflow-hidden" {...swipeHandlers}>
-            <CarouselTrack
-                images={images}
-                activeIndex={activeIndex}
-            />
+            <div className='flex flex-col gap-6'>
+                <CarouselTrack
+                    images={images}
+                    activeIndex={activeIndex}
+                />
+
+                {showThumbs && (
+                    <CarouselThumbs
+                        thumbnails={visibleThumbnails}
+                        activeIndex={activeIndex}
+                        onClick={setActiveIndex}
+                    />
+                )}
+            </div>
 
             {showBadges && (
                 <Badges
@@ -41,14 +51,6 @@ const MediaCarousel = ({ images, showBadges, showThumbs }) => {
                 onClick={handleNext}
                 className="right-6 2xl:right-8"
             />
-
-            {showThumbs && (
-                <CarouselThumbs
-                    thumbnails={visibleThumbnails}
-                    activeIndex={activeIndex}
-                    onClick={setActiveIndex}
-                />
-            )}
         </div>
     )
 }

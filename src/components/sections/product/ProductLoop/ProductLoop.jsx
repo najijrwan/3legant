@@ -11,21 +11,19 @@ const PRODUCT_IMAGES = [
 
 const ProductLoop = () => {
     return (
-        <section className="">
-
-            <div
-                className='
+        <section
+            className="
                 px-8 2xl:px-40
-                flex flex-col 2xl:flex-row 2xl:justify-between'
-            >
-                <ProductMedia
-                    images={PRODUCT_IMAGES}
-                    isMobile={false}
-                    hasRecommendations={false}
-                />
+                flex flex-col 2xl:flex-row 2xl:justify-between"
+        >
 
-                <ProductInfo />
-            </div>
+            <ProductMedia
+                images={PRODUCT_IMAGES}
+                isMobile={false}
+                hasRecommendations={false}
+            />
+
+            <ProductInfo />
         </section>
     );
 }

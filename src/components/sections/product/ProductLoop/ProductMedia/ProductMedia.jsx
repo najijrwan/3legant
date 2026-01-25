@@ -7,8 +7,8 @@ const ProductMedia = ({ images, isMobile, hasRecommendations }) => {
     return (
         <MediaCarousel
             images={images}
+            showBadges={true}
             showThumbs={!isMobile}
-            isMobile={isMobile}
         />
     );
 };
