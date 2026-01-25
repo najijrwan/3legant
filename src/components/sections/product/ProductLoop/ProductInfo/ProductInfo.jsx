@@ -3,13 +3,14 @@ import ProductOfferCountdown from './ProductOfferCountdown';
 import ProductOptions from './ProductOptions';
 import ProductActions from './ProductActions';
 import ProductMeta from './ProductMeta';
+import ProductTabs from '../../ProductTabs/ProductTabs';
 
-const ProductInfo = () => {
+const ProductInfo = ({ hasRecommendation = true }) => {
     return (
         <div
             className='
-            pt-4 2xl:pt-0
-            w-full max-w-[508px]
+            @container 
+            w-full max-w-[508px] pt-4 2xl:pt-0
             flex flex-col'
         >
             <ProductSummary />
@@ -21,6 +22,10 @@ const ProductInfo = () => {
             <ProductActions />
 
             <ProductMeta />
+
+            {hasRecommendation && (
+                <ProductTabs />
+            )}
         </div>
     )
 }

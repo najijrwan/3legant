@@ -12,11 +12,10 @@ const ProductTabs = () => {
     return (
         <section
             className={`
-            px-8 2xl:px-40 pb-20 2xl:py-10
-            flex flex-col ${activeTab === 'additionalInfo' ? 'gap-0' : 'gap-10'} 2xl:gap-12`}
+            flex flex-col ${activeTab === 'additionalInfo' ? 'gap-0' : 'gap-10'} @2xl:gap-12`}
         >
             <div
-                className="w-full flex flex-col 2xl:flex-row 2xl:gap-20"
+                className="w-full flex flex-col @2xl:flex-row @2xl:gap-20"
             >
                 {PRODUCT_TABS.map((tab) => {
                     const isOpen = activeTab === tab.id;
@@ -25,8 +24,8 @@ const ProductTabs = () => {
                         <div
                             key={tab.id}
                             className={`
-                            pb-2 2xl:pb-0
-                            ${isOpen ? 'border-b border-b-n7100' : 'border-b border-b-n4100 2xl:border-0'}`}
+                            pb-2 @2xl:pb-0
+                            ${isOpen ? 'border-b border-b-n7100' : 'border-b border-b-n4100 @2xl:border-0'}`}
                         >
                             <button
                                 onClick={() => setActiveTab(isOpen ? null : tab.id)}
@@ -40,7 +39,7 @@ const ProductTabs = () => {
 
                                 <Icon
                                     name="ChevronDown"
-                                    spanClassName="size-6 2xl:hidden"
+                                    spanClassName="size-6 @2xl:hidden"
                                     iconClassName={`
                                     w-[12px] h-[6px]
                                     ${isOpen ? 'rotate-180' : 'rotate-0'}

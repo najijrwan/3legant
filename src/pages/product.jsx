@@ -7,10 +7,14 @@ const ProductPage = ({ hasRecommendation = true }) => {
 
             <ProductLoop />
 
-            <ProductTabs />
+            {!hasRecommendation && (
+                <section className="@container px-8 2xl:px-40">
+                    <ProductTabs />
+                </section>
+            )}
 
             {hasRecommendation && (
-                <NewArrivals title='You might also like'/>
+                <NewArrivals title='You might also like' />
             )}
         </>
     );
