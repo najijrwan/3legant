@@ -1,7 +1,7 @@
 const CarouselThumbs = ({ thumbnails = [], activeIndex, onClick, className = '' }) => {
   return (
     <div className={`flex gap-6 ${className}`}>
-      {thumbnails.map((img, i) => {
+      {thumbnails.map((img, i) => { //TODO: from here
         const thumbIndex = i + 1; // assuming first big image is at index 0
         return (
           <div

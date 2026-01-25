@@ -1,4 +1,5 @@
 import { ProductMedia, ProductInfo, } from '@product';
+import { useBreakpoint } from '@hooks';
 
 const PRODUCT_IMAGES = [
     "src/assets/images/product image 1 black.png",
@@ -10,6 +11,7 @@ const PRODUCT_IMAGES = [
 ]
 
 const ProductLoop = () => {
+    const { isMobile } = useBreakpoint();
     return (
         <section
             className="
@@ -19,7 +21,7 @@ const ProductLoop = () => {
 
             <ProductMedia
                 images={PRODUCT_IMAGES}
-                isMobile={false}
+                isMobile={isMobile}
                 hasRecommendations={false}
             />
 
