@@ -1,7 +1,7 @@
 import { useSwipe, useCarousel } from '@/hooks';
 import { Badges, CarouselTrack, CarouselNavButton, CarouselThumbs } from '@ui';
 
-const MediaCarousel = ({ images, showBadges, showThumbs }) => {
+const MediaCarousel = ({ images, variant, showBadges, showThumbs }) => {
     const {
         activeIndex,
         hasPrev,
@@ -15,42 +15,43 @@ const MediaCarousel = ({ images, showBadges, showThumbs }) => {
     const swipeHandlers = useSwipe({ onSwipeLeft: handleNext, onSwipeRight: handlePrev });
 
     return (
-        <div className="relative overflow-hidden" {...swipeHandlers}>
-            <div className='flex flex-col gap-6'>
+        <div className="overflow-hidden" {...swipeHandlers}>
+            <div className='relative'>
                 <CarouselTrack
                     images={images}
+                    variant={variant}
                     activeIndex={activeIndex}
                 />
 
-                {showThumbs && (
-                    <CarouselThumbs
-                        thumbnails={visibleThumbnails}
-                        activeIndex={activeIndex}
-                        onClick={setActiveIndex}
+                {showBadges && (
+                    <Badges
+                        variant='large'
+                        containerClass='left-6 top-6 2xl:left-8 2xl:top-8'
                     />
                 )}
+
+                <CarouselNavButton
+                    direction="left"
+                    disabled={!hasPrev}
+                    onClick={handlePrev}
+                    className="left-6 2xl:left-8"
+                />
+
+                <CarouselNavButton
+                    direction="right"
+                    disabled={!hasNext}
+                    onClick={handleNext}
+                    className="right-6 2xl:right-8"
+                />
             </div>
 
-            {showBadges && (
-                <Badges
-                    variant='large'
-                    containerClass='left-6 top-6 2xl:left-8 2xl:top-8'
+            {showThumbs && (
+                <CarouselThumbs
+                    thumbnails={visibleThumbnails}
+                    activeIndex={activeIndex}
+                    onClick={setActiveIndex}
                 />
             )}
-
-            <CarouselNavButton
-                direction="left"
-                disabled={!hasPrev}
-                onClick={handlePrev}
-                className="left-6 2xl:left-8"
-            />
-
-            <CarouselNavButton
-                direction="right"
-                disabled={!hasNext}
-                onClick={handleNext}
-                className="right-6 2xl:right-8"
-            />
         </div>
     )
 }

@@ -26,7 +26,7 @@ const HeroSlider = () => {
                 <CarouselTrack
                     images={HOME_HERO_IMAGES}
                     activeIndex={activeIndex}
-                    className='w-full h-[304px] 2xl:h-[536px]'
+                    variant='heroImages'
                 />
 
                 {/* Left & Right buttons */}
