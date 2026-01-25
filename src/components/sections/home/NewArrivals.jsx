@@ -18,7 +18,7 @@ const NewArrivals = ({ title }) => {
                 flex justify-between items-end"
             >
                 <h5 className="text-brand 2xl:h4">
-                    {title.split(" ")[0]} <br /> {title.split(" ").slice(1).join(" ")}
+                    {title}
                 </h5>
                 <MoreActionBtn
                     label='More Products'
