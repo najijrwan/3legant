@@ -7,9 +7,9 @@ const PRODUCT_COLORS = [
     "src/assets/images/product image 1 white.png",
 ]
 
-const ProductOptions = () => {
+const ProductOptions = ({ hasRecommendations = true}) => {
     return (
-        <div className='py-6 flex flex-col gap-6'>
+        <div className={`${hasRecommendations ? 'py-4' : 'py-6'} flex flex-col gap-6`}>
             <div className='flex flex-col gap-2'>
                 <p className='text-n4100 body-2-semi'>Measurements</p>
                 <p className='text-black body-1'>17 1/2x20 5/8 "</p>
