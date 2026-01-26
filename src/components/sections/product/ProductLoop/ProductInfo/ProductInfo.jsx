@@ -15,7 +15,9 @@ const ProductInfo = ({ hasRecommendation = true }) => {
         >
             <ProductSummary />
 
-            <ProductOfferCountdown />
+            {!hasRecommendation && (
+                <ProductOfferCountdown />
+            )}
 
             <ProductOptions />
 

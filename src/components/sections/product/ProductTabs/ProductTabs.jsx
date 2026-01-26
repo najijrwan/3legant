@@ -3,7 +3,7 @@ import { Icon } from '@ui';
 import { PRODUCT_TABS } from './ProductTabs.config';
 
 const ProductTabs = () => {
-    const [activeTab, setActiveTab] = useState('reviews');
+    const [activeTab, setActiveTab] = useState('additionalInfo');
 
     const ActiveTabComponent = PRODUCT_TABS.find(
         (tab) => tab.id === activeTab
@@ -12,6 +12,7 @@ const ProductTabs = () => {
     return (
         <section
             className={`
+            h-[348px] overflow-y-scroll
             flex flex-col ${activeTab === 'additionalInfo' ? 'gap-0' : 'gap-10'} @2xl:gap-12`}
         >
             <div
