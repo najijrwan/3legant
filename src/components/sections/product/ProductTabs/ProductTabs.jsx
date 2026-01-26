@@ -5,14 +5,10 @@ import { PRODUCT_TABS } from './ProductTabs.config';
 const ProductTabs = () => {
     const [activeTab, setActiveTab] = useState('additionalInfo');
 
-    const ActiveTabComponent = PRODUCT_TABS.find(
-        (tab) => tab.id === activeTab
-    )?.component;
-
     return (
         <section
             className={`
-            h-[351px] 2xl:py-2 @2xl:py-0 overflow-y-auto
+            h-[349px] 2xl:py-2 @2xl:py-0 overflow-y-auto
             flex flex-col ${activeTab === 'additionalInfo' ? 'gap-0' : 'gap-10'} @2xl:gap-12`}
         >
             <div
@@ -26,7 +22,7 @@ const ProductTabs = () => {
                         <div
                             key={tab.id}
                             className={`
-                            pb-2 @2xl:pb-0
+                            pb-1.75 @2xl:pb-0
                             ${isOpen
                                     ? 'border-b border-b-n7100'
                                     : 'border-b border-b-n4100 @2xl:border-0'}`}

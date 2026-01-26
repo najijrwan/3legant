@@ -6,7 +6,7 @@ const ProductSummary = ({ hasRecommendations = true }) => {
     return (
         <div
             className={`
-            pb-6 ${hasRecommendations ? '2xl:pb-4' : ''}
+            pb-6 ${hasRecommendations ? '2xl:pb-3.75' : ''}
             flex flex-col gap-4 
             border-b border-b-n3100`}
         >
