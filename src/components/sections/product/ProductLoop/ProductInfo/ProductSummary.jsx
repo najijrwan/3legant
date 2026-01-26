@@ -1,14 +1,14 @@
 import { ProductRating } from '@ui';
 import { formatPrice, finalPrice } from '@utils';
 
-const ProductSummary = () => {
+const ProductSummary = ({ hasRecommendations = true }) => {
     const price = formatPrice(finalPrice(400, 50));
     return (
         <div
-            className='
-            pb-6
+            className={`
+            pb-6 ${hasRecommendations ? '2xl:pb-4' : ''}
             flex flex-col gap-4 
-            border-b border-b-n3100'
+            border-b border-b-n3100`}
         >
             <div className='flex gap-2.5'>
                 <ProductRating rating={5} />

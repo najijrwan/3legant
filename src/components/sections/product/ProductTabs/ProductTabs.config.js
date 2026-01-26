@@ -8,8 +8,13 @@ export const PRODUCT_TABS = [
         component: ProductAdditionalInfo,
     },
     {
+        id: 'questions',
+        label: 'Questions',
+        component: ProductAdditionalInfo,
+    },
+    {
         id: "reviews",
         label: 'Reviews',
         component: ProductReviews,
-    }
+    },
 ]

@@ -1,6 +1,6 @@
 import { Icon, AddToCartBtn } from '@ui';
 
-const ProductActions = ({hasRecommednations = true}) => {
+const ProductActions = ({ hasRecommednations = true }) => {
     return (
         <div className={`py-6 ${hasRecommednations ? '' : '2xl:py-8'} flex flex-col gap-4 border-b border-b-n3100`}>
             <div className='flex items-center gap-2 2xl:gap-6'>
