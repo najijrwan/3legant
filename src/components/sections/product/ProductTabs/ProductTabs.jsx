@@ -12,7 +12,7 @@ const ProductTabs = () => {
     return (
         <section
             className={`
-            h-[348px] 2xl:py-2 @2xl:py-0 overflow-y-auto
+            h-[351px] 2xl:py-2 @2xl:py-0 overflow-y-auto
             flex flex-col ${activeTab === 'additionalInfo' ? 'gap-0' : 'gap-10'} @2xl:gap-12`}
         >
             <div
@@ -20,13 +20,16 @@ const ProductTabs = () => {
             >
                 {PRODUCT_TABS.map((tab) => {
                     const isOpen = activeTab === tab.id;
+                    const TabComponent = tab.component;
 
                     return (
                         <div
                             key={tab.id}
                             className={`
                             pb-2 @2xl:pb-0
-                            ${isOpen ? 'border-b border-b-n7100' : 'border-b border-b-n4100 @2xl:border-0'}`}
+                            ${isOpen
+                                    ? 'border-b border-b-n7100'
+                                    : 'border-b border-b-n4100 @2xl:border-0'}`}
                         >
                             <button
                                 onClick={() => setActiveTab(isOpen ? null : tab.id)}
@@ -47,12 +50,11 @@ const ProductTabs = () => {
                                     transition-all duration-150`}
                                 />
                             </button>
+                            {isOpen && <TabComponent />}
                         </div>
                     );
                 })}
             </div>
-
-            {ActiveTabComponent && <ActiveTabComponent />}
         </section>
     );
 }
