@@ -12,7 +12,7 @@ const ProductTabs = () => {
     return (
         <section
             className={`
-            h-[348px] overflow-y-scroll
+            h-[348px] 2xl:py-2 @2xl:py-0 overflow-y-scroll
             flex flex-col ${activeTab === 'additionalInfo' ? 'gap-0' : 'gap-10'} @2xl:gap-12`}
         >
             <div
