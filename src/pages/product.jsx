@@ -1,9 +1,8 @@
-import { ProductBreadcrumbs, ProductLoop, ProductTabs } from '@product';
+import { useProduct, ProductBreadcrumbs, ProductLoop, ProductsTab } from '@product';
 import { NewArrivals } from '@home';
-import { useProduct } from '@product';
+
 const ProductPage = () => {
     const { canShowRecommendations } = useProduct();
-
     return (
         <>
             <ProductBreadcrumbs />
@@ -11,9 +10,9 @@ const ProductPage = () => {
             <ProductLoop />
 
             {!canShowRecommendations && (
-                <section className="@container px-8 2xl:px-40">
-                    <ProductTabs />
-                </section>
+                <div className='w-full px-8 pb-20'>
+                    <ProductsTab />
+                </div>
             )}
 
             {canShowRecommendations && (

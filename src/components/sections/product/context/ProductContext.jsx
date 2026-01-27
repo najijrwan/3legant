@@ -4,7 +4,7 @@ const ProductContext = createContext(null);
 
 export const ProductProvider = ({ children }) => {
   // 🔴 MOCK — replace later with real logic
-  const canShowRecommendations = false;
+  const canShowRecommendations = true;
 
   return (
     <ProductContext.Provider value={{ canShowRecommendations }}>
