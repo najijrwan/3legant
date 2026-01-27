@@ -2,7 +2,7 @@ import { ProductTabBtn } from '@ui';
 
 const ProductTabsInline = ({ tabs, activeTab, onTabClick }) => {
     return (
-        <div className="flex flex-col">
+        <div className="pb-20 2xl:py-2 flex flex-col">
             {tabs.map((tab) => (
                 <div key={tab.id}>
                     <ProductTabBtn

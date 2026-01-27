@@ -15,6 +15,9 @@ const ProductTabs = ({ }) => {
         setActiveTab(activeTab === tabId ? null : tabId);
     }
 
+    console.log('can:', canShowRecommendations)
+    console.log('mobile: ', isMobile);
+    
     if (canShowRecommendations || isMobile)
         return <ProductTabsInline
             tabs={PRODUCT_TABS}

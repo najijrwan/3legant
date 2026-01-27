@@ -1,16 +1,19 @@
 import { useProduct, ProductBreadcrumbs, ProductLoop, ProductTabs } from '@product';
 import { NewArrivals } from '@home';
+import { useBreakpoint } from '@hooks';
 
 const ProductPage = () => {
     const { canShowRecommendations } = useProduct();
+    const { isMobile } = useBreakpoint();
+
     return (
         <>
             <ProductBreadcrumbs />
 
             <ProductLoop />
 
-            {!canShowRecommendations && (
-                <div className='w-full px-8 pb-20'>
+            {!canShowRecommendations || isMobile && (
+                <div className='@container w-full px-8 pb-20'>
                     <ProductTabs />
                 </div>
             )}
