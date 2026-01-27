@@ -1,4 +1,4 @@
-import { useProduct, ProductBreadcrumbs, ProductLoop, ProductsTab } from '@product';
+import { useProduct, ProductBreadcrumbs, ProductLoop, ProductTabs } from '@product';
 import { NewArrivals } from '@home';
 
 const ProductPage = () => {
@@ -11,7 +11,7 @@ const ProductPage = () => {
 
             {!canShowRecommendations && (
                 <div className='w-full px-8 pb-20'>
-                    <ProductsTab />
+                    <ProductTabs />
                 </div>
             )}
 

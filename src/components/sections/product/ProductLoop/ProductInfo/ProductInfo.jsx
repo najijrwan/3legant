@@ -6,9 +6,11 @@ import ProductOptions from './ProductOptions';
 import ProductActions from './ProductActions';
 import ProductMeta from './ProductMeta';
 import ProductTabs from '../../ProductTabs/ProductTabs';
+import { useBreakpoint } from '@hooks';
 
-const ProductInfo = ({ isMobile = true }) => {
+const ProductInfo = ({ }) => {
     const { canShowRecommendations } = useProduct();
+    const { isMobile } = useBreakpoint();
 
     return (
         <div
@@ -39,7 +41,7 @@ const ProductInfo = ({ isMobile = true }) => {
                 <ProductMeta />
             </Section>
 
-            {canShowRecommendations && (
+            {canShowRecommendations && !isMobile && (
                 <Section className='h-[349px] overflow-y-auto'>
                     <ProductTabs />
                 </Section>
