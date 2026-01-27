@@ -1,13 +1,14 @@
-const Section = ({ children, divider = false, padding = 'default' }) => (
-    <div 
+const Section = ({ className = '', children, divider = false }) => (
+
+    <div
         className={`
         flex flex-col
-        ${padding === 'default' ? 'py-6 2xl:py-4' : ''}
-  `}>
+        ${className}`}
+    >
         {children}
 
         {divider && (
-            <div className="h-px bg-n3100" />
+            <div className="h-px bg-n3100 mt-6" />
         )}
     </div>
 );

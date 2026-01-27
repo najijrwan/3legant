@@ -25,7 +25,7 @@ const ProductLoop = () => {
                 hasRecommendations={true}
             />
 
-            <ProductInfo />
+            <ProductInfo isMobile={isMobile} />
         </section>
     );
 }

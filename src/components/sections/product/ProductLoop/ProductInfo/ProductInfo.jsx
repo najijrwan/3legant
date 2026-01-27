@@ -9,36 +9,41 @@ import ProductTabs from '../../ProductTabs/ProductTabs';
 
 const ProductInfo = ({ isMobile = true }) => {
     const { canShowRecommendations } = useProduct();
+    console.log('isMobile: ', isMobile);
+    console.log('canShowRecommendations: ', canShowRecommendations);
     return (
         <div
             className='
             @container 
             w-full max-w-[508px] pt-4 2xl:pt-0
-            flex flex-col gap-6 2xl:gap-8'
+            flex flex-col gap-6'
         >
             <Section divider>
                 <ProductSummary />
             </Section>
 
-            <Section>
-                {!canShowRecommendations || isMobile && (<ProductOfferCountdown />)}
+            <Section divider>
+                {(!canShowRecommendations || isMobile) && (<ProductOfferCountdown />)}
             </Section>
 
             <Section>
                 <ProductOptions />
             </Section>
 
-            <Section>
-                <ProductActions padded divider={!canShowRecommendations} />
+            <Section className='mt-6 2xl:mt-8' divider={!canShowRecommendations || isMobile}>
+                <ProductActions />
             </Section>
 
             <Section>
                 <ProductMeta />
             </Section>
 
-            <Section>
-                {canShowRecommendations && (<ProductTabs />)}
-            </Section>
+            {canShowRecommendations && (
+                <Section >
+                    <ProductTabs />
+                </Section>
+            )}
+
         </div>
     )
 }
