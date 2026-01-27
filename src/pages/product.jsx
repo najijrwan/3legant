@@ -16,7 +16,7 @@ const ProductPage = () => {
             <ProductLoop />
 
             {(!canShowRecommendations || isMobile) && (
-                <div className='@container w-full px-8 pb-20 2xl:px-40 2xl:py-10'>
+                <div className='@container w-full px-8 pb-20 2xl:px-40 2xl:py-10 mt-6 2xl:mt-0'>
                     <ProductTabs />
                 </div>
             )}

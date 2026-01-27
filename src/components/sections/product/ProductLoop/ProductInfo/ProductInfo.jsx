@@ -14,10 +14,10 @@ const ProductInfo = ({ }) => {
 
     return (
         <div
-            className='
+            className={`
             @container 
             w-full max-w-[508px] pt-4 2xl:pt-0
-            flex flex-col gap-6'
+            flex flex-col ${canShowRecommendations ? 'gap-4' : 'gap-6'}`}
         >
             <Section divider>
                 <ProductSummary />
@@ -33,11 +33,11 @@ const ProductInfo = ({ }) => {
                 <ProductOptions />
             </Section>
 
-            <Section className='mt-6 2xl:mt-8' divider={!canShowRecommendations || isMobile}>
+            <Section className={`pt-6 ${canShowRecommendations ? '2xl:pt-6 2xl:gap-6' : '2xl:pt-8 2xl:gap-8'}`} divider={!canShowRecommendations || isMobile}>
                 <ProductActions />
             </Section>
 
-            <Section className='mb-6'>
+            <Section>
                 <ProductMeta />
             </Section>
 
