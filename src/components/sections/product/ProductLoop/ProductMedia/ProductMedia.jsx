@@ -1,8 +1,11 @@
 import ProductDesktopGrid from './ProductDesktopGrid';
 import { MediaCarousel } from '@ui';
+import { useProduct } from '@product';
 
-const ProductMedia = ({ images, isMobile, hasRecommendations }) => {
-    if (hasRecommendations && !isMobile) return <ProductDesktopGrid images={images} />;
+const ProductMedia = ({ images, isMobile }) => {
+    const { canShowRecommendations } = useProduct();
+
+    if (canShowRecommendations && !isMobile) return <ProductDesktopGrid images={images} />;
 
     return (
         <MediaCarousel

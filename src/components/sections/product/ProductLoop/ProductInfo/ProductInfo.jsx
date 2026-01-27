@@ -9,8 +9,7 @@ import ProductTabs from '../../ProductTabs/ProductTabs';
 
 const ProductInfo = ({ isMobile = true }) => {
     const { canShowRecommendations } = useProduct();
-    console.log('isMobile: ', isMobile);
-    console.log('canShowRecommendations: ', canShowRecommendations);
+
     return (
         <div
             className='
@@ -22,9 +21,11 @@ const ProductInfo = ({ isMobile = true }) => {
                 <ProductSummary />
             </Section>
 
-            <Section divider>
-                {(!canShowRecommendations || isMobile) && (<ProductOfferCountdown />)}
-            </Section>
+            {(!canShowRecommendations || isMobile) && (
+                <Section divider>
+                    <ProductOfferCountdown />
+                </Section>
+            )}
 
             <Section>
                 <ProductOptions />
@@ -34,12 +35,12 @@ const ProductInfo = ({ isMobile = true }) => {
                 <ProductActions />
             </Section>
 
-            <Section>
+            <Section className='mb-6'>
                 <ProductMeta />
             </Section>
 
             {canShowRecommendations && (
-                <Section >
+                <Section className='h-[349px] overflow-y-auto'>
                     <ProductTabs />
                 </Section>
             )}

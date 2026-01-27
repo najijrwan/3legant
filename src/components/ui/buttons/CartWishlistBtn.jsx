@@ -1,6 +1,6 @@
 import { Icon } from '@ui';
 
-const CartWishlistButton = ({ onClick, iconName = '', count = 0 }) => {
+const CartWishlistBtn = ({ onClick, iconName = '', count = 0 }) => {
     return (
         <div
             className="
@@ -27,4 +27,4 @@ const CartWishlistButton = ({ onClick, iconName = '', count = 0 }) => {
     );
 }
 
-export default CartWishlistButton;
+export default CartWishlistBtn;

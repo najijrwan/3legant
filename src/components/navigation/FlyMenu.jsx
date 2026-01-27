@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Icon, Brand, CartWishlistButton, SocialLinks } from '@ui';
+import { Icon, Brand, CartWishlistBtn, SocialLinks } from '@ui';
 import { NavLinks } from '@navigation';
 
 export const asideClass = `
@@ -13,11 +13,11 @@ const FlyMenu = ({ isOpen, onClose, onCartOpen }) => {
     const userSavedProducts = [
         {
             label: "Cart",
-            tool: <CartWishlistButton onClick={onCartOpen} count={2} iconName="ShoppingBag" />,
+            tool: <CartWishlistBtn onClick={onCartOpen} count={2} iconName="ShoppingBag" />,
         },
         {
             label: "Wishlist",
-            tool: <CartWishlistButton count={2} iconName="Heart" />,
+            tool: <CartWishlistBtn count={2} iconName="Heart" />,
         }
     ]
 
