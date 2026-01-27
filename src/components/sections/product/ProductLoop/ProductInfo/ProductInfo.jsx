@@ -1,3 +1,5 @@
+import { useProduct } from '@product';
+import Section from './Section';
 import ProductSummary from './ProductSummary';
 import ProductOfferCountdown from './ProductOfferCountdown';
 import ProductOptions from './ProductOptions';
@@ -5,29 +7,38 @@ import ProductActions from './ProductActions';
 import ProductMeta from './ProductMeta';
 import ProductTabs from '../../ProductTabs/ProductTabs';
 
-const ProductInfo = ({ hasRecommendation = true }) => {
+const ProductInfo = ({ isMobile = true }) => {
+    const { canShowRecommendations } = useProduct();
     return (
         <div
             className='
             @container 
             w-full max-w-[508px] pt-4 2xl:pt-0
-            flex flex-col'
+            flex flex-col gap-6 2xl:gap-8'
         >
-            <ProductSummary />
+            <Section divider>
+                <ProductSummary />
+            </Section>
 
-            {!hasRecommendation && (
-                <ProductOfferCountdown />
-            )}
+            <Section>
+                {!canShowRecommendations || isMobile && (<ProductOfferCountdown />)}
+            </Section>
 
-            <ProductOptions />
+            <Section>
+                <ProductOptions />
+            </Section>
 
-            <ProductActions />
+            <Section>
+                <ProductActions padded divider={!canShowRecommendations} />
+            </Section>
 
-            <ProductMeta />
+            <Section>
+                <ProductMeta />
+            </Section>
 
-            {hasRecommendation && (
-                <ProductTabs />
-            )}
+            <Section>
+                {canShowRecommendations && (<ProductTabs />)}
+            </Section>
         </div>
     )
 }

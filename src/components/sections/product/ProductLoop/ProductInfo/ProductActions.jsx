@@ -1,8 +1,8 @@
 import { Icon, AddToCartBtn } from '@ui';
 
-const ProductActions = ({ hasRecommednations = true }) => {
+const ProductActions = () => {
     return (
-        <div className={`py-6 ${hasRecommednations ? 'border-b-0' : '2xl:py-8'} flex flex-col gap-4 border-b border-b-n3100`}>
+        <div className={`flex flex-col gap-4`}>
             <div className='flex items-center gap-2 2xl:gap-6'>
                 <div className='h-8 2xl:h-auto px-2 2xl:px-4 2xl:py-3 flex items-center bg-black100'>
                     <div className='2xl:h-7 flex items-center gap-[13px] 2xl:gap-6'>
