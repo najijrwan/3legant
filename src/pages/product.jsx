@@ -6,14 +6,17 @@ const ProductPage = () => {
     const { canShowRecommendations } = useProduct();
     const { isMobile } = useBreakpoint();
 
+    console.log('can: ', canShowRecommendations);
+    console.log('mobile: ', isMobile);
+
     return (
         <>
             <ProductBreadcrumbs />
 
             <ProductLoop />
 
-            {!canShowRecommendations || isMobile && (
-                <div className='@container w-full px-8 pb-20'>
+            {(!canShowRecommendations || isMobile) && (
+                <div className='@container w-full px-8 pb-20 2xl:px-40 2xl:py-10'>
                     <ProductTabs />
                 </div>
             )}
