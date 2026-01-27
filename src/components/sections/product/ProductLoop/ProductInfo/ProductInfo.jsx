@@ -42,7 +42,7 @@ const ProductInfo = ({ }) => {
             </Section>
 
             {(canShowRecommendations && !isMobile) && (
-                <Section className='h-[349px] overflow-y-auto'>
+                <Section className='py-2 h-[352px] overflow-y-auto'>
                     <ProductTabs />
                 </Section>
             )}
