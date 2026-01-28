@@ -17,7 +17,7 @@ const ProductInfo = ({ }) => {
             className={`
             @container 
             w-full max-w-[508px] pt-4 2xl:pt-0
-            flex flex-col ${canShowRecommendations ? 'gap-4' : 'gap-6'}`}
+            flex flex-col ${canShowRecommendations && !isMobile? 'gap-4' : 'gap-6'}`}
         >
             <Section divider>
                 <ProductSummary />
@@ -41,7 +41,7 @@ const ProductInfo = ({ }) => {
                 <ProductMeta />
             </Section>
 
-            {(canShowRecommendations) && (
+            {(canShowRecommendations && !isMobile) && (
                 <Section className='py-2 h-[352px] overflow-y-auto'>
                     <ProductTabs />
                 </Section>
