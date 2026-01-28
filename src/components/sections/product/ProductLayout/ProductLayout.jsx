@@ -32,7 +32,13 @@ const ProductLayout = () => {
       )}
 
       {layout.showRecommendations && (
-        <NewArrivals title="You might also like" />
+        <section
+          className='
+            relative
+            w-full pl-8 pb-20 pt-8 2xl:pl-40 2xl:pt-10'
+        >
+          <NewArrivals title="You might also like" />
+        </section>
       )}
     </>
   );
