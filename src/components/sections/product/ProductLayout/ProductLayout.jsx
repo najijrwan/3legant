@@ -1,4 +1,4 @@
-import useProduct from '../context/ProductContext';
+import { useProduct } from '../context/ProductContext';
 import { useBreakpoint } from '@hooks';
 import { ProductBreadcrumbs, ProductLoop, ProductTabs } from '@product';
 import { NewArrivals } from '@home';
@@ -12,12 +12,21 @@ const ProductLayout = () => {
     showRecommendations: canShowRecommendations,
     isMobile,
 
-    showTabsInline: canShowRecommendations || isMobile,
-    showTabsBelow: !canShowRecommendations && !isMobile,
+    showTabsInline: canShowRecommendations && !isMobile,
+    showTabsSection: !canShowRecommendations || isMobile,
 
     useDesktopMedia: canShowRecommendations && !isMobile,
     showOfferCountdown: !canShowRecommendations || isMobile,
   };
+
+  const productTabsVariant = layout.isMobile ? 'inline' : 'section';
+
+  console.log('showRecommendations: ', layout.showRecommendations);
+  console.log('isMobile: ', layout.isMobile);
+  console.log('showTabsInline: ', layout.showTabsInline);
+  console.log('showTabsSection: ', layout.showTabsSection);
+  console.log('useDesktopMedia: ', layout.useDesktopMedia);
+  console.log('showOfferCountdown: ', layout.showOfferCountdown);
 
   return (
     <>
@@ -25,9 +34,9 @@ const ProductLayout = () => {
 
       <ProductLoop layout={layout} />
 
-      {layout.showTabsBelow && (
-        <div className="@container w-full px-8 pb-20 2xl:px-40 2xl:py-10">
-          <ProductTabs variant="section" />
+      {(!layout.showRecommendations && !layout.isMobile) && (
+        <div className="@container w-full px-40 py-10">
+          <ProductTabs variant='section' />
         </div>
       )}
 

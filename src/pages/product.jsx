@@ -1,26 +1,10 @@
-import { useProduct, ProductBreadcrumbs, ProductLoop, ProductTabs } from '@product';
-import { NewArrivals } from '@home';
-import { useBreakpoint } from '@hooks';
+import { ProductLayout } from '@product';
 
 const ProductPage = () => {
-    const { canShowRecommendations } = useProduct();
-    const { isMobile } = useBreakpoint();
 
     return (
         <>
-            <ProductBreadcrumbs />
-
-            <ProductLoop />
-
-            {(!canShowRecommendations || isMobile) && (
-                <div className='@container w-full px-8 pb-20 2xl:px-40 2xl:py-10'>
-                    <ProductTabs />
-                </div>
-            )}
-
-            {canShowRecommendations && (
-                <NewArrivals title='You might also like' />
-            )}
+            <ProductLayout />
         </>
     );
 }

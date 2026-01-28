@@ -8,8 +8,6 @@ export default function useBreakpoint() {
         window.innerWidth <= MOBILE_BREAKPOINT
     );
 
-    console.log(isMobile);
-
     useEffect(() => {
         const onResize = () =>
             setIsMobile(window.innerWidth < MOBILE_BREAKPOINT);
