@@ -24,11 +24,12 @@ const ProductReviewsSummary = () => (
                     flex items-center justify-between
                     rounded-2xl border-2 border-n3100'
         >
-            <form className='h-fit'>
+            <form className='size-fit'>
                 <input
                     type="text"
                     placeholder='Share your thoughts'
                     className='
+                            w-[135px] 2xl:w-[154px] block
                             text-n4100 caption-1
                             2xl:placeholder-transparent outline-none'
                 />
@@ -36,14 +37,14 @@ const ProductReviewsSummary = () => (
 
             <button
                 className='
-                        p-1 2xl:px-10 2xl:py-1.5
+                        p-1 @2xl:px-10 @2xl:py-1.5
                         flex items-center justify-center
                         bg-n7100 rounded-full'
             >
-                <span className='hidden 2xl:inline text-white btn-s'>Write Review</span>
+                <span className='hidden @2xl:inline text-white btn-s'>Write Review</span>
                 <Icon
                     name='ArrowRightLong'
-                    spanClassName='2xl:hidden size-6'
+                    spanClassName='@2xl:hidden size-6'
                     iconClassName='w-[14px] h-[9px]'
                 />
             </button>
