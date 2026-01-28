@@ -41,7 +41,9 @@ const ProductInfo = ({ layout }) => {
             </Section>
 
             {layout.showTabsInline && (
-                <Section className={`w-full pb-20 @2xl:py-2 @2xl:h-[352px] @2xl:overflow-y-auto`}>
+                <Section
+                    className={`w-full pb-20 @sm:py-2 @sm:h-[352px] @sm:overflow-y-auto`}
+                >
                     <ProductTabs variant='inline' layout={layout} />
                 </Section>
             )}

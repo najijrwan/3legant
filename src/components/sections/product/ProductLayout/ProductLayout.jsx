@@ -26,9 +26,9 @@ const ProductLayout = () => {
       <ProductLoop layout={layout} />
 
       {layout.showTabsSection && (
-        <div className="@container w-full px-40 py-10">
-          <ProductTabs variant='section' layout={layout}/>
-        </div>
+        <section className="@container px-40 py-10">
+          <ProductTabs variant='section' layout={layout} />
+        </section>
       )}
 
       {layout.showRecommendations && (

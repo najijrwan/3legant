@@ -14,7 +14,7 @@ const ProductSummary = () => {
 
             <h4>Tray Table</h4>
 
-            <p className='text-n4100 body-2'>
+            <p className='w-full text-n4100 body-2'>
                 Buy one or buy a few and make every space where you sit more convenient.
                 Light and easy to move around with removable tray top, handy for serving snacks.
             </p>

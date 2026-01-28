@@ -41,7 +41,7 @@ const ProductActions = () => {
 
             <AddToCartBtn
                 className='
-                px-10 py-1 2xl:py-2.5
+                w-full px-10 py-1 2xl:py-2.5
                 text-white btn-xs 2xl:btn-m rounded-sm 2xl:rounded-lg'
             />
         </div>

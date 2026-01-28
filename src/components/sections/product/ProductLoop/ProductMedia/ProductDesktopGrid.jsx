@@ -6,7 +6,7 @@ const ProductDesktopGrid = ({ images }) => {
             {images.map((image, i) => (
                 <div
                     key={i}
-                    className='relative w-[262px] h-[349px] bg-n2100 flex items-center'
+                    className='relative w-[262px] h-[355px] bg-n2100 flex items-center'
                 >
                     <img
                         src={image}
