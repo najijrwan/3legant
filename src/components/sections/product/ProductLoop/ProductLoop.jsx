@@ -1,10 +1,6 @@
 import { ProductMedia, ProductInfo, } from '@product';
 
 const ProductLoop = ({ layout }) => {
-    const mediaLayout = {
-        useDesktopMedia: layout.useDesktopMedia,
-        isMobile: layout.isMobile,
-    };
 
     return (
         <section
@@ -13,7 +9,7 @@ const ProductLoop = ({ layout }) => {
                 flex flex-col 2xl:flex-row 2xl:justify-between"
         >
 
-            <ProductMedia mediaLayout={mediaLayout} />
+            <ProductMedia layout={layout} />
 
             <ProductInfo layout={layout} />
         </section>
