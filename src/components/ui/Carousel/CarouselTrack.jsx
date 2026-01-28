@@ -1,7 +1,7 @@
 const CarouselTrack = ({ images, activeIndex, variant, className = '' }) => {
     const VARIANTS = {
         heroImages: 'w-full h-[304px] 2xl:h-[536px]',
-        productImages: 'w-[311px] 2xl:w-[549px] h-[414px] 2xl:h-[728px] mb-4 2xl:mb-6',
+        productImages: 'w-[311px] 2xl:w-[549px] h-[414px] 2xl:h-[733px] mb-4 2xl:mb-6',
     }
     const SIZE = VARIANTS[variant];
     return (
