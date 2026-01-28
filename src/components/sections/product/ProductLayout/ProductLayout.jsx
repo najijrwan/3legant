@@ -12,19 +12,12 @@ const ProductLayout = () => {
     showRecommendations: canShowRecommendations,
     isMobile,
 
-    showTabsInline: canShowRecommendations && !isMobile,
-    showTabsSection: !canShowRecommendations || isMobile,
+    showTabsInline: canShowRecommendations || isMobile,
+    showTabsSection: !canShowRecommendations && !isMobile,
 
     useDesktopMedia: canShowRecommendations && !isMobile,
     showOfferCountdown: !canShowRecommendations || isMobile,
   };
-
-  console.log('showRecommendations: ', layout.showRecommendations);
-  console.log('isMobile: ', layout.isMobile);
-  console.log('showTabsInline: ', layout.showTabsInline);
-  console.log('showTabsSection: ', layout.showTabsSection);
-  console.log('useDesktopMedia: ', layout.useDesktopMedia);
-  console.log('showOfferCountdown: ', layout.showOfferCountdown);
 
   return (
     <>
@@ -32,7 +25,7 @@ const ProductLayout = () => {
 
       <ProductLoop layout={layout} />
 
-      {(!layout.showRecommendations && !layout.isMobile) && (
+      {layout.showTabsSection && (
         <div className="@container w-full px-40 py-10">
           <ProductTabs variant='section' layout={layout}/>
         </div>
