@@ -37,11 +37,11 @@ const ProductInfo = ({ }) => {
                 <ProductActions />
             </Section>
 
-            <Section>
+            <Section className='pb-6'>
                 <ProductMeta />
             </Section>
 
-            {(canShowRecommendations && !isMobile) && (
+            {(canShowRecommendations) && (
                 <Section className='py-2 h-[352px] overflow-y-auto'>
                     <ProductTabs />
                 </Section>
