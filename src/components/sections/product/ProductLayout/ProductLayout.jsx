@@ -19,8 +19,6 @@ const ProductLayout = () => {
     showOfferCountdown: !canShowRecommendations || isMobile,
   };
 
-  const productTabsVariant = layout.isMobile ? 'inline' : 'section';
-
   console.log('showRecommendations: ', layout.showRecommendations);
   console.log('isMobile: ', layout.isMobile);
   console.log('showTabsInline: ', layout.showTabsInline);
@@ -36,7 +34,7 @@ const ProductLayout = () => {
 
       {(!layout.showRecommendations && !layout.isMobile) && (
         <div className="@container w-full px-40 py-10">
-          <ProductTabs variant='section' />
+          <ProductTabs variant='section' layout={layout}/>
         </div>
       )}
 

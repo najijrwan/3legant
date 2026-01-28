@@ -3,9 +3,10 @@ import ProductTabsInline from './variants/ProductTabsInline';
 import ProductTabsSection from './variants/ProductTabsSection';
 import { PRODUCT_TABS } from './ProductTabs.config';
 
-const ProductTabs = ({ variant }) => {
-    const [activeTab, setActiveTab] = useState(null);
+const ProductTabs = ({ variant, layout }) => {
+    const defaultOpenTab = layout.showRecommendations ? 'additionalInfo' : 'reviews';
 
+    const [activeTab, setActiveTab] = useState(defaultOpenTab);
     const handleTabClick = (tabId) => {
         setActiveTab(activeTab === tabId ? null : tabId);
     }

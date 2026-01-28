@@ -41,9 +41,9 @@ const ProductInfo = ({ layout }) => {
                 <ProductMeta />
             </Section>
 
-            {(layout.showRecommendations || isMobile) && (
+            {(layout.showRecommendations || layout.isMobile) && (
                 <Section className={`w-full pb-20 @2xl:py-2 @2xl:h-[352px] @2xl:overflow-y-auto`}>
-                    <ProductTabs variant='inline'/>
+                    <ProductTabs variant='inline' layout={layout} />
                 </Section>
             )}
 
