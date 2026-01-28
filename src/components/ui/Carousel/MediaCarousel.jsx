@@ -1,7 +1,7 @@
 import { useSwipe, useCarousel } from '@/hooks';
 import { Badges, CarouselTrack, CarouselNavButton, CarouselThumbs } from '@ui';
 
-const MediaCarousel = ({ images, variant, showBadges, showThumbs }) => {
+const MediaCarousel = ({ images, variant, config }) => {
     const {
         activeIndex,
         hasPrev,
@@ -13,6 +13,11 @@ const MediaCarousel = ({ images, variant, showBadges, showThumbs }) => {
     } = useCarousel(images, 3);
 
     const swipeHandlers = useSwipe({ onSwipeLeft: handleNext, onSwipeRight: handlePrev });
+
+    const {
+        showBadges = false,
+        showThumbs = false,
+    } = config;
 
     return (
         <div className="overflow-hidden" {...swipeHandlers}>

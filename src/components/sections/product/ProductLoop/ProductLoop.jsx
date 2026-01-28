@@ -8,7 +8,7 @@ const ProductLoop = ({ layout }) => {
                 flex flex-col 2xl:flex-row 2xl:justify-between"
         >
 
-            <ProductMedia useDesktop={layout.useDesktopMedia}/>
+            <ProductMedia useDesktop={layout} />
 
             <ProductInfo />
         </section>

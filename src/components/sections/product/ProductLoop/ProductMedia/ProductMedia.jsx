@@ -10,15 +10,22 @@ const PRODUCT_IMAGES = [
     "src/assets/images/product image 1.5.png",
 ]
 
-const ProductMedia = ({ useDesktop }) => {
-    if (useDesktop) return <ProductDesktopGrid images={PRODUCT_IMAGES} />;
+const ProductMedia = ({ layout }) => {
+    const getProductCarouselConfig = (layout) => ({
+        showBadges: true,
+        showThumbs: !layout.isMobile,
+    });
+
+    if (layout.useDesktop) {
+        return <ProductDesktopGrid images={PRODUCT_IMAGES} />;
+    }
+    //TODO: Ask about when a constant should live inside the function and when outside.
 
     return (
         <MediaCarousel
             images={PRODUCT_IMAGES}
             variant='productImages'
-            showBadges={true}
-            showThumbs={!isMobile}
+            config={getProductCarouselConfig(layout)}
         />
     );
 };
