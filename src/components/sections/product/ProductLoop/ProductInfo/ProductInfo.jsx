@@ -7,7 +7,7 @@ import ProductMeta from './ProductMeta';
 import ProductTabs from '../../ProductTabs/ProductTabs';
 
 const ProductInfo = ({ layout }) => {
-
+    const divider = !layout.showRecommendations || layout.isMobile;
     return (
         <div
             className={`
@@ -31,9 +31,8 @@ const ProductInfo = ({ layout }) => {
 
             <Section
                 className={`
-                pt-6 
-                ${layout.showRecommendations ? '2xl:pt-6 2xl:gap-6' : '2xl:pt-8 2xl:gap-8'}`}
-                divider={layout.showRecommendations || layout.isMobile}>
+                ${divider ? 'pt-6 gap-6 2xl:pt-8 gap-8' : 'py-6'}`}
+                divider={divider}>
                 <ProductActions />
             </Section>
 
