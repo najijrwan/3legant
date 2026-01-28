@@ -6,9 +6,6 @@ const ProductPage = () => {
     const { canShowRecommendations } = useProduct();
     const { isMobile } = useBreakpoint();
 
-    console.log('can: ', canShowRecommendations);
-    console.log('mobile: ', isMobile);
-
     return (
         <>
             <ProductBreadcrumbs />

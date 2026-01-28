@@ -1,7 +1,5 @@
 import ProductDesktopGrid from './ProductDesktopGrid';
 import { MediaCarousel } from '@ui';
-import { useProduct } from '@product';
-import { useBreakpoint } from '@hooks';
 
 const PRODUCT_IMAGES = [
     "src/assets/images/product image 1 black.png",
@@ -12,12 +10,8 @@ const PRODUCT_IMAGES = [
     "src/assets/images/product image 1.5.png",
 ]
 
-const ProductMedia = () => {
-    const { canShowRecommendations } = useProduct();
-    const { isMobile } = useBreakpoint();
-
-    if (canShowRecommendations && !isMobile)
-        return <ProductDesktopGrid images={PRODUCT_IMAGES} />;
+const ProductMedia = ({ useDesktop }) => {
+    if (useDesktop) return <ProductDesktopGrid images={PRODUCT_IMAGES} />;
 
     return (
         <MediaCarousel
