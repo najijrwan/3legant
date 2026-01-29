@@ -3,7 +3,7 @@ import { ProductCard } from '@ui';
 
 import { useScrollbarThumb, useScrollProgress, useDragToScroll } from '@hooks';
 
-const ProductCarousel = ({ items, cardVariant }) => {
+const ProductsCarousel = ({ items, cardVariant }) => {
     const trackRef = useRef(null);
     const barRef = useRef(null);
 
@@ -67,4 +67,4 @@ const ProductCarousel = ({ items, cardVariant }) => {
     );
 };
 
-export default ProductCarousel;
+export default ProductsCarousel;

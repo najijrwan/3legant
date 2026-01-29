@@ -1,4 +1,4 @@
-import { ProductCarousel, ProductCarouselHeading } from '@ui';
+import { ProductsCarousel, ProductCarouselHeading } from '@ui';
 import { MoreActionBtn } from '@ui';
 
 const CarouselSection = ({ title, variant, carouselActionVariant, items }) => {
@@ -36,7 +36,7 @@ const CarouselSection = ({ title, variant, carouselActionVariant, items }) => {
                 )}
             </ProductCarouselHeading>
 
-            <ProductCarousel
+            <ProductsCarousel
                 data-id='products'
                 items={items}
                 cardVariant="medium"
