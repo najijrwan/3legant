@@ -5,7 +5,7 @@ const HomePage = () => {
         <>
             <HeroSlider />
             <BannerGrid />
-            <NewArrivals title="New Arrivals" />
+            <NewArrivals title={`New\nArrivals`} />
             <Values />
             <Banner />
             <Blog title="Articles" />

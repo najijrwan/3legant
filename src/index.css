@@ -54,6 +54,15 @@ body {
   background-color: white;
 }
 
+/* In your global CSS file */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
 @theme {
 
   /* ------------FONT FAMILY------------*/

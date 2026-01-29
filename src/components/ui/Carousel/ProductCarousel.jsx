@@ -30,8 +30,7 @@ const ProductCarousel = ({ items, cardVariant }) => {
             <ul
                 ref={trackRef}
                 className="
-                    h-[392px] 2xl:h-[433px]
-                    overflow-x-auto
+                    h-[392px] 2xl:h-[433px] hide-scrollbar overflow-x-auto
                     flex gap-4 2xl:gap-6"
             >
                 {items.map((product, index) => (
