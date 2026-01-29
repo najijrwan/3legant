@@ -33,7 +33,12 @@ const ProductLayout = () => {
       )}
 
       {layout.showRecommendations && (
-        <CarouselSection title="You might also like" variant="alt" items={HOME_NEW_ARRIVALS} />
+        <CarouselSection
+          title="You might also like"
+          variant="alt"
+          headingVariant="default"
+          items={HOME_NEW_ARRIVALS}
+        />
       )}
     </>
   );
