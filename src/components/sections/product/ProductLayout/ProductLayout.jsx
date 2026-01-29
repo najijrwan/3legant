@@ -1,7 +1,8 @@
 import { useProduct } from '../context/ProductContext';
 import { useBreakpoint } from '@hooks';
-import { ProductBreadcrumbs, ProductLoop, ProductTabs } from '@product';
-import { NewArrivals } from '@home';
+import { ProductBreadcrumbs, ProductLoop, ProductTabs, Recommendations } from '@product';
+import { CarouselSection } from '@ui';
+import { HOME_NEW_ARRIVALS } from '@data';
 
 const ProductLayout = () => {
   const { canShowRecommendations } = useProduct();
@@ -32,13 +33,7 @@ const ProductLayout = () => {
       )}
 
       {layout.showRecommendations && (
-        <section
-          className='
-            relative
-            w-full pl-8 pb-20 pt-8 2xl:pl-40 2xl:pt-10'
-        >
-          <NewArrivals title="You might also like" />
-        </section>
+        <CarouselSection title="You might also like" variant="alt" items={HOME_NEW_ARRIVALS} />
       )}
     </>
   );

@@ -1,21 +1,35 @@
-import { ProductCarousel } from '@ui';
+import { ProductCarousel, ProductCarouselHeading } from '@ui';
 
-const CarouselSection = ({ title, children, items }) => {
+const CarouselSection = ({ title, variant, items }) => {
+    const VARIANTS = {
+        default: 'px-8 pl-8 2xl:pb-0 2xl:pt-12 2xl:pr-0 2xl:pl-40',
+        alt: 'pl-8 pb-20 pt-8 2xl:pl-40 2xl:pt-10',
+    }
     return (
-        <div
+        <section
             data-title={title}
-            className="
+            className={`
             relative
-            flex flex-col gap-10 2xl:gap-12"
+            w-full ${VARIANTS[variant]}
+            flex flex-col gap-10 2xl:gap-12`}
         >
-            {children}
+            <ProductCarouselHeading
+                title={title}
+                variant="default"
+            >
+                <MoreActionBtn
+                    label='More Products'
+                    labelClass='btn-xs 2xl:btn-s text-n7100'
+                    buttonClass='absolute bottom-0 left-8 2xl:static'
+                />
+            </ProductCarouselHeading>
 
             <ProductCarousel
                 data-id='products'
                 items={items}
                 cardVariant="medium"
             />
-        </div>
+        </section>
     )
 }
 

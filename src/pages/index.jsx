@@ -1,11 +1,13 @@
 import { HeroSlider, BannerGrid, NewArrivals, Values, Banner, Blog } from '@home';
+import { CarouselSection } from '@ui';
+import { HOME_NEW_ARRIVALS } from '@data';
 
 const HomePage = () => {
     return (
         <>
             <HeroSlider />
             <BannerGrid />
-            <NewArrivals title={`New\nArrivals`} />
+            <CarouselSection title={`New\nArrivals`} variant="default" items={HOME_NEW_ARRIVALS} />
             <Values />
             <Banner />
             <Blog title="Articles" />

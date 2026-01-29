@@ -1,7 +1,7 @@
 const ProductCarouselHeading = ({ title, variant, children }) => {
     const VARIANTS = {
         default: 'h5 2xl:h4',
-        small: 'h6',
+        alt: 'h6',
     }
     return (
         <header
