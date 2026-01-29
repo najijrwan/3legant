@@ -1,4 +1,4 @@
-import { HeroSlider, BannerGrid, NewArrivals, Values, Banner, Blog } from '@home';
+import { HeroSlider, BannerGrid, Values, Banner, Blog } from '@home';
 import { CarouselSection } from '@ui';
 import { HOME_NEW_ARRIVALS } from '@data';
 

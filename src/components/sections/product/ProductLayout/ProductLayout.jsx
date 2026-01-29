@@ -1,6 +1,6 @@
 import { useProduct } from '../context/ProductContext';
 import { useBreakpoint } from '@hooks';
-import { ProductBreadcrumbs, ProductLoop, ProductTabs, Recommendations } from '@product';
+import { ProductBreadcrumbs, ProductLoop, ProductTabs } from '@product';
 import { CarouselSection } from '@ui';
 import { HOME_NEW_ARRIVALS } from '@data';
 

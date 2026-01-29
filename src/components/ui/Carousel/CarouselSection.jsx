@@ -1,4 +1,5 @@
 import { ProductCarousel, ProductCarouselHeading } from '@ui';
+import { MoreActionBtn } from '@ui';
 
 const CarouselSection = ({ title, variant, items }) => {
     const VARIANTS = {
@@ -15,7 +16,7 @@ const CarouselSection = ({ title, variant, items }) => {
         >
             <ProductCarouselHeading
                 title={title}
-                variant="default"
+                variant="alt"
             >
                 <MoreActionBtn
                     label='More Products'
