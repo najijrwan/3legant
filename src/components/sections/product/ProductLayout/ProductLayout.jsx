@@ -36,7 +36,7 @@ const ProductLayout = () => {
         <CarouselSection
           title="You might also like"
           variant="alt"
-          headingVariant="default"
+          carouselActionVariant="alt"
           items={HOME_NEW_ARRIVALS}
         />
       )}

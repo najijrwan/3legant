@@ -6,10 +6,20 @@ const HomePage = () => {
     return (
         <>
             <HeroSlider />
+
             <BannerGrid />
-            <CarouselSection title={`New\nArrivals`} variant="default" items={HOME_NEW_ARRIVALS} />
+
+            <CarouselSection
+                title={`New\nArrivals`}
+                variant="default"
+                carouselActionVariant="default"
+                items={HOME_NEW_ARRIVALS}
+            />
+
             <Values />
+
             <Banner />
+
             <Blog title="Articles" />
         </>
     );
