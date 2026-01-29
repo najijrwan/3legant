@@ -3,11 +3,13 @@ export { default as CartWishlistBtn } from './buttons/CartWishlistBtn';
 export { default as MoreActionBtn } from './buttons/MoreActionBtn';
 export { default as ProductTabBtn } from './buttons/ProductTabBtn';
 
+export { default as CarouselSection } from './carousel/CarouselSection';
 export { default as ProductCarousel } from './carousel/ProductCarousel';
 export { default as MediaCarousel } from './carousel/MediaCarousel';
 export { default as CarouselTrack } from './carousel/CarouselTrack';
 export { default as CarouselNavButton } from './carousel/CarouselNavButton';
 export { default as CarouselThumbs } from './carousel/CarouselThumbs';
+export { default as ProductCarouselHeading } from './carousel/ProductCarouselHeading';
 
 export { default as Brand } from './primitives/Brand';
 export { default as Icon } from './primitives/Icon';

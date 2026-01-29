@@ -46,17 +46,14 @@ const ProductCarousel = ({ items, cardVariant }) => {
                 ref={barRef}
                 className="
                     relative
-                    w-[311px] 2xl:w-[1120px]
-                    h-1
-                    bg-n3100
-                    rounded-[80px]"
+                    w-[311px] 2xl:w-[1120px] h-1
+                    bg-n3100 rounded-[80px]"
             >
                 <div
                     onMouseDown={startDrag}
                     className="
                         absolute top-0 h-full
-                        bg-n5100
-                        rounded
+                        bg-n5100 rounded
                         cursor-pointer"
                     style={{
                         width: `${thumbRatio * 100}%`,
