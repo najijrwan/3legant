@@ -36,8 +36,6 @@ const ProductsCarousel = ({ products, navMode, }) => {
                     viewportRef={viewportRef}
                 />
             )}
-
-            <div className="2xl:hidden" />
         </>
     );
 };

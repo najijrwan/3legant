@@ -1,4 +1,4 @@
-import { ProductsCarousel, ProductsCarouselHeader } from '@ui';
+import { ProductsCarousel, ProductsCarouselHeader, MoreActionBtn } from '@ui';
 
 const ProductCarouselSection = ({
     title,
@@ -6,6 +6,7 @@ const ProductCarouselSection = ({
     sectionVariant,
     intent,
     products,
+    isMobile,
 }) => {
 
     const VARIANTS = {
@@ -27,12 +28,20 @@ const ProductCarouselSection = ({
                 title={title}
                 titleVariant={titleVariant}
                 intent={intent}
+                isMobile={isMobile}
             />
 
             <ProductsCarousel
                 products={products}
                 navMode={navMode}
             />
+
+            {isMobile && intent === 'discovery' && (
+                <MoreActionBtn
+                    label='More Products'
+                    labelClass='btn-xs 2xl:btn-s text-n7100'
+                />
+            )}
         </section>
     );
 };

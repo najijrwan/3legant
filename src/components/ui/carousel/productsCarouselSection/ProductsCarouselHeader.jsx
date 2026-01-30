@@ -1,10 +1,13 @@
 import { MoreActionBtn } from '@ui';
 
-const ProductsCarouselHeader = ({ title, titleVariant, intent }) => {
+const ProductsCarouselHeader = ({ title, titleVariant, intent, isMobile }) => {
+
     const VARIANTS = {
         default: 'h5 2xl:h4',
         alt: 'h6',
     }
+
+    console.log(isMobile);
 
     return (
         <header
@@ -17,11 +20,10 @@ const ProductsCarouselHeader = ({ title, titleVariant, intent }) => {
                 {title}
             </p>
 
-            {intent === 'discovery' && (
+            {(intent === 'discovery' && !isMobile) && (
                 <MoreActionBtn
                     label='More Products'
                     labelClass='btn-xs 2xl:btn-s text-n7100'
-                    buttonClass='absolute bottom-0 left-8 2xl:static'
                 />
             )}
 

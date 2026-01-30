@@ -39,6 +39,7 @@ const ProductLayout = () => {
           sectionVariant="alt"
           intent="discovery"
           products={HOME_NEW_ARRIVALS}
+          isMobile={isMobile}
         />
       )}
     </>
