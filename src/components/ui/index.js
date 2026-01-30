@@ -1,6 +1,3 @@
-// UI Components Export File
-// This file aggregates and re-exports UI components for easier imports elsewhere in the project.
-
 // Button Components
 export { default as AddToCartBtn } from './buttons/AddToCartBtn';
 export { default as CartWishlistBtn } from './buttons/CartWishlistBtn';

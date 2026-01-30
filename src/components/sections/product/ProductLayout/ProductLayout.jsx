@@ -37,7 +37,7 @@ const ProductLayout = () => {
           title="You might also like"
           titleVariant="alt"
           sectionVariant="alt"
-          intent="discovery"
+          navMode="scrollbar"
           products={HOME_NEW_ARRIVALS}
           isMobile={isMobile}
         />

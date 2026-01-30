@@ -4,7 +4,7 @@ const ProductCarouselSection = ({
     title,
     titleVariant,
     sectionVariant,
-    intent,
+    navMode,
     products,
     isMobile,
 }) => {
@@ -13,8 +13,6 @@ const ProductCarouselSection = ({
         default: 'pl-8 py-8 2xl:pb-0 2xl:pt-12 2xl:pr-0 2xl:pl-40',
         alt: 'pl-8 pb-20 pt-8 2xl:pl-40 2xl:pt-10',
     };
-
-    const navMode = intent === 'discovery' ? 'scrollbar' : 'dots';
 
     return (
         <section
@@ -27,7 +25,7 @@ const ProductCarouselSection = ({
             <ProductsCarouselHeader
                 title={title}
                 titleVariant={titleVariant}
-                intent={intent}
+                navMode={navMode}
                 isMobile={isMobile}
             />
 
@@ -36,7 +34,7 @@ const ProductCarouselSection = ({
                 navMode={navMode}
             />
 
-            {isMobile && intent === 'discovery' && (
+            {isMobile && navMode === 'scrollbar' && (
                 <MoreActionBtn
                     label='More Products'
                     labelClass='btn-xs 2xl:btn-s text-n7100'
