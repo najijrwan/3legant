@@ -6,12 +6,7 @@ const ProductCard = ({ product, variant }) => {
     const price = formatPrice(finalPrice(product.price, product.discountPercentage));
 
     return (
-        <li
-            className="
-            h-full
-            flex flex-col gap-3
-            group cursor-pointer"
-        >
+        <>
             <div
                 className="
                     relative
@@ -88,7 +83,7 @@ const ProductCard = ({ product, variant }) => {
                     </span>
                 </p>
             </div>
-        </li>
+        </>
     );
 }
 

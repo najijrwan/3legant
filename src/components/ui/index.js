@@ -17,8 +17,8 @@ export { default as CarouselThumbs } from './carousel/media/CarouselThumbs.js';
 export { default as ProductsCarouselSection } from './carousel/productsCarouselSection/ProductsCarouselSection';
 export { default as ProductsCarouselHeader } from './carousel/productsCarouselSection/ProductsCarouselHeader';
 export { default as ProductsCarousel } from './carousel/productsCarouselSection/ProductsCarousel';
-export { default as ProductsCarousel } from './carousel/productsCarouselSection/ProductsCarousel';
-export { default as ProductsCarousel } from './carousel/productsCarouselSection/ProductsCarousel';
+export { default as ScrollbarNav } from './carousel/productsCarouselSection/navigation/ScrollbarNav';
+// export { default as DotNav } from './carousel/productsCarouselSection/navigation/DotNav';
 
 
 // Primitive Components
