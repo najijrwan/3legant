@@ -8,7 +8,12 @@ const ProductsCarousel = ({ products, navMode, }) => {
     return (
         <>
             <div ref={viewportRef}>
-                <ul ref={trackRef}>
+                <ul
+                    ref={trackRef}
+                    className="
+                    h-[392px] 2xl:h-[433px] hide-scrollbar overflow-x-auto
+                    flex gap-4 2xl:gap-6"
+                >
                     {products.map(product => (
                         <li
                             key={product.id}

@@ -11,8 +11,8 @@ const HomePage = () => {
 
             <ProductsCarouselSection
                 title={`New\nArrivals`}
-                titleVariant="alt"
-                sectionVariant="alt"
+                titleVariant="default"
+                sectionVariant="default"
                 intent="discovery"
                 products={HOME_NEW_ARRIVALS}
             />

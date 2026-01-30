@@ -41,8 +41,19 @@ const ScrollbarNav = ({ trackRef, viewportRef }) => {
     };
 
     return (
-        <div ref={barRef} onMouseDown={onDrag}>
+        <div
+            ref={barRef}
+            onMouseDown={onDrag}
+            className="
+            relative
+            w-[311px] 2xl:w-[1120px] h-1
+            bg-n3100 rounded-[80px]"
+        >
             <span
+                className="
+                absolute top-0 h-full
+                bg-n5100 rounded
+                cursor-pointer"
                 style={{
                     width: thumbWidth,
                     transform: `translateX(${thumbLeft}px)`,
