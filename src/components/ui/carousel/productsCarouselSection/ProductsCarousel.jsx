@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { ScrollbarNav } from '@ui';
+import { ProductCard, ScrollbarNav } from '@ui';
 
 const ProductsCarousel = ({ products, navMode, }) => {
     const trackRef = useRef(null);
@@ -18,9 +18,7 @@ const ProductsCarousel = ({ products, navMode, }) => {
                             group cursor-pointer"
                         >
                             <ProductCard
-                                key={index}
                                 product={product}
-                                variant={cardVariant}
                             />
                         </li>
                     ))}

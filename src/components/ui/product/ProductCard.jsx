@@ -1,7 +1,7 @@
 import { Icon, Badges, AddToCartBtn, ProductRating } from '@ui';
 import { formatPrice, finalPrice } from '@utils';
 
-const ProductCard = ({ product, variant }) => {
+const ProductCard = ({ product }) => {
     const { rating } = product;
     const price = formatPrice(finalPrice(product.price, product.discountPercentage));
 
@@ -20,14 +20,14 @@ const ProductCard = ({ product, variant }) => {
                 />
 
                 <Badges
-                    variant={variant}
+                    variant='medium'
                     discountPercentage={product.discountPercentage}
                     containerClass='left-6 top-6'
                 />
 
                 <button
                     className={`
-                    absolute top-4 ${variant === 'medium' ? 'right-4' : 'right-3 2xl:right-4'} 2xl:-translate-y-1/2
+                    absolute top-4 right-3 2xl:right-4 2xl:-translate-y-1/2
                     size-8 rounded-full
                     flex items-center justify-center
                     bg-white opacity-100 2xl:opacity-0

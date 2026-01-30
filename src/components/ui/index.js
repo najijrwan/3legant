@@ -8,10 +8,10 @@ export { default as MoreActionBtn } from './buttons/MoreActionBtn';
 export { default as ProductTabBtn } from './buttons/ProductTabBtn';
 
 // Media Carousel Components
-export { default as MediaCarousel } from './carousel/media/MediaCarousel.jsx';
-export { default as CarouselTrack } from './carousel/media/CarouselTrack.js';
-export { default as CarouselNavButton } from './carousel/media/CarouselNavButton.js';
-export { default as CarouselThumbs } from './carousel/media/CarouselThumbs.js';
+export { default as MediaCarousel } from './carousel/media/MediaCarousel';
+export { default as CarouselTrack } from './carousel/media/CarouselTrack';
+export { default as CarouselNavButton } from './carousel/media/CarouselNavButton';
+export { default as CarouselThumbs } from './carousel/media/CarouselThumbs';
 
 // Products Carousel Components
 export { default as ProductsCarouselSection } from './carousel/productsCarouselSection/ProductsCarouselSection';

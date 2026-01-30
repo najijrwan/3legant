@@ -1,5 +1,6 @@
 export const HOME_NEW_ARRIVALS = [
     {
+        id: 1,
         image: 'src/assets/images/product image 7.png',
         rating: 5,
         label: 'Loveseat Sofa',
@@ -7,6 +8,7 @@ export const HOME_NEW_ARRIVALS = [
         price: 400,
     },
     {
+        id: 2,
         image: 'src/assets/images/product image 3.png',
         rating: 4,
         label: 'Table Lamp',
@@ -14,6 +16,7 @@ export const HOME_NEW_ARRIVALS = [
         price: 50,
     },
     {
+        id: 3,
         image: 'src/assets/images/product image 8.png',
         rating: 3,
         label: 'Beige Table Lamp',
@@ -21,6 +24,7 @@ export const HOME_NEW_ARRIVALS = [
         price: 75,
     },
     {
+        id: 4,
         image: 'src/assets/images/product image 9.png',
         rating: 5,
         label: 'Bamboo Basket',
@@ -28,6 +32,7 @@ export const HOME_NEW_ARRIVALS = [
         price: 75,
     },
     {
+        id: 5,
         image: 'src/assets/images/product image 6.png',
         rating: 1,
         label: 'Toasted',
@@ -35,6 +40,7 @@ export const HOME_NEW_ARRIVALS = [
         price: 450,
     },
     {
+        id: 6,
         image: 'src/assets/images/product image 7.png',
         rating: 5,
         label: 'Loveseat Sofa',
@@ -42,6 +48,7 @@ export const HOME_NEW_ARRIVALS = [
         price: 400,
     },
     {
+        id: 7,
         image: 'src/assets/images/product image 3.png',
         rating: 4,
         label: 'Table Lamp',
@@ -49,6 +56,7 @@ export const HOME_NEW_ARRIVALS = [
         price: 50,
     },
     {
+        id: 8,
         image: 'src/assets/images/product image 8.png',
         rating: 3,
         label: 'Beige Table Lamp',
@@ -56,6 +64,7 @@ export const HOME_NEW_ARRIVALS = [
         price: 75,
     },
     {
+        id: 9,
         image: 'src/assets/images/product image 9.png',
         rating: 5,
         label: 'Bamboo Basket',
@@ -63,6 +72,7 @@ export const HOME_NEW_ARRIVALS = [
         price: 75,
     },
     {
+        id: 10,
         image: 'src/assets/images/product image 6.png',
         rating: 1,
         label: 'Toasted',

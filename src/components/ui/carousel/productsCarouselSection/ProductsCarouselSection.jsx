@@ -12,7 +12,7 @@ const ProductCarouselSection = ({
         default: 'pl-8 py-8 2xl:pb-0 2xl:pt-12 2xl:pr-0 2xl:pl-40',
         alt: 'pl-8 pb-20 pt-8 2xl:pl-40 2xl:pt-10',
     };
-    
+
     const navMode = intent === 'discovery' ? 'scrollbar' : 'dots';
 
     return (
