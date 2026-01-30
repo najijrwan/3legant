@@ -8,15 +8,18 @@ export { default as MoreActionBtn } from './buttons/MoreActionBtn';
 export { default as ProductTabBtn } from './buttons/ProductTabBtn';
 
 // Media Carousel Components
-export { default as MediaCarousel } from './carousel/mediaCarousel/MediaCarousel';
-export { default as CarouselTrack } from './carousel/mediaCarousel/CarouselTrack';
-export { default as CarouselNavButton } from './carousel/mediaCarousel/CarouselNavButton';
-export { default as CarouselThumbs } from './carousel/mediaCarousel/CarouselThumbs';
+export { default as MediaCarousel } from './carousel/media/MediaCarousel.jsx';
+export { default as CarouselTrack } from './carousel/media/CarouselTrack.js';
+export { default as CarouselNavButton } from './carousel/media/CarouselNavButton.js';
+export { default as CarouselThumbs } from './carousel/media/CarouselThumbs.js';
 
 // Products Carousel Components
-export { default as CarouselSection } from './carousel/productsCarouselSection/CarouselSection';
+export { default as ProductsCarouselSection } from './carousel/productsCarouselSection/ProductsCarouselSection';
+export { default as ProductsCarouselHeader } from './carousel/productsCarouselSection/ProductsCarouselHeader';
 export { default as ProductsCarousel } from './carousel/productsCarouselSection/ProductsCarousel';
-export { default as ProductCarouselHeading } from './carousel/productsCarouselSection/ProductCarouselHeading';
+export { default as ProductsCarousel } from './carousel/productsCarouselSection/ProductsCarousel';
+export { default as ProductsCarousel } from './carousel/productsCarouselSection/ProductsCarousel';
+
 
 // Primitive Components
 export { default as Brand } from './primitives/Brand';

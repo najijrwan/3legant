@@ -1,4 +1,4 @@
-const ProductCarouselHeading = ({ title, variant, children }) => {
+const ProductsCarouselHeader = ({ title, variant, children }) => {
     const VARIANTS = {
         default: 'h5 2xl:h4',
         alt: 'h6',
@@ -19,4 +19,4 @@ const ProductCarouselHeading = ({ title, variant, children }) => {
     )
 }
 
-export default ProductCarouselHeading;
+export default ProductsCarouselHeader;
