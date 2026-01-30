@@ -1,7 +1,7 @@
 import { useProduct } from '../context/ProductContext';
 import { useBreakpoint } from '@hooks';
 import { ProductBreadcrumbs, ProductLoop, ProductTabs } from '@product';
-import { CarouselSection } from '@ui';
+import { ProductsCarouselSection } from '@ui';
 import { HOME_NEW_ARRIVALS } from '@data';
 
 const ProductLayout = () => {
@@ -33,11 +33,12 @@ const ProductLayout = () => {
       )}
 
       {layout.showRecommendations && (
-        <CarouselSection
+        <ProductsCarouselSection
           title="You might also like"
-          variant="alt"
-          carouselActionVariant="default"
-          items={HOME_NEW_ARRIVALS}
+          titleVariant="alt"
+          sectionVariant="alt"
+          intent="discovery"
+          products={HOME_NEW_ARRIVALS}
         />
       )}
     </>

@@ -1,5 +1,5 @@
 import { HeroSlider, BannerGrid, Values, Banner, Blog } from '@home';
-import { CarouselSection } from '@ui';
+import { ProductsCarouselSection } from '@ui';
 import { HOME_NEW_ARRIVALS } from '@data';
 
 const HomePage = () => {
@@ -9,11 +9,12 @@ const HomePage = () => {
 
             <BannerGrid />
 
-            <CarouselSection
+            <ProductsCarouselSection
                 title={`New\nArrivals`}
-                variant="default"
-                carouselActionVariant="default"
-                items={HOME_NEW_ARRIVALS}
+                titleVariant="alt"
+                sectionVariant="alt"
+                intent="discovery"
+                products={HOME_NEW_ARRIVALS}
             />
 
             <Values />
