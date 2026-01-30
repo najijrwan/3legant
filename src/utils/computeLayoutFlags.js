@@ -8,5 +8,7 @@ export const computeLayoutFlags = ({ canShowRecommendations, isMobile }) => {
 
         useDesktopMedia: canShowRecommendations && !isMobile,
         showOfferCountdown: !canShowRecommendations || isMobile,
+
+        divider: !canShowRecommendations || isMobile,
     }
 };
