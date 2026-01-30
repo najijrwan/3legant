@@ -29,6 +29,7 @@ export default defineConfig({
           '@home': path.resolve(__dirname, './src/components/sections/home'),
           '@newsletter': path.resolve(__dirname, './src/components/sections/newsletter'),
           '@product': path.resolve(__dirname, './src/components/sections/product'),
+          '@shop': path.resolve(__dirname, './src/components/sections/shop'),
         '@ui': path.resolve(__dirname, './src/components/ui'),
 
       '@data': path.resolve(__dirname, './src/data'),
