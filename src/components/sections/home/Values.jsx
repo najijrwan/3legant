@@ -2,7 +2,6 @@ import { Icon } from '@ui';
 import { HOME_VALUES } from '@data';
 
 const Values = () => {
-    console.log(HOME_VALUES);
     return (
         <section
             className='

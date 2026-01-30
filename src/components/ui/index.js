@@ -11,11 +11,11 @@ export { default as CarouselNavButton } from './carousel/media/CarouselNavButton
 export { default as CarouselThumbs } from './carousel/media/CarouselThumbs';
 
 // Products Carousel Components
-export { default as ProductsCarouselSection } from './carousel/productsCarouselSection/ProductsCarouselSection';
-export { default as ProductsCarouselHeader } from './carousel/productsCarouselSection/ProductsCarouselHeader';
-export { default as ProductsCarousel } from './carousel/productsCarouselSection/ProductsCarousel';
-export { default as ScrollbarNav } from './carousel/productsCarouselSection/navigation/ScrollbarNav';
-// export { default as DotNav } from './carousel/productsCarouselSection/navigation/DotNav';
+export { default as ProductsCarouselSection } from './carousel/products/ProductsCarouselSection';
+export { default as ProductsCarouselHeader } from './carousel/products/ProductsCarouselHeader';
+export { default as ProductsCarousel } from './carousel/products/ProductsCarousel';
+export { default as ScrollbarNav } from './carousel/products/navigation/ScrollbarNav';
+// export { default as DotNav } from './carousel/products/navigation/DotNav';
 
 
 // Primitive Components

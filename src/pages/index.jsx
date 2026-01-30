@@ -1,5 +1,4 @@
 import { HeroSlider, BannerGrid, NewArrivals, Values, Banner, Blog } from '@home';
-import NewArrivals from '../components/sections/home/NewArrivals';
 
 const HomePage = () => {
     return (
