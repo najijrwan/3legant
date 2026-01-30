@@ -1,6 +1,6 @@
 import { MoreActionBtn } from '@ui';
 
-const ProductsCarouselHeader = ({ title, titleVariant, navMode, isMobile }) => {
+const ProductsCarouselHeader = ({ title, titleVariant, action }) => {
 
     const VARIANTS = {
         default: 'h5 2xl:h4',
@@ -18,12 +18,7 @@ const ProductsCarouselHeader = ({ title, titleVariant, navMode, isMobile }) => {
                 {title}
             </p>
 
-            {(navMode === 'scrollbar' && !isMobile) && (
-                <MoreActionBtn
-                    label='More Products'
-                    labelClass='btn-xs 2xl:btn-s text-n7100'
-                />
-            )}
+            {action}
 
             {/* {navMode === 'dots' && (
                 <DotNav />

@@ -1,7 +1,6 @@
-// hooks/useBreakpoint.js
 import { useEffect, useState } from 'react';
 
-const MOBILE_BREAKPOINT = 375; // match Tailwind lg / 2xl logic
+const MOBILE_BREAKPOINT = 375;
 
 export default function useBreakpoint() {
     const [isMobile, setIsMobile] = useState(

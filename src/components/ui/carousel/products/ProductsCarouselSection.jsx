@@ -14,6 +14,8 @@ const ProductCarouselSection = ({
         alt: 'pl-8 pb-20 pt-8 2xl:pl-40 2xl:pt-10',
     };
 
+    const showHeaderAction = navMode === 'scrollbar' && !isMobile;
+
     return (
         <section
             data-title={title}
@@ -25,8 +27,13 @@ const ProductCarouselSection = ({
             <ProductsCarouselHeader
                 title={title}
                 titleVariant={titleVariant}
-                navMode={navMode}
-                isMobile={isMobile}
+                action={
+                    showHeaderAction
+                        ? <MoreActionBtn
+                            label='More Products'
+                            labelClass='btn-xs 2xl:btn-s text-n7100' />
+                        : null
+                }
             />
 
             <ProductsCarousel
