@@ -7,7 +7,7 @@ const CarouselThumbs = ({ thumbnails = [], activeIndex, onClick, className = '' 
           <div
             key={img}
             onClick={() => onClick(thumbIndex)}
-            className={`size-[167px] border-2 ${activeIndex === thumbIndex ? 'border-n7100' : 'border-transparent'}`}
+            className='size-[167px]'
           >
             <img
               src={img}
