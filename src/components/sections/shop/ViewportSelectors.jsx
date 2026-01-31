@@ -9,7 +9,7 @@ const ViewportSelectors = () => {
         : ['Grid3x3', 'Grid4x4', 'Grid4x2', 'Grid4x1'];
 
     return (
-        <>
+        <div className='flex border border-black-200'>
             {iconNames.map((iconName) => (
                 <button className='
                     w-[46px] h-[40px]
@@ -24,7 +24,7 @@ const ViewportSelectors = () => {
                     />
                 </button>
             ))}
-        </>
+        </div>
     );
 };
 

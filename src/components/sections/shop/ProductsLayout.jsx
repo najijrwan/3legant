@@ -14,7 +14,7 @@ export const ProductsLayout = () => {
             >
                 <div className='w-full py-2 flex items-center justify-between'>
                     <ProductsFilter />
-                    <div className='flex border border-black-200 '>
+                    <div className='2xl:hidden'>
                         <ViewportSelectors />
                     </div>
                 </div>
@@ -25,6 +25,9 @@ export const ProductsLayout = () => {
                         <p className='body-2-semi'>Sort by</p>
                         <Icon name="ChevronDown" spanClassName='size-5' iconClassName="w-[10px] h-[5px]" />
                     </button>
+                    <div className='hidden 2xl:block'>
+                        <ViewportSelectors />
+                    </div>
                 </div>
             </div>
         </section>
