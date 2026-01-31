@@ -1,32 +1,27 @@
-import { ProductsFilter, ViewportSelectors } from '@shop';
-import { Icon } from '@ui';
+import { ProductsFilter, ViewportSelectors, SortFilter } from '@shop';
+import { useBreakpoint } from '@hooks';
 
 export const ProductsLayout = () => {
-
+    const { isMobile } = useBreakpoint();
     return (
         <section className="
             pb-20 2xl:pb-25 2xl:px-40 2xl:pt-15
             flex flex-col gap-8 2xl:gap-6"
         >
             <div className='
-                w-full p-8
-                flex flex-col gap-4'
+                w-full p-8 2xl:p-0
+                flex flex-col 2xl:flex-row-reverse items-centergap-4'
             >
-                <div className='w-full py-2 flex items-center justify-between'>
-                    <ProductsFilter />
-                    <div className='2xl:hidden'>
-                        <ViewportSelectors />
-                    </div>
+                <div className='w-full max-w-[296px] py-2 2xl:p-0 flex items-center justify-between'>
+                    {isMobile && <ProductsFilter />}
+                    {!isMobile && <SortFilter />}
+                    <ViewportSelectors />
                 </div>
 
-                <div className='w-full flex justify-between'>
+                <div className='w-full flex items-center justify-between'>
                     <p className='text-brand body-2-semi'>Living Room</p>
-                    <button className='text-black-900 flex items-center gap-1'>
-                        <p className='body-2-semi'>Sort by</p>
-                        <Icon name="ChevronDown" spanClassName='size-5' iconClassName="w-[10px] h-[5px]" />
-                    </button>
-                    <div className='hidden 2xl:block'>
-                        <ViewportSelectors />
+                    <div className='2xl:hidden'>
+                        <SortFilter />
                     </div>
                 </div>
             </div>

@@ -11,13 +11,14 @@ const ViewportSelectors = () => {
     return (
         <div className='flex border border-black-200'>
             {iconNames.map((iconName) => (
-                <button className='
+                <button
+                    key={iconName}
+                    className='
                     w-[46px] h-[40px]
                     flex justify-center items-center
                     border border-n3100'
                 >
                     <Icon
-                        key={iconName}
                         name={iconName}
                         spanclassName="size-6"
                         iconClassName="size-4.5 text-n4100"
