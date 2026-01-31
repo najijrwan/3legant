@@ -1,9 +1,7 @@
-import { useBreakpoint } from '@hooks';
-import { ProductsFilter } from '@shop';
+import { ProductsFilter, ViewportSelectors } from '@shop';
 import { Icon } from '@ui';
 
 export const ProductsLayout = () => {
-    const { isMobile } = useBreakpoint();
 
     return (
         <section className="
@@ -17,12 +15,7 @@ export const ProductsLayout = () => {
                 <div className='w-full py-2 flex items-center justify-between'>
                     <ProductsFilter />
                     <div className='flex border border-black-200 '>
-                        <button className='bg-n2100 border border-n3100 flex justify-center items-center'>
-                            <Icon name="Grid3x3" spanClassName="w-[46px] h-[40px]" iconClassName="size-4.5 text-n7100" />
-                        </button>
-                        <button className='border border-n3100 flex justify-center items-center'>
-                            <Icon name="Grid4x4" spanClassName="w-[46px] h-[40px]" iconClassName="size-4.5 text-n4100" />
-                        </button>
+                        <ViewportSelectors />
                     </div>
                 </div>
 

@@ -13,6 +13,7 @@
   --red: #FF5630;
   --black-900: #121212;
   --black-600: #605F5F;
+  --black-200: #EAEAEA;
   --black-100: #F5F5F5;
 
   /*---Neutral---*/
@@ -85,6 +86,7 @@ body {
   --color-red: var(--red);
   --color-black-900: var(--black-900);
   --color-black-600: var(--black-600);
+  --color-black-200: var(--black-200);
   --color-black-100: var(--black-100);
 
   /*---Neutral---*/
