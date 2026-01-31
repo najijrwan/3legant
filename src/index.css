@@ -56,11 +56,15 @@ body {
 
 /* In your global CSS file */
 .hide-scrollbar::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
+  display: none;
+  /* Chrome, Safari */
 }
+
 .hide-scrollbar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;     /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 @theme {
@@ -79,9 +83,9 @@ body {
   --color-green: var(--green);
   --color-yellow: var(--yellow);
   --color-red: var(--red);
-  --color-black900: var(--black-900);
-  --color-black600: var(--black-600);
-  --color-black100: var(--black-100);
+  --color-black-900: var(--black-900);
+  --color-black-600: var(--black-600);
+  --color-black-100: var(--black-100);
 
   /*---Neutral---*/
   --color-n2: var(--neutrals-2);

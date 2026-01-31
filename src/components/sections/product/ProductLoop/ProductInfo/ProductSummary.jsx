@@ -20,7 +20,7 @@ const ProductSummary = () => {
             </p>
 
             <div className='flex items-center gap-3'>
-                <h6 className='text-black900'>{price}</h6>
+                <h6 className='text-black-900'>{price}</h6>
                 <p className='h7 text-n4100 line-through'>{formatPrice(400)}</p>
             </div>
         </div>
