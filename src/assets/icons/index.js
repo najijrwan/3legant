@@ -23,3 +23,4 @@ export { ReactComponent as Lock01 } from './lock-01.svg';
 export { ReactComponent as Call } from './call.svg';
 export { ReactComponent as Email } from './email.svg';
 export { ReactComponent as ArrowRightLong } from './arrow-right-long.svg';
+export { ReactComponent as Filter } from './filter.svg';

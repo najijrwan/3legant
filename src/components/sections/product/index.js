@@ -2,8 +2,8 @@ export { default as ProductLayout } from './ProductLayout/ProductLayout';
 
 export * from './context/ProductContext';
 
-export { default as ProductBreadcrumbs } from './ProductBreadcrumbs';
 //TODO: ask about exporting and importing
+export { default as ProductBreadcrumbs } from './ProductLoop/ProductBreadcrumbs';
 export { default as ProductLoop } from './ProductLoop/ProductLoop';
 export { default as ProductMedia } from './ProductLoop/ProductMedia/ProductMedia';
 export { default as ProductInfo } from './ProductLoop/ProductInfo/ProductInfo';
