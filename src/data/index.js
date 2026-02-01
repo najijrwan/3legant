@@ -7,3 +7,5 @@ export { NAV_ITEMS } from './navigation/navItems';
 
 export { PRODUCT_ADDITONAL_INFO } from './product/productAddtionalInfo';
 export { PRODUCT_REVIEWS } from './product/productReviews';
+
+export { CATEGORIES } from './product/categories';
