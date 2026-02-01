@@ -15,7 +15,7 @@ const DropdownBtn = ({ items }) => {
                     <Icon
                         name="ChevronDown"
                         spanClassName="size-6"
-                        iconClassName="w-[5.5px] h-[9px] text-n4100"
+                        iconClassName="w-[11px] h-[18px] text-n4100"
                     />
                 </span>
             </button>
