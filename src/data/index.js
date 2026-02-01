@@ -10,3 +10,5 @@ export { PRODUCT_REVIEWS } from './product/productReviews';
 
 export { CATEGORIES } from './product/categories';
 export { PRICES } from './product/prices';
+
+export { PRODUCTS_GRID } from './product/productsGrid';
