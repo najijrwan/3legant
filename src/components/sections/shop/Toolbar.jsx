@@ -1,4 +1,4 @@
-import { Filters } from '@shop';
+import { Filters, ViewportSelectors } from '@shop';
 
 const Toolbar = () => {
     return (
@@ -7,6 +7,8 @@ const Toolbar = () => {
                 p-8 flex flex-col gap-8'
         >
             <Filters />
+
+            <ViewportSelectors />
         </div>
     )
 }
