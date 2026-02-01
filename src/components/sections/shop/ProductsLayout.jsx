@@ -1,5 +1,5 @@
 import { useBreakpoint } from '@hooks';
-import { Toolbar } from '@shop';
+import { Toolbar, ProductsGrid } from '@shop';
 
 export const ProductsLayout = () => {
     const { isMobile } = useBreakpoint();
@@ -10,6 +10,8 @@ export const ProductsLayout = () => {
             flex flex-col gap-8"
         >
             <Toolbar />
+
+            <ProductsGrid />
         </section>
     )
 }

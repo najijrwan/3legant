@@ -4,6 +4,7 @@ export { default as CartWishlistBtn } from './buttons/CartWishlistBtn';
 export { default as MoreActionBtn } from './buttons/MoreActionBtn';
 export { default as ProductTabBtn } from './buttons/ProductTabBtn';
 export { default as DropdownBtn } from './buttons/DropdownBtn';
+export { default as ViewMore } from './buttons/ViewMore';
 
 // Media Carousel Components
 export { default as MediaCarousel } from './carousel/media/MediaCarousel';

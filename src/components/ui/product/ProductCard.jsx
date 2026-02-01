@@ -1,7 +1,7 @@
 import { Icon, Badges, AddToCartBtn, ProductRating } from '@ui';
 import { formatPrice, finalPrice } from '@utils';
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, className }) => {
     const { rating } = product;
     const price = formatPrice(finalPrice(product.price, product.discountPercentage));
 

@@ -6,3 +6,4 @@ export { default as Filter } from './Filter';
 export { default as ViewportSelectors } from './ViewportSelectors';
 export { default as SortBtn } from './SortBtn';
 export { default as Selectors } from './Selectors';
+export { default as ProductsGrid } from './ProductsGrid';
