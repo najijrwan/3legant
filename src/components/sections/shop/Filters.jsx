@@ -1,18 +1,18 @@
-import { FilterType } from '@shop';
-import { CATEGORIES } from '@data';
+import { Filter } from '@shop';
+import { CATEGORIES, PRICES } from '@data';
 
 const Filters = () => {
     return (
         <div className='flex flex-col gap-6'>
-            <FilterType
+            <Filter
                 type="CATEGORIES"
                 items={CATEGORIES}
             />
 
-            {/* <FilterType
+            <Filter
                 type="PRICE"
                 items={PRICES}
-            /> */}
+            />
         </div>
     )
 }

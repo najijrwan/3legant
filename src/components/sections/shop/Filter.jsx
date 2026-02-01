@@ -1,6 +1,6 @@
 import { DropdownBtn } from '@ui';
 
-const FilterType = ({ type, items }) => {
+const Filter = ({ type, items }) => {
     return (
         <div
             className='flex flex-col gap-2'
@@ -14,4 +14,4 @@ const FilterType = ({ type, items }) => {
     )
 }
 
-export default FilterType;
+export default Filter;

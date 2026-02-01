@@ -19,7 +19,12 @@ const DropdownBtn = ({ items }) => {
                     />
                 </span>
             </button>
-            <div className='p-2 flex flex-col gap-2.5'>
+            <div
+                className='
+                p-2
+                flex flex-col gap-2.5
+                shadow-2'
+            >
                 {items.map((item, index) => (
                     <p
                         key={index}
