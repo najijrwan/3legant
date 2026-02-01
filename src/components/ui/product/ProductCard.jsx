@@ -7,12 +7,7 @@ const ProductCard = ({ product }) => {
 
     return (
         <>
-            <div
-                className="
-                    relative
-                    w-[231px] 2xl:w-[262px] h-[306px] 2xl:h-[349px]
-                    bg-n2100"
-            >
+            <div className={`relative bg-n2100 ${className}`}>
                 <img
                     src={product.image}
                     alt={`${product.image} image`}
