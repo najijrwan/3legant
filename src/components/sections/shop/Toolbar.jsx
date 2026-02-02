@@ -1,14 +1,14 @@
 import { Filters, ViewportSelectors } from '@shop';
 
-const Toolbar = () => {
+const Toolbar = ({ activeSelector, onClick }) => {
     return (
         <div
             className='
-                p-8 flex flex-col gap-8'
+                p-8 2xl:p-0 flex flex-col gap-8'
         >
             <Filters />
 
-            <ViewportSelectors />
+            <ViewportSelectors activeSelector={activeSelector} onClick={onClick} />
         </div>
     )
 }

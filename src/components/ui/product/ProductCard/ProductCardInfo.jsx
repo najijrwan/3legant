@@ -6,21 +6,15 @@ const ProductCardInfo = ({ product }) => {
 
     return (
         <div
-            className='w-full flex flex-col gap-1'
+            className='flex flex-col gap-1'
         >
             <ProductRating rating={product.rating} />
 
-            <p
-                className='
-                    w-full
-                    text-n7100 body-2-semi'
-            >
+            <p className='text-n7100 body-2-semi'>
                 {product.label}
             </p>
 
-            <p
-                className='w-fit flex items-center gap-3'
-            >
+            <p className='flex items-center gap-3'>
                 <span className='text-n7100 caption-1-semi'>
                     {price}
                 </span>

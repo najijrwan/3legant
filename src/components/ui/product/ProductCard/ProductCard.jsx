@@ -3,7 +3,7 @@ import { Badges, WishlistBtn, AddToCartBtn, ProductCardInfo } from '@ui';
 const ProductCard = ({ product, variant }) => {
     const VARIANTS = {
         sm: 'w-[152px] h-[203px]',
-        md: 'w[231px] 2xl:[262px] h-[308px] 2xl:h-[349px]',
+        md: 'w-[231px] 2xl:w-[262px] h-[308px] 2xl:h-[349px]',
     }
     return (
         <>

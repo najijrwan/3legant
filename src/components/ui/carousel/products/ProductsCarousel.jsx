@@ -24,6 +24,7 @@ const ProductsCarousel = ({ products, navMode, }) => {
                         >
                             <ProductCard
                                 product={product}
+                                variant='md'
                             />
                         </li>
                     ))}
