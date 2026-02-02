@@ -2,7 +2,7 @@ import { Icon } from '@ui';
 
 const DropdownBtn = ({ items }) => {
     return (
-        <div className='flex flex-col gap-2'>
+        <>
             <button
                 className='
                 relative
@@ -19,6 +19,7 @@ const DropdownBtn = ({ items }) => {
                     />
                 </span>
             </button>
+
             <div
                 className='
                 hidden p-2
@@ -34,7 +35,7 @@ const DropdownBtn = ({ items }) => {
                     </p>
                 ))}
             </div>
-        </div>
+        </>
     )
 }
 

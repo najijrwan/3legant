@@ -2,15 +2,15 @@ import { DropdownBtn } from '@ui';
 
 const Filter = ({ type, items }) => {
     return (
-        <div
-            className='flex flex-col gap-2'
-        >
-            <header className='text-n4100 body-2-semi'>{type}</header>
+        <>
+            <header className='text-n4100 body-2-semi' >
+                {type}
+            </header >
 
-            <DropdownBtn
-                items={items}
-            />
-        </div>
+            <div className='w-full 2xl:w-[262px] flex flex-col gap-2'>
+                <DropdownBtn items={items} />
+            </div>
+        </>
     )
 }
 
