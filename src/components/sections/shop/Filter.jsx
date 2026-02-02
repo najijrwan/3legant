@@ -1,4 +1,4 @@
-import { DropdownBtn } from '@ui';
+import { DropdownBtn, DropdownOptions } from '@ui';
 
 const Filter = ({ type, items }) => {
     return (
@@ -9,6 +9,8 @@ const Filter = ({ type, items }) => {
 
             <div className='relative w-full 2xl:w-[262px] flex flex-col gap-2'>
                 <DropdownBtn items={items} />
+
+                <DropdownOptions items={items} />
             </div>
         </>
     )
