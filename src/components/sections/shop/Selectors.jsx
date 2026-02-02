@@ -27,17 +27,17 @@ const Selectors = ({ activeSelector, onClick }) => {
                     className={`
                     w-[46px] h-[40px]
                     flex items-center justify-center
-                    border transition-colors
+                    border border-n3100 transition-colors
                     ${activeSelector === item
-                            ? 'border-black-900 bg-black-900'
-                            : 'border-n3100 bg-white hover:bg-n1100'
+                            ? 'border-black-900 bg-n2100'
+                            : ''
                         }`}
                 >
                     <Icon
                         name={item}
                         spanClassName='size-6'
                         iconClassName={`size-[18px] ${activeSelector === item
-                                ? 'text-white'
+                                ? 'text-n7100'
                                 : 'text-n4100'
                             }`}
                     />

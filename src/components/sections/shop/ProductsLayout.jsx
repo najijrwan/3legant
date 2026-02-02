@@ -18,7 +18,7 @@ export const ProductsLayout = () => {
             <div
                 className='
                 p-8 2xl:p-0
-                flex flex-col @sm:flex-row gap-8 @sm:justify-between'
+                flex flex-col @sm:flex-row 2xl:items-end @sm:justify-between gap-8'
             >
                 <Toolbar
                     activeSelector={activeSelector}
