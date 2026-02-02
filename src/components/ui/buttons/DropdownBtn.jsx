@@ -5,7 +5,6 @@ const DropdownBtn = ({ items }) => {
         <>
             <button
                 className='
-                relative
                 p-2 pl-4
                 flex items-center justify-between
                 border-2 border-n4100 rounded-lg'>
@@ -22,9 +21,10 @@ const DropdownBtn = ({ items }) => {
 
             <div
                 className='
-                hidden p-2
+                2xl:absolute -bottom-2 2xl:translate-y-full z-20
+                hidden 2xl:w-[262px] p-2
                 flex flex-col gap-2.5
-                shadow-2'
+                bg-white border-[1.5px] border-n2100 rounded-xl shadow-2'
             >
                 {items.map((item, index) => (
                     <p

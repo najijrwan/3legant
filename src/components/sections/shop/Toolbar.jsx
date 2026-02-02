@@ -3,7 +3,11 @@ import { Filters, ViewportSelectors } from '@shop';
 const Toolbar = ({ activeSelector, onClick }) => {
     return (
         <>
-            <div className='flex flex-col gap-2'>
+            {activeSelector === 'Grid3x3' && (
+                <p className='text-n7100 body-1-semi'>Living Room</p>
+            )}
+
+            <div className='2xl:hidden flex flex-col 2xl:flex-row gap-6'>
                 <Filters />
             </div>
 

@@ -7,7 +7,7 @@ const Filter = ({ type, items }) => {
                 {type}
             </header >
 
-            <div className='w-full 2xl:w-[262px] flex flex-col gap-2'>
+            <div className='relative w-full 2xl:w-[262px] flex flex-col gap-2'>
                 <DropdownBtn items={items} />
             </div>
         </>

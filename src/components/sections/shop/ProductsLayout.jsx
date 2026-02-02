@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useBreakpoint } from '@hooks';
-import { Toolbar, ProductsGrid } from '@shop';
+import { Toolbar, Filters, ProductsGrid } from '@shop';
 
 export const ProductsLayout = () => {
     const { isMobile } = useBreakpoint();
@@ -12,21 +12,30 @@ export const ProductsLayout = () => {
             className={`
             @container
             pb-20 2xl:pb-25 2xl:px-40 2xl:pt-15
-            flex flex-col gap-8 2xl:gap-10
-            ${activeSelector3x3 ? 'flex-row gap-6' : ''}`}
+            ${activeSelector3x3 ? 'flex flex-row gap-6' : ''}`}
         >
-            <div
-                className='
-                p-8 2xl:p-0
-                flex flex-col @sm:flex-row 2xl:items-end @sm:justify-between gap-8'
-            >
-                <Toolbar
-                    activeSelector={activeSelector}
-                    onClick={(selector) => setActiveSelector(selector)}
-                />
-            </div>
+            {activeSelector3x3 && (
+                <div
+                    className='flex flex-col gap-8'
+                >
+                    <Filters />
+                </div>
+            )}
+            
+            <div className='flex flex-col gap-8 2xl:gap-10'>
+                <div
+                    className='
+                    p-8 2xl:p-0
+                    flex flex-col @sm:flex-row 2xl:items-start @sm:justify-between gap-8'
+                >
+                    <Toolbar
+                        activeSelector={activeSelector}
+                        onClick={(selector) => setActiveSelector(selector)}
+                    />
+                </div>
 
-            <ProductsGrid activeSelector={activeSelector} />
+                <ProductsGrid activeSelector={activeSelector} />
+            </div>
         </section>
     )
 }
