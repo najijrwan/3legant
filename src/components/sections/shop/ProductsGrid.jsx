@@ -7,7 +7,7 @@ const ProductsGrid = () => {
             className='flex flex-col items-center gap-8'
         >
             <div
-                className='max-w-max grid grid-rows-4 grid-cols-2 gap-x-2 gap-y-4 2xl:grid-rows-3 2xl:grid-cols-3 2xl:gap-6'
+                className='w-[311px] 2xl:w-full grid grid-rows-4 grid-cols-2 gap-x-2 gap-y-4 2xl:grid-rows-3 2xl:grid-cols-3 2xl:gap-6'
             >
                 {PRODUCTS_GRID.map((product, index) => (
                     <div
@@ -16,7 +16,7 @@ const ProductsGrid = () => {
                     >
                         <ProductCard
                             product={product}
-                            className=''
+                            variant='md'
                         />
                     </div>
                 ))}

@@ -1,13 +1,17 @@
 import { Badges, WishlistBtn, AddToCartBtn, ProductCardInfo } from '@ui';
 
-const ProductCard = ({ product, className = '' }) => {
+const ProductCard = ({ product, variant }) => {
+    const VARIANTS = {
+        sm: 'w-[152px] h-[203px]',
+        md: 'w[231px] 2xl:[262px] h-[308px] 2xl:h-[349px]',
+    }
     return (
         <>
             <div
                 className={`
                 relative
-                bg-n2100 h-[203px] 2xl:h-[349px]
-                ${className}`}
+                bg-n2100
+                ${VARIANTS[variant]}`}
             >
                 <img
                     src={product.image}
