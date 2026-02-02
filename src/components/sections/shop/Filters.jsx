@@ -3,7 +3,7 @@ import { CATEGORIES, PRICES } from '@data';
 
 const Filters = () => {
     return (
-        <div className='flex flex-col gap-6'>
+        <div className='flex flex-col 2xl:flex-row gap-6'>
             <Filter
                 type="CATEGORIES"
                 items={CATEGORIES}

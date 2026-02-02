@@ -21,7 +21,7 @@ const DropdownBtn = ({ items }) => {
             </button>
             <div
                 className='
-                p-2
+                hidden p-2
                 flex flex-col gap-2.5
                 shadow-2'
             >

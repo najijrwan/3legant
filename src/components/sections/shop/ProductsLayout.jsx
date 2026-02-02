@@ -4,14 +4,14 @@ import { Toolbar, ProductsGrid } from '@shop';
 
 export const ProductsLayout = () => {
     const { isMobile } = useBreakpoint();
-    const [activeSelector, setActiveSelector] = useState('Grid3x3');
+    const [activeSelector, setActiveSelector] = useState(isMobile ? 'Grid4x2' : 'Grid3x3');
 
 
     return (
         <section
             className="
             pb-20 2xl:pb-25 2xl:px-40 2xl:pt-15
-            flex flex-col 2xl:flex-row gap-8 2xl:gap-6"
+            flex flex-col gap-8 "
         >
             <Toolbar
                 activeSelector={activeSelector}
