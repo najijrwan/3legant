@@ -1,13 +1,18 @@
 import { Icon, Badges, AddToCartBtn, ProductRating } from '@ui';
 import { formatPrice, finalPrice } from '@utils';
 
-const ProductCard = ({ product, className }) => {
+const ProductCard = ({ product, className = '' }) => {
     const { rating } = product;
     const price = formatPrice(finalPrice(product.price, product.discountPercentage));
 
     return (
         <>
-            <div className={`relative bg-n2100 ${className}`}>
+            <div
+                className={`
+                relative
+                bg-n2100 h-[203px] 2xl:h-[349px]
+                ${className}`}
+            >
                 <img
                     src={product.image}
                     alt={`${product.image} image`}
@@ -17,7 +22,7 @@ const ProductCard = ({ product, className }) => {
                 <Badges
                     variant='medium'
                     discountPercentage={product.discountPercentage}
-                    containerClass='left-6 top-6'
+                    containerClass='left-4 top-4'
                 />
 
                 <button
@@ -39,8 +44,8 @@ const ProductCard = ({ product, className }) => {
                 <AddToCartBtn
                     className='
                     absolute right-1/2 translate-x-1/2 bottom-3.5 2xl:bottom-4 2xl:translate-y-1/2
-                    w-[203px] 2xl:w-[230px] px-6 py-2
-                    text-n1100 btn-s
+                    px-6 py-2
+                    text-n1100
                     opacity-100 2xl:opacity-0
                     group-hover:opacity-100 group-hover:translate-y-0
                     transition-all duration-400 east-out'
