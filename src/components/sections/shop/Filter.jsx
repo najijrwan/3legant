@@ -17,7 +17,7 @@ const Filter = ({ type, activeSelector3x3, items }) => {
 
                     <DropdownOptions
                         items={items}
-                        className='2xl:absolute 2xl:-bottom-2 2xl:translate-y-full 2xl:z-20'
+                        className='2xl:hidden 2xl:absolute 2xl:-bottom-2 2xl:translate-y-full 2xl:z-20'
                     />
                 </div>
             )}

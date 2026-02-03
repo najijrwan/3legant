@@ -28,23 +28,22 @@ export const ProductsLayout = () => {
 
                         <p className='text-black-900 body-1-semi'>Filter</p>
                     </header>
-                    
+
                     <Filters activeSelector3x3={activeSelector3x3} />
                 </div>
             )}
 
             <div className='flex flex-col gap-8 2xl:gap-10'>
                 <div
-                    className='
+                    className={`
                     p-8 2xl:p-0
-                    flex flex-col @sm:flex-row 2xl:items-start @sm:justify-between gap-8'
+                    flex flex-col @sm:flex-row 
+                    ${activeSelector3x3 ? '2xl:items-start' : 'items-end'}
+                    @sm:justify-between gap-8`}
                 >
-                    {activeSelector3x3 && (
-                        <p className='text-n7100 body-1-semi'>Living Room</p>
-                    )}
-
                     <Toolbar
                         activeSelector={activeSelector}
+                        activeSelector3x3={activeSelector3x3}
                         onClick={(selector) => setActiveSelector(selector)}
                     />
                 </div>
