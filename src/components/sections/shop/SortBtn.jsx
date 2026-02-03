@@ -11,7 +11,7 @@ const SortBtn = () => {
             <Icon
                 name='ChevronDown'
                 spanClassName='size-5'
-                iconClassName='w-[10px] h-[5px]'
+                iconClassName='w-[12px] h-[7px]'
             />
         </button>
     )

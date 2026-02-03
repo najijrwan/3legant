@@ -16,7 +16,7 @@ const PageHeader = ({ title }) => {
                         <Icon
                             name='ChevronRight'
                             spanClassName='size-3'
-                            iconClassName='w-[3px] h-[6px] text-black-600'
+                            iconClassName='w-[4px] h-[7px] text-black-600'
                         />
                     </Link>
 
