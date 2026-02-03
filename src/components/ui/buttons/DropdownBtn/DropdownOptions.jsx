@@ -5,7 +5,7 @@ const DropdownOptions = ({ items }) => {
         <div
             className='
             2xl:absolute -bottom-2 2xl:translate-y-full z-20
-            hidden 2xl:w-[262px] p-2
+            2xl:w-[262px] p-2
             flex flex-col gap-2.5
             bg-white border-[1.5px] border-n2100 rounded-xl shadow-2'
         >
