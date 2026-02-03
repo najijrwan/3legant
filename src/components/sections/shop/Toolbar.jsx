@@ -8,7 +8,7 @@ const Toolbar = ({ activeSelector, activeSelector3x3, onClick }) => {
             )}
 
             {!activeSelector3x3 && (
-                <div className='flex flex-col 2xl:flex-row gap-6'>
+                <div className='w-full flex flex-col 2xl:flex-row gap-6'>
                     <Filters activeSelector3x3={activeSelector3x3} />
                 </div>
             )}

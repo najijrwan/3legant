@@ -37,7 +37,7 @@ export const ProductsLayout = () => {
                 <div
                     className={`
                     p-8 2xl:p-0
-                    flex flex-col @sm:flex-row 
+                    flex flex-col @sm:flex-row
                     ${activeSelector3x3 ? '2xl:items-start' : 'items-end'}
                     @sm:justify-between gap-8`}
                 >
