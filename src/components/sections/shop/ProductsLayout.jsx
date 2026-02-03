@@ -18,16 +18,20 @@ export const ProductsLayout = () => {
                 <div
                     className='flex flex-col gap-8'
                 >
-                    <Filters />
+                    <Filters activeSelector3x3={activeSelector3x3} />
                 </div>
             )}
-            
+
             <div className='flex flex-col gap-8 2xl:gap-10'>
                 <div
                     className='
                     p-8 2xl:p-0
                     flex flex-col @sm:flex-row 2xl:items-start @sm:justify-between gap-8'
                 >
+                    {activeSelector3x3 && (
+                        <p className='text-n7100 body-1-semi'>Living Room</p>
+                    )}
+
                     <Toolbar
                         activeSelector={activeSelector}
                         onClick={(selector) => setActiveSelector(selector)}
