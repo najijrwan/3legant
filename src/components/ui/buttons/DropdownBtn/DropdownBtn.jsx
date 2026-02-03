@@ -5,7 +5,7 @@ const DropdownBtn = ({ onClick }) => {
         <button
             onClick={onClick}
             className='
-            p-2 pl-4
+            w-full p-2 pl-4
             flex items-center justify-between
             border-2 border-n4100 rounded-lg'>
             <p className='text-n7100 body-2-semi'>Living Room</p>

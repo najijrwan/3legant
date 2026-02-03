@@ -7,7 +7,7 @@ const SortBtn = () => {
             flex items-center gap-1
             text-black-900 body-2-semi'
         >
-            <span>Sort by</span>
+            <span className=''>Sort by</span>
             <Icon
                 name='ChevronDown'
                 spanClassName='size-5'
