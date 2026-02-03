@@ -1,8 +1,8 @@
-const DropdownOptions = ({ items, variant }) => {
+const DropdownOptions = ({ items, variant, isOpen }) => {
     const VARIANTS = {
         default: {
             containerClass: `
-                2xl:hidden 2xl:absolute 2xl:-bottom-2 2xl:translate-y-full 2xl:z-20
+                ${isOpen ? 'block' : 'hidden'} 2xl:absolute 2xl:-bottom-2 2xl:translate-y-full 2xl:z-20
                 p-2 gap-2.5
                 bg-white border-[1.5px] border-n2100 rounded-xl shadow-2`,
             buttonClass: `

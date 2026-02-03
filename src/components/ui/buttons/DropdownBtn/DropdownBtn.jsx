@@ -1,8 +1,9 @@
 import { Icon } from '@ui';
 
-const DropdownBtn = () => {
+const DropdownBtn = ({ onClick }) => {
     return (
         <button
+            onClick={onClick}
             className='
             p-2 pl-4
             flex items-center justify-between
