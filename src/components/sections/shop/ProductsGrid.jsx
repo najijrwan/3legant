@@ -29,7 +29,7 @@ const ProductsGrid = ({ activeSelector = 'Grid3x3' }) => {
                 {PRODUCTS_GRID.map((product, index) => (
                     <div
                         key={index}
-                        className='flex flex-col gap-3'
+                        className='flex flex-col gap-3 group cursor-pointer'
                     >
                         <ProductCard
                             product={product}
