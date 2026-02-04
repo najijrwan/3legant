@@ -7,12 +7,7 @@ const ProductCard = ({ product, variant }) => {
     }
     return (
         <>
-            <div
-                className={`
-                relative
-                bg-n2100
-                ${VARIANTS[variant]}`}
-            >
+            <div className={`relative bg-n2100 ${VARIANTS[variant]}`}>
                 <img
                     src={product.image}
                     alt={`${product.image} image`}
@@ -25,7 +20,7 @@ const ProductCard = ({ product, variant }) => {
                     containerClass='left-4 top-4'
                 />
 
-                <WishlistBtn />
+                <WishlistBtn variant={variant} />
 
                 <AddToCartBtn
                     className={`

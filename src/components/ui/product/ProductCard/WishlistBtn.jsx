@@ -1,10 +1,10 @@
 import { Icon } from '@ui';
 
-const WishlistBtn = () => {
+const WishlistBtn = ({ variant }) => {
     return (
         <button
             className={`
-            absolute top-4 right-3 2xl:right-4 2xl:-translate-y-1/2
+            absolute top-4 ${variant === 'sm' ? 'right-3' : 'right-4'} 2xl:-translate-y-1/2
             size-8 rounded-full
             flex items-center justify-center
             bg-white opacity-100 2xl:opacity-0
