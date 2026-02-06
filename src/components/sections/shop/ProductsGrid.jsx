@@ -1,7 +1,10 @@
-import { ProductCard, ViewMore } from '@ui';
+import { ProductCard, ProductCardHorizontal, ViewMore } from '@ui';
 import { PRODUCTS_GRID } from '@data';
+import { useBreakpoint } from '@hooks';
 
 const ProductsGrid = ({ activeSelector = 'Grid3x3' }) => {
+    const { isMobile } = useBreakpoint();
+
     const getGridClasses = () => {
         switch (activeSelector) {
             case 'Grid3x3':
@@ -19,6 +22,8 @@ const ProductsGrid = ({ activeSelector = 'Grid3x3' }) => {
 
     const VARIANT = activeSelector === 'Grid4x2' ? 'sm' : 'md';
 
+    const test = activeSelector === 'Grid4x2' && !isMobile;
+
     return (
         <div
             className='flex flex-col items-center gap-8'
@@ -31,10 +36,14 @@ const ProductsGrid = ({ activeSelector = 'Grid3x3' }) => {
                         key={index}
                         className='flex flex-col gap-3 group cursor-pointer'
                     >
-                        <ProductCard
+                        {/* <ProductCard
                             product={product}
                             variant={VARIANT}
-                        />
+                        /> */}
+
+                        <div className='flex flex-col 2xl:flex-row gap-4 2xl:gap-0'>
+                            <ProductCardHorizontal product={product} />
+                        </div>
                     </div>
                 ))}
             </div>

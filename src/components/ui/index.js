@@ -29,6 +29,7 @@ export { default as Icon } from './primitives/Icon';
 export { default as Badges } from './product/Badges';
 export { default as ProductRating } from './product/ProductRating';
 export { default as ProductCard } from './product/ProductCard/ProductCard';
+export { default as ProductCardHorizontal } from './product/ProductCard/ProductCardHorizontal';
 export { default as WishlistBtn } from './product/ProductCard/WishlistBtn';
 export { default as ProductCardInfo } from './product/ProductCard/ProductCardInfo';
 

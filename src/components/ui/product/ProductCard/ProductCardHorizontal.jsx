@@ -1,4 +1,5 @@
-import { Icon, ProductRating } from '@ui';
+import { Icon, Badges, AddToCartBtn, ProductRating } from '@ui';
+import { formatPrice, finalPrice } from '@utils';
 
 const ProductCardHorizontal = ({ product }) => {
     const price = formatPrice(finalPrice(product.price, product.discountPercentage));
@@ -51,10 +52,30 @@ const ProductCardHorizontal = ({ product }) => {
                                 {formatPrice(product.price)}
                             </span>
                         </p>
-                        {/* TODO: continue from here */}
+
+                        <p className='text-n4100 caption-2 2xl:caption-1'>
+                            Super-soft cushion cover in off-white with a tactile pattern that enhances the different tones in the pile and base.
+                        </p>
+                    </div>
+
+                    <div>
+                        <AddToCartBtn
+                            className='w-full px-6 text-n1100'
+                        />
+                        <button className='hidden 2xl:block py-1 flex items-center gap-1 text-n7100'>
+                            <Icon
+                                name='Heart'
+                                spanClassName='size-5'
+                                iconClassName='size-full'
+                            />
+
+                            <span className='btn-xs'>Wishlist</span>
+                        </button>
                     </div>
                 </div>
             </div >
         </>
     )
 }
+
+export default ProductCardHorizontal;
