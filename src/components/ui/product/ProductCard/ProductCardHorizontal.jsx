@@ -5,7 +5,7 @@ const ProductCardHorizontal = ({ product }) => {
     const price = formatPrice(finalPrice(product.price, product.discountPercentage));
     return (
         <>
-            <div className="relative bg-n2100 h-[416px] 2xl:h-[349px]">
+            <div className="relative bg-n2100 w-full 2xl:w-[265px] h-[416px] 2xl:h-[349px]">
                 <img
                     src={product.image}
                     alt=""
@@ -19,12 +19,14 @@ const ProductCardHorizontal = ({ product }) => {
                 />
             </div>
 
-            <div className="p-0 2xl:p-6 flex flex-col gap-4 2xl:gap-6">
+            <div className="
+                w-full 2xl:w-[282px] p-0 2xl:p-6 
+                flex flex-col items-start gap-4 2xl:gap-6">
                 <div className='flex flex-col gap-2 2xl:gap-4'>
                     <ProductRating rating={product.rating} />
 
                     <div className="flex flex-col gap-1">
-                        <div className="w-full flex items-center gap-1">
+                        <div className="flex items-center gap-1">
                             <p className="text-n7100 body-2-semi">
                                 {product.label}
                             </p>
@@ -53,16 +55,21 @@ const ProductCardHorizontal = ({ product }) => {
                             </span>
                         </p>
 
-                        <p className='text-n4100 caption-2 2xl:caption-1'>
+                        <p className='w-full 2xl:w-[230px] text-n4100 caption-2 2xl:caption-1'>
                             Super-soft cushion cover in off-white with a tactile pattern that enhances the different tones in the pile and base.
                         </p>
                     </div>
 
-                    <div>
+                    <div className='flex flex-col items-center gap-2'>
                         <AddToCartBtn
-                            className='w-full px-6 text-n1100'
+                            className='
+                            w-full 2xl:w-[230px] h-10 2xl:h-11.5 px-6 py-2 
+                            text-n1100 btn-xs 2xl:btn-s'
                         />
-                        <button className='hidden 2xl:block py-1 flex items-center gap-1 text-n7100'>
+                        <button className='
+                            py-1 
+                            hidden 2xl:flex flex-row items-center gap-1 text-n7100'
+                        >
                             <Icon
                                 name='Heart'
                                 spanClassName='size-5'
