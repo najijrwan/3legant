@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useBreakpoint } from '@hooks';
 import { Icon } from '@ui';
-import { Toolbar, Filters, ProductsGrid } from '@shop';
+import { Toolbar, FilterItems, ProductsGrid } from '@shop';
 
-export const ProductsLayout = () => {
+export const ShopLayout = () => {
     const { isMobile } = useBreakpoint();
     const [activeSelector, setActiveSelector] = useState(isMobile ? 'Grid4x2' : 'Grid3x3');
 
@@ -22,15 +22,15 @@ export const ProductsLayout = () => {
                 >
                     <header className='flex items-center gap-2'>
                         <Icon
-                            name='Filter'
+                            name='FilterItem'
                             spanClassName='size-6'
                             iconClassName='w-[18px] h-[16px] text-n7100'
                         />
 
-                        <p className='text-black-900 body-1-semi'>Filter</p>
+                        <p className='text-black-900 body-1-semi'>FilterItem</p>
                     </header>
 
-                    <Filters activeSelector3x3={activeSelector3x3} />
+                    <FilterItems activeSelector3x3={activeSelector3x3} />
                 </div>
             )}
 
@@ -55,4 +55,4 @@ export const ProductsLayout = () => {
     )
 }
 
-export default ProductsLayout;
+export default ShopLayout;

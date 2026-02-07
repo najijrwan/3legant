@@ -57,7 +57,8 @@ const ProductCardHorizontal = ({ product }) => {
                         </p>
 
                         <p className='w-full 2xl:w-[230px] text-n4100 caption-2 2xl:caption-1'>
-                            Super-soft cushion cover in off-white with a tactile pattern that enhances the different tones in the pile and base.
+                            Super-soft cushion cover in off-white with a tactile pattern that 
+                            enhances the different tones in the pile and base.
                         </p>
                     </div>
 

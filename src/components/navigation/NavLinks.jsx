@@ -20,7 +20,7 @@ const NavLinks = ({
   return (
     <ul className={ul}>
       {items
-        .filter(item => !exclude.includes(item.label))
+        .FilterItem(item => !exclude.includes(item.label))
         .map(item => (
           <li key={item.label} className={li}>
             <div className={`flex justify-between ${row}`}>

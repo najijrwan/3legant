@@ -1,10 +1,10 @@
-import { PageHeader, ProductsLayout } from '@shop';
+import { PageHeader, ShopLayout } from '@shop';
 
 const ShopPage = () => {
     return (
         <>
             <PageHeader title="Shop Page" />
-            <ProductsLayout />
+            <ShopLayout />
         </>
     )
 }

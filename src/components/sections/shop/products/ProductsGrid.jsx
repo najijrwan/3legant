@@ -1,6 +1,7 @@
+import { useState } from 'react';
+import { useBreakpoint } from '@hooks';
 import { ProductCard, ProductCardHorizontal, ViewMore } from '@ui';
 import { PRODUCTS_GRID } from '@data';
-import { useBreakpoint } from '@hooks';
 
 const ProductsGrid = ({ activeSelector = 'Grid3x3' }) => {
     const { isMobile } = useBreakpoint();
@@ -17,7 +18,7 @@ const ProductsGrid = ({ activeSelector = 'Grid3x3' }) => {
                 return `grid-rows-4 grid-cols-1`;
             default:
                 return `grid-rows-3 grid-cols-3`;
-        }       
+        }
     };
 
     const VARIANT = activeSelector === 'Grid4x2' ? 'sm' : 'md';

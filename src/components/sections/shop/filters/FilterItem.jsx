@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { DropdownBtn, DropdownOptions } from '@ui';
 
-const Filter = ({ type, activeSelector3x3, items }) => {
+const FilterItem = ({ type, activeSelector3x3, items }) => {
     const [isOpen, setIsOpen] = useState(false);
     const handleClick = () => {
         setIsOpen(prev => !prev);
@@ -31,4 +31,4 @@ const Filter = ({ type, activeSelector3x3, items }) => {
     )
 }
 
-export default Filter;
+export default FilterItem;

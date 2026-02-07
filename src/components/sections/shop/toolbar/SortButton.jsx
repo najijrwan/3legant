@@ -1,6 +1,6 @@
 import { Icon } from '@ui';
 
-const SortBtn = () => {
+const SortButton = () => {
     return (
         <button
             className='
@@ -17,4 +17,4 @@ const SortBtn = () => {
     )
 }
 
-export default SortBtn;
+export default SortButton;

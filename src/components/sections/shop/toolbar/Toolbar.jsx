@@ -1,4 +1,4 @@
-import { Filters, ViewportSelectors } from '@shop';
+import { FilterItems, ViewSelectors } from '@shop';
 
 const Toolbar = ({ activeSelector, activeSelector3x3, onClick }) => {
     return (
@@ -9,14 +9,14 @@ const Toolbar = ({ activeSelector, activeSelector3x3, onClick }) => {
 
             {!activeSelector3x3 && (
                 <div className='w-full 2xl:w-fit flex flex-col 2xl:flex-row gap-6'>
-                    <Filters activeSelector3x3={activeSelector3x3} />
+                    <FilterItems activeSelector3x3={activeSelector3x3} />
                 </div>
             )}
 
             <div
                 className='w-full 2xl:w-auto py-2 2xl:py-0 flex items-center justify-between gap-8'
             >
-                <ViewportSelectors
+                <ViewSelectors
                     activeSelector={activeSelector}
                     onClick={onClick}
                 />
