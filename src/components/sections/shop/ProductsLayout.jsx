@@ -8,6 +8,7 @@ export const ProductsLayout = () => {
     const [activeSelector, setActiveSelector] = useState(isMobile ? 'Grid4x2' : 'Grid3x3');
 
     const activeSelector3x3 = activeSelector === 'Grid3x3';
+    console.log(isMobile && activeSelector === 'Grid4x1');
     return (
         <section
             className={`
@@ -33,7 +34,7 @@ export const ProductsLayout = () => {
                 </div>
             )}
 
-            <div className='flex flex-col gap-8 2xl:gap-10'>
+            <div className={`flex flex-col 2xl:gap-10 ${(isMobile && activeSelector) === 'Grid4x1' ? 'gap-10' : 'gap-8'}`}>
                 <div
                     className={`
                     p-8 2xl:p-0
