@@ -48,7 +48,7 @@ export const ProductsLayout = () => {
                     />
                 </div>
 
-                <ProductsGrid activeSelector={activeSelector} />
+                <ProductsGrid activeSelector3x3={activeSelector3x3} activeSelector={activeSelector} />
             </div>
         </section>
     )

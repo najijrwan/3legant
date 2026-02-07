@@ -21,12 +21,13 @@ const ProductCardHorizontal = ({ product }) => {
 
             <div className="
                 w-full 2xl:w-[282px] p-0 2xl:p-6 
-                flex flex-col items-start gap-4 2xl:gap-6">
+                flex flex-col items-start gap-4 2xl:gap-6"
+                >
                 <div className='flex flex-col gap-2 2xl:gap-4'>
                     <ProductRating rating={product.rating} />
 
                     <div className="flex flex-col gap-1">
-                        <div className="flex items-center gap-1">
+                        <div className="flex items-center justify-between gap-1">
                             <p className="text-n7100 body-2-semi">
                                 {product.label}
                             </p>

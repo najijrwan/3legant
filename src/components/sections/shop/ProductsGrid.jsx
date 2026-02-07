@@ -22,8 +22,6 @@ const ProductsGrid = ({ activeSelector = 'Grid3x3' }) => {
 
     const VARIANT = activeSelector === 'Grid4x2' ? 'sm' : 'md';
 
-    const test = activeSelector === 'Grid4x2' && !isMobile;
-
     return (
         <div
             className='flex flex-col items-center gap-8'
@@ -36,14 +34,18 @@ const ProductsGrid = ({ activeSelector = 'Grid3x3' }) => {
                         key={index}
                         className='flex flex-col gap-3 group cursor-pointer'
                     >
-                        {/* <ProductCard
-                            product={product}
-                            variant={VARIANT}
-                        /> */}
+                        {(activeSelector === 'Grid3x3' || activeSelector === 'Grid4x4' || activeSelector === 'Grid4x2') && (
+                            <ProductCard
+                                product={product}
+                                variant={VARIANT}
+                            />
+                        )}
 
-                        <div className='flex flex-col 2xl:flex-row gap-4 2xl:gap-0'>
-                            <ProductCardHorizontal product={product} />
-                        </div>
+                        {(activeSelector === 'Grid4x2' || activeSelector === 'Grid4x1') && (
+                            <div className='px-8 2xl:px-0 flex flex-col 2xl:flex-row gap-4 2xl:gap-0'>
+                                <ProductCardHorizontal product={product} />
+                            </div>
+                        )}
                     </div>
                 ))}
             </div>
