@@ -1,4 +1,4 @@
-const DropdownOptions = ({ items, variant, isOpen }) => {
+const DropdownOptions = ({ items, variant, checkBox = false, isOpen }) => {
     const VARIANTS = {
         default: {
             containerClass: `

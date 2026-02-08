@@ -17,6 +17,8 @@ export const FilterItem = ({ type, activeSelector3x3, items }) => {
                 <DropdownOptions
                     items={items}
                     variant='alt'
+                    checkBox
+                    isOpen={isOpen}
                 />
             )}
 
