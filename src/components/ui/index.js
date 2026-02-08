@@ -20,6 +20,8 @@ export { default as ProductsCarousel } from './carousel/products/ProductsCarouse
 export { default as ScrollbarNav } from './carousel/products/navigation/ScrollbarNav';
 // export { default as DotNav } from './carousel/products/navigation/DotNav';
 
+//Page Header
+export { default as PageHeader } from './pageHeader/PageHeader';
 
 // Primitive Components
 export { default as Brand } from './primitives/Brand';

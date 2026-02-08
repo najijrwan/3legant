@@ -1,4 +1,5 @@
-import { PageHeader, ShopLayout } from '@shop';
+import { PageHeader } from '@ui';
+import ShopLayout from '@shop';
 
 const ShopPage = () => {
     return (

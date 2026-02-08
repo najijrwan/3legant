@@ -1,5 +1,3 @@
-export { default as PageHeader } from './PageHeader';
-
 export { default as ShopLayout } from './layout/ShopLayout';
 
 export { default as Toolbar } from './toolbar/Toolbar';
