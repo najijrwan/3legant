@@ -10,7 +10,7 @@ export const ShopLayout = () => {
     const [activeSelector, setActiveSelector] = useState(isMobile ? 'Grid4x2' : 'Grid3x3');
 
     const activeSelector3x3 = activeSelector === 'Grid3x3';
-    console.log(isMobile && activeSelector === 'Grid4x1');
+
     return (
         <section
             className={`
@@ -24,7 +24,7 @@ export const ShopLayout = () => {
                 >
                     <header className='flex items-center gap-2'>
                         <Icon
-                            name='FilterItem'
+                            name='Filter'
                             spanClassName='size-6'
                             iconClassName='w-[18px] h-[16px] text-n7100'
                         />

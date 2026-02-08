@@ -1,5 +1,5 @@
 import { PageHeader } from '@ui';
-import { ShopLayout } from '@shop';
+import { ShopLayout } from '@shopLayout';
 
 const ShopPage = () => {
     return (

@@ -1,6 +1,6 @@
 import { SortButton, Selectors } from '@toolbar';
 
-const ViewSelectors = ({ activeSelector, onClick }) => {
+export const ViewSelectors = ({ activeSelector, onClick }) => {
     return (
         <>
 

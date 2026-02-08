@@ -31,7 +31,7 @@ export default defineConfig({
           '@product': path.resolve(__dirname, './src/components/sections/product'),
           '@shop': path.resolve(__dirname, './src/components/sections/shop'),
             '@filters': path.resolve(__dirname, './src/components/sections/shop/filters'),
-            '@layout': path.resolve(__dirname, './src/components/sections/shop/layout'),
+            '@shopLayout': path.resolve(__dirname, './src/components/sections/shop/layout'),
             '@products': path.resolve(__dirname, './src/components/sections/shop/products'),
             '@state': path.resolve(__dirname, './src/components/sections/shop/state'),
             '@toolbar': path.resolve(__dirname, './src/components/sections/shop/toolbar'),

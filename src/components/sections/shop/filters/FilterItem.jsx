@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { DropdownBtn, DropdownOptions } from '@ui';
 
-const FilterItem = ({ type, activeSelector3x3, items }) => {
+export const FilterItem = ({ type, activeSelector3x3, items }) => {
     const [isOpen, setIsOpen] = useState(false);
     const handleClick = () => {
         setIsOpen(prev => !prev);

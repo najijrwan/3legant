@@ -3,7 +3,7 @@ import { useBreakpoint } from '@hooks';
 import { ProductCard, ProductCardHorizontal, ViewMore } from '@ui';
 import { PRODUCTS_GRID } from '@data';
 
-const ProductsGrid = ({ activeSelector = 'Grid3x3' }) => {
+export const ProductsGrid = ({ activeSelector = 'Grid3x3' }) => {
     const { isMobile } = useBreakpoint();
 
     const getGridClasses = () => {

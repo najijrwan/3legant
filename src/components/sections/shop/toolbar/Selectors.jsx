@@ -1,7 +1,7 @@
 import { Icon } from '@ui';
 import { useBreakpoint } from '@hooks';
 
-const Selectors = ({ activeSelector, onClick }) => {
+export const Selectors = ({ activeSelector, onClick }) => {
     const { isMobile } = useBreakpoint();
 
     const base = ['Grid4x2', 'Grid4x1'];
