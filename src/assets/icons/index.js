@@ -24,7 +24,7 @@ export { ReactComponent as Call } from './call.svg';
 export { ReactComponent as Email } from './email.svg';
 export { ReactComponent as ArrowRightLong } from './arrow-right-long.svg';
 export { ReactComponent as ArrowDownSimple } from './arrow-down-simple.svg';
-export { ReactComponent as FilterItem } from './FilterItem.svg';
+export { ReactComponent as Filter } from './filter.svg';
 export { ReactComponent as Grid3x3 } from './3x3.svg';
 export { ReactComponent as Grid4x4 } from './4x4.svg';
 export { ReactComponent as Grid4x2 } from './4x2.svg';

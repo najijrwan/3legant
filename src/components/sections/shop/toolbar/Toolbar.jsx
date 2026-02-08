@@ -1,4 +1,5 @@
-import { FilterItems, ViewSelectors } from '@shop';
+import { FilterItems } from '@filters';
+import { ViewSelectors } from '@toolbar';
 
 const Toolbar = ({ activeSelector, activeSelector3x3, onClick }) => {
     return (

@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { useBreakpoint } from '@hooks';
 import { Icon } from '@ui';
-import { Toolbar, FilterItems, ProductsGrid } from '@shop';
+import { ProductsGrid } from '@shop';
+import { Toolbar } from '@toolbar';
+import { FilterItems } from '@filters';
 
 export const ShopLayout = () => {
     const { isMobile } = useBreakpoint();

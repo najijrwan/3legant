@@ -1,4 +1,4 @@
-import { SortButton, Selectors } from '@shop';
+import { SortButton, Selectors } from '@toolbar';
 
 const ViewSelectors = ({ activeSelector, onClick }) => {
     return (
