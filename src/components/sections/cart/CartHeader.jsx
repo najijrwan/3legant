@@ -5,10 +5,22 @@ const HEADER_ITEMS = ['Shopping cart', 'Checkout details', 'Order complete'];
 const CartHeader = () => {
     return (
         <header className="flex flex-col gap-10">
-            <div className="flex flex-col items-center gap-6">
-                <h4 className="text-brand 2xl:h3">Cart</h4>
+            <button
+                className="2xl:hidden ml-8 flex items-center gap-1"
+            >
+                <Icon
+                    name='ChevronLeft'
+                    spanClassName='size-3'
+                    iconClassName='w-[4px] h-[7px] text-black-600'
+                />
 
-                <div className="flex gap-8">
+                <span className='text-black-600 btn-sx'>Back</span>
+            </button>
+
+            <div className="flex flex-col 2xl:items-center gap-6 overflow-hidden">
+                <h4 className="text-brand 2xl:h3 mx-auto">Cart</h4>
+
+                <div className="w-max ml-8 flex gap-8">
                     {HEADER_ITEMS.map((item, i) => (
                         <div
                             key={i}
@@ -30,18 +42,6 @@ const CartHeader = () => {
                     ))}
                 </div>
             </div>
-
-            <button
-                className="2xl:hidden flex items-center gap-1"
-            >
-                <Icon
-                    name='ChevronLeft'
-                    spanClassName='size-3'
-                    iconClassName='w-[4px] h-[7px] text-black-600'
-                />
-
-                <span className='text-black-600 btn-sx'>Back</span>
-            </button>
         </header>
     )
 }
