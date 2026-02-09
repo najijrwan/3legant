@@ -1,3 +1,4 @@
+import { Icon } from '@ui';
 
 const HEADER_ITEMS = ['Shopping cart', 'Checkout details', 'Order complete'];
 
@@ -19,12 +20,12 @@ const CartHeader = () => {
                                 className="
                                 size-[42px]
                                 flex items-center justify-center
-                                bg-n2 rounded-full"
+                                text-n8 bg-n2 rounded-full"
                             >
                                 {i + 1}
                             </div>
 
-                            <p className=""></p>
+                            <p className="text-n2 body-2-semi">{item}</p>
                         </div>
                     ))}
                 </div>
@@ -44,3 +45,5 @@ const CartHeader = () => {
         </header>
     )
 }
+
+export default CartHeader;

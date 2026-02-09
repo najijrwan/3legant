@@ -25,6 +25,7 @@ export default defineConfig({
         '@layout': path.resolve(__dirname, './src/components/layout'),
         '@navigation': path.resolve(__dirname, './src/components/navigation'),
         '@sections': path.resolve(__dirname, './src/components/sections'),
+          '@cart': path.resolve(__dirname, './src/components/sections/cart'),
           '@auth': path.resolve(__dirname, './src/components/sections/auth'),
           '@home': path.resolve(__dirname, './src/components/sections/home'),
           '@newsletter': path.resolve(__dirname, './src/components/sections/newsletter'),

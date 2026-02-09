@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { asideClass } from '@navigation/FlyMenu.jsx';
 import { Icon } from '@ui';
 import { formatPrice } from '@utils';
@@ -143,9 +144,11 @@ const FlyoutCart = ({ isOpen, onClose }) => {
                         Checkout
                     </button>
 
-                    <button className="w-fit mx-auto text-[#121212] caption-1-semi underline underline-offset-6">
+                    <Link
+                        to='/cart'
+                        className="w-fit mx-auto text-[#121212] caption-1-semi underline underline-offset-6">
                         View Cart
-                    </button>
+                    </Link>
                 </div>
             </div>
         </aside>
