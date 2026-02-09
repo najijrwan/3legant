@@ -1,6 +1,5 @@
 import { NotificationBar, NavBar } from '@navigation';
-import Newsletter from '@newsletter/Newsletter';
-import Footer from '@footer/Footer';
+import { Newsletter, Footer } from '@footer';
 
 const MainLayout = ({ children, onMenuOpen, onCartOpen }) => {
   return (
