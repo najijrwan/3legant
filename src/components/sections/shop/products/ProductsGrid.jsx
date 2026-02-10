@@ -3,7 +3,7 @@ import { GRID_MODE } from '@shop/state';
 import { ProductCard, ProductCardHorizontal, ViewMore } from '@ui';
 import { PRODUCTS_GRID } from '@data';
 
-export const ProductsGrid = ({ activeSelector = GRID_MODE.GRID_3X3, isMobile }) => {
+export const ProductsGrid = ({ activeSelector, isMobile }) => {
 
     const {
         gridClasses,
@@ -17,7 +17,7 @@ export const ProductsGrid = ({ activeSelector = GRID_MODE.GRID_3X3, isMobile }) 
             className='flex flex-col items-center gap-8'
         >
             <div
-                className={`grid gap-6 ${gridClasses}`}
+                className={`grid ${gridClasses}`}
             >
                 {PRODUCTS_GRID.map((product, index) => (
                     <div
