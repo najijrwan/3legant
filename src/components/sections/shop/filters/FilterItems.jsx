@@ -1,4 +1,4 @@
-import { FilterItem } from '@filters';
+import { FilterItem } from '@shop/filters';
 import { CATEGORIES, PRICES } from '@data';
 
 export const FilterItems = ({ activeSelector3x3 }) => {

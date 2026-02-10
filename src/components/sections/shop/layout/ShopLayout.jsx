@@ -1,15 +1,16 @@
 import { useState } from 'react';
 import { useBreakpoint } from '@hooks';
 import { Icon } from '@ui';
+import { GRID_MODE } from '@shop/state'
 import { ProductsGrid } from '@shop';
-import { Toolbar } from '@toolbar';
-import { FilterItems } from '@filters';
+import { Toolbar } from '@shop/toolbar';
+import { FilterItems } from '@shop/filters';
 
 export const ShopLayout = () => {
     const { isMobile } = useBreakpoint();
-    const [activeSelector, setActiveSelector] = useState(isMobile ? 'Grid4x2' : 'Grid3x3');
+    const [activeSelector, setActiveSelector] = useState(isMobile ? GRID_MODE.GRID_4x2 : GRID_MODE.GRID_3x3);
 
-    const activeSelector3x3 = activeSelector === 'Grid3x3';
+    const activeSelector3x3 = GRID_MODE.GRID_3X3;
 
     return (
         <section
