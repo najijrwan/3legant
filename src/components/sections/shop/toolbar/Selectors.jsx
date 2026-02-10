@@ -1,50 +1,46 @@
 import { Icon } from '@ui';
 import { useBreakpoint } from '@hooks';
+import { GRID_MODE } from '@shop/state';
 
 export const Selectors = ({ activeSelector, onClick }) => {
     const { isMobile } = useBreakpoint();
 
-    const base = ['Grid4x2', 'Grid4x1'];
+    const base = [
+        { mode: GRID_MODE.GRID_4x2, icon: 'Grid4x2' },
+        { mode: GRID_MODE.GRID_4x1, icon: 'Grid4x1' },
+    ];
 
     const items = isMobile
         ? base
-        : ['Grid3x3', 'Grid4x4', ...base];
-
-    const handleSelectorClick = (selector) => {
-        if (onClick) {
-            onClick(selector);
-        }
-    };
+        : [
+            { mode: GRID_MODE.GRID_3x3, icon: 'Grid3x3' },
+            { mode: GRID_MODE.GRID_4x4, icon: 'Grid4x4' },
+            ...base,
+        ];
 
     return (
-        <div
-            className='flex border border-black-200'
-        >
-            {items.map((item, i) => (
+        <div className='flex border border-black-200'>
+            {items.map(({ mode, icon }) => (
                 <button
-                    key={i}
-                    onClick={() => handleSelectorClick(item)}
+                    key={icon}
+                    onClick={() => onClick?.(mode)}
                     className={`
-                    w-[46px] h-[40px]
-                    flex items-center justify-center
-                    border border-n3100 transition-colors
-                    ${activeSelector === item
-                            ? 'border-black-900 bg-n2100'
-                            : ''
-                        }`}
+                        w-[46px] h-[40px]
+                        flex items-center justify-center
+                        border border-n3100 transition-colors
+                        ${activeSelector === mode ? 'border-black-900 bg-n2100' : ''}`}
                 >
                     <Icon
-                        name={item}
+                        name={icon}
                         spanClassName='size-6'
-                        iconClassName={`size-[18px] ${activeSelector === item
-                                ? 'text-n7100'
-                                : 'text-n4100'
-                            }`}
+                        iconClassName={`
+                            size-[18px]
+                            ${activeSelector === mode ? 'text-n7100' : 'text-n4100'}`}
                     />
                 </button>
             ))}
         </div>
-    )
-}
+    );
+};
 
 export default Selectors;
