@@ -39,8 +39,8 @@ export const ShopLayout = () => {
 
             <div
                 className={`
-                flex flex-col 2xl:gap-10
-                ${isMobile && activeSelector === GRID_MODE.GRID_4X1 ? 'gap-10' : 'gap-8'}`}>
+                flex flex-col
+                ${isMobile && activeSelector === GRID_MODE.GRID_4X1 ? 'gap-10' : 'gap-8 2xl:gap-10'}`}>
                 <div
                     className={`
                     p-8 2xl:p-0

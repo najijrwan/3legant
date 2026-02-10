@@ -1,5 +1,4 @@
 import { useShopLayout } from '@shop/layout/useShopLayout';
-import { GRID_MODE } from '@shop/state';
 import { ProductCard, ProductCardHorizontal, ViewMore } from '@ui';
 import { PRODUCTS_GRID } from '@data';
 
