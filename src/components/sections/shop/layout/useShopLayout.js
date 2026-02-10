@@ -25,6 +25,7 @@ export const useShopLayout = ({ activeSelector, isMobile }) => {
     const isHorizontalCard =
         (activeSelector === GRID_MODE.GRID_4X2 && !isMobile) ||
         activeSelector === GRID_MODE.GRID_4X1
+    console.log(isHorizontalCard);
 
     const cardVariant =
         activeSelector === GRID_MODE.GRID_4X2 ? 'sm' : 'md'

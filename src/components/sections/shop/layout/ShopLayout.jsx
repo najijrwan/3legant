@@ -8,11 +8,9 @@ import { FilterItems } from '@shop/filters';
 
 export const ShopLayout = () => {
     const { isMobile } = useBreakpoint();
-    const [activeSelector, setActiveSelector] = useState(isMobile ? GRID_MODE.GRID_4x2 : GRID_MODE.GRID_3x3);
+    const [activeSelector, setActiveSelector] = useState(isMobile ? GRID_MODE.GRID_4X2 : GRID_MODE.GRID_3X3);
 
-    const activeSelector3x3 = activeSelector === GRID_MODE.GRID_3x3;
-
-    console.log(activeSelector3x3);
+    const activeSelector3x3 = activeSelector === GRID_MODE.GRID_3X3;
 
     return (
         <section
@@ -42,7 +40,7 @@ export const ShopLayout = () => {
             <div
                 className={`
                 flex flex-col 2xl:gap-10
-                ${isMobile && activeSelector === GRID_MODE.GRID_4x1 ? 'gap-10' : 'gap-8'}`}>
+                ${isMobile && activeSelector === GRID_MODE.GRID_4X1 ? 'gap-10' : 'gap-8'}`}>
                 <div
                     className={`
                     p-8 2xl:p-0

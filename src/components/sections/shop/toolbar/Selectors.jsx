@@ -6,15 +6,15 @@ export const Selectors = ({ activeSelector, onClick }) => {
     const { isMobile } = useBreakpoint();
 
     const base = [
-        { mode: GRID_MODE.GRID_4x2, icon: 'Grid4x2' },
+        { mode: GRID_MODE.GRID_4X2, icon: 'Grid4x2' },
         { mode: GRID_MODE.GRID_4x1, icon: 'Grid4x1' },
     ];
 
     const items = isMobile
         ? base
         : [
-            { mode: GRID_MODE.GRID_3x3, icon: 'Grid3x3' },
-            { mode: GRID_MODE.GRID_4x4, icon: 'Grid4x4' },
+            { mode: GRID_MODE.GRID_3X3, icon: 'Grid3x3' },
+            { mode: GRID_MODE.GRID_4X4, icon: 'Grid4x4' },
             ...base,
         ];
 
