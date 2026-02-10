@@ -4,7 +4,15 @@ import { GRID_MODE } from '@shop/state';
 import { ProductCard, ProductCardHorizontal, ViewMore } from '@ui';
 import { PRODUCTS_GRID } from '@data';
 
-export const ProductsGrid = ({ activeSelector = GRID_MODE.GRID_3X3}) => {
+export const ProductsGrid = ({ activeSelector = GRID_MODE.GRID_3X3 }) => {
+
+    const {
+        gridClasses,
+        renderVerticalCard,
+        renderHorizontalCard,
+        cardVariant,
+    } = useShopLayout({ activeSelector, isMobile })
+    
     const { isMobile } = useBreakpoint();
 
     const getGridClasses = () => {
