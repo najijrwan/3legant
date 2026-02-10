@@ -10,7 +10,9 @@ export const ShopLayout = () => {
     const { isMobile } = useBreakpoint();
     const [activeSelector, setActiveSelector] = useState(isMobile ? GRID_MODE.GRID_4x2 : GRID_MODE.GRID_3x3);
 
-    const activeSelector3x3 = GRID_MODE.GRID_3X3;
+    const activeSelector3x3 = activeSelector === GRID_MODE.GRID_3x3;
+
+    console.log(activeSelector3x3);
 
     return (
         <section
@@ -52,7 +54,7 @@ export const ShopLayout = () => {
                     />
                 </div>
 
-                <ProductsGrid activeSelector3x3={activeSelector3x3} activeSelector={activeSelector} />
+                <ProductsGrid activeSelector={activeSelector} isMobile={isMobile} />
             </div>
         </section>
     )
